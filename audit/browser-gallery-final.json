@@ -1,0 +1,169 @@
+{
+  "time": "2026-09-07T18:43:27.852Z",
+  "browser": "152.0.7977.77",
+  "results": [
+    {
+      "path": "/hu/munkaink/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "cookies": [],
+  "interactions": {
+    "skip": "Ugrás a tartalomra",
+    "skipTarget": "main",
+    "mobileOpen": true,
+    "switched": true,
+    "faqOpen": true,
+    "quoteText": "Nettó: 281 890 Ft · Áfa (27%): 76 110 Ft · Bruttó összesen: 358 000 Ft. Tervezett fotóslétszám: 1. Tájékoztató összeg, nem megrendelés. ",
+    "actual404": 404,
+    "redirect": "http://127.0.0.1:4173/hu/szolgaltatasok/oneletrajz-foto/"
+  }
+}

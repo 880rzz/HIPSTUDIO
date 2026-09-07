@@ -1,0 +1,322 @@
+[
+  {
+    "old": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/reklamfotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/fotostudio-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/impresszum",
+    "new": "https://www.hipstudio.hu/hu/impresszum/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/videokeszites/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/muveszi-akt/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/epulet-fotozas-galeria",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#property",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/partnereink",
+    "new": "https://www.hipstudio.hu/hu/fotospartnerek/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/referencia-vide%C3%B3k",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#films",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#commercial",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#art",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#portfolio",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/portfolio-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/oneletrajz-foto/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/podcast-keszites",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/podcast-keszites/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/rendezvenyfotozas",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/rendezvenyfotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/ingatlanfotozas",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/ingatlanfotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/portrefotozas-galeria",
+    "new": "https://www.hipstudio.hu/hu/munkaink/#portrait",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+    "new": "https://www.hipstudio.hu/hu/arak/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/rendezvenyfotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/kapcsolat",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/m%C5%B1v%C3%A9szi-aktfot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/muveszi-akt/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/m%C5%B1v%C3%A9szi-aktfot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/muveszi-akt/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/portf%C3%B3li%C3%B3-%C3%A9s-divatfot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/portfolio-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/portf%C3%B3li%C3%B3-%C3%A9s-divatfot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/portfolio-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/glamour-boudoir-fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/glamour-boudoir/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/glamour-boudoir-fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/glamour-boudoir/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/cv-%C3%B6n%C3%A9letrajz-fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/oneletrajz-foto/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/cv-%C3%B6n%C3%A9letrajz-fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/oneletrajz-foto/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/szem%C3%A9lyes-egyeztet%C3%A9s-a-st%C3%BAdi%C3%B3ban",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/szem%C3%A9lyes-egyeztet%C3%A9s-a-st%C3%BAdi%C3%B3ban",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/szem%C3%A9lyes-egyeztet%C3%A9s-online",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/szem%C3%A9lyes-egyeztet%C3%A9s-online",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/%C3%BCzleti-kreat%C3%ADv-portr%C3%A9fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/uzleti-portre/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/%C3%BCzleti-kreat%C3%ADv-portr%C3%A9fot%C3%B3z%C3%A1s",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/uzleti-portre/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/service-page/mini-portf%C3%B3li%C3%B3-t%C3%A1rskeres%C5%91-fot%C3%B3z%C3%A1s-1",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/tarskereso-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/booking-calendar/mini-portf%C3%B3li%C3%B3-t%C3%A1rskeres%C5%91-fot%C3%B3z%C3%A1s-1",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/tarskereso-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/bookings-checkout/mini-portf%C3%B3li%C3%B3-t%C3%A1rskeres%C5%91-fot%C3%B3z%C3%A1s-1",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/tarskereso-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/bookings-checkout/portf%C3%B3li%C3%B3-fot%C3%B3z%C3%A1s-m%C5%B1v%C3%A9szi-aktfot%C3%B3z%C3%A1s-1",
+    "new": "https://www.hipstudio.hu/hu/szolgaltatasok/portfolio-fotozas/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/bookings-checkout/szem%C3%A9lyes-egyeztet%C3%A9s-1",
+    "new": "https://www.hipstudio.hu/hu/kapcsolat/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve service intent; booking function removed"
+  },
+  {
+    "old": "https://www.hipstudio.hu/",
+    "new": "https://www.hipstudio.hu/hu/",
+    "implementation": "static HTML refresh and fallback link",
+    "plannedHttpStatus": 301,
+    "actualPagesStatus": 200,
+    "reason": "Preserve content intent"
+  }
+]

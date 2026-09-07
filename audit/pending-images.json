@@ -1,0 +1,539 @@
+[
+  {
+    "id": "commercial-52",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_e993bc5892fc41de8cf74e4aa11f35af~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "1c4a911e-36ef-4994-99b7-6c4aaca5b87d",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-53",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_2af4772d595744eaaf10ff2d43684a0b~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "3453bbcb-8165-4736-ae47-9650af0fc112",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-54",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_657f444399814a269da478502c377db6~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "e3acb96d-68f9-42ea-91d1-9dad891cd676",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-55",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_9f934e09cef14dd7b94fff9c94e827c1~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "acc513c5-cbd9-42f9-96cb-c4c773e60220",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-56",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_dcc06f4c854d4dde9b7365894ffd9a7a~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "1b837cf7-5f62-4dad-bb07-a37486755f64",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-57",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_721ea82bd343405bb318bedb812acc92~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "b8002647-ca85-4f07-8030-8a7e11cea32a",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-58",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_81b0c126738948249610272023b7c897~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {},
+    "apiItemId": "172a8e25-c924-4bce-b157-6df88550b9d2",
+    "error": "Source CDN download failed; curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "commercial-59",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_446ec98e66904dcab5db271794ffdf9c~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Mosolygó gyermek a vízfelszín közelében",
+      "en": "Smiling child near the water surface",
+      "de": "Lächelndes Kind nahe der Wasseroberfläche"
+    },
+    "apiItemId": "8ff961d0-2970-4e18-bfe1-9cdbd6d534a8",
+    "sha256": "49c97ee4a58768da127cb57168684f6486213d023c87130fe312c238b78a46a9",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-60",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_ae48343d4fd846148249c021567346ac~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Piros öltönyös alak piros sportautó mellett",
+      "en": "Figure in a red suit beside a red sports car",
+      "de": "Person im roten Anzug neben einem roten Sportwagen"
+    },
+    "apiItemId": "4d198c27-380e-46bb-b5b1-c1496fa1f468",
+    "sha256": "18d48fe9a59d65aa9edf3e33a320947b4e7299d44f913fa2847537302c510e23",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-61",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_aab72dd0871e46e1b46aff1bb24b83d2~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Sáros arc és élénk tekintet a talaj szintjén",
+      "en": "Muddy face and an intense gaze at ground level",
+      "de": "Schlammiges Gesicht und intensiver Blick auf Bodenhöhe"
+    },
+    "apiItemId": "376cc8f1-1ca3-4584-bb6f-fcbf354069b1",
+    "sha256": "93e7ecb901d558856ebe76447cf1571b3e4b1537cc51183109e7084c20aed231",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-62",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_be6b8bda04114450875eef045b5b6edc~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Öltönyös alak madarakkal a naplementés parton",
+      "en": "Figure in a suit with birds on a beach at sunset",
+      "de": "Person im Anzug mit Vögeln am Strand bei Sonnenuntergang"
+    },
+    "apiItemId": "f1568451-5691-4b2d-ba70-4b4d691da78c",
+    "sha256": "fa6da6dbb4bec73345fe53512cb9ea8658c1eaf332bc71db2dcf8faa7d90a332",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-63",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_15d19bb227d246a1a58ae5d96bae6fc0~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Női arc köré rendezett kozmetikumok rózsaszín háttéren",
+      "en": "Cosmetics arranged around a woman’s face on a pink background",
+      "de": "Kosmetikprodukte um ein Frauengesicht auf rosa Hintergrund"
+    },
+    "apiItemId": "8d02b93c-ee0d-4572-a632-4f8284a95e28",
+    "sha256": "4355be0ad578e01b3dae4406914912cf258a037797bad5adb848702f668ac7d5",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-64",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_1604395e825248a1a0a585b314ffb802~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Világos tetőtéri szoba ferde ablakokkal",
+      "en": "Bright attic room with sloping windows",
+      "de": "Helles Dachzimmer mit schrägen Fenstern"
+    },
+    "apiItemId": "17b37c31-fbf6-41ba-97f2-084061f14c0b",
+    "sha256": "18827c7958f2fff5087a16e8b7a33e8addf08426e51bd382b0f60a3b58e237ce",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-65",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_fc5ebf0fa51a415f821ea8384aefd3a6~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Szemüveges férfialak barna öltönyben, narancs nyakkendővel",
+      "en": "Male figure wearing glasses, a brown suit and an orange tie",
+      "de": "Männliche Figur mit Brille, braunem Anzug und orangefarbener Krawatte"
+    },
+    "apiItemId": "6dac6dfc-79c5-4000-9444-13f133307707",
+    "sha256": "b6703878bc5d8d7086197f7774d9dd4cd472da3bdf372f56eca974ba6261c6dd",
+    "originalSize": [
+      3072,
+      3072
+    ],
+    "width": 3072,
+    "height": 3072,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-66",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_0e30fe9409334c919cec99fd7c7b2786~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Szürreális fekete-fehér kompozíció arccal és szemmotívumokkal",
+      "en": "Surreal monochrome composition with a face and eye motifs",
+      "de": "Surreale Schwarzweiß-Komposition mit Gesicht und Augenmotiven"
+    },
+    "apiItemId": "df8013d5-59dd-4e7e-8bb2-f6fe96571a1a",
+    "sha256": "b542c6f468f3d0af8d7b870e98ff0d01d857ef6f417770768b21adb15152aae2",
+    "originalSize": [
+      3072,
+      3072
+    ],
+    "width": 3072,
+    "height": 3072,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-67",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_508e7beb228948b38a7be8bde6481c5a~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Erősen színezett hamburgerkompozíció sötét háttéren",
+      "en": "Vividly coloured burger composition against a dark background",
+      "de": "Kräftig kolorierte Burger-Komposition vor dunklem Hintergrund"
+    },
+    "apiItemId": "2dc71605-5677-4a97-9802-32c645af4c2a",
+    "sha256": "509c9f78b2aded2e0d7b9802bbbb581fef43329591f3af90651853a431ca64b7",
+    "originalSize": [
+      4368,
+      2448
+    ],
+    "width": 4368,
+    "height": 2448,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-68",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_54a8c93fdc36404db35f91478358d6d2~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Magányos alak egy elhagyatott, díszes teremben",
+      "en": "Solitary figure in an abandoned ornate hall",
+      "de": "Einzelne Figur in einem verlassenen prunkvollen Saal"
+    },
+    "apiItemId": "8e263bd8-643d-4a04-b29e-6512a5cff8db",
+    "sha256": "6983c10b58278e530c23ee6e86d1329cc714c487c58f0cf7fa164a83be7c3f51",
+    "originalSize": [
+      3072,
+      3072
+    ],
+    "width": 3072,
+    "height": 3072,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-69",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_c002adbfaec04c7f812ade1247929ff5~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Autóban ülő alak, előtte bankjegykötegek",
+      "en": "Figure seated in a car with bundles of banknotes in front",
+      "de": "Figur in einem Auto mit Geldscheinbündeln davor"
+    },
+    "apiItemId": "bd17179b-2d70-481b-822e-05ca9935cae3",
+    "sha256": "1b32fbd1bed623368660830631008e6830092837aeed8f08ea5b48e4505a5190",
+    "originalSize": [
+      4368,
+      2448
+    ],
+    "width": 4368,
+    "height": 2448,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-70",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_387fb86542fd4362babb9319109ab91d~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Űrhajós egy széken, romos díszteremben, fekete-fehér kompozíción",
+      "en": "Astronaut seated in a ruined ornate hall in a monochrome composition",
+      "de": "Astronaut auf einem Stuhl in einem verfallenen Prunksaal, Schwarzweiß-Komposition"
+    },
+    "apiItemId": "a88717b9-4f2b-4882-97e5-383dd74905b4",
+    "sha256": "facf90e97e527cf2477d4e6ed556390ac6905ddce02fcf0c1ebe8a3e5db909a2",
+    "originalSize": [
+      3072,
+      3072
+    ],
+    "width": 3072,
+    "height": 3072,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-71",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_a3e480fee7f048d39960915ac07f53e1~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Feltétekkel borított pizza felülnézetből",
+      "en": "Pizza covered with toppings seen from above",
+      "de": "Belegte Pizza von oben"
+    },
+    "apiItemId": "fa359d9d-2223-4434-8b62-50e96618d36d",
+    "sha256": "b84da527a0b6e4f54de76054b6935bd2931d4e94cf75fa4bf480d7b54b827737",
+    "originalSize": [
+      3072,
+      3072
+    ],
+    "width": 3072,
+    "height": 3072,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-72",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_457a37971bc746168889882bbf85a067~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Narancsszínű vonós hangszer színes belső térben",
+      "en": "Orange string instrument in a colourful interior",
+      "de": "Orangefarbenes Streichinstrument in einem farbigen Innenraum"
+    },
+    "apiItemId": "064a81bc-8ac5-421c-94c9-527f93945203",
+    "sha256": "33e0d6c7d40770ae4238ec127a41db240bee8f64571a4fe8ec749b24199e0d09",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-73",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_988e669619014a419407e30effa13518~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Hamburger gőzzel és zöldségekkel sötét háttéren",
+      "en": "Burger with steam and vegetables against a dark background",
+      "de": "Burger mit Dampf und Gemüse vor dunklem Hintergrund"
+    },
+    "apiItemId": "15dacbdc-1c75-4134-b308-73093f92f6f5",
+    "sha256": "74d0c2f35117d2e90d03bd6ad6be86cdbd9863854a81abf11423ec872c7b22f1",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-74",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_cc53e71c9f1d434f9dedcf1827d47bb2~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Szürke autó egy vízparti úton, naplementében",
+      "en": "Grey car on a waterfront road at sunset",
+      "de": "Graues Auto auf einer Uferstraße bei Sonnenuntergang"
+    },
+    "apiItemId": "410862f3-751d-41c9-b7ba-75793bd33865",
+    "sha256": "3ad15f5c76a8da1cd6f307ec048bff85ef011d0881ae4db9bba066dcd8d901d2",
+    "originalSize": [
+      872,
+      490
+    ],
+    "width": 872,
+    "height": 490,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-75",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_f4fd4cafa66143bda819b5e73429a7e5~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Színes, tüskés forma körömszerű csúcsokkal",
+      "en": "Colourful spiked form with nail-like tips",
+      "de": "Farbige stachelige Form mit nagelartigen Spitzen"
+    },
+    "apiItemId": "0afd8a62-6491-4b2c-8c08-ce4c5359e455",
+    "sha256": "708b87fc68cf74f2ac3a895397692ed9e48ec1df7d90b8efdf3ef823416096b6",
+    "originalSize": [
+      1024,
+      1024
+    ],
+    "width": 1024,
+    "height": 1024,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-76",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_25136040f60c44f2883884164a2a12ff~mv2.jpg",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Rajzfilmfigurás karóra meleg fényben",
+      "en": "Wristwatch with a cartoon character in warm light",
+      "de": "Armbanduhr mit Zeichentrickfigur in warmem Licht"
+    },
+    "apiItemId": "4b9a34be-6508-40db-bc87-0757ebca2a59",
+    "sha256": "3a79f98d6a7c8fcd95f4d95cd0b996d5ef13cae004bafcaceb386020b72cec04",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-77",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_e27f1d7413cd4982b2714a85371e14f2~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Fehér, konzolos épületformák kék ég előtt",
+      "en": "White cantilevered building forms against a blue sky",
+      "de": "Weiße auskragende Gebäudeformen vor blauem Himmel"
+    },
+    "apiItemId": "768ebeb2-4ea7-49ad-8c30-5b8c9890ce23",
+    "sha256": "ae9823eeeecd0f976b0c5eacab526dcce8fe665d3bd2b1e14bcfa3712c14dfde",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  },
+  {
+    "id": "commercial-78",
+    "category": "commercial",
+    "sourcePage": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "original": "https://static.wixstatic.com/media/b0aee1_25f39fc9f4454f118fa728cec3111c87~mv2.png",
+    "sourceAlt": "",
+    "publicationRights": "user_confirmed_2026-09-07",
+    "alt": {
+      "hu": "Hosszú ruhás alak homokdűnék között, naplementében",
+      "en": "Figure in a long dress among sand dunes at sunset",
+      "de": "Figur im langen Kleid zwischen Sanddünen bei Sonnenuntergang"
+    },
+    "apiItemId": "c1160785-a7da-40ad-bcc9-70d29af8ac7b",
+    "sha256": "a39a7bb40bdfd33f874d9d782dcb13561dd8c7e50a8d55de2c93b9ec9f0918b6",
+    "originalSize": [
+      1456,
+      816
+    ],
+    "width": 1456,
+    "height": 816,
+    "visualReview": "contact_sheet_2026-09-07",
+    "pendingReason": "User confirmation of digital/composite versus photographic provenance requested"
+  }
+]

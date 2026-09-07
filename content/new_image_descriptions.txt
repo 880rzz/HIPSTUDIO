@@ -1,0 +1,98 @@
+portrait-26|Lovaglósisakos nő oldalnézetből, sötét háttér előtt|Woman in a riding helmet in profile against a dark background|Frau mit Reithelm im Profil vor dunklem Hintergrund
+portrait-27|Női tekintet zöld levelek között|Woman’s eyes framed by green leaves|Blick einer Frau zwischen grünen Blättern
+portrait-28|Mosolygó nő farmerdzsekiben a korlátnál|Smiling woman in a denim jacket beside a railing|Lächelnde Frau in Jeansjacke am Geländer
+portrait-29|Férfi sötét kabátban a folyóparton|Man in a dark coat beside the river|Mann im dunklen Mantel am Flussufer
+portrait-30|Mosolygó nő fekete bőrdzsekiben, összefont karral|Smiling woman in a black leather jacket with folded arms|Lächelnde Frau in schwarzer Lederjacke mit verschränkten Armen
+portfolio-26|Férfi szálló porral, fekete-fehér stúdióképen|Man surrounded by airborne powder in a monochrome studio image|Mann mit aufgewirbeltem Pulver in einer Schwarzweiß-Studioaufnahme
+portfolio-27|Nő öltönyben és meglazított nyakkendővel a stúdió padlóján|Woman in a suit and loose tie seated on a studio floor|Frau im Anzug mit lockerer Krawatte auf dem Studioboden
+portfolio-28|Mellényes férfi elektromos gitárral|Man in a waistcoat playing an electric guitar|Mann mit Weste an einer E-Gitarre
+portfolio-29|Vörös hajú nő fekete ruhában, világos háttér előtt|Red-haired woman in a black dress against a light background|Rothaarige Frau im schwarzen Kleid vor hellem Hintergrund
+portfolio-30|Férfi világos zakóban és kalapban, szabadban|Man in a light blazer and hat outdoors|Mann mit hellem Sakko und Hut im Freien
+portfolio-31|Nő virágmintás felsőben, kerítésen ülve|Woman in a floral top sitting on a fence|Frau mit geblümtem Oberteil auf einem Zaun
+portfolio-32|Férfi fekete pólóban, sötét stúdióháttér előtt|Man in a black T-shirt against a dark studio background|Mann im schwarzen T-Shirt vor dunklem Studiohintergrund
+portfolio-33|Nő zöld felsőben egy kőkorláton ülve|Woman in a green top sitting on a stone railing|Frau mit grünem Oberteil auf einer Steinbrüstung
+portfolio-34|Nő fekete kalapban és szürke zakóban|Woman in a black hat and grey blazer|Frau mit schwarzem Hut und grauem Sakko
+portfolio-35|Férfi futócipőkkel a kezében egy kőpárkányon|Man holding running shoes on a stone ledge|Mann mit Laufschuhen in den Händen auf einem Steinvorsprung
+portfolio-36|Vörös hajú nő farmerdzsekiben, zöld lombok között|Red-haired woman in a denim jacket among green leaves|Rothaarige Frau in Jeansjacke zwischen grünen Blättern
+portfolio-37|Szemüveges férfi öltönyben, lépcsőn ülve|Man wearing glasses and a suit seated on steps|Mann mit Brille im Anzug auf einer Treppe
+portfolio-38|Férfi szivart gyújt, füsttel a sötét háttér előtt|Man lighting a cigar with smoke against a dark background|Mann zündet eine Zigarre an, Rauch vor dunklem Hintergrund
+portfolio-39|Mosolygó nő szürke, vállat szabadon hagyó felsőben|Smiling woman in a grey off-the-shoulder top|Lächelnde Frau mit grauem schulterfreiem Oberteil
+portfolio-40|Női arckép hálóminta árnyékával|Woman’s face crossed by a mesh-pattern shadow|Frauengesicht mit netzförmigem Schatten
+portfolio-41|Nő zakóban, fekete-fehér stúdióportrén|Woman in a blazer in a monochrome studio portrait|Frau im Sakko auf einem Schwarzweiß-Studioporträt
+portfolio-42|Mosolygó nő napszemüveggel és piros pöttyös felsőben|Smiling woman with sunglasses and a red polka-dot top|Lächelnde Frau mit Sonnenbrille und rot gepunktetem Oberteil
+portfolio-43|Nő hosszú, fekete csíkos ruhában, világos stúdióban|Woman in a long black striped dress in a light studio|Frau im langen schwarzen gestreiften Kleid im hellen Studio
+portfolio-44|Szemüveges férfi kávéval egy szabadtéri asztalnál|Man wearing glasses with coffee at an outdoor table|Mann mit Brille und Kaffee an einem Tisch im Freien
+portfolio-45|Mosolygó nő farmerdzsekiben a korlátnál|Smiling woman in a denim jacket beside a railing|Lächelnde Frau in Jeansjacke am Geländer
+portfolio-46|Hosszú hajú nő barna zakóban a stúdióban|Long-haired woman in a brown blazer in the studio|Langhaarige Frau im braunen Sakko im Studio
+portfolio-47|Mosolygó pár egymás mellett a szabadban|Smiling couple standing together outdoors|Lächelndes Paar im Freien
+portfolio-48|Nő világos ruhában egy függönyös ablak mellett|Woman in a light dress beside a curtained window|Frau im hellen Kleid neben einem Fenster mit Vorhang
+portfolio-49|Férfi fehér pólóban, üveghomlokzat előtt|Man in a white T-shirt in front of a glass facade|Mann im weißen T-Shirt vor einer Glasfassade
+portfolio-50|Nő széles karimájú fekete kalapban, színezett fényben|Woman in a wide-brimmed black hat under coloured light|Frau mit breitem schwarzem Hut in farbigem Licht
+portfolio-51|Vörös hajú nő oldalra fordított arccal, meleg fényben|Red-haired woman turning her face in warm light|Rothaarige Frau mit seitlich gewandtem Gesicht in warmem Licht
+property-26|Kivilágított hegyi épületek hóval borított tájban, éjszaka|Illuminated mountain buildings in a snowy landscape at night|Beleuchtete Berggebäude in verschneiter Landschaft bei Nacht
+property-27|Íves betonszerkezet és üvegfal egy nyitott épülettérben|Curved concrete structure and glass wall in an open architectural space|Geschwungene Betonstruktur und Glaswand in einem offenen Gebäuderaum
+property-28|Magas lakóépület türkiz üvegfelületekkel|Tall residential building with turquoise glazing|Hohes Wohngebäude mit türkisfarbenen Glasflächen
+property-29|Sűrűn beépített városi látkép magasból|Densely built city skyline from above|Dicht bebaute Stadtsilhouette von oben
+property-30|Magas irodaházak világító ablakai éjszaka|Lit windows of tall office buildings at night|Beleuchtete Fenster hoher Bürogebäude bei Nacht
+property-31|Meleg fénnyel megvilágított utcai bejárat|Street entrance illuminated by warm light|Straßeneingang in warmem Licht
+property-32|Lakóépületek kertje és úszómedencéi felülnézetből|Garden and swimming pools between residential buildings seen from above|Garten und Schwimmbecken zwischen Wohngebäuden von oben
+property-33|Íves lépcső és kör alakú nyílás építészeti részlete|Architectural detail of a curved staircase and circular opening|Architekturdetail einer geschwungenen Treppe und runden Öffnung
+property-34|Sűrű városi épületek és világító ablakok este|Dense city buildings and illuminated windows in the evening|Dichte Stadtbebauung und beleuchtete Fenster am Abend
+property-35|Modern lakóépület erkélyekkel és előtte gyepfelülettel|Modern residential building with balconies and a lawn in front|Modernes Wohngebäude mit Balkonen und Rasenfläche
+property-36|Nappali ülőbútorokkal, étkezőasztallal és magas ablakokkal|Living room with seating, dining table and tall windows|Wohnraum mit Sitzmöbeln, Esstisch und hohen Fenstern
+property-37|Tágas előcsarnok üvegfallal és meleg fa burkolattal|Spacious lobby with a glass wall and warm timber cladding|Großzügiges Foyer mit Glaswand und warmer Holzverkleidung
+property-38|Díszes történeti terem festett mennyezettel|Ornate historic hall with a painted ceiling|Prunkvoller historischer Saal mit bemalter Decke
+property-39|Színes üvegű rózsaablak boltozatos térben|Stained-glass rose window beneath vaulted ceilings|Buntes Rosettenfenster unter einem Gewölbe
+property-40|Vörös szőnyeges díszlépcső íves kőkorlátokkal|Grand staircase with a red carpet and curved stone balustrades|Prunktreppe mit rotem Teppich und geschwungenen Steinbalustraden
+property-41|Geometrikus ablakrács egy épülethomlokzaton|Geometric window grid on a building facade|Geometrisches Fensterraster einer Gebäudefassade
+property-42|Íves, színes üvegablak díszes belső térben|Arched stained-glass window in an ornate interior|Rundbogiges Buntglasfenster in einem verzierten Innenraum
+property-43|Havas hegyi település esti kivilágításban|Snow-covered mountain settlement illuminated at night|Verschneite Bergsiedlung in abendlicher Beleuchtung
+property-44|Magas épületek tükröződése egy utcai pocsolyában|Tall buildings reflected in a puddle on the street|Spiegelung hoher Gebäude in einer Straßenpfütze
+property-45|A budapesti Parlament a Duna felől, naplementében|Budapest Parliament seen from the Danube at sunset|Budapester Parlament von der Donau aus bei Sonnenuntergang
+property-46|Neonfényes városi utca esti forgalommal|Neon-lit city street with evening traffic|Neonbeleuchtete Stadtstraße mit Abendverkehr
+commercial-26|Mosolygó nő nyitott könyvvel egy pult mögött|Smiling woman with an open book behind a counter|Lächelnde Frau mit offenem Buch hinter einem Tresen
+commercial-27|Kezek és fekete csipke közeli részlete|Close detail of hands and black lace|Nahaufnahme von Händen und schwarzer Spitze
+commercial-28|Repülőgép a magas városi épületek közötti égbolton|Aircraft in the sky between tall city buildings|Flugzeug am Himmel zwischen hohen Stadtgebäuden
+commercial-29|Nő piros ruhában egy autó volánjánál|Woman in red at the wheel of a car|Frau in Rot am Steuer eines Autos
+commercial-30|Gyermek az ablakredőny mellett, oldalról megvilágítva|Child beside window blinds, lit from the side|Kind neben einer Jalousie im seitlichen Licht
+commercial-31|Nő színes ruhában, türkiz medencevízben lebegve|Woman in a colourful dress floating in turquoise pool water|Frau im farbigen Kleid im türkisfarbenen Poolwasser
+commercial-32|Lila virágbimbók és zöld levelek közeli képe|Close-up of purple flower buds and green leaves|Nahaufnahme violetter Blütenknospen und grüner Blätter
+commercial-33|Rövid vörös hajú nő kék mintás felsőben|Woman with short red hair in a blue patterned top|Frau mit kurzem rotem Haar und blau gemustertem Oberteil
+commercial-34|Pár közeli portréja, tetovált karokkal|Close portrait of a couple with tattooed arms|Nahporträt eines Paares mit tätowierten Armen
+commercial-35|Szabadtéri rendezvény mosolygó résztvevőiből készült képkollázs|Collage of smiling participants at an outdoor event|Fotocollage lächelnder Teilnehmender einer Veranstaltung im Freien
+commercial-36|Kivilágított hegyi épületek havas tájban éjszaka|Illuminated mountain buildings in a snowy landscape at night|Beleuchtete Berggebäude in verschneiter Landschaft bei Nacht
+commercial-37|Vitorlás a napfényben csillogó vízen|Sailboat on sunlit water|Segelboot auf sonnenbeschienenem Wasser
+commercial-38|Díszes boltív és színes üvegablak|Ornate arch and stained-glass window|Verzierter Bogen und Buntglasfenster
+commercial-39|Motoros hajó a városi látkép előtt, meleg esti fényben|Motor yacht in front of a city skyline in warm evening light|Motorjacht vor einer Stadtsilhouette in warmem Abendlicht
+commercial-40|Menyasszony egy csigalépcső felső fordulóján|Bride on the upper turn of a spiral staircase|Braut an der oberen Windung einer Wendeltreppe
+commercial-41|Két ember színes festményekkel teli műteremben, felülnézetből|Two people in a studio filled with colourful paintings, seen from above|Zwei Menschen in einem Atelier voller bunter Gemälde, von oben gesehen
+commercial-42|Nő piros ruhában egy vörös falú folyosón|Woman in a red dress in a red-walled corridor|Frau im roten Kleid in einem Flur mit roten Wänden
+commercial-43|Két mosolygó felnőtt és egy gyermek a szabadban|Two smiling adults and a child outdoors|Zwei lächelnde Erwachsene und ein Kind im Freien
+commercial-44|Öltönyös férfi városi utcán, taxik mellett|Man in a suit on a city street beside taxis|Mann im Anzug auf einer Stadtstraße neben Taxis
+commercial-45|Női arc fekete-fehér közelképe, keskeny fénysávval|Monochrome close-up of a woman’s face with a narrow band of light|Schwarzweiß-Nahaufnahme eines Frauengesichts mit schmalem Lichtstreifen
+commercial-46|Sárga taxi egy esti városi utcán|Yellow taxi on a city street at night|Gelbes Taxi auf einer Stadtstraße am Abend
+commercial-47|Nő városi kilátó kőfalán ülve, folyóval a háttérben|Woman seated on a viewpoint’s stone wall with a river behind her|Frau auf der Steinmauer eines Aussichtspunkts mit Fluss im Hintergrund
+commercial-48|Lufik egy reklámtáblákkal teli nagyvárosi téren|Balloons in a city square filled with advertising signs|Luftballons auf einem Großstadtplatz mit Werbetafeln
+commercial-49|Óriáskerék részlete lila esti kivilágításban|Detail of a Ferris wheel illuminated in purple at night|Detail eines Riesenrads in violetter Abendbeleuchtung
+commercial-50|Napszemüveges nő fejhallgatóval a nyakában, fekete-fehér utcai képen|Woman with sunglasses and headphones around her neck in a monochrome street image|Frau mit Sonnenbrille und Kopfhörern um den Hals auf einem Schwarzweiß-Straßenbild
+commercial-51|Halak türkiz, sekély vízben felülnézetből|Fish in shallow turquoise water seen from above|Fische in flachem türkisfarbenem Wasser von oben
+commercial-59|Mosolygó gyermek a vízfelszín közelében|Smiling child near the water surface|Lächelndes Kind nahe der Wasseroberfläche
+commercial-60|Piros öltönyös alak piros sportautó mellett|Figure in a red suit beside a red sports car|Person im roten Anzug neben einem roten Sportwagen
+commercial-61|Sáros arc és élénk tekintet a talaj szintjén|Muddy face and an intense gaze at ground level|Schlammiges Gesicht und intensiver Blick auf Bodenhöhe
+commercial-62|Öltönyös alak madarakkal a naplementés parton|Figure in a suit with birds on a beach at sunset|Person im Anzug mit Vögeln am Strand bei Sonnenuntergang
+commercial-63|Női arc köré rendezett kozmetikumok rózsaszín háttéren|Cosmetics arranged around a woman’s face on a pink background|Kosmetikprodukte um ein Frauengesicht auf rosa Hintergrund
+commercial-64|Világos tetőtéri szoba ferde ablakokkal|Bright attic room with sloping windows|Helles Dachzimmer mit schrägen Fenstern
+commercial-65|Szemüveges férfialak barna öltönyben, narancs nyakkendővel|Male figure wearing glasses, a brown suit and an orange tie|Männliche Figur mit Brille, braunem Anzug und orangefarbener Krawatte
+commercial-66|Szürreális fekete-fehér kompozíció arccal és szemmotívumokkal|Surreal monochrome composition with a face and eye motifs|Surreale Schwarzweiß-Komposition mit Gesicht und Augenmotiven
+commercial-67|Erősen színezett hamburgerkompozíció sötét háttéren|Vividly coloured burger composition against a dark background|Kräftig kolorierte Burger-Komposition vor dunklem Hintergrund
+commercial-68|Magányos alak egy elhagyatott, díszes teremben|Solitary figure in an abandoned ornate hall|Einzelne Figur in einem verlassenen prunkvollen Saal
+commercial-69|Autóban ülő alak, előtte bankjegykötegek|Figure seated in a car with bundles of banknotes in front|Figur in einem Auto mit Geldscheinbündeln davor
+commercial-70|Űrhajós egy széken, romos díszteremben, fekete-fehér kompozíción|Astronaut seated in a ruined ornate hall in a monochrome composition|Astronaut auf einem Stuhl in einem verfallenen Prunksaal, Schwarzweiß-Komposition
+commercial-71|Feltétekkel borított pizza felülnézetből|Pizza covered with toppings seen from above|Belegte Pizza von oben
+commercial-72|Narancsszínű vonós hangszer színes belső térben|Orange string instrument in a colourful interior|Orangefarbenes Streichinstrument in einem farbigen Innenraum
+commercial-73|Hamburger gőzzel és zöldségekkel sötét háttéren|Burger with steam and vegetables against a dark background|Burger mit Dampf und Gemüse vor dunklem Hintergrund
+commercial-74|Szürke autó egy vízparti úton, naplementében|Grey car on a waterfront road at sunset|Graues Auto auf einer Uferstraße bei Sonnenuntergang
+commercial-75|Színes, tüskés forma körömszerű csúcsokkal|Colourful spiked form with nail-like tips|Farbige stachelige Form mit nagelartigen Spitzen
+commercial-76|Rajzfilmfigurás karóra meleg fényben|Wristwatch with a cartoon character in warm light|Armbanduhr mit Zeichentrickfigur in warmem Licht
+commercial-77|Fehér, konzolos épületformák kék ég előtt|White cantilevered building forms against a blue sky|Weiße auskragende Gebäudeformen vor blauem Himmel
+commercial-78|Hosszú ruhás alak homokdűnék között, naplementében|Figure in a long dress among sand dunes at sunset|Figur im langen Kleid zwischen Sanddünen bei Sonnenuntergang

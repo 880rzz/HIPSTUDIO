@@ -1,0 +1,13 @@
+dist/
+node_modules/
+audit/raw/
+audit/screenshots/
+audit/lighthouse-*.html
+__pycache__/
+.DS_Store
+audit/home-*.png
+audit/contact-sheet-*.jpg
+audit/lighthouse-*.json
+!audit/lighthouse-summary.json
+
+node_modules

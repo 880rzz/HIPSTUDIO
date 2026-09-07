@@ -1,0 +1,117 @@
+[
+  {
+    "index": 1,
+    "poster": "https://static.wixstatic.com/media/b0aee1_fdfc0fe07b074efea763921be0f67840~mv2.jpg/v1/fit/w_960,h_540,q_90,enc_avif,quality_auto/b0aee1_fdfc0fe07b074efea763921be0f67840~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+      "https://video.wixstatic.com/video/b0aee1_c22b23e7f0ad47148f45d38275cb8f83/720p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": "Apollo Tennis Team\n\n„Ha nem tudod elmondani egyszerűen, Te magad sem érted igazán.”\n \nA jó reklám nem akar mindenáron eladni. Az a vásári kofa ismérve. A jó reklám célja a jó kapcsolat kiépítése."
+  },
+  {
+    "index": 2,
+    "poster": "https://static.wixstatic.com/media/b0aee1_6a1613aaa3eb4142868bf2f0823d9fbb~mv2.jpg/v1/fit/w_1178,h_666,q_90,enc_avif,quality_auto/b0aee1_6a1613aaa3eb4142868bf2f0823d9fbb~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": ""
+  },
+  {
+    "index": 2,
+    "error": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'E"
+  },
+  {
+    "index": 3,
+    "poster": "https://static.wixstatic.com/media/b0aee1_0b40f80926324d5c9ddc8f60e9ab99df~mv2.jpg/v1/fit/w_640,h_360,q_90,enc_avif,quality_auto/b0aee1_0b40f80926324d5c9ddc8f60e9ab99df~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+      "https://video.wixstatic.com/video/b0aee1_91a3c53deaeb49e0ba95071f51770272/360p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": "BME Audi TT based vehicle simulator\n\n„Ha nem tudod elmondani egyszerűen, Te magad sem érted igazán.”\n \nA jó reklám nem akar mindenáron eladni. Az a vásári kofa ismérve. A jó reklám célja a jó kapcsolat kiépítése."
+  },
+  {
+    "index": 4,
+    "poster": "https://static.wixstatic.com/media/b0aee1_475aa5f20f0143228131ffbaffa2c68c~mv2.jpg/v1/fit/w_1178,h_666,q_90,enc_avif,quality_auto/b0aee1_475aa5f20f0143228131ffbaffa2c68c~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": ""
+  },
+  {
+    "index": 4,
+    "error": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'E"
+  },
+  {
+    "index": 5,
+    "poster": "https://static.wixstatic.com/media/b0aee1_36b65f661de64f19be337c9296d4b9bb~mv2.jpg/v1/fit/w_1120,h_632,q_90,enc_avif,quality_auto/b0aee1_36b65f661de64f19be337c9296d4b9bb~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+      "https://video.wixstatic.com/video/b0aee1_ca99766dd8dc4b978919d4ea372d8bcd/720p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": "Koreny Dóra - Festőművész\n\n„Ha nem tudod elmondani egyszerűen, Te magad sem érted igazán.”\n \nA jó reklám nem akar mindenáron eladni. Az a vásári kofa ismérve. A jó reklám célja a jó kapcsolat kiépítése."
+  },
+  {
+    "index": 6,
+    "poster": "https://static.wixstatic.com/media/b0aee1_f9704759e17546ddb4f38f0012335283~mv2.jpg/v1/fit/w_854,h_480,q_90,enc_avif,quality_auto/b0aee1_f9704759e17546ddb4f38f0012335283~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": ""
+  },
+  {
+    "index": 6,
+    "error": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'E"
+  },
+  {
+    "index": 7,
+    "poster": "https://static.wixstatic.com/media/b0aee1_7211532488244fa4acb4d362697bbde1~mv2.jpg/v1/fit/w_1120,h_632,q_90,enc_avif,quality_auto/b0aee1_7211532488244fa4acb4d362697bbde1~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+      "https://video.wixstatic.com/video/b0aee1_3930fe66257d41858b523bf50d7cb8a9/720p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": "Cross Fit film\n\n„Ha nem tudod elmondani egyszerűen, Te magad sem érted igazán.”\n \nA jó reklám nem akar mindenáron eladni. Az a vásári kofa ismérve. A jó reklám célja a jó kapcsolat kiépítése."
+  },
+  {
+    "index": 8,
+    "poster": "https://static.wixstatic.com/media/b0aee1_d901c11db4c6436084944d5123dd0d3c~mv2.jpg/v1/fit/w_1120,h_632,q_90,enc_avif,quality_auto/b0aee1_d901c11db4c6436084944d5123dd0d3c~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": ""
+  },
+  {
+    "index": 8,
+    "error": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'E"
+  },
+  {
+    "index": 9,
+    "poster": "https://static.wixstatic.com/media/b0aee1_09d65e819587452a8d3d1943ed9619ee~mv2.jpg/v1/fit/w_1120,h_632,q_90,enc_avif,quality_auto/b0aee1_09d65e819587452a8d3d1943ed9619ee~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+      "https://video.wixstatic.com/video/b0aee1_d14a5385399e4d4482b0e8b1c2bacb1a/720p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": "HUMORTECHNIKUM\n\n„Ha nem tudod elmondani egyszerűen, Te magad sem érted igazán.”\n \nA jó reklám nem akar mindenáron eladni. Az a vásári kofa ismérve. A jó reklám célja a jó kapcsolat kiépítése."
+  },
+  {
+    "index": 10,
+    "poster": "https://static.wixstatic.com/media/b0aee1_9bfdb187c4ae41808e33d0b85bb129ec~mv2.jpg/v1/fit/w_640,h_360,q_90,enc_avif,quality_auto/b0aee1_9bfdb187c4ae41808e33d0b85bb129ec~mv2.jpg",
+    "videos": [
+      "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4"
+    ],
+    "iframes": [],
+    "text": ""
+  },
+  {
+    "index": 10,
+    "error": "locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'E"
+  }
+]
