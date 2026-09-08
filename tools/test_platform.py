@@ -19,6 +19,7 @@ def build(env=None):
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_solution_depth.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
 
@@ -33,6 +34,10 @@ def assert_review():
     assert manifest['masterBrandApprovalRequired'] is False
     assert manifest['commercialContent']['version']=='commercial-content-v1'
     assert manifest['commercialContent']['enrichedPages']==15
+    assert manifest['solutionDepth']['version']=='solution-depth-v1'
+    assert manifest['solutionDepth']['solutions']==5
+    assert manifest['solutionDepth']['localizedPages']==15
+    assert manifest['solutionDepth']['publicPricing'] is False
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['solutions']==5
     assert manifest['serviceInventory']['version']=='unified-service-inventory-v1'
@@ -60,6 +65,9 @@ def assert_review():
         assert 'sessionStorage' not in html
     for key in expected_solution_keys:
         assert any('/'+key+'/' in p['path'] for p in manifest['pages'])
+        html=(D/'hu'/'megoldasok'/key/'index.html').read_text()
+        assert f'data-solution-depth="{key}"' in html
+        assert '?pillar=' in html and '&amp;service=' in html
     expected_service_paths=[
       '/hu/szolgaltatasok/business/finance-admin/financial-administration/',
       '/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/',
@@ -119,6 +127,7 @@ def assert_quote_endpoint_gate():
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_solution_depth.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     p=subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=env,capture_output=True,text=True)
     assert p.returncode != 0
@@ -130,6 +139,7 @@ def assert_isolated_production_contract():
     manifest=json.loads((D/'platform-build.json').read_text())
     assert manifest['mode']=='production'
     assert manifest['commercialContent']['version']=='commercial-content-v1'
+    assert manifest['solutionDepth']['version']=='solution-depth-v1'
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['quoteRequest']['endpointConfigured'] is True
     assert (D/'robots.txt').read_text()=='User-agent: *\nAllow: /\n'
