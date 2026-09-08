@@ -12,6 +12,7 @@
     "preview": "python3 tools/serve.py",
     "test:pricing": "node tools/test-pricing.mjs",
     "test:browser": "node tools/browser-qa.mjs",
+    "test:browser:platform": "node tools/browser-platform-qa.mjs",
     "test:html": "html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
     "test:lighthouse": "node tools/lighthouse.mjs"
   },
