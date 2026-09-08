@@ -140,13 +140,46 @@ function ensureSheet_(ss) {
   let sh = ss.getSheetByName(HIPSTUDIO.SHEET_NAME);
   if (!sh) sh = ss.insertSheet(HIPSTUDIO.SHEET_NAME);
   if (sh.getLastRow() === 0) {
+    ensureColumns_(sh, HEADERS.length);
     sh.getRange(1,1,1,HEADERS.length).setValues([HEADERS]);
     sh.setFrozenRows(1);
-  } else {
-    const current = sh.getRange(1,1,1,Math.max(sh.getLastColumn(),HEADERS.length)).getValues()[0].slice(0,HEADERS.length);
-    if (current.join('|') !== HEADERS.join('|')) throw new Error('sheet_header_mismatch');
+    return sh;
   }
+
+  const oldHeaders = sh.getRange(1,1,1,sh.getLastColumn()).getValues()[0].map(function(v){return String(v||'').trim();});
+  while (oldHeaders.length && !oldHeaders[oldHeaders.length-1]) oldHeaders.pop();
+  if (oldHeaders.join('|') !== HEADERS.join('|')) migrateSheetSchema_(sh, oldHeaders);
   return sh;
+}
+
+function migrateSheetSchema_(sh, oldHeaders) {
+  if (!oldHeaders.length) throw new Error('sheet_headers_missing');
+  const seen = {};
+  oldHeaders.forEach(function(h){
+    if (!h) throw new Error('sheet_blank_header');
+    if (seen[h]) throw new Error('sheet_duplicate_header:' + h);
+    if (HEADERS.indexOf(h) < 0) throw new Error('sheet_unknown_header:' + h);
+    seen[h] = true;
+  });
+
+  const values = sh.getRange(1,1,sh.getLastRow(),oldHeaders.length).getValues();
+  const index = {};
+  oldHeaders.forEach(function(h,i){index[h]=i;});
+  const migrated = values.slice(1).map(function(row){
+    return HEADERS.map(function(h){ return index[h] == null ? '' : row[index[h]]; });
+  });
+
+  ensureColumns_(sh, HEADERS.length);
+  sh.clearContents();
+  sh.getRange(1,1,1,HEADERS.length).setValues([HEADERS]);
+  if (migrated.length) sh.getRange(2,1,migrated.length,HEADERS.length).setValues(migrated);
+  sh.setFrozenRows(1);
+  console.log('Migrated quote Sheet schema from ' + oldHeaders.length + ' to ' + HEADERS.length + ' columns; preserved rows=' + migrated.length);
+}
+
+function ensureColumns_(sh, required) {
+  const current = sh.getMaxColumns();
+  if (current < required) sh.insertColumnsAfter(current, required-current);
 }
 
 function sendInternal_(r) {
