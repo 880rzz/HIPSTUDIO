@@ -55,18 +55,20 @@ Production cutover is not ready. Legal/privacy inputs, unresolved media classifi
 
 ## 4. Code defects found
 
-No functional defect was found in the generated routes, metadata, schema, pricing, consent, media loading or browser behavior.
+No functional defect was found in the generated routes, metadata, schema, pricing, consent, media loading or browser behavior. The first clean-checkout CI run did expose one provenance portability defect: three manifest entries referenced gitignored local snapshots, so their generated checksums were absent outside the audit workstation.
 
 Two release-validation gaps were identified:
 
 1. CI did not install the locked development dependencies and therefore did not run HTML validation or browser QA.
 2. Critical production-output and privacy behaviors lacked direct regression coverage: allowed production robots/sitemap/index output, redirect chains/loops, public provenance checksums, and browser-level consent reset/storage state.
+3. Three provenance entries depended on local ignored snapshots instead of a versioned extraction record.
 
 ## 5. Fixes applied
 
 - `.github/workflows/validate.yml`: added `npm ci`, HTML validation, Chromium installation, local preview and browser QA. Deployment permissions and actions remain absent.
 - `tools/test.py`: added isolated synthetic production-output assertions, redirect loop/chain assertions and provenance checksum assertions.
 - `tools/browser-qa.mjs`: added consent default, preference change, rejection/reset, localStorage and sessionStorage assertions.
+- `audit/entity-source-records.json` and `content/provenance.json`: preserved the relevant extracted facts, source URLs and original snapshot hashes in the repository, removing the clean-checkout dependency on ignored raw files.
 - Refreshed local browser and Lighthouse evidence after the changes.
 
 ## 6. Remaining P0 blockers

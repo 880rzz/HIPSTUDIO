@@ -2,9 +2,9 @@
   "version": 1,
   "policy": "Public facts require an identified source. Absence of evidence is not evidence of a claim.",
   "sources": {
-    "wikidata-hipstudio": {"type": "Wikidata snapshot", "path": "audit/raw/revision/wikidata-hipstudio.json", "url": "https://www.wikidata.org/wiki/Q138482177"},
-    "wix-legal": {"type": "public source snapshot", "path": "audit/raw/revision/impresszum.html", "url": "https://www.hipstudio.hu/impresszum"},
-    "wix-partners": {"type": "public source snapshot", "path": "audit/raw/revision/partnereink.html", "url": "https://www.hipstudio.hu/partnereink"},
+    "wikidata-hipstudio": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.wikidata.org/wiki/Q138482177"},
+    "wix-legal": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.hipstudio.hu/impresszum"},
+    "wix-partners": {"type": "versioned extraction and asset record", "path": "audit/client-logo-manifest.json", "url": "https://www.hipstudio.hu/partnereink"},
     "wix-services": {"type": "public source inventory", "path": "audit/source-inventory.json", "url": "https://www.hipstudio.hu/"},
     "user-approval-pricing": {"type": "documented approval", "path": "audit/pricing-approval.json"},
     "user-approval-media": {"type": "documented approval", "path": "content/approvals.json"}
