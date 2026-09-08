@@ -25,6 +25,7 @@ jobs:
       - run: npm run build:all
       - run: npm test
       - run: npm run test:platform
+      - run: npm run test:public-quote
       - run: npm run test:pricing
       - run: npm run test:html
       - run: npx playwright install --with-deps chromium
