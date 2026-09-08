@@ -61,7 +61,8 @@ def assert_review():
         html=(D/path.strip('/')/'index.html').read_text()
         if 'history-archive' in path:
             assert 'Történeti anyag' in html
-            assert '<section class="cta">' not in html
+            assert '?pillar=' not in html
+            assert '<a class="button"' not in html
             assert '"@type":"Service"' not in html
         else:
             assert '"@type":"Service"' in html
