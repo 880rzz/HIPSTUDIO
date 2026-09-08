@@ -1,0 +1,38 @@
+name: Validate unpublished migration
+on:
+  push:
+    branches: [codex/hipstudio-static-migration]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:pricing
+      - run: npm run test:html
+      - run: npx playwright install --with-deps chromium
+      - name: Start local review server
+        run: |
+          nohup npm run preview >/tmp/hipstudio-preview.log 2>&1 &
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4173/hu/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/hipstudio-preview.log
+          exit 1
+      - run: npm run test:browser

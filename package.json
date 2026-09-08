@@ -1,0 +1,21 @@
+{
+  "name": "hipstudio-static",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "test": "python3 tools/test.py",
+    "preview": "python3 tools/serve.py",
+    "test:pricing": "node tools/test-pricing.mjs",
+    "test:browser": "node tools/browser-qa.mjs",
+    "test:html": "html-validate \"dist/**/*.html\"",
+    "test:lighthouse": "node tools/lighthouse.mjs"
+  },
+  "description": "Static HU/EN/DE HIPStudio migration. No runtime dependencies; no automatic deployment.",
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "html-validate": "11.14.0",
+    "lighthouse": "13.4.1",
+    "playwright": "1.63.0"
+  }
+}

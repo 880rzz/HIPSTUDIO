@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "status": "inactive-plan",
+  "source": "audit/url-mapping.json",
+  "requirements": {
+    "permanentMoves": 301,
+    "removedWithoutReplacement": 410,
+    "preserveQueryString": true,
+    "avoidChains": true,
+    "testBeforeCutover": true
+  }
+}

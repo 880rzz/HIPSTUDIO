@@ -1,0 +1,1951 @@
+{
+  "time": "2026-09-08T06:10:04.551Z",
+  "browser": "152.0.7977.77",
+  "results": [
+    {
+      "path": "/hu/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/arak/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/gyik/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/vezetoi-jelenlet/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/kampany-es-ertekesites/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/vallalati-esemenyek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/terek-es-elmenyek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/esettanulmanyok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/banhalmi-norbert/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/speier-viko/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/forrasok-es-ai-trust/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/uzleti-portre/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/oneletrajz-foto/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/headshot/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/tarskereso-fotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/portfolio-fotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/divatfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/reklamfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/termekfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/katalogusfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/ingatlanfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/legi-felvetelek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/virtualis-seta/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/muveszi-akt/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/glamour-boudoir/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/rendezvenyfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/videokeszites/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/forgatas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/werkfilm/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/social-media-film/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/podcast-keszites/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/executive-portre/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/brand-fotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/vizualis-pozicionalas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/muveszi-fotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/c-level-rendezvenyfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/emlekfotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/greenbox-fotozas/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/konferencia-streameles/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/sportvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/koncertvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/videoklip/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szolgaltatasok/rendezvenyvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/gyik/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/studio/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/fotospartnerek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/impresszum/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/cookie-k/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/arak/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/executive-presence/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/campaign-and-commerce/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/corporate-events/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/film-and-editorial-content/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/spaces-and-experiences/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/case-studies/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/norbert-banhalmi/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/viko-speier/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/sources-and-ai-trust/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/business-portraits/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/cv-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/headshots/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/dating-photos/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/portfolio-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/fashion-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/advertising-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/product-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/catalogue-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/property-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/aerial-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/virtual-tours/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/fine-art-nude/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/glamour-boudoir/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/event-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/video-production/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/filming/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/behind-the-scenes-films/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/social-media-films/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/podcast-production/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/executive-portraits/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/brand-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/visual-positioning/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/fine-art-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/c-level-event-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/souvenir-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/green-screen-photography/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/conference-streaming/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/sports-video/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/concert-video/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/music-videos/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/services/event-video/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/work/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/faq/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/contact/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/studio/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/photography-partners/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/legal/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/cookies/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/pricing/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/fuehrungspraesenz/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/kampagne-und-vertrieb/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/unternehmensveranstaltungen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/film-und-redaktioneller-inhalt/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/raeume-und-erlebnisse/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fallstudien/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/norbert-banhalmi/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/viko-speier/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/quellen-und-ai-trust/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/businessportraets/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/bewerbungsfotos/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/headshots/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/dating-fotos/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/portfoliofotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/modefotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/werbefotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/produktfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/katalogfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/immobilienfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/luftaufnahmen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/virtuelle-rundgaenge/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/kuenstlerischer-akt/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/glamour-boudoir/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/eventfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/videoproduktion/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/dreharbeiten/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/making-of-filme/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/social-media-filme/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/podcastproduktion/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/brandfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/visuelle-positionierung/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/kuenstlerische-fotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/c-level-eventfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/erinnerungsfotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/greenscreen-fotografie/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/konferenz-streaming/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/sportvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/konzertvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/musikvideos/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/eventvideo/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/arbeiten/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fragen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/kontakt/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/studio/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fotopartner/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/impressum/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/cookies/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/preise/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/arak/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/gyik/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/arak/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/gyik/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/arak/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/gyik/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/munkaink/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "cookies": [],
+  "interactions": {
+    "skip": "Ugrás a tartalomra",
+    "skipTarget": "main",
+    "mobileOpen": true,
+    "switched": true,
+    "faqOpen": true,
+    "quoteText": "Nettó: 281 890 Ft · Áfa (27%): 76 110 Ft · Bruttó összesen: 358 000 Ft. Tervezett fotóslétszám: 1. Tájékoztató összeg, nem megrendelés. ",
+    "consent": {
+      "initial": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "accepted": {
+        "necessary": true,
+        "analytics": true,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "rejected": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "localStorage": 0,
+      "sessionStorage": 0
+    },
+    "actual404": 404,
+    "redirect": "http://127.0.0.1:4173/hu/szolgaltatasok/oneletrajz-foto/"
+  }
+}

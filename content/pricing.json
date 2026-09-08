@@ -1,0 +1,376 @@
+{
+  "currency": "HUF",
+  "vatRate": 27,
+  "dateModified": "2026-09-07",
+  "status": "indicative_user_approved",
+  "sourceCommit": "c3bc1143254a467cb8d47091e84acc2aac361ebc",
+  "packages": [
+    {
+      "code": "headshotcv",
+      "group": "portrait",
+      "name": {
+        "hu": "Headshot, executive portré és C-level üzleti fotózás",
+        "en": "Headshots, executive portraits and C-level business photography",
+        "de": "Headshots, Executive-Porträts und C-Level-Businessfotografie"
+      },
+      "durationMinutes": 10,
+      "includedImages": 1,
+      "grossHUF": 48000,
+      "netHUF": 37795,
+      "vatHUF": 10205,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "quick30",
+      "group": "portrait",
+      "name": {
+        "hu": "Headshot, executive portré és C-level üzleti fotózás",
+        "en": "Headshots, executive portraits and C-level business photography",
+        "de": "Headshots, Executive-Porträts und C-Level-Businessfotografie"
+      },
+      "durationMinutes": 30,
+      "includedImages": 1,
+      "grossHUF": 88000,
+      "netHUF": 69291,
+      "vatHUF": 18709,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "guided60",
+      "group": "portrait",
+      "name": {
+        "hu": "Headshot, executive portré és C-level üzleti fotózás",
+        "en": "Headshots, executive portraits and C-level business photography",
+        "de": "Headshots, Executive-Porträts und C-Level-Businessfotografie"
+      },
+      "durationMinutes": 60,
+      "includedImages": 1,
+      "grossHUF": 168000,
+      "netHUF": 132283,
+      "vatHUF": 35717,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "guided120",
+      "group": "portrait",
+      "name": {
+        "hu": "Headshot, executive portré és C-level üzleti fotózás",
+        "en": "Headshots, executive portraits and C-level business photography",
+        "de": "Headshots, Executive-Porträts und C-Level-Businessfotografie"
+      },
+      "durationMinutes": 120,
+      "includedImages": 1,
+      "grossHUF": 276000,
+      "netHUF": 217323,
+      "vatHUF": 58677,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "brand60",
+      "group": "brand-visual-positioning",
+      "name": {
+        "hu": "Brand fotózás és vizuális pozicionálás",
+        "en": "Brand photography and visual positioning",
+        "de": "Brandfotografie und visuelle Markenpositionierung"
+      },
+      "durationMinutes": 60,
+      "includedImages": 3,
+      "grossHUF": 199600,
+      "netHUF": 157165,
+      "vatHUF": 42435,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "brand120",
+      "group": "brand-visual-positioning",
+      "name": {
+        "hu": "Brand fotózás és vizuális pozicionálás",
+        "en": "Brand photography and visual positioning",
+        "de": "Brandfotografie und visuelle Markenpositionierung"
+      },
+      "durationMinutes": 120,
+      "includedImages": 3,
+      "grossHUF": 316000,
+      "netHUF": 248819,
+      "vatHUF": 67181,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "brand180",
+      "group": "brand-visual-positioning",
+      "name": {
+        "hu": "Brand fotózás és vizuális pozicionálás",
+        "en": "Brand photography and visual positioning",
+        "de": "Brandfotografie und visuelle Markenpositionierung"
+      },
+      "durationMinutes": 180,
+      "includedImages": 3,
+      "grossHUF": 436000,
+      "netHUF": 343307,
+      "vatHUF": 92693,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "brand240",
+      "group": "brand-visual-positioning",
+      "name": {
+        "hu": "Brand fotózás és vizuális pozicionálás",
+        "en": "Brand photography and visual positioning",
+        "de": "Brandfotografie und visuelle Markenpositionierung"
+      },
+      "durationMinutes": 240,
+      "includedImages": 3,
+      "grossHUF": 556000,
+      "netHUF": 437795,
+      "vatHUF": 118205,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "art60",
+      "group": "fine-art",
+      "name": {
+        "hu": "Művészi fotózás / Művészek és előadóművészek",
+        "en": "Fine Art / Artists & Performers",
+        "de": "Fine Art / Künstler:innen & Performer:innen"
+      },
+      "durationMinutes": 60,
+      "includedImages": 2,
+      "grossHUF": 276000,
+      "netHUF": 217323,
+      "vatHUF": 58677,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "art120",
+      "group": "fine-art",
+      "name": {
+        "hu": "Művészi fotózás / Művészek és előadóművészek",
+        "en": "Fine Art / Artists & Performers",
+        "de": "Fine Art / Künstler:innen & Performer:innen"
+      },
+      "durationMinutes": 120,
+      "includedImages": 2,
+      "grossHUF": 396000,
+      "netHUF": 311811,
+      "vatHUF": 84189,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "art180",
+      "group": "fine-art",
+      "name": {
+        "hu": "Művészi fotózás / Művészek és előadóművészek",
+        "en": "Fine Art / Artists & Performers",
+        "de": "Fine Art / Künstler:innen & Performer:innen"
+      },
+      "durationMinutes": 180,
+      "includedImages": 2,
+      "grossHUF": 516000,
+      "netHUF": 406299,
+      "vatHUF": 109701,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "event60",
+      "group": "event",
+      "name": {
+        "hu": "C-Level rendezvényfotózás",
+        "en": "C-Level Event Photography",
+        "de": "C-Level-Eventfotografie"
+      },
+      "durationMinutes": 60,
+      "includedImages": null,
+      "grossHUF": 236000,
+      "netHUF": 185827,
+      "vatHUF": 50173,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "event120",
+      "group": "event",
+      "name": {
+        "hu": "C-Level rendezvényfotózás",
+        "en": "C-Level Event Photography",
+        "de": "C-Level-Eventfotografie"
+      },
+      "durationMinutes": 120,
+      "includedImages": null,
+      "grossHUF": 356000,
+      "netHUF": 280315,
+      "vatHUF": 75685,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "event180",
+      "group": "event",
+      "name": {
+        "hu": "C-Level rendezvényfotózás",
+        "en": "C-Level Event Photography",
+        "de": "C-Level-Eventfotografie"
+      },
+      "durationMinutes": 180,
+      "includedImages": null,
+      "grossHUF": 476000,
+      "netHUF": 374803,
+      "vatHUF": 101197,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "event240",
+      "group": "event",
+      "name": {
+        "hu": "C-Level rendezvényfotózás",
+        "en": "C-Level Event Photography",
+        "de": "C-Level-Eventfotografie"
+      },
+      "durationMinutes": 240,
+      "includedImages": null,
+      "grossHUF": 596000,
+      "netHUF": 469291,
+      "vatHUF": 126709,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    },
+    {
+      "code": "eventFullDay",
+      "group": "event",
+      "name": {
+        "hu": "C-Level rendezvényfotózás",
+        "en": "C-Level Event Photography",
+        "de": "C-Level-Eventfotografie"
+      },
+      "durationMinutes": 480,
+      "includedImages": null,
+      "grossHUF": 996000,
+      "netHUF": 784252,
+      "vatHUF": 211748,
+      "source": "BANHALMI gross preserved; user approved 27% VAT split"
+    }
+  ],
+  "wixPackages": [
+    {
+      "code": "wix-cv",
+      "group": "wix",
+      "name": {
+        "hu": "CV / Önéletrajz",
+        "en": "CV photography",
+        "de": "Bewerbungsfotos"
+      },
+      "durationMinutes": 30,
+      "includedImages": 1,
+      "netHUF": 34990,
+      "vatHUF": 9447,
+      "grossHUF": 44437,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    },
+    {
+      "code": "wix-business",
+      "group": "wix",
+      "name": {
+        "hu": "Üzleti / kreatív portré",
+        "en": "Business / creative portrait",
+        "de": "Business- / Kreativporträt"
+      },
+      "durationMinutes": 60,
+      "includedImages": 3,
+      "netHUF": 64990,
+      "vatHUF": 17547,
+      "grossHUF": 82537,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    },
+    {
+      "code": "wix-dating",
+      "group": "wix",
+      "name": {
+        "hu": "Mini portfólió / társkereső",
+        "en": "Mini portfolio / dating",
+        "de": "Miniportfolio / Dating"
+      },
+      "durationMinutes": 90,
+      "includedImages": 6,
+      "netHUF": 84990,
+      "vatHUF": 22947,
+      "grossHUF": 107937,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    },
+    {
+      "code": "wix-portfolio",
+      "group": "wix",
+      "name": {
+        "hu": "Portfólió és divat",
+        "en": "Portfolio and fashion",
+        "de": "Portfolio und Mode"
+      },
+      "durationMinutes": 180,
+      "includedImages": 20,
+      "netHUF": 139990,
+      "vatHUF": 37797,
+      "grossHUF": 177787,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    },
+    {
+      "code": "wix-nude",
+      "group": "wix",
+      "name": {
+        "hu": "Művészi akt",
+        "en": "Fine-art nude",
+        "de": "Künstlerischer Akt"
+      },
+      "durationMinutes": 180,
+      "includedImages": 20,
+      "netHUF": 139990,
+      "vatHUF": 37797,
+      "grossHUF": 177787,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    },
+    {
+      "code": "wix-boudoir",
+      "group": "wix",
+      "name": {
+        "hu": "Glamour / boudoir",
+        "en": "Glamour / boudoir",
+        "de": "Glamour / Boudoir"
+      },
+      "durationMinutes": 120,
+      "includedImages": 10,
+      "netHUF": 94990,
+      "vatHUF": 25647,
+      "grossHUF": 120637,
+      "source": "Wix higher NET amount confirmed by user; VAT27 added; whole-HUF half-up rounding"
+    }
+  ],
+  "components": {
+    "individualQuick30": 88000,
+    "individualGuided60": 168000,
+    "individualGuided120": 276000,
+    "groupSetupLaterRetouching": 156000,
+    "groupPerPersonLaterRetouching": 18000,
+    "brandFastOneHour": 199600,
+    "brandTwoHours": 316000,
+    "brandThreeHours": 436000,
+    "brandFourHours": 556000,
+    "fineArtOneHour": 276000,
+    "fineArtTwoHours": 396000,
+    "fineArtThreeHours": 516000,
+    "eventOneHour": 236000,
+    "eventTwoHours": 356000,
+    "eventThreeHours": 476000,
+    "eventFourHours": 596000,
+    "eventFullDay": 996000,
+    "retouchedImagePortrait": 14000,
+    "retouchedImageGroup": 11600,
+    "retouchedImageFineArt": 18000,
+    "stylist": 88000,
+    "hair": 88000,
+    "makeup": 88000,
+    "expressDelivery": 48000,
+    "mobileStudio": 96000,
+    "artDirection": 104000,
+    "additionalPhotographer": 156000,
+    "additionalPhotographerEventPerHour": 48000,
+    "headshotCvGross": 48000,
+    "instantRetouchingPerStartedHourGross": 144000,
+    "travelPerVehicleGross": 96000
+  },
+  "rounding": "Whole HUF, half up. BANHALMI net=round(gross/1.27), VAT=gross-net. Wix approved net retained, VAT=round(net*0.27). No currency conversion.",
+  "offerSchema": false
+}

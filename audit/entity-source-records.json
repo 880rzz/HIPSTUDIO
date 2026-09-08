@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "recordedAt": "2026-09-08",
+  "records": [
+    {
+      "id": "wikidata-hipstudio",
+      "sourceUrl": "https://www.wikidata.org/wiki/Q138482177",
+      "rawSnapshotSha256": "081376c2c0aa4d2c44b039fab468088928765bce3af3db9598c207fd5445c5cb",
+      "extractedClaims": {
+        "entity": "HIPStudio",
+        "foundingDate": "2006-02-27",
+        "founder": "https://www.wikidata.org/wiki/Q56391118"
+      }
+    },
+    {
+      "id": "wix-legal",
+      "sourceUrl": "https://www.hipstudio.hu/impresszum",
+      "rawSnapshotSha256": "77cd0e809cfb7a9b507d5145fd83ce7f6bdcc1cef46f03560ba33afc2b2afcf5",
+      "extractedClaims": {
+        "legalName": "Hipstudió Korlátolt Felelősségű Társaság",
+        "shortName": "Hipstudió Kft.",
+        "companyRegistrationNumber": "01-09-907275",
+        "taxNumber": "14513938-2-42"
+      }
+    },
+    {
+      "id": "wix-partners",
+      "sourceUrl": "https://www.hipstudio.hu/partnereink",
+      "rawSnapshotSha256": "a150aae37d62ab28ab5386c2a8b6c470fabe7b5b0a29f529d355fa8132be48bd",
+      "extractedClaims": {
+        "namedProfessionalPartners": ["Bánhalmi Norbert", "Speier Vikó"],
+        "logoManifest": "audit/client-logo-manifest.json"
+      }
+    }
+  ],
+  "limits": [
+    "This record preserves only facts used by the static migration and hashes of the locally retained source snapshots.",
+    "A source URL or historical logo does not prove a current engagement, endorsement, employment relationship or project result."
+  ]
+}

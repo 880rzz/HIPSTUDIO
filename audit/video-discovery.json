@@ -1,0 +1,78 @@
+{
+  "saved": [
+    {
+      "url": "https://static.parastorage.com/services/pro-gallery-tpa/91420afc528391188340108f72bf947b94ba4115b21169358eb3d9b5/assets/locales/messages_hu.json",
+      "file": "video-data-0.json"
+    }
+  ],
+  "dom": {
+    "text": "Referencia videók \nRövidfilmek\nRiportfilmek\nMax 90 mp filmek\nRendezvény videók\n• rövidfilmek  •\n• riportfilmek  •\n• maximum 90 másodperces filmek  •\n• rövid rendezvény werk videók •\n• rendezvény videók + riportok •",
+    "iframes": [],
+    "videos": [
+      {
+        "src": "https://video.wixstatic.com/video/b0aee1_bdce417615614253a25aaedeb7af65e3/1080p/mp4/file.mp4",
+        "poster": ""
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Sync to live",
+        "title": "",
+        "text": ""
+      },
+      {
+        "label": "Play",
+        "title": "",
+        "text": ""
+      },
+      {
+        "label": "Mute",
+        "title": "",
+        "text": ""
+      },
+      {
+        "label": "Play Picture-in-Picture",
+        "title": "",
+        "text": ""
+      },
+      {
+        "label": "Download video",
+        "title": "",
+        "text": "          "
+      },
+      {
+        "label": "Enter full screen",
+        "title": "",
+        "text": ""
+      },
+      {
+        "label": "Watch on site",
+        "title": "",
+        "text": "      "
+      },
+      {
+        "label": "Play video",
+        "title": "",
+        "text": ""
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.hipstudio.hu/referencia-vide%C3%B3k#rvidfilmek",
+        "text": "Rövidfilmek"
+      },
+      {
+        "href": "https://www.hipstudio.hu/referencia-vide%C3%B3k#riportfilmek",
+        "text": "Riportfilmek"
+      },
+      {
+        "href": "https://www.hipstudio.hu/referencia-vide%C3%B3k#90msodpercesfilmek",
+        "text": "Max 90 mp filmek"
+      },
+      {
+        "href": "https://www.hipstudio.hu/referencia-vide%C3%B3k#rvidrendezvny",
+        "text": "Rendezvény videók"
+      }
+    ]
+  }
+}

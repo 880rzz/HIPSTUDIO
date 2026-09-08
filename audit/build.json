@@ -1,0 +1,1125 @@
+{
+  "mode": "review",
+  "base": "https://www.hipstudio.hu",
+  "pages": [
+    {
+      "path": "/hu/",
+      "url": "https://www.hipstudio.hu/hu/",
+      "key": "home",
+      "lang": "hu",
+      "title": "Az Ön márkája. Teljes figyelemmel."
+    },
+    {
+      "path": "/hu/megoldasok/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/",
+      "key": "solutions",
+      "lang": "hu",
+      "title": "Megoldások"
+    },
+    {
+      "path": "/hu/megoldasok/vezetoi-jelenlet/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/vezetoi-jelenlet/",
+      "key": "solution:executive-presence",
+      "lang": "hu",
+      "title": "Vezetői jelenlét"
+    },
+    {
+      "path": "/hu/megoldasok/kampany-es-ertekesites/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/kampany-es-ertekesites/",
+      "key": "solution:campaign-commerce",
+      "lang": "hu",
+      "title": "Kampány és értékesítés"
+    },
+    {
+      "path": "/hu/megoldasok/vallalati-esemenyek/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/vallalati-esemenyek/",
+      "key": "solution:corporate-events",
+      "lang": "hu",
+      "title": "Vállalati események"
+    },
+    {
+      "path": "/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "key": "solution:film-editorial",
+      "lang": "hu",
+      "title": "Film és szerkesztett tartalom"
+    },
+    {
+      "path": "/hu/megoldasok/terek-es-elmenyek/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/terek-es-elmenyek/",
+      "key": "solution:spaces-experiences",
+      "lang": "hu",
+      "title": "Terek és élmények"
+    },
+    {
+      "path": "/hu/esettanulmanyok/",
+      "url": "https://www.hipstudio.hu/hu/esettanulmanyok/",
+      "key": "cases",
+      "lang": "hu",
+      "title": "Esettanulmányok"
+    },
+    {
+      "path": "/hu/szakertok/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/",
+      "key": "people",
+      "lang": "hu",
+      "title": "Szakértők"
+    },
+    {
+      "path": "/hu/szakertok/banhalmi-norbert/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/banhalmi-norbert/",
+      "key": "person:banhalmi-norbert",
+      "lang": "hu",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/hu/szakertok/speier-viko/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/speier-viko/",
+      "key": "person:speier-viko",
+      "lang": "hu",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/hu/forrasok-es-ai-trust/",
+      "url": "https://www.hipstudio.hu/hu/forrasok-es-ai-trust/",
+      "key": "trust",
+      "lang": "hu",
+      "title": "Források és AI Trust"
+    },
+    {
+      "path": "/hu/szolgaltatasok/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/",
+      "key": "services",
+      "lang": "hu",
+      "title": "Szolgáltatások"
+    },
+    {
+      "path": "/hu/szolgaltatasok/uzleti-portre/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/uzleti-portre/",
+      "key": "business",
+      "lang": "hu",
+      "title": "Üzleti portré"
+    },
+    {
+      "path": "/hu/szolgaltatasok/oneletrajz-foto/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/oneletrajz-foto/",
+      "key": "cv",
+      "lang": "hu",
+      "title": "Önéletrajz-fotó"
+    },
+    {
+      "path": "/hu/szolgaltatasok/headshot/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/headshot/",
+      "key": "headshot",
+      "lang": "hu",
+      "title": "Headshot"
+    },
+    {
+      "path": "/hu/szolgaltatasok/tarskereso-fotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/tarskereso-fotozas/",
+      "key": "dating",
+      "lang": "hu",
+      "title": "Társkereső-fotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/portfolio-fotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/portfolio-fotozas/",
+      "key": "portfolio",
+      "lang": "hu",
+      "title": "Portfólió-fotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/divatfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/divatfotozas/",
+      "key": "fashion",
+      "lang": "hu",
+      "title": "Divatfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/reklamfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/reklamfotozas/",
+      "key": "advertising",
+      "lang": "hu",
+      "title": "Reklámfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/termekfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/termekfotozas/",
+      "key": "product",
+      "lang": "hu",
+      "title": "Termékfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/katalogusfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/katalogusfotozas/",
+      "key": "catalogue",
+      "lang": "hu",
+      "title": "Katalógusfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/ingatlanfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/ingatlanfotozas/",
+      "key": "property",
+      "lang": "hu",
+      "title": "Ingatlan- és enteriőrfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/legi-felvetelek/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/legi-felvetelek/",
+      "key": "aerial",
+      "lang": "hu",
+      "title": "Légi felvételek"
+    },
+    {
+      "path": "/hu/szolgaltatasok/virtualis-seta/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/virtualis-seta/",
+      "key": "virtual",
+      "lang": "hu",
+      "title": "3D virtuális séta"
+    },
+    {
+      "path": "/hu/szolgaltatasok/muveszi-akt/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/muveszi-akt/",
+      "key": "nude",
+      "lang": "hu",
+      "title": "Művészi aktfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/glamour-boudoir/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/glamour-boudoir/",
+      "key": "boudoir",
+      "lang": "hu",
+      "title": "Glamour és boudoir"
+    },
+    {
+      "path": "/hu/szolgaltatasok/rendezvenyfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/rendezvenyfotozas/",
+      "key": "event",
+      "lang": "hu",
+      "title": "Rendezvényfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/videokeszites/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/videokeszites/",
+      "key": "video",
+      "lang": "hu",
+      "title": "Videókészítés és reklámfilm"
+    },
+    {
+      "path": "/hu/szolgaltatasok/forgatas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/forgatas/",
+      "key": "shoot",
+      "lang": "hu",
+      "title": "Forgatás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/werkfilm/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/werkfilm/",
+      "key": "werk",
+      "lang": "hu",
+      "title": "Werkfilm és aftermovie"
+    },
+    {
+      "path": "/hu/szolgaltatasok/social-media-film/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/social-media-film/",
+      "key": "social",
+      "lang": "hu",
+      "title": "Social-media film"
+    },
+    {
+      "path": "/hu/szolgaltatasok/podcast-keszites/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/podcast-keszites/",
+      "key": "podcast",
+      "lang": "hu",
+      "title": "Podcastkészítés"
+    },
+    {
+      "path": "/hu/szolgaltatasok/executive-portre/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/executive-portre/",
+      "key": "executive",
+      "lang": "hu",
+      "title": "Executive portré"
+    },
+    {
+      "path": "/hu/szolgaltatasok/brand-fotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/brand-fotozas/",
+      "key": "brand",
+      "lang": "hu",
+      "title": "Brand-fotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/vizualis-pozicionalas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/vizualis-pozicionalas/",
+      "key": "positioning",
+      "lang": "hu",
+      "title": "Vizuális pozicionálás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/muveszi-fotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/muveszi-fotozas/",
+      "key": "fineart",
+      "lang": "hu",
+      "title": "Művészi fotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/c-level-rendezvenyfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/c-level-rendezvenyfotozas/",
+      "key": "clevel",
+      "lang": "hu",
+      "title": "C-level rendezvényfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/emlekfotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/emlekfotozas/",
+      "key": "souvenir",
+      "lang": "hu",
+      "title": "Emlékfotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/greenbox-fotozas/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/greenbox-fotozas/",
+      "key": "greenbox",
+      "lang": "hu",
+      "title": "Greenbox fotózás"
+    },
+    {
+      "path": "/hu/szolgaltatasok/konferencia-streameles/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/konferencia-streameles/",
+      "key": "streaming",
+      "lang": "hu",
+      "title": "Konferencia-streamelés"
+    },
+    {
+      "path": "/hu/szolgaltatasok/sportvideo/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/sportvideo/",
+      "key": "sports-video",
+      "lang": "hu",
+      "title": "Sportvideó"
+    },
+    {
+      "path": "/hu/szolgaltatasok/koncertvideo/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/koncertvideo/",
+      "key": "concert-video",
+      "lang": "hu",
+      "title": "Koncertvideó"
+    },
+    {
+      "path": "/hu/szolgaltatasok/videoklip/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/videoklip/",
+      "key": "music-video",
+      "lang": "hu",
+      "title": "Videoklip"
+    },
+    {
+      "path": "/hu/szolgaltatasok/rendezvenyvideo/",
+      "url": "https://www.hipstudio.hu/hu/szolgaltatasok/rendezvenyvideo/",
+      "key": "event-video",
+      "lang": "hu",
+      "title": "Rendezvényvideó"
+    },
+    {
+      "path": "/hu/munkaink/",
+      "url": "https://www.hipstudio.hu/hu/munkaink/",
+      "key": "work",
+      "lang": "hu",
+      "title": "Munkáink"
+    },
+    {
+      "path": "/hu/gyik/",
+      "url": "https://www.hipstudio.hu/hu/gyik/",
+      "key": "faq",
+      "lang": "hu",
+      "title": "Gyakori kérdések"
+    },
+    {
+      "path": "/hu/kapcsolat/",
+      "url": "https://www.hipstudio.hu/hu/kapcsolat/",
+      "key": "contact",
+      "lang": "hu",
+      "title": "Kapcsolat"
+    },
+    {
+      "path": "/hu/studio/",
+      "url": "https://www.hipstudio.hu/hu/studio/",
+      "key": "studio",
+      "lang": "hu",
+      "title": "A stúdió"
+    },
+    {
+      "path": "/hu/fotospartnerek/",
+      "url": "https://www.hipstudio.hu/hu/fotospartnerek/",
+      "key": "partners",
+      "lang": "hu",
+      "title": "Történet és partnerek"
+    },
+    {
+      "path": "/hu/impresszum/",
+      "url": "https://www.hipstudio.hu/hu/impresszum/",
+      "key": "legal",
+      "lang": "hu",
+      "title": "Impresszum és adatkezelés"
+    },
+    {
+      "path": "/hu/cookie-k/",
+      "url": "https://www.hipstudio.hu/hu/cookie-k/",
+      "key": "cookies",
+      "lang": "hu",
+      "title": "Cookie-k és külső tartalom"
+    },
+    {
+      "path": "/hu/arak/",
+      "url": "https://www.hipstudio.hu/hu/arak/",
+      "key": "prices",
+      "lang": "hu",
+      "title": "Árak"
+    },
+    {
+      "path": "/en/",
+      "url": "https://www.hipstudio.hu/en/",
+      "key": "home",
+      "lang": "en",
+      "title": "Your brand. Our full attention."
+    },
+    {
+      "path": "/en/solutions/",
+      "url": "https://www.hipstudio.hu/en/solutions/",
+      "key": "solutions",
+      "lang": "en",
+      "title": "Solutions"
+    },
+    {
+      "path": "/en/solutions/executive-presence/",
+      "url": "https://www.hipstudio.hu/en/solutions/executive-presence/",
+      "key": "solution:executive-presence",
+      "lang": "en",
+      "title": "Executive presence"
+    },
+    {
+      "path": "/en/solutions/campaign-and-commerce/",
+      "url": "https://www.hipstudio.hu/en/solutions/campaign-and-commerce/",
+      "key": "solution:campaign-commerce",
+      "lang": "en",
+      "title": "Campaign and commerce"
+    },
+    {
+      "path": "/en/solutions/corporate-events/",
+      "url": "https://www.hipstudio.hu/en/solutions/corporate-events/",
+      "key": "solution:corporate-events",
+      "lang": "en",
+      "title": "Corporate events"
+    },
+    {
+      "path": "/en/solutions/film-and-editorial-content/",
+      "url": "https://www.hipstudio.hu/en/solutions/film-and-editorial-content/",
+      "key": "solution:film-editorial",
+      "lang": "en",
+      "title": "Film and editorial content"
+    },
+    {
+      "path": "/en/solutions/spaces-and-experiences/",
+      "url": "https://www.hipstudio.hu/en/solutions/spaces-and-experiences/",
+      "key": "solution:spaces-experiences",
+      "lang": "en",
+      "title": "Spaces and experiences"
+    },
+    {
+      "path": "/en/case-studies/",
+      "url": "https://www.hipstudio.hu/en/case-studies/",
+      "key": "cases",
+      "lang": "en",
+      "title": "Case studies"
+    },
+    {
+      "path": "/en/expertise/",
+      "url": "https://www.hipstudio.hu/en/expertise/",
+      "key": "people",
+      "lang": "en",
+      "title": "Expertise"
+    },
+    {
+      "path": "/en/expertise/norbert-banhalmi/",
+      "url": "https://www.hipstudio.hu/en/expertise/norbert-banhalmi/",
+      "key": "person:banhalmi-norbert",
+      "lang": "en",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/en/expertise/viko-speier/",
+      "url": "https://www.hipstudio.hu/en/expertise/viko-speier/",
+      "key": "person:speier-viko",
+      "lang": "en",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/en/sources-and-ai-trust/",
+      "url": "https://www.hipstudio.hu/en/sources-and-ai-trust/",
+      "key": "trust",
+      "lang": "en",
+      "title": "Sources and AI Trust"
+    },
+    {
+      "path": "/en/services/",
+      "url": "https://www.hipstudio.hu/en/services/",
+      "key": "services",
+      "lang": "en",
+      "title": "Services"
+    },
+    {
+      "path": "/en/services/business-portraits/",
+      "url": "https://www.hipstudio.hu/en/services/business-portraits/",
+      "key": "business",
+      "lang": "en",
+      "title": "Business portraits"
+    },
+    {
+      "path": "/en/services/cv-photography/",
+      "url": "https://www.hipstudio.hu/en/services/cv-photography/",
+      "key": "cv",
+      "lang": "en",
+      "title": "CV photography"
+    },
+    {
+      "path": "/en/services/headshots/",
+      "url": "https://www.hipstudio.hu/en/services/headshots/",
+      "key": "headshot",
+      "lang": "en",
+      "title": "Headshots"
+    },
+    {
+      "path": "/en/services/dating-photos/",
+      "url": "https://www.hipstudio.hu/en/services/dating-photos/",
+      "key": "dating",
+      "lang": "en",
+      "title": "Dating photography"
+    },
+    {
+      "path": "/en/services/portfolio-photography/",
+      "url": "https://www.hipstudio.hu/en/services/portfolio-photography/",
+      "key": "portfolio",
+      "lang": "en",
+      "title": "Portfolio photography"
+    },
+    {
+      "path": "/en/services/fashion-photography/",
+      "url": "https://www.hipstudio.hu/en/services/fashion-photography/",
+      "key": "fashion",
+      "lang": "en",
+      "title": "Fashion photography"
+    },
+    {
+      "path": "/en/services/advertising-photography/",
+      "url": "https://www.hipstudio.hu/en/services/advertising-photography/",
+      "key": "advertising",
+      "lang": "en",
+      "title": "Advertising photography"
+    },
+    {
+      "path": "/en/services/product-photography/",
+      "url": "https://www.hipstudio.hu/en/services/product-photography/",
+      "key": "product",
+      "lang": "en",
+      "title": "Product photography"
+    },
+    {
+      "path": "/en/services/catalogue-photography/",
+      "url": "https://www.hipstudio.hu/en/services/catalogue-photography/",
+      "key": "catalogue",
+      "lang": "en",
+      "title": "Catalogue photography"
+    },
+    {
+      "path": "/en/services/property-photography/",
+      "url": "https://www.hipstudio.hu/en/services/property-photography/",
+      "key": "property",
+      "lang": "en",
+      "title": "Property and interior photography"
+    },
+    {
+      "path": "/en/services/aerial-photography/",
+      "url": "https://www.hipstudio.hu/en/services/aerial-photography/",
+      "key": "aerial",
+      "lang": "en",
+      "title": "Aerial photography"
+    },
+    {
+      "path": "/en/services/virtual-tours/",
+      "url": "https://www.hipstudio.hu/en/services/virtual-tours/",
+      "key": "virtual",
+      "lang": "en",
+      "title": "3D virtual tours"
+    },
+    {
+      "path": "/en/services/fine-art-nude/",
+      "url": "https://www.hipstudio.hu/en/services/fine-art-nude/",
+      "key": "nude",
+      "lang": "en",
+      "title": "Fine-art nude photography"
+    },
+    {
+      "path": "/en/services/glamour-boudoir/",
+      "url": "https://www.hipstudio.hu/en/services/glamour-boudoir/",
+      "key": "boudoir",
+      "lang": "en",
+      "title": "Glamour and boudoir"
+    },
+    {
+      "path": "/en/services/event-photography/",
+      "url": "https://www.hipstudio.hu/en/services/event-photography/",
+      "key": "event",
+      "lang": "en",
+      "title": "Event photography"
+    },
+    {
+      "path": "/en/services/video-production/",
+      "url": "https://www.hipstudio.hu/en/services/video-production/",
+      "key": "video",
+      "lang": "en",
+      "title": "Video and commercial production"
+    },
+    {
+      "path": "/en/services/filming/",
+      "url": "https://www.hipstudio.hu/en/services/filming/",
+      "key": "shoot",
+      "lang": "en",
+      "title": "Filming"
+    },
+    {
+      "path": "/en/services/behind-the-scenes-films/",
+      "url": "https://www.hipstudio.hu/en/services/behind-the-scenes-films/",
+      "key": "werk",
+      "lang": "en",
+      "title": "Behind-the-scenes films and aftermovies"
+    },
+    {
+      "path": "/en/services/social-media-films/",
+      "url": "https://www.hipstudio.hu/en/services/social-media-films/",
+      "key": "social",
+      "lang": "en",
+      "title": "Social media films"
+    },
+    {
+      "path": "/en/services/podcast-production/",
+      "url": "https://www.hipstudio.hu/en/services/podcast-production/",
+      "key": "podcast",
+      "lang": "en",
+      "title": "Podcast production"
+    },
+    {
+      "path": "/en/services/executive-portraits/",
+      "url": "https://www.hipstudio.hu/en/services/executive-portraits/",
+      "key": "executive",
+      "lang": "en",
+      "title": "Executive portraits"
+    },
+    {
+      "path": "/en/services/brand-photography/",
+      "url": "https://www.hipstudio.hu/en/services/brand-photography/",
+      "key": "brand",
+      "lang": "en",
+      "title": "Brand photography"
+    },
+    {
+      "path": "/en/services/visual-positioning/",
+      "url": "https://www.hipstudio.hu/en/services/visual-positioning/",
+      "key": "positioning",
+      "lang": "en",
+      "title": "Visual positioning"
+    },
+    {
+      "path": "/en/services/fine-art-photography/",
+      "url": "https://www.hipstudio.hu/en/services/fine-art-photography/",
+      "key": "fineart",
+      "lang": "en",
+      "title": "Fine-art photography"
+    },
+    {
+      "path": "/en/services/c-level-event-photography/",
+      "url": "https://www.hipstudio.hu/en/services/c-level-event-photography/",
+      "key": "clevel",
+      "lang": "en",
+      "title": "C-level event photography"
+    },
+    {
+      "path": "/en/services/souvenir-photography/",
+      "url": "https://www.hipstudio.hu/en/services/souvenir-photography/",
+      "key": "souvenir",
+      "lang": "en",
+      "title": "Souvenir photography"
+    },
+    {
+      "path": "/en/services/green-screen-photography/",
+      "url": "https://www.hipstudio.hu/en/services/green-screen-photography/",
+      "key": "greenbox",
+      "lang": "en",
+      "title": "Green-screen photography"
+    },
+    {
+      "path": "/en/services/conference-streaming/",
+      "url": "https://www.hipstudio.hu/en/services/conference-streaming/",
+      "key": "streaming",
+      "lang": "en",
+      "title": "Conference streaming"
+    },
+    {
+      "path": "/en/services/sports-video/",
+      "url": "https://www.hipstudio.hu/en/services/sports-video/",
+      "key": "sports-video",
+      "lang": "en",
+      "title": "Sports video"
+    },
+    {
+      "path": "/en/services/concert-video/",
+      "url": "https://www.hipstudio.hu/en/services/concert-video/",
+      "key": "concert-video",
+      "lang": "en",
+      "title": "Concert video"
+    },
+    {
+      "path": "/en/services/music-videos/",
+      "url": "https://www.hipstudio.hu/en/services/music-videos/",
+      "key": "music-video",
+      "lang": "en",
+      "title": "Music videos"
+    },
+    {
+      "path": "/en/services/event-video/",
+      "url": "https://www.hipstudio.hu/en/services/event-video/",
+      "key": "event-video",
+      "lang": "en",
+      "title": "Event video"
+    },
+    {
+      "path": "/en/work/",
+      "url": "https://www.hipstudio.hu/en/work/",
+      "key": "work",
+      "lang": "en",
+      "title": "Our work"
+    },
+    {
+      "path": "/en/faq/",
+      "url": "https://www.hipstudio.hu/en/faq/",
+      "key": "faq",
+      "lang": "en",
+      "title": "Frequently asked questions"
+    },
+    {
+      "path": "/en/contact/",
+      "url": "https://www.hipstudio.hu/en/contact/",
+      "key": "contact",
+      "lang": "en",
+      "title": "Contact"
+    },
+    {
+      "path": "/en/studio/",
+      "url": "https://www.hipstudio.hu/en/studio/",
+      "key": "studio",
+      "lang": "en",
+      "title": "The studio"
+    },
+    {
+      "path": "/en/photography-partners/",
+      "url": "https://www.hipstudio.hu/en/photography-partners/",
+      "key": "partners",
+      "lang": "en",
+      "title": "Our story and partners"
+    },
+    {
+      "path": "/en/legal/",
+      "url": "https://www.hipstudio.hu/en/legal/",
+      "key": "legal",
+      "lang": "en",
+      "title": "Legal notice and privacy"
+    },
+    {
+      "path": "/en/cookies/",
+      "url": "https://www.hipstudio.hu/en/cookies/",
+      "key": "cookies",
+      "lang": "en",
+      "title": "Cookies and external content"
+    },
+    {
+      "path": "/en/pricing/",
+      "url": "https://www.hipstudio.hu/en/pricing/",
+      "key": "prices",
+      "lang": "en",
+      "title": "Pricing"
+    },
+    {
+      "path": "/de/",
+      "url": "https://www.hipstudio.hu/de/",
+      "key": "home",
+      "lang": "de",
+      "title": "Ihre Marke. Unsere volle Aufmerksamkeit."
+    },
+    {
+      "path": "/de/loesungen/",
+      "url": "https://www.hipstudio.hu/de/loesungen/",
+      "key": "solutions",
+      "lang": "de",
+      "title": "Lösungen"
+    },
+    {
+      "path": "/de/loesungen/fuehrungspraesenz/",
+      "url": "https://www.hipstudio.hu/de/loesungen/fuehrungspraesenz/",
+      "key": "solution:executive-presence",
+      "lang": "de",
+      "title": "Führungspräsenz"
+    },
+    {
+      "path": "/de/loesungen/kampagne-und-vertrieb/",
+      "url": "https://www.hipstudio.hu/de/loesungen/kampagne-und-vertrieb/",
+      "key": "solution:campaign-commerce",
+      "lang": "de",
+      "title": "Kampagne und Vertrieb"
+    },
+    {
+      "path": "/de/loesungen/unternehmensveranstaltungen/",
+      "url": "https://www.hipstudio.hu/de/loesungen/unternehmensveranstaltungen/",
+      "key": "solution:corporate-events",
+      "lang": "de",
+      "title": "Unternehmensveranstaltungen"
+    },
+    {
+      "path": "/de/loesungen/film-und-redaktioneller-inhalt/",
+      "url": "https://www.hipstudio.hu/de/loesungen/film-und-redaktioneller-inhalt/",
+      "key": "solution:film-editorial",
+      "lang": "de",
+      "title": "Film und redaktioneller Inhalt"
+    },
+    {
+      "path": "/de/loesungen/raeume-und-erlebnisse/",
+      "url": "https://www.hipstudio.hu/de/loesungen/raeume-und-erlebnisse/",
+      "key": "solution:spaces-experiences",
+      "lang": "de",
+      "title": "Räume und Erlebnisse"
+    },
+    {
+      "path": "/de/fallstudien/",
+      "url": "https://www.hipstudio.hu/de/fallstudien/",
+      "key": "cases",
+      "lang": "de",
+      "title": "Fallstudien"
+    },
+    {
+      "path": "/de/fachleute/",
+      "url": "https://www.hipstudio.hu/de/fachleute/",
+      "key": "people",
+      "lang": "de",
+      "title": "Fachleute"
+    },
+    {
+      "path": "/de/fachleute/norbert-banhalmi/",
+      "url": "https://www.hipstudio.hu/de/fachleute/norbert-banhalmi/",
+      "key": "person:banhalmi-norbert",
+      "lang": "de",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/de/fachleute/viko-speier/",
+      "url": "https://www.hipstudio.hu/de/fachleute/viko-speier/",
+      "key": "person:speier-viko",
+      "lang": "de",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/de/quellen-und-ai-trust/",
+      "url": "https://www.hipstudio.hu/de/quellen-und-ai-trust/",
+      "key": "trust",
+      "lang": "de",
+      "title": "Quellen und AI Trust"
+    },
+    {
+      "path": "/de/leistungen/",
+      "url": "https://www.hipstudio.hu/de/leistungen/",
+      "key": "services",
+      "lang": "de",
+      "title": "Leistungen"
+    },
+    {
+      "path": "/de/leistungen/businessportraets/",
+      "url": "https://www.hipstudio.hu/de/leistungen/businessportraets/",
+      "key": "business",
+      "lang": "de",
+      "title": "Businessporträts"
+    },
+    {
+      "path": "/de/leistungen/bewerbungsfotos/",
+      "url": "https://www.hipstudio.hu/de/leistungen/bewerbungsfotos/",
+      "key": "cv",
+      "lang": "de",
+      "title": "Bewerbungsfotos"
+    },
+    {
+      "path": "/de/leistungen/headshots/",
+      "url": "https://www.hipstudio.hu/de/leistungen/headshots/",
+      "key": "headshot",
+      "lang": "de",
+      "title": "Headshots"
+    },
+    {
+      "path": "/de/leistungen/dating-fotos/",
+      "url": "https://www.hipstudio.hu/de/leistungen/dating-fotos/",
+      "key": "dating",
+      "lang": "de",
+      "title": "Dating-Fotografie"
+    },
+    {
+      "path": "/de/leistungen/portfoliofotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/portfoliofotografie/",
+      "key": "portfolio",
+      "lang": "de",
+      "title": "Portfoliofotografie"
+    },
+    {
+      "path": "/de/leistungen/modefotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/modefotografie/",
+      "key": "fashion",
+      "lang": "de",
+      "title": "Modefotografie"
+    },
+    {
+      "path": "/de/leistungen/werbefotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/werbefotografie/",
+      "key": "advertising",
+      "lang": "de",
+      "title": "Werbefotografie"
+    },
+    {
+      "path": "/de/leistungen/produktfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/produktfotografie/",
+      "key": "product",
+      "lang": "de",
+      "title": "Produktfotografie"
+    },
+    {
+      "path": "/de/leistungen/katalogfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/katalogfotografie/",
+      "key": "catalogue",
+      "lang": "de",
+      "title": "Katalogfotografie"
+    },
+    {
+      "path": "/de/leistungen/immobilienfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/immobilienfotografie/",
+      "key": "property",
+      "lang": "de",
+      "title": "Immobilien- und Interieurfotografie"
+    },
+    {
+      "path": "/de/leistungen/luftaufnahmen/",
+      "url": "https://www.hipstudio.hu/de/leistungen/luftaufnahmen/",
+      "key": "aerial",
+      "lang": "de",
+      "title": "Luftaufnahmen"
+    },
+    {
+      "path": "/de/leistungen/virtuelle-rundgaenge/",
+      "url": "https://www.hipstudio.hu/de/leistungen/virtuelle-rundgaenge/",
+      "key": "virtual",
+      "lang": "de",
+      "title": "Virtuelle 3D-Rundgänge"
+    },
+    {
+      "path": "/de/leistungen/kuenstlerischer-akt/",
+      "url": "https://www.hipstudio.hu/de/leistungen/kuenstlerischer-akt/",
+      "key": "nude",
+      "lang": "de",
+      "title": "Künstlerische Aktfotografie"
+    },
+    {
+      "path": "/de/leistungen/glamour-boudoir/",
+      "url": "https://www.hipstudio.hu/de/leistungen/glamour-boudoir/",
+      "key": "boudoir",
+      "lang": "de",
+      "title": "Glamour und Boudoir"
+    },
+    {
+      "path": "/de/leistungen/eventfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/eventfotografie/",
+      "key": "event",
+      "lang": "de",
+      "title": "Eventfotografie"
+    },
+    {
+      "path": "/de/leistungen/videoproduktion/",
+      "url": "https://www.hipstudio.hu/de/leistungen/videoproduktion/",
+      "key": "video",
+      "lang": "de",
+      "title": "Video- und Werbefilmproduktion"
+    },
+    {
+      "path": "/de/leistungen/dreharbeiten/",
+      "url": "https://www.hipstudio.hu/de/leistungen/dreharbeiten/",
+      "key": "shoot",
+      "lang": "de",
+      "title": "Dreharbeiten"
+    },
+    {
+      "path": "/de/leistungen/making-of-filme/",
+      "url": "https://www.hipstudio.hu/de/leistungen/making-of-filme/",
+      "key": "werk",
+      "lang": "de",
+      "title": "Making-of-Filme und Aftermovies"
+    },
+    {
+      "path": "/de/leistungen/social-media-filme/",
+      "url": "https://www.hipstudio.hu/de/leistungen/social-media-filme/",
+      "key": "social",
+      "lang": "de",
+      "title": "Social-Media-Filme"
+    },
+    {
+      "path": "/de/leistungen/podcastproduktion/",
+      "url": "https://www.hipstudio.hu/de/leistungen/podcastproduktion/",
+      "key": "podcast",
+      "lang": "de",
+      "title": "Podcastproduktion"
+    },
+    {
+      "path": "/de/leistungen/executive-portraets/",
+      "url": "https://www.hipstudio.hu/de/leistungen/executive-portraets/",
+      "key": "executive",
+      "lang": "de",
+      "title": "Executive-Porträts"
+    },
+    {
+      "path": "/de/leistungen/brandfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/brandfotografie/",
+      "key": "brand",
+      "lang": "de",
+      "title": "Brandfotografie"
+    },
+    {
+      "path": "/de/leistungen/visuelle-positionierung/",
+      "url": "https://www.hipstudio.hu/de/leistungen/visuelle-positionierung/",
+      "key": "positioning",
+      "lang": "de",
+      "title": "Visuelle Positionierung"
+    },
+    {
+      "path": "/de/leistungen/kuenstlerische-fotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/kuenstlerische-fotografie/",
+      "key": "fineart",
+      "lang": "de",
+      "title": "Künstlerische Fotografie"
+    },
+    {
+      "path": "/de/leistungen/c-level-eventfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/c-level-eventfotografie/",
+      "key": "clevel",
+      "lang": "de",
+      "title": "C-Level-Eventfotografie"
+    },
+    {
+      "path": "/de/leistungen/erinnerungsfotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/erinnerungsfotografie/",
+      "key": "souvenir",
+      "lang": "de",
+      "title": "Erinnerungsfotografie"
+    },
+    {
+      "path": "/de/leistungen/greenscreen-fotografie/",
+      "url": "https://www.hipstudio.hu/de/leistungen/greenscreen-fotografie/",
+      "key": "greenbox",
+      "lang": "de",
+      "title": "Greenscreen-Fotografie"
+    },
+    {
+      "path": "/de/leistungen/konferenz-streaming/",
+      "url": "https://www.hipstudio.hu/de/leistungen/konferenz-streaming/",
+      "key": "streaming",
+      "lang": "de",
+      "title": "Konferenz-Streaming"
+    },
+    {
+      "path": "/de/leistungen/sportvideo/",
+      "url": "https://www.hipstudio.hu/de/leistungen/sportvideo/",
+      "key": "sports-video",
+      "lang": "de",
+      "title": "Sportvideo"
+    },
+    {
+      "path": "/de/leistungen/konzertvideo/",
+      "url": "https://www.hipstudio.hu/de/leistungen/konzertvideo/",
+      "key": "concert-video",
+      "lang": "de",
+      "title": "Konzertvideo"
+    },
+    {
+      "path": "/de/leistungen/musikvideos/",
+      "url": "https://www.hipstudio.hu/de/leistungen/musikvideos/",
+      "key": "music-video",
+      "lang": "de",
+      "title": "Musikvideos"
+    },
+    {
+      "path": "/de/leistungen/eventvideo/",
+      "url": "https://www.hipstudio.hu/de/leistungen/eventvideo/",
+      "key": "event-video",
+      "lang": "de",
+      "title": "Eventvideo"
+    },
+    {
+      "path": "/de/arbeiten/",
+      "url": "https://www.hipstudio.hu/de/arbeiten/",
+      "key": "work",
+      "lang": "de",
+      "title": "Arbeiten"
+    },
+    {
+      "path": "/de/fragen/",
+      "url": "https://www.hipstudio.hu/de/fragen/",
+      "key": "faq",
+      "lang": "de",
+      "title": "Häufige Fragen"
+    },
+    {
+      "path": "/de/kontakt/",
+      "url": "https://www.hipstudio.hu/de/kontakt/",
+      "key": "contact",
+      "lang": "de",
+      "title": "Kontakt"
+    },
+    {
+      "path": "/de/studio/",
+      "url": "https://www.hipstudio.hu/de/studio/",
+      "key": "studio",
+      "lang": "de",
+      "title": "Das Studio"
+    },
+    {
+      "path": "/de/fotopartner/",
+      "url": "https://www.hipstudio.hu/de/fotopartner/",
+      "key": "partners",
+      "lang": "de",
+      "title": "Geschichte und Partner"
+    },
+    {
+      "path": "/de/impressum/",
+      "url": "https://www.hipstudio.hu/de/impressum/",
+      "key": "legal",
+      "lang": "de",
+      "title": "Impressum und Datenschutz"
+    },
+    {
+      "path": "/de/cookies/",
+      "url": "https://www.hipstudio.hu/de/cookies/",
+      "key": "cookies",
+      "lang": "de",
+      "title": "Cookies und externe Inhalte"
+    },
+    {
+      "path": "/de/preise/",
+      "url": "https://www.hipstudio.hu/de/preise/",
+      "key": "prices",
+      "lang": "de",
+      "title": "Preise"
+    }
+  ],
+  "redirects": 40,
+  "images": 194,
+  "solutions": 5,
+  "people": 2,
+  "approvedCaseStudies": 0,
+  "css": "site.c1e137bea343.css"
+}

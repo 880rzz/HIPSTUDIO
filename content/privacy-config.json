@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "defaultConsent": {"necessary": true, "analytics": false, "marketing": false, "externalMedia": false},
+  "optionalIntegrations": [],
+  "storageEnabled": false,
+  "networkActivationEnabled": false,
+  "note": "Consent hooks are present for future reviewed integrations. No tracker, marketing tag or external-media loader is registered or activated."
+}

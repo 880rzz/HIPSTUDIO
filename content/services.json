@@ -1,0 +1,1326 @@
+[
+  {
+    "key": "business",
+    "slug": {
+      "hu": "uzleti-portre",
+      "en": "business-portraits",
+      "de": "businessportraets"
+    },
+    "name": {
+      "hu": "Üzleti portré",
+      "en": "Business portraits",
+      "de": "Businessporträts"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portrefotozas-galeria",
+    "intro": {
+      "hu": "Egy szakmai bemutatkozásnak rád kell hasonlítania. Az üzleti portré a személyiségedet és a szerepedet kapcsolja össze, stúdióban vagy a hozzád illő környezetben.",
+      "en": "A professional introduction should feel like you. A business portrait brings together your personality and your role, in the studio or in a setting that suits you.",
+      "de": "Ein beruflicher Auftritt sollte zu Ihnen passen. Ein Businessporträt verbindet Persönlichkeit und berufliche Rolle, im Studio oder in einem passenden Umfeld."
+    },
+    "result": {
+      "hu": "LinkedInre, céges weboldalra és sajtóanyagba szánt, közösen kiválasztott portrék. A komolyabb és közvetlenebb megjelenés között a felhasználási cél segít dönteni.",
+      "en": "Portraits selected together for LinkedIn, company websites and press materials. The intended use helps us choose between a formal and a more relaxed approach.",
+      "de": "Gemeinsam ausgewählte Porträts für LinkedIn, Unternehmensseiten und Presseunterlagen. Der Verwendungszweck entscheidet über einen formellen oder einen lockeren Stil."
+    },
+    "brief": {
+      "hu": "Írd meg, milyen szakmai szerepben jelensz meg, és hol használod majd a képeket. Hozz olyan ruhát, amelyben önazonosnak érzed magad; az eltérő képkivágásokat és környezeteket előre érdemes átbeszélni.",
+      "en": "Tell us about your professional role and where the images will appear. Choose clothing that feels like you; discuss different crops and settings before the session.",
+      "de": "Beschreiben Sie Ihre berufliche Rolle und die geplanten Einsatzorte der Bilder. Wählen Sie Kleidung, in der Sie sich wohlfühlen. Bildausschnitte und Umgebungen besprechen wir vorab."
+    },
+    "question": {
+      "hu": "Lehet stúdión kívül is fotózni?",
+      "en": "Can we shoot outside the studio?",
+      "de": "Ist ein Shooting außerhalb des Studios möglich?"
+    },
+    "answer": {
+      "hu": "Igen, a HIPStudio portréoldala stúdiós és kültéri lehetőséget is ismertet. A konkrét helyszínt és a hozzá tartozó feltételeket az egyeztetés rögzíti.",
+      "en": "Yes. HIPStudio describes both studio and outdoor portraits. The location and its requirements are agreed during planning.",
+      "de": "Ja. HIPStudio beschreibt Porträts im Studio und im Freien. Den Ort und die dazugehörigen Bedingungen klären wir bei der Planung."
+    }
+  },
+  {
+    "key": "cv",
+    "slug": {
+      "hu": "oneletrajz-foto",
+      "en": "cv-photography",
+      "de": "bewerbungsfotos"
+    },
+    "name": {
+      "hu": "Önéletrajz-fotó",
+      "en": "CV photography",
+      "de": "Bewerbungsfotos"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portrefotozas-galeria",
+    "intro": {
+      "hu": "Pályakezdőként és tapasztalt szakemberként is fontos, hogy a bemutatkozásod következetes legyen. Egy önéletrajzhoz készült portré letisztultan mutat meg, túlzó beállítások nélkül.",
+      "en": "Whether you are starting out or have years of experience, your introduction should be consistent. A portrait for your CV presents you clearly, without an exaggerated pose.",
+      "de": "Ob beim Berufseinstieg oder mit langjähriger Erfahrung: Ihr Auftritt sollte stimmig sein. Ein Bewerbungsfoto zeigt Sie klar und ohne übertriebene Inszenierung."
+    },
+    "result": {
+      "hu": "A cél a jelentkezésedhez illő arckép. A képet az önéletrajz formátumával és a szakmai profiloddal együtt érdemes megtervezni, nem különálló díszítőelemként.",
+      "en": "The aim is a portrait that fits your application. Plan it alongside your CV layout and professional profile, rather than as an isolated decoration.",
+      "de": "Ziel ist ein Porträt, das zu Ihrer Bewerbung passt. Planen Sie es gemeinsam mit dem Lebenslauf und Ihrem beruflichen Profil, nicht als separates Schmuckelement."
+    },
+    "brief": {
+      "hu": "Az egyeztetéshez elég a megpályázott terület és a kép tervezett használata. Teljes önéletrajzot vagy érzékeny személyes adatokat nem szükséges elküldenie a fotózási igény leírásához.",
+      "en": "To plan the session, tell us your field and the intended use of the photograph. You do not need to send a full CV or sensitive personal information to describe your photography needs.",
+      "de": "Für die Planung genügen Ihr Berufsfeld und der Verwendungszweck. Ein vollständiger Lebenslauf oder sensible persönliche Daten sind für die Beschreibung Ihres Fotowunsches nicht nötig."
+    },
+    "question": {
+      "hu": "Mi történik, ha nem érzem magam fotogénnek?",
+      "en": "What if I do not feel photogenic?",
+      "de": "Was ist, wenn ich mich nicht fotogen fühle?"
+    },
+    "answer": {
+      "hu": "A fotózás beszélgetéssel indul. A képeket közösen nézzük át, így a kiválasztásnál Ön is elmondhatja, melyik megjelenéssel tud azonosulni.",
+      "en": "We begin with a conversation and review the photographs together. You can say which expression feels right for you.",
+      "de": "Wir beginnen mit einem Gespräch und sehen die Bilder gemeinsam durch. Sie können sagen, mit welchem Ausdruck Sie sich identifizieren."
+    }
+  },
+  {
+    "key": "headshot",
+    "slug": {
+      "hu": "headshot",
+      "en": "headshots",
+      "de": "headshots"
+    },
+    "name": {
+      "hu": "Headshot",
+      "en": "Headshots",
+      "de": "Headshots"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "Kis profilképen is felismerhető, közvetlen jelenlét. A headshot az arcra és a tekintetre összpontosít, ezért más képi döntéseket kíván, mint egy teljes alakos portré.",
+      "en": "A recognisable, approachable presence even in a small profile image. A headshot focuses on your face and expression, calling for different choices than a full-length portrait.",
+      "de": "Auch als kleines Profilbild erkennbar und nahbar. Ein Headshot konzentriert sich auf Gesicht und Ausdruck und verlangt andere Bildentscheidungen als ein Ganzkörperporträt."
+    },
+    "result": {
+      "hu": "Olyan arckép a cél, amely kis méretben sem veszíti el a karakterét. A HIPStudio reklámgalériája headshot referenciákat is felsorol; a portréfolyamat közös képkiválasztásra épül.",
+      "en": "The goal is a portrait that retains its character at a small size. HIPStudio lists headshots in its commercial gallery and describes a portrait process with joint image selection.",
+      "de": "Ziel ist ein Porträt, das auch im kleinen Format seinen Charakter behält. HIPStudio führt Headshots in der Werbegalerie und beschreibt eine gemeinsame Bildauswahl."
+    },
+    "brief": {
+      "hu": "Hozd el a felület képarányát és arculati elvárásait, ha vannak. Kör alakú profilképnél különösen fontos az arc körüli hely és a háttér viszonya.",
+      "en": "Bring the required aspect ratio and any brand guidelines. For a circular profile image, space around the face and the background are particularly important.",
+      "de": "Bringe das benötigte Seitenverhältnis und gegebenenfalls Gestaltungsrichtlinien mit. Bei runden Profilbildern sind der Raum um das Gesicht und der Hintergrund besonders wichtig."
+    },
+    "question": {
+      "hu": "Miben különbözik az üzleti portrétól?",
+      "en": "How does this differ from a business portrait?",
+      "de": "Wie unterscheidet sich das vom Businessporträt?"
+    },
+    "answer": {
+      "hu": "A headshot szűkebben az arcra épít. Az üzleti portré több környezetet, testtartást vagy szakmai kontextust is megmutathat. A kívánt képtípust a felhasználás szerint egyeztetjük.",
+      "en": "A headshot concentrates more closely on the face. A business portrait may include more setting, posture or professional context. We choose the image type around its intended use.",
+      "de": "Ein Headshot konzentriert sich stärker auf das Gesicht. Ein Businessporträt kann mehr Umgebung, Körperhaltung oder beruflichen Kontext zeigen. Die Bildart richtet sich nach dem Verwendungszweck."
+    }
+  },
+  {
+    "key": "dating",
+    "slug": {
+      "hu": "tarskereso-fotozas",
+      "en": "dating-photos",
+      "de": "dating-fotos"
+    },
+    "name": {
+      "hu": "Társkereső-fotózás",
+      "en": "Dating photography",
+      "de": "Dating-Fotografie"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+    "intro": {
+      "hu": "Egy profilképen is önmagadat szeretnéd viszontlátni. A társkereső-fotózás közvetlenebb, hétköznapibb képekből indul ki, és teret hagy a személyiségednek.",
+      "en": "You want to recognise yourself in your profile photographs. Dating photography starts with a natural, everyday approach and makes room for your personality.",
+      "de": "Auch auf Profilfotos möchten Sie sich wiedererkennen. Dating-Fotografie setzt auf eine natürliche, alltagsnahe Darstellung und lässt Raum für Ihre Persönlichkeit."
+    },
+    "result": {
+      "hu": "Változatos, egymással összhangban álló képek készülhetnek stúdióban és kültéren. A cél nem egy idegen szerep felvétele, hanem egy olyan sorozat, amellyel szívesen mutatkozol be.",
+      "en": "A varied, coherent series can be created in the studio and outdoors. The aim is a set of photographs you feel comfortable using to introduce yourself.",
+      "de": "Eine abwechslungsreiche, zusammenhängende Serie kann im Studio und im Freien entstehen. Ziel sind Bilder, mit denen Sie sich gerne vorstellen."
+    },
+    "brief": {
+      "hu": "Gondold át, milyen ruhák és helyzetek jellemzők rád. Az előzetes beszélgetésben a hangulatot, a helyszínt és a ruhaváltásokat is össze tudjuk hangolni.",
+      "en": "Think about the clothes and settings that feel like you. During the initial conversation we can align the mood, locations and outfit changes.",
+      "de": "Überlegen Sie, welche Kleidung und Situationen zu Ihnen passen. Im Vorgespräch stimmen wir Stimmung, Orte und Kleidungswechsel aufeinander ab."
+    },
+    "question": {
+      "hu": "Lehet több öltözékben fotózni?",
+      "en": "Can I use more than one outfit?",
+      "de": "Sind mehrere Outfits möglich?"
+    },
+    "answer": {
+      "hu": "A Wix társkereső- és portfólióoldala több ruhaszettet is ismertet. A választott összeállításokat és a sorozat terjedelmét az aktuális ajánlatban kell rögzíteni.",
+      "en": "The Wix dating and portfolio page describes multiple outfits. The selection and scope of your session need to be confirmed in the current quote.",
+      "de": "Die Wix-Seite für Dating- und Portfoliofotos beschreibt mehrere Outfits. Auswahl und Umfang werden im aktuellen Angebot festgehalten."
+    }
+  },
+  {
+    "key": "portfolio",
+    "slug": {
+      "hu": "portfolio-fotozas",
+      "en": "portfolio-photography",
+      "de": "portfoliofotografie"
+    },
+    "name": {
+      "hu": "Portfólió-fotózás",
+      "en": "Portfolio photography",
+      "de": "Portfoliofotografie"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+    "intro": {
+      "hu": "Egyetlen kép helyett több oldaladat szeretnéd megmutatni. A portfólió különböző hangulatokat, öltözékeket és képtípusokat fog össze egy személyes sorozattá.",
+      "en": "You want to show more than one side of yourself. A portfolio brings together different moods, outfits and image types in a personal series.",
+      "de": "Sie möchten mehr als eine Seite von sich zeigen. Ein Portfolio verbindet unterschiedliche Stimmungen, Outfits und Bildarten zu einer persönlichen Serie."
+    },
+    "result": {
+      "hu": "A HIPStudio portfóliófolyamata közös koncepcióra, stúdiós vagy külső helyszínre és képkiválasztásra épül. A sorozatot a saját célodhoz érdemes igazítani, legyen az személyes bemutatkozás vagy alkotói anyag.",
+      "en": "HIPStudio describes a shared concept, studio or location photography and joint image selection. Shape the series around your own purpose, from a personal introduction to a creative portfolio.",
+      "de": "HIPStudio beschreibt ein gemeinsames Konzept, Aufnahmen im Studio oder vor Ort und eine gemeinsame Bildauswahl. Die Serie richtet sich nach Ihrem Ziel, vom persönlichen Auftritt bis zum kreativen Portfolio."
+    },
+    "brief": {
+      "hu": "Az inspirációk mellé írja meg azt is, mit nem szeretne. A helyszínek és öltözékek száma, a smink és a haj igénye mind az előkészítés része.",
+      "en": "Alongside inspiration, tell us what you do not want. Locations, outfit changes and any makeup or hair requirements belong in the planning stage.",
+      "de": "Nennen Sie neben Inspirationen auch, was Sie nicht möchten. Orte, Outfits sowie Wünsche zu Make-up und Haaren gehören zur Vorbereitung."
+    },
+    "question": {
+      "hu": "Kérhető smink vagy fodrász?",
+      "en": "Can makeup or hair styling be arranged?",
+      "de": "Können Make-up oder Haarstyling organisiert werden?"
+    },
+    "answer": {
+      "hu": "A nyilvános portfólióoldal szerint igény esetén sminkes és fodrász is biztosítható. Az elérhetőséget és a díjat az adott fotózáshoz külön egyeztetjük.",
+      "en": "The public portfolio page says makeup and hair professionals can be arranged on request. Availability and cost are agreed for the individual session.",
+      "de": "Laut öffentlicher Portfolioseite können auf Wunsch Make-up und Haarstyling organisiert werden. Verfügbarkeit und Kosten werden für das jeweilige Shooting geklärt."
+    }
+  },
+  {
+    "key": "fashion",
+    "slug": {
+      "hu": "divatfotozas",
+      "en": "fashion-photography",
+      "de": "modefotografie"
+    },
+    "name": {
+      "hu": "Divatfotózás",
+      "en": "Fashion photography",
+      "de": "Modefotografie"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+    "intro": {
+      "hu": "A ruhának és az embernek ugyanabban a képben kell érvényesülnie. A divatfotózásnál a mozdulat, az anyag és a hangulat együtt alakítja a sorozatot.",
+      "en": "The clothing and the person need to work together in the image. In fashion photography, movement, fabric and mood shape the series.",
+      "de": "Kleidung und Mensch sollen im selben Bild zur Geltung kommen. Bewegung, Material und Stimmung prägen eine Modeserie."
+    },
+    "result": {
+      "hu": "A HIPStudio nyilvános portfólió- és divatfotózási kínálata stúdiós és kültéri sorozatot is tartalmaz. A divatgaléria valós képi támpontot ad a megbeszéléshez.",
+      "en": "HIPStudio publicly offers portfolio and fashion sessions in the studio and outdoors. Its fashion gallery provides real visual references for the discussion.",
+      "de": "HIPStudio bietet Portfolio- und Modeaufnahmen im Studio und im Freien an. Die Modegalerie liefert konkrete Bildreferenzen für die Abstimmung."
+    },
+    "brief": {
+      "hu": "A ruhadarabok száma mellett a kollekció karakterét és a megjelenés felületét is írja meg. A modell, a styling, a hátterek és a képarányok tisztázása segít egységes sorozatot tervezni.",
+      "en": "Include the collection’s character and publishing channels, as well as the number of garments. Models, styling, backgrounds and aspect ratios help define a coherent series.",
+      "de": "Beschreibe neben der Anzahl der Kleidungsstücke auch den Charakter der Kollektion und die Veröffentlichungskanäle. Models, Styling, Hintergründe und Seitenverhältnisse helfen bei einer stimmigen Planung."
+    },
+    "question": {
+      "hu": "Elég csak a ruhadarabok számát megadni?",
+      "en": "Is the garment count enough for a quote?",
+      "de": "Genügt die Anzahl der Kleidungsstücke für ein Angebot?"
+    },
+    "answer": {
+      "hu": "Nem minden sorozat azonos feladat. Az öltözékek mellé a tervezett képtípusokat, helyszínt és felhasználást is add meg, hogy az ajánlat a tényleges produkcióról szóljon.",
+      "en": "Each series is different. Include the image types, location and intended use so that the quote reflects the actual production.",
+      "de": "Jede Serie ist anders. Ergänze Bildarten, Ort und Verwendungszweck, damit das Angebot die tatsächliche Produktion abbildet."
+    }
+  },
+  {
+    "key": "advertising",
+    "slug": {
+      "hu": "reklamfotozas",
+      "en": "advertising-photography",
+      "de": "werbefotografie"
+    },
+    "name": {
+      "hu": "Reklámfotózás",
+      "en": "Advertising photography",
+      "de": "Werbefotografie"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "A kampány képeinek világosan kell megmutatniuk, miért fontos a termék vagy a szolgáltatás. A reklámfotózás a kívánt üzenetből és a célközönségből indul ki.",
+      "en": "Campaign imagery needs to make the product or service relevant. Advertising photography begins with the message and its intended audience.",
+      "de": "Kampagnenbilder sollen die Bedeutung eines Produkts oder einer Leistung vermitteln. Werbefotografie beginnt mit Botschaft und Zielgruppe."
+    },
+    "result": {
+      "hu": "A HIPStudio stúdióban és külső helyszínen is készít reklámképeket, szükség esetén mobil műteremmel. A publikus szolgáltatásleírás színhelyes, korrigált, nyomdai felhasználásra is alkalmas képeket ismertet.",
+      "en": "HIPStudio creates advertising images in the studio and on location, with a mobile studio where needed. The public service description includes colour-corrected images suitable for print.",
+      "de": "HIPStudio erstellt Werbeaufnahmen im Studio und vor Ort, bei Bedarf mit mobilem Studio. Die öffentliche Leistungsbeschreibung nennt farbkorrigierte, auch für Druck geeignete Bilder."
+    },
+    "brief": {
+      "hu": "A briefben szerepeljen a termék, a célközönség, a megjelenési felület és a kívánt üzenet. Kellékek, szereplők és helyszínek esetén a produkciós igényt is külön írjuk körül.",
+      "en": "Include the product, audience, channels and intended message in the brief. Props, people and locations also need a clearly defined production scope.",
+      "de": "Das Briefing sollte Produkt, Zielgruppe, Kanäle und Botschaft enthalten. Requisiten, Personen und Drehorte brauchen ebenfalls einen klar definierten Produktionsumfang."
+    },
+    "question": {
+      "hu": "Van egységes reklámfotózási ár?",
+      "en": "Is there one standard advertising rate?",
+      "de": "Gibt es einen einheitlichen Preis für Werbefotografie?"
+    },
+    "answer": {
+      "hu": "A Wix szolgáltatásoldala egyedi árazást ír le. Az árhoz a koncepció, a szükséges technika, a stáb és a felhasználás részletei kellenek.",
+      "en": "The Wix service page describes individual pricing. A quote requires the concept, equipment, crew and usage details.",
+      "de": "Die Wix-Leistungsseite beschreibt individuelle Preise. Für ein Angebot werden Konzept, Technik, Team und Nutzungsdetails benötigt."
+    }
+  },
+  {
+    "key": "product",
+    "slug": {
+      "hu": "termekfotozas",
+      "en": "product-photography",
+      "de": "produktfotografie"
+    },
+    "name": {
+      "hu": "Termékfotózás",
+      "en": "Product photography",
+      "de": "Produktfotografie"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "Anyag, felület, részlet: a termékfotó ott ad információt, ahol a leírás önmagában kevés. A képsorozatot a termék jellemzőihez és a megjelenési felülethez kell igazítani.",
+      "en": "Material, surface and detail: product photographs provide information that words alone cannot. The series needs to fit both the product and its publishing context.",
+      "de": "Material, Oberfläche und Detail: Produktbilder vermitteln Informationen, die Worte allein nicht zeigen. Die Serie muss zum Produkt und zum Einsatzort passen."
+    },
+    "result": {
+      "hu": "A termékfotózás a HIPStudio kreatív reklámfotózási körének része. A megvilágítás és a színkorrekció célja, hogy a tárgy érthetően jelenjen meg a kész képen.",
+      "en": "Product photography is part of HIPStudio’s commercial photography offering. Lighting and colour correction help present the object clearly.",
+      "de": "Produktfotografie gehört zum Werbefotografie-Angebot von HIPStudio. Beleuchtung und Farbkorrektur helfen, den Gegenstand verständlich darzustellen."
+    },
+    "brief": {
+      "hu": "A darabszám mellett add meg a termékek méretét, anyagát és a kért nézeteket. Az átlátszó, fényes vagy különösen nagy tárgy más előkészítést igényelhet; ezt az ajánlat előtt tisztázzuk.",
+      "en": "Include product dimensions, materials and required views, not just the item count. Transparent, reflective or very large objects may need different preparation, which we discuss before quoting.",
+      "de": "Nenne neben der Stückzahl auch Maße, Materialien und benötigte Ansichten. Transparente, glänzende oder sehr große Gegenstände können andere Vorbereitungen erfordern; das klären wir vor dem Angebot."
+    },
+    "question": {
+      "hu": "Mitől függ a termékfotók mennyisége?",
+      "en": "How is the number of product images determined?",
+      "de": "Wovon hängt die Anzahl der Produktbilder ab?"
+    },
+    "answer": {
+      "hu": "A termékek száma és a kért nézetek együtt határozzák meg a feladatot. A részletfotókat és a környezetbe helyezett képeket külön is érdemes felsorolni.",
+      "en": "The item count and requested views together define the scope. List detail images and photographs showing the product in context separately.",
+      "de": "Stückzahl und gewünschte Ansichten bestimmen gemeinsam den Umfang. Detailbilder und Aufnahmen im Anwendungskontext sollten separat aufgeführt werden."
+    }
+  },
+  {
+    "key": "catalogue",
+    "slug": {
+      "hu": "katalogusfotozas",
+      "en": "catalogue-photography",
+      "de": "katalogfotografie"
+    },
+    "name": {
+      "hu": "Katalógusfotózás",
+      "en": "Catalogue photography",
+      "de": "Katalogfotografie"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "Egy katalógusban a képek egymáshoz való viszonya is számít. Az ismétlődő nézetek, a következetes háttér és a részletek ritmusa segít összehasonlíthatóvá tenni a kínálatot.",
+      "en": "In a catalogue, the relationship between images matters. Repeated views, consistent backgrounds and a clear rhythm of detail help readers compare products.",
+      "de": "In einem Katalog zählt auch das Verhältnis der Bilder zueinander. Wiederkehrende Ansichten, einheitliche Hintergründe und klare Details erleichtern den Vergleich."
+    },
+    "result": {
+      "hu": "A HIPStudio reklámfotózási oldala katalóguscélú munkát is ismertet. Az egységes sorozatot a tördelés és az arculat követelményeivel együtt érdemes előkészíteni.",
+      "en": "HIPStudio’s advertising page also describes catalogue work. Prepare a consistent series alongside layout and brand requirements.",
+      "de": "Die Werbefotografie-Seite von HIPStudio beschreibt auch Katalogarbeiten. Eine einheitliche Serie sollte gemeinsam mit Layout- und Markenanforderungen vorbereitet werden."
+    },
+    "brief": {
+      "hu": "A brief része legyen a tétellista, a mintakép, a háttér és a végső képarány. Ha később bővül a katalógus, az új képek illeszkedésének igényét is jelezze.",
+      "en": "Include the item list, a sample image, background and final aspect ratio. If the catalogue will grow, mention the need to match later photographs.",
+      "de": "Zum Briefing gehören Artikelliste, Musterbild, Hintergrund und endgültiges Seitenverhältnis. Wenn der Katalog erweitert wird, sollte auch die spätere Bildanpassung eingeplant werden."
+    },
+    "question": {
+      "hu": "Nyomtatott katalógushoz is kérhető kép?",
+      "en": "Can images be prepared for a printed catalogue?",
+      "de": "Sind Bilder für gedruckte Kataloge möglich?"
+    },
+    "answer": {
+      "hu": "A nyilvános reklámfotózási leírás nyomdai felbontást és színkorrekciót is említ. A pontos méretet és a nyomdai leadási követelményeket a megrendelés előtt egyeztetni kell.",
+      "en": "The public advertising description mentions print resolution and colour correction. Exact dimensions and printer requirements need to be agreed before the commission.",
+      "de": "Die öffentliche Beschreibung nennt Druckauflösung und Farbkorrektur. Genaue Maße und Druckvorgaben müssen vor dem Auftrag abgestimmt werden."
+    }
+  },
+  {
+    "key": "property",
+    "slug": {
+      "hu": "ingatlanfotozas",
+      "en": "property-photography",
+      "de": "immobilienfotografie"
+    },
+    "name": {
+      "hu": "Ingatlan- és enteriőrfotózás",
+      "en": "Property and interior photography",
+      "de": "Immobilien- und Interieurfotografie"
+    },
+    "cluster": "space",
+    "source": "https://www.hipstudio.hu/ingatlanfotozas",
+    "reference": "https://www.hipstudio.hu/epulet-fotozas-galeria",
+    "intro": {
+      "hu": "Egy tér nem csak helyiségek felsorolása. Az ingatlanfotózás az arányokat, a fényt és az egymáshoz kapcsolódó tereket teszi láthatóvá.",
+      "en": "A space is more than a list of rooms. Property photography makes proportions, light and connections between spaces visible.",
+      "de": "Ein Raum ist mehr als eine Liste von Zimmern. Immobilienfotografie macht Proportionen, Licht und räumliche Zusammenhänge sichtbar."
+    },
+    "result": {
+      "hu": "A HIPStudio lakó- és üzleti ingatlanok, épületek és enteriőrök fotózását is ismerteti. A galéria külső épületképeket és belső tereket egyaránt bemutat.",
+      "en": "HIPStudio describes photography for residential and commercial properties, buildings and interiors. Its gallery includes both exteriors and interior spaces.",
+      "de": "HIPStudio beschreibt Aufnahmen von Wohn- und Gewerbeimmobilien, Gebäuden und Innenräumen. Die Galerie zeigt Außenansichten und Interieurs."
+    },
+    "brief": {
+      "hu": "Küldd el a helyszínt, a fotózandó terek listáját és a tervezett felhasználást. A hozzáférést, a berendezést és a fotózás időpontját a kívánt fényviszonyokkal együtt érdemes megtervezni.",
+      "en": "Send the location, a list of spaces and the intended use. Plan access, furnishings and timing alongside the desired lighting conditions.",
+      "de": "Schicke den Standort, eine Liste der Räume und den Verwendungszweck. Zugang, Einrichtung und Termin sollten gemeinsam mit dem gewünschten Licht geplant werden."
+    },
+    "question": {
+      "hu": "Belső és külső képek is készülhetnek?",
+      "en": "Can the project include interiors and exteriors?",
+      "de": "Sind Innen- und Außenaufnahmen möglich?"
+    },
+    "answer": {
+      "hu": "Igen, az ingatlanfotózási szolgáltatás mindkettőt tartalmazhatja. Légi felvétel és 3D séta külön egyeztetendő feladat.",
+      "en": "Yes, property photography can cover both. Aerial footage and 3D tours are separate elements to discuss.",
+      "de": "Ja, die Immobilienfotografie kann beides umfassen. Luftaufnahmen und 3D-Rundgänge werden gesondert abgestimmt."
+    }
+  },
+  {
+    "key": "aerial",
+    "slug": {
+      "hu": "legi-felvetelek",
+      "en": "aerial-photography",
+      "de": "luftaufnahmen"
+    },
+    "name": {
+      "hu": "Légi felvételek",
+      "en": "Aerial photography",
+      "de": "Luftaufnahmen"
+    },
+    "cluster": "space",
+    "source": "https://www.hipstudio.hu/ingatlanfotozas",
+    "reference": "https://www.hipstudio.hu/epulet-fotozas-galeria",
+    "intro": {
+      "hu": "Az épület környezete néha csak távolabbról érthető. A légi nézőpont a telek, a megközelítés és a környező terek viszonyát is megmutathatja.",
+      "en": "A building’s setting sometimes needs a wider view. An aerial perspective can show the plot, access routes and surrounding spaces.",
+      "de": "Die Umgebung eines Gebäudes wird manchmal erst aus größerer Distanz verständlich. Luftaufnahmen können Grundstück, Zufahrt und umliegende Räume zeigen."
+    },
+    "result": {
+      "hu": "A HIPStudio ingatlanoldala légi felvételt beltéri fotózáshoz kapcsoltan és önálló megrendelésként is felsorol. A megvalósíthatóságot minden helyszínnél külön kell tisztázni.",
+      "en": "HIPStudio’s property page lists aerial photography both alongside interior work and as a separate commission. Feasibility needs to be checked for each location.",
+      "de": "Die Immobilienseite von HIPStudio nennt Luftaufnahmen sowohl ergänzend zu Innenaufnahmen als auch als eigenen Auftrag. Die Machbarkeit muss für jeden Ort geklärt werden."
+    },
+    "brief": {
+      "hu": "Az első egyeztetéshez pontos helyszín és kívánt látószög szükséges. Az időjárás, a helyszíni hozzáférés és az engedélyezési feltételek tisztázása nélkül nem ígérünk konkrét felvételt.",
+      "en": "Provide the exact location and desired viewpoints. Specific shots cannot be promised before weather, access and permission requirements have been considered.",
+      "de": "Nenne den genauen Ort und gewünschte Perspektiven. Konkrete Aufnahmen können erst nach Klärung von Wetter, Zugang und Genehmigungsvoraussetzungen zugesagt werden."
+    },
+    "question": {
+      "hu": "Minden helyszínen elérhető a légi felvétel?",
+      "en": "Is aerial photography possible everywhere?",
+      "de": "Sind Luftaufnahmen überall möglich?"
+    },
+    "answer": {
+      "hu": "Ez a helyszíni és engedélyezési feltételektől függ. A nyilvános szolgáltatásleírás nem helyettesíti az adott felvétel megvalósíthatóságának ellenőrzését.",
+      "en": "It depends on local conditions and permissions. The public service description does not replace a feasibility check for the actual shoot.",
+      "de": "Das hängt von örtlichen Bedingungen und Genehmigungen ab. Die öffentliche Leistungsbeschreibung ersetzt keine Machbarkeitsprüfung für die konkrete Aufnahme."
+    }
+  },
+  {
+    "key": "virtual",
+    "slug": {
+      "hu": "virtualis-seta",
+      "en": "virtual-tours",
+      "de": "virtuelle-rundgaenge"
+    },
+    "name": {
+      "hu": "3D virtuális séta",
+      "en": "3D virtual tours",
+      "de": "Virtuelle 3D-Rundgänge"
+    },
+    "cluster": "space",
+    "source": "https://www.hipstudio.hu/ingatlanfotozas",
+    "reference": "https://www.hipstudio.hu/ingatlanfotozas",
+    "intro": {
+      "hu": "Ha a látogatónak a helyiségek kapcsolatát is meg kell értenie, a fotók mellé bejárható bemutató adhat további támpontot.",
+      "en": "When visitors need to understand how rooms connect, an interactive tour can add context beyond still photographs.",
+      "de": "Wenn Besucher die Verbindung zwischen Räumen verstehen sollen, kann ein begehbarer Rundgang die Fotos ergänzen."
+    },
+    "result": {
+      "hu": "A HIPStudio nyilvános ingatlanoldalán működő Matterport-referencia szerepel. A 3D séta külön linkként vagy beilleszthető bemutatóként használható, a célfelülettel egyeztetett módon.",
+      "en": "HIPStudio’s public property page links to a Matterport reference. A 3D tour can be shared as a link or embedded, subject to the destination platform’s requirements.",
+      "de": "Die öffentliche Immobilienseite von HIPStudio verlinkt eine Matterport-Referenz. Ein 3D-Rundgang kann als Link oder eingebettet genutzt werden, abgestimmt auf die Zielplattform."
+    },
+    "brief": {
+      "hu": "Add meg a bejárandó területet, a hozzáférést és a bemutató célját. A tárhelyet, a hozzáférési időt és a külső szolgáltató feltételeit külön kell tisztázni.",
+      "en": "Specify the area to capture, access arrangements and the tour’s purpose. Hosting, access duration and third-party terms need separate agreement.",
+      "de": "Beschreibe die zu erfassende Fläche, den Zugang und den Zweck des Rundgangs. Hosting, Zugriffsdauer und Bedingungen des Drittanbieters müssen gesondert geklärt werden."
+    },
+    "question": {
+      "hu": "Automatikusan elindul a 3D bemutató az oldalon?",
+      "en": "Does the 3D tour load automatically here?",
+      "de": "Wird der 3D-Rundgang hier automatisch geladen?"
+    },
+    "answer": {
+      "hu": "Nem. A referenciát külső hivatkozás nyitja meg; a bemutató szolgáltatója csak a link követése után töltődik be.",
+      "en": "No. The reference opens through an external link; its provider loads only when you follow that link.",
+      "de": "Nein. Die Referenz wird über einen externen Link geöffnet. Der Anbieter wird erst nach dem Aufruf dieses Links geladen."
+    }
+  },
+  {
+    "key": "nude",
+    "slug": {
+      "hu": "muveszi-akt",
+      "en": "fine-art-nude",
+      "de": "kuenstlerischer-akt"
+    },
+    "name": {
+      "hu": "Művészi aktfotózás",
+      "en": "Fine-art nude photography",
+      "de": "Künstlerische Aktfotografie"
+    },
+    "cluster": "art",
+    "source": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
+    "intro": {
+      "hu": "A művészi akt személyes bizalomra épül. A képek előtt a határokról, az elképzelésekről és arról beszélgetünk, milyen helyzetben tudsz önmagad lenni.",
+      "en": "Fine-art nude photography begins with trust. Before photographs, the conversation is about boundaries, ideas and the setting in which you can feel yourself.",
+      "de": "Künstlerische Aktfotografie beginnt mit Vertrauen. Vor den Bildern sprechen wir über Grenzen, Vorstellungen und die Situation, in der Sie sich wohlfühlen."
+    },
+    "result": {
+      "hu": "Speier Vikó nyilvános szolgáltatásleírása előzetes beszélgetést, közös tervezést és képkiválasztást ismertet. A hangsúly a személyes, kifejező képeken van.",
+      "en": "Speier Vikó’s public service description includes an initial conversation, shared planning and joint image selection. The emphasis is on personal, expressive images.",
+      "de": "Die öffentliche Leistungsbeschreibung von Speier Vikó umfasst Vorgespräch, gemeinsame Planung und Bildauswahl. Im Mittelpunkt stehen persönliche, ausdrucksstarke Bilder."
+    },
+    "brief": {
+      "hu": "A stílust, a ruhákat, a kiegészítőket és a helyszínt előre átbeszéljük. Intim fotót nem szükséges egy első megkereséshez küldened. A nyilvános felhasználás feltételei külön megállapodást igényelnek.",
+      "en": "We discuss style, clothing, accessories and location beforehand. You do not need to send intimate photographs with an initial enquiry. Public use requires a separate agreement on its terms.",
+      "de": "Stil, Kleidung, Accessoires und Ort besprechen wir vorher. Für eine erste Anfrage brauchst du keine intimen Fotos zu senden. Die öffentliche Nutzung erfordert eine gesonderte Vereinbarung."
+    },
+    "question": {
+      "hu": "A fotózás automatikusan portfólió-hozzájárulás?",
+      "en": "Does taking part automatically permit portfolio use?",
+      "de": "Erlaubt die Teilnahme automatisch eine Portfolionutzung?"
+    },
+    "answer": {
+      "hu": "Nem. A HIPStudio impresszuma külön kezeli a szolgáltatás teljesítését és a referencia- vagy marketingcélú felhasználás megfelelő jogalapját.",
+      "en": "No. HIPStudio’s notice distinguishes delivering the service from having an appropriate basis for reference or marketing use.",
+      "de": "Nein. Die Datenschutzhinweise von HIPStudio unterscheiden zwischen Leistungserbringung und einer geeigneten Grundlage für Referenz- oder Marketingnutzung."
+    }
+  },
+  {
+    "key": "boudoir",
+    "slug": {
+      "hu": "glamour-boudoir",
+      "en": "glamour-boudoir",
+      "de": "glamour-boudoir"
+    },
+    "name": {
+      "hu": "Glamour és boudoir",
+      "en": "Glamour and boudoir",
+      "de": "Glamour und Boudoir"
+    },
+    "cluster": "art",
+    "source": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
+    "intro": {
+      "hu": "A finom gesztus, a ruha és a fény együtt adja a boudoir képek hangulatát. Az előzetes beszélgetésben azt keressük, milyen megjelenés áll közel hozzád.",
+      "en": "Gesture, clothing and light create the mood of boudoir photographs. The first conversation explores the kind of expression that feels right for you.",
+      "de": "Geste, Kleidung und Licht bestimmen die Stimmung von Boudoirbildern. Im ersten Gespräch erkunden wir, welcher Ausdruck zu Ihnen passt."
+    },
+    "result": {
+      "hu": "A nyilvános HIPStudio-kínálat a glamour és boudoir fotózást a művészi akttól külön csomagként is bemutatja. A közös tervezés és a személyes határok tisztelete itt is alapvető.",
+      "en": "HIPStudio presents glamour and boudoir separately from fine-art nude photography. Shared planning and respect for personal boundaries remain central.",
+      "de": "HIPStudio führt Glamour und Boudoir getrennt von künstlerischer Aktfotografie. Gemeinsame Planung und der respektvolle Umgang mit persönlichen Grenzen bleiben zentral."
+    },
+    "brief": {
+      "hu": "Beszéljük át a ruhákat, a takarás mértékét, a hangulatot és a képek célját. A galéria inspiráció lehet, de nem írja elő, hogyan kell megjelennie.",
+      "en": "Discuss clothing, coverage, mood and the purpose of the images. The gallery can be inspiration, but it does not dictate how you should appear.",
+      "de": "Wir besprechen Kleidung, Bedeckung, Stimmung und Bildzweck. Die Galerie kann inspirieren, schreibt Ihnen aber keinen bestimmten Auftritt vor."
+    },
+    "question": {
+      "hu": "Kell teljes aktot vállalni?",
+      "en": "Is full nudity required?",
+      "de": "Sind vollständige Aktaufnahmen erforderlich?"
+    },
+    "answer": {
+      "hu": "A glamour/boudoir kínálat fehérneműs képeket is ismertet. A kívánt megjelenést és a határokat az egyeztetésen rögzítjük; az akt külön képi irány.",
+      "en": "The glamour and boudoir offering includes lingerie photographs. The intended look and boundaries are discussed; nude work is a separate direction.",
+      "de": "Das Glamour- und Boudoirangebot umfasst auch Dessousaufnahmen. Darstellung und Grenzen werden besprochen; Aktaufnahmen sind eine eigene Richtung."
+    }
+  },
+  {
+    "key": "event",
+    "slug": {
+      "hu": "rendezvenyfotozas",
+      "en": "event-photography",
+      "de": "eventfotografie"
+    },
+    "name": {
+      "hu": "Rendezvényfotózás",
+      "en": "Event photography",
+      "de": "Eventfotografie"
+    },
+    "cluster": "event",
+    "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Egy rendezvény nem ismételhető meg a kamera kedvéért. A fotós munkáját a programhoz, a szervezőkhöz és a párhuzamos történésekhez kell igazítani.",
+      "en": "An event cannot be repeated for the camera. Photography needs to follow the programme, the organisers and simultaneous activity.",
+      "de": "Eine Veranstaltung lässt sich nicht für die Kamera wiederholen. Die Fotografie muss sich am Programm, den Organisatoren und parallelen Abläufen orientieren."
+    },
+    "result": {
+      "hu": "A HIPStudio a szervezői csapat részeként írja le a rendezvényfotós munkát. Igény esetén mobil műterem, sajtófal előtti portré és eseményvideó is kapcsolódhat hozzá.",
+      "en": "HIPStudio describes its event photographers as working with the organising team. A mobile studio, portraits at a press wall and event video can be discussed as additional elements.",
+      "de": "HIPStudio beschreibt die Zusammenarbeit der Eventfotografen mit dem Organisationsteam. Mobiles Studio, Porträts an der Pressewand und Eventvideo können ergänzend abgestimmt werden."
+    },
+    "brief": {
+      "hu": "A program mellett jelölje meg a fontos szereplőket, a párhuzamos helyszíneket és azokat a pillanatokat, amelyekről mindenképpen szükség van képre. A gyors sajtóválogatás igényét előre jelezze.",
+      "en": "Alongside the programme, identify key people, parallel locations and essential moments. Mention any need for a fast press selection in advance.",
+      "de": "Nenne neben dem Programm wichtige Personen, parallele Orte und unverzichtbare Momente. Einen Bedarf an schneller Presseauswahl solltest du vorher angeben."
+    },
+    "question": {
+      "hu": "Kaphatunk képet már a rendezvény alatt?",
+      "en": "Can we receive images during the event?",
+      "de": "Können Bilder schon während der Veranstaltung bereitstehen?"
+    },
+    "answer": {
+      "hu": "A Wix leírás szerint igény esetén néhány kép utómunkája rögtön elvégezhető. Ez előzetesen egyeztetendő lehetőség, nem minden megrendelés automatikus határideje.",
+      "en": "Wix describes the option of immediate editing for selected images on request. This needs advance agreement and is not an automatic deadline for every commission.",
+      "de": "Wix beschreibt auf Wunsch eine zeitnahe Bearbeitung ausgewählter Bilder. Das muss vorher vereinbart werden und ist keine automatische Zusage für jeden Auftrag."
+    }
+  },
+  {
+    "key": "video",
+    "slug": {
+      "hu": "videokeszites",
+      "en": "video-production",
+      "de": "videoproduktion"
+    },
+    "name": {
+      "hu": "Videókészítés és reklámfilm",
+      "en": "Video and commercial production",
+      "de": "Video- und Werbefilmproduktion"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Előbb a mondanivaló, utána a film hossza. A videó akkor tervezhető jól, ha világos, kihez szól, és mit szeretne megmutatni vele.",
+      "en": "The message comes before the running time. Video can be planned well when its audience and purpose are clear.",
+      "de": "Die Botschaft kommt vor der Filmlänge. Ein Video lässt sich gut planen, wenn Zielgruppe und Zweck klar sind."
+    },
+    "result": {
+      "hu": "A HIPStudio nyilvános folyamata a koncepciótól és forgatókönyvtől a szervezésen át a felvételig és utómunkáig tart. Reklámfilm, image film, interjú és eseményfilm is szerepel a kínálatban.",
+      "en": "HIPStudio’s public workflow covers concept, script, organisation, recording and post-production. Its offering includes commercials, image films, interviews and event films.",
+      "de": "Der öffentliche Ablauf von HIPStudio reicht von Konzept und Drehbuch über Organisation und Aufnahme bis zur Nachbearbeitung. Zum Angebot gehören Werbe-, Image-, Interview- und Eventfilme."
+    },
+    "brief": {
+      "hu": "Írd meg az üzenetet, a tervezett közönséget és a közzétételi felületeket. A szereplők, helyszínek, kellékek és a rendelkezésre álló költségkeret segítenek megtervezni a produkciót.",
+      "en": "Describe the message, audience and publishing channels. People, locations, props and the available budget help define the production.",
+      "de": "Beschreibe Botschaft, Zielgruppe und Veröffentlichungskanäle. Personen, Orte, Requisiten und das verfügbare Budget helfen bei der Produktionsplanung."
+    },
+    "question": {
+      "hu": "A rövidebb film mindig kevesebbe kerül?",
+      "en": "Is a shorter film always cheaper?",
+      "de": "Ist ein kürzerer Film immer günstiger?"
+    },
+    "answer": {
+      "hu": "Nem feltétlenül. A Wix leírása is kiemeli, hogy a rövid, feszesen vágott film elkészítése hasonló munkát igényelhet, mint egy hosszabb anyagé. A tartalom és a produkciós igény számít.",
+      "en": "Not necessarily. Wix notes that a short, tightly edited film can require similar work to a longer one. Content and production requirements matter.",
+      "de": "Nicht unbedingt. Wix weist darauf hin, dass ein kurzer, straff geschnittener Film ähnlich viel Arbeit erfordern kann wie ein längerer. Inhalt und Produktionsaufwand sind entscheidend."
+    }
+  },
+  {
+    "key": "shoot",
+    "slug": {
+      "hu": "forgatas",
+      "en": "filming",
+      "de": "dreharbeiten"
+    },
+    "name": {
+      "hu": "Forgatás",
+      "en": "Filming",
+      "de": "Dreharbeiten"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A jó forgatási nap az előkészítésen múlik. A szereplők, helyszínek és jelenetek összehangolása teremti meg a használható felvételek feltételeit.",
+      "en": "A productive filming day depends on preparation. Aligning people, locations and scenes creates the conditions for useful footage.",
+      "de": "Ein erfolgreicher Drehtag hängt von der Vorbereitung ab. Personen, Orte und Szenen müssen aufeinander abgestimmt sein."
+    },
+    "result": {
+      "hu": "A HIPStudio filmkészítési folyamata helyszín- és szereplőválasztást, szervezést és operatőri megvalósítást ismertet. A forgatás a közösen meghatározott koncepció része.",
+      "en": "HIPStudio describes location and participant selection, production planning and camera work as part of its filmmaking process. Filming follows the agreed concept.",
+      "de": "HIPStudio beschreibt Orts- und Personenauswahl, Organisation und Kameraarbeit als Teile der Filmproduktion. Der Dreh folgt dem gemeinsam festgelegten Konzept."
+    },
+    "brief": {
+      "hu": "A jelenetlista mellett a rendelkezésre álló idősávokat, helyszíni kapcsolatot és technikai kötöttségeket is érdemes összegyűjteni. Nyersanyag-átadásról vagy kizárólag felvételi megbízásról külön kell megállapodni.",
+      "en": "Gather the scene list, available time slots, location contact and technical constraints. Raw footage delivery or recording-only assignments require separate agreement.",
+      "de": "Sammle Szenenliste, verfügbare Zeitfenster, Kontakt vor Ort und technische Vorgaben. Rohmaterialübergabe oder reine Aufnahmeaufträge erfordern eine gesonderte Vereinbarung."
+    },
+    "question": {
+      "hu": "Benne van az utómunka a forgatásban?",
+      "en": "Does filming include post-production?",
+      "de": "Ist die Nachbearbeitung im Dreh enthalten?"
+    },
+    "answer": {
+      "hu": "A teljes filmkészítési folyamat tartalmaz utómunkát, de a konkrét megrendelés terjedelmét az ajánlat rögzíti. A forgatási nap önmagában nem határozza meg a kész filmek számát.",
+      "en": "The complete filmmaking process includes post-production, but the quote defines your commission’s scope. A filming day alone does not determine the number of finished films.",
+      "de": "Der vollständige Filmprozess umfasst Nachbearbeitung; den konkreten Auftragsumfang legt das Angebot fest. Ein Drehtag allein bestimmt nicht die Anzahl fertiger Filme."
+    }
+  },
+  {
+    "key": "werk",
+    "slug": {
+      "hu": "werkfilm",
+      "en": "behind-the-scenes-films",
+      "de": "making-of-filme"
+    },
+    "name": {
+      "hu": "Werkfilm és aftermovie",
+      "en": "Behind-the-scenes films and aftermovies",
+      "de": "Making-of-Filme und Aftermovies"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A történések mögötti munka és az esemény hangulata külön történetet alkot. A werkfilm és az aftermovie ezt a folyamatot sűríti nézhető sorozattá.",
+      "en": "The work behind an event and its atmosphere form their own story. Behind-the-scenes films and aftermovies bring that experience into a watchable sequence.",
+      "de": "Die Arbeit hinter einem Ereignis und seine Atmosphäre erzählen eine eigene Geschichte. Making-of-Filme und Aftermovies verdichten diese Erfahrung zu einer Bildfolge."
+    },
+    "result": {
+      "hu": "A HIPStudio filmoldala zenés werkvideót és aftermovie-t is ismertet; a referenciák között rövid rendezvény werkfilmek szerepelnek. A ritmust a történések és a tervezett közönség alakítja.",
+      "en": "HIPStudio describes music-led behind-the-scenes videos and aftermovies, and lists short event films among its references. The activity and intended audience shape the rhythm.",
+      "de": "HIPStudio beschreibt musikalisch gestaltete Making-of-Videos und Aftermovies und führt kurze Eventfilme als Referenzen. Geschehen und Zielgruppe bestimmen den Rhythmus."
+    },
+    "brief": {
+      "hu": "Jelöld meg a kulcspillanatokat, az előkészületekhez való hozzáférést és a kívánt hangulatot. Interjú, zene, felirat és többféle képarány esetén külön egyeztetjük az utómunkát.",
+      "en": "Identify key moments, access to preparations and the desired mood. Interviews, music, captions and multiple aspect ratios need specific post-production planning.",
+      "de": "Nenne Schlüsselmomente, Zugang zu Vorbereitungen und gewünschte Stimmung. Interviews, Musik, Untertitel und mehrere Seitenverhältnisse erfordern eine eigene Abstimmung der Nachbearbeitung."
+    },
+    "question": {
+      "hu": "Lehet interjú is az eseményfilmben?",
+      "en": "Can an event film include interviews?",
+      "de": "Können Interviews im Eventfilm vorkommen?"
+    },
+    "answer": {
+      "hu": "Igen, a rendezvényoldal zenés vagy interjús film lehetőségét írja le. A megszólalókat, a kérdéseket és a hangfelvétel körülményeit előre érdemes tisztázni.",
+      "en": "Yes. The event page describes music-led or interview-based films. Agree speakers, questions and audio recording conditions in advance.",
+      "de": "Ja. Die Eventseite beschreibt musikalische oder interviewbasierte Filme. Gesprächspartner, Fragen und Tonbedingungen sollten vorab geklärt werden."
+    }
+  },
+  {
+    "key": "social",
+    "slug": {
+      "hu": "social-media-film",
+      "en": "social-media-films",
+      "de": "social-media-filme"
+    },
+    "name": {
+      "hu": "Social-media film",
+      "en": "Social media films",
+      "de": "Social-Media-Filme"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Rövid felületen is egyértelmű üzenetre van szükség. A közösségi csatornára tervezett filmnél a képarány, a kezdőkép és a néző helyzete is az ötlet része.",
+      "en": "A short format still needs a clear message. For social channels, aspect ratio, the opening image and the viewer’s context are part of the idea.",
+      "de": "Auch ein kurzes Format braucht eine klare Botschaft. Bei Social-Media-Filmen gehören Seitenverhältnis, Einstiegsbild und Nutzungssituation zur Idee."
+    },
+    "result": {
+      "hu": "A HIPStudio nyilvános filmkínálata rövid videókat, vírusvideót és pre-roll szpotot is említ. A csatornához illeszkedő változatokat a koncepcióban érdemes meghatározni.",
+      "en": "HIPStudio’s public film offering includes short videos, viral-style videos and pre-roll spots. Channel-specific versions should be defined in the concept.",
+      "de": "Das öffentliche Filmangebot von HIPStudio nennt Kurzvideos, virale Videoformate und Pre-Roll-Spots. Kanalspezifische Varianten sollten im Konzept festgelegt werden."
+    },
+    "brief": {
+      "hu": "Írd meg a platformot, a képarányt, az üzenetet és azt, hogy hang nélkül is érthetőnek kell-e lennie az anyagnak. A feliratok és külön változatok legyenek részei a briefnek.",
+      "en": "State the platform, aspect ratio, message and whether the film must work without sound. Include captions and separate versions in the brief.",
+      "de": "Nenne Plattform, Seitenverhältnis, Botschaft und ob der Film ohne Ton verständlich sein soll. Untertitel und zusätzliche Versionen gehören ins Briefing."
+    },
+    "question": {
+      "hu": "Egy forgatásból több változat is tervezhető?",
+      "en": "Can one shoot be planned for several versions?",
+      "de": "Lassen sich aus einem Dreh mehrere Versionen planen?"
+    },
+    "answer": {
+      "hu": "Ez a koncepció és a felvett anyag függvénye. A változatokat a forgatás előtt érdemes egyeztetni; utólag nem minden képkivágás vagy tartalmi irány pótolható.",
+      "en": "It depends on the concept and footage. Plan versions before filming; not every crop or content direction can be recovered afterwards.",
+      "de": "Das hängt von Konzept und Material ab. Varianten sollten vor dem Dreh geplant werden; nicht jeder Ausschnitt oder Inhalt lässt sich nachträglich ergänzen."
+    }
+  },
+  {
+    "key": "podcast",
+    "slug": {
+      "hu": "podcast-keszites",
+      "en": "podcast-production",
+      "de": "podcastproduktion"
+    },
+    "name": {
+      "hu": "Podcastkészítés",
+      "en": "Podcast production",
+      "de": "Podcastproduktion"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/podcast-keszites",
+    "reference": "https://www.hipstudio.hu/podcast-keszites",
+    "intro": {
+      "hu": "A beszélgetés akkor működik, ha a technika helyett a témára figyelhetsz. A videós podcast a hangot, a személyiséget és a képi jelenlétet kapcsolja össze.",
+      "en": "A conversation works best when you can focus on the subject instead of the equipment. A video podcast brings together voice, personality and visual presence.",
+      "de": "Ein Gespräch gelingt besser, wenn Sie sich auf das Thema statt auf die Technik konzentrieren können. Ein Videopodcast verbindet Stimme, Persönlichkeit und visuelle Präsenz."
+    },
+    "result": {
+      "hu": "A HIPStudio tématervezést, műsorstruktúrát, hang- és videófelvételt, szerkesztést és disztribúciót ismertet. Mobil stúdióval az irodai helyszín lehetőségét is leírja.",
+      "en": "HIPStudio describes topic planning, programme structure, audio and video recording, editing and distribution. It also describes recording at an office with a mobile studio.",
+      "de": "HIPStudio beschreibt Themenplanung, Sendungsstruktur, Ton- und Videoaufnahme, Schnitt und Distribution. Auch Aufnahmen im Büro mit mobilem Studio werden genannt."
+    },
+    "brief": {
+      "hu": "Az első briefben a témák, a résztvevők száma, a helyszín és a sorozat célja legyen világos. A publikálási csatornákat és az utómunka terjedelmét külön egyeztetjük.",
+      "en": "Start with the subjects, number of participants, location and the series’ purpose. Publishing channels and the scope of editing need separate agreement.",
+      "de": "Im ersten Briefing sollten Themen, Teilnehmerzahl, Ort und Ziel der Serie klar sein. Veröffentlichungskanäle und Umfang der Nachbearbeitung werden gesondert abgestimmt."
+    },
+    "question": {
+      "hu": "Csak a stúdióban készülhet felvétel?",
+      "en": "Is recording limited to the studio?",
+      "de": "Sind Aufnahmen nur im Studio möglich?"
+    },
+    "answer": {
+      "hu": "Nem. A publikus podcastoldal mobil stúdiós, irodai felvételt is ismertet. A helyszín alkalmasságát és a technikai feltételeket előzetesen egyeztetjük.",
+      "en": "No. The public podcast page describes office recording with a mobile studio. We discuss the location’s suitability and technical requirements beforehand.",
+      "de": "Nein. Die öffentliche Podcastseite beschreibt Büroaufnahmen mit mobilem Studio. Eignung des Ortes und technische Voraussetzungen werden vorher geklärt."
+    }
+  },
+  {
+    "key": "executive",
+    "slug": {
+      "hu": "executive-portre",
+      "en": "executive-portraits",
+      "de": "executive-portraets"
+    },
+    "name": {
+      "hu": "Executive portré",
+      "en": "Executive portraits",
+      "de": "Executive-Porträts"
+    },
+    "cluster": "portrait",
+    "source": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portrefotozas-galeria",
+    "intro": {
+      "hu": "A vezetői portrénak a személyt és a felelősségi kört is hitelesen kell képviselnie. A cél a szakmai szerephez illő, következetes megjelenés.",
+      "en": "An executive portrait needs to represent both the person and their responsibility. The aim is a consistent presence that fits the professional role.",
+      "de": "Ein Executive-Porträt soll die Person und ihre Verantwortung glaubwürdig darstellen. Ziel ist ein stimmiger Auftritt, der zur beruflichen Rolle passt."
+    },
+    "result": {
+      "hu": "Sajtóportré, vezetői bemutatkozás és céges profil eltérő képkivágást igényelhet. A rövid headshottól a hosszabb portrésorozatig a feladathoz illő időkeretet és képszámot választjuk.",
+      "en": "Press portraits, executive introductions and company profiles may require different crops. From a short headshot session to an extended portrait series, the time and image count should fit the task.",
+      "de": "Presseporträts, Führungskräftevorstellungen und Unternehmensprofile können unterschiedliche Ausschnitte benötigen. Vom kurzen Headshot bis zur längeren Porträtserie sollen Zeitrahmen und Bildanzahl zur Aufgabe passen."
+    },
+    "brief": {
+      "hu": "Az egyeztetéshez add meg a szerepkört, a vállalati arculati elvárásokat és a publikálási helyeket. A rendelkezésre álló idő és a jóváhagyó személy meghatározása segíti az előkészítést.",
+      "en": "Include the role, brand requirements and publishing channels. Knowing the available time and the person approving the images helps with preparation.",
+      "de": "Nenne Rolle, Gestaltungsanforderungen und Veröffentlichungskanäle. Verfügbare Zeit und Freigabeverantwortliche helfen bei der Vorbereitung."
+    },
+    "question": {
+      "hu": "Készülhet több felületre alkalmas vezetői portré?",
+      "en": "Can executive portraits serve several channels?",
+      "de": "Können Executive-Porträts für mehrere Kanäle entstehen?"
+    },
+    "answer": {
+      "hu": "Igen, a képkivágásokat és felhasználási célokat előre érdemes meghatározni. A végleges darabszámot és a jogokat az ajánlat rögzíti.",
+      "en": "Yes. Define crops and uses in advance. The quote records final image quantities and rights.",
+      "de": "Ja. Ausschnitte und Nutzung sollten vorab festgelegt werden. Bildanzahl und Rechte werden im Angebot dokumentiert."
+    },
+    "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
+  },
+  {
+    "key": "brand",
+    "slug": {
+      "hu": "brand-fotozas",
+      "en": "brand-photography",
+      "de": "brandfotografie"
+    },
+    "name": {
+      "hu": "Brand-fotózás",
+      "en": "Brand photography",
+      "de": "Brandfotografie"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "Ha az Ön márkája minden felületen más arcot mutat, a képi jelenlétet együtt érdemes megtervezni. A brand-fotózás a szereplőket, a helyszínt és a kommunikáció célját kapcsolja össze.",
+      "en": "When a brand looks different on every channel, its visual presence needs a shared plan. Brand photography connects people, setting and communication goals.",
+      "de": "Wenn eine Marke auf jedem Kanal anders wirkt, braucht ihr visueller Auftritt einen gemeinsamen Plan. Brandfotografie verbindet Menschen, Umgebung und Kommunikationsziele."
+    },
+    "result": {
+      "hu": "A portrék, munkakörnyezetek és részletek együtt alkotnak használható képi készletet. Az egységes sorozatot a honlap, a szakmai bemutatkozás és a kampányok tervezett használatához igazítjuk.",
+      "en": "Portraits, working environments and details form a useful image collection together. A coherent series is planned around your website, professional introduction and campaign needs.",
+      "de": "Porträts, Arbeitsumgebungen und Details ergeben gemeinsam einen nutzbaren Bildbestand. Eine stimmige Serie richtet sich nach Website, beruflichem Auftritt und Kampagnenbedarf."
+    },
+    "brief": {
+      "hu": "Írd össze a szükséges felületeket és azokat az üzeneteket, amelyekhez saját kép kell. Fontos a szereplők száma, a helyszín és a ténylegesen kiválasztandó képek mennyisége.",
+      "en": "List the channels and messages that need original imagery. Include participant count, location and the number of final images required.",
+      "de": "Liste die Kanäle und Botschaften auf, für die eigene Bilder benötigt werden. Wichtig sind Personenzahl, Ort und Anzahl der final ausgewählten Bilder."
+    },
+    "question": {
+      "hu": "A csomagban szereplő képszám személyenként értendő?",
+      "en": "Is the included image count per person?",
+      "de": "Gilt die enthaltene Bildanzahl pro Person?"
+    },
+    "answer": {
+      "hu": "A brand csomagokban a három retusált kép projektenként értendő. A további kiválasztott képek külön tételt jelentenek.",
+      "en": "Brand packages include three retouched images per project. Additional selected images are separate items.",
+      "de": "Die Brandpakete enthalten drei retuschierte Bilder pro Projekt. Weitere ausgewählte Bilder sind separate Positionen."
+    },
+    "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
+  },
+  {
+    "key": "positioning",
+    "slug": {
+      "hu": "vizualis-pozicionalas",
+      "en": "visual-positioning",
+      "de": "visuelle-positionierung"
+    },
+    "name": {
+      "hu": "Vizuális pozicionálás",
+      "en": "Visual positioning",
+      "de": "Visuelle Positionierung"
+    },
+    "cluster": "commercial",
+    "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
+    "intro": {
+      "hu": "Mit szeretne, hogy megértsenek Önről az első képből? A vizuális pozicionálás ezt a kérdést fordítja le a fotózás céljára, stílusára és felhasználására.",
+      "en": "What should the first image help people understand about you? Visual positioning translates that question into the purpose, style and use of the photography.",
+      "de": "Was sollen Menschen schon durch das erste Bild über Sie verstehen? Visuelle Positionierung übersetzt diese Frage in Ziel, Stil und Verwendung der Fotos."
+    },
+    "result": {
+      "hu": "A cél a döntések összehangolása: kit szólítasz meg, milyen szerepben jelensz meg, és hol találkoznak a képeiddel. A brand-fotózáshoz kapcsolódó tervezési irányként kezeljük.",
+      "en": "The aim is to align the audience, the role you present and the places where your images appear. We treat it as a planning direction within brand photography.",
+      "de": "Ziel ist die Abstimmung von Zielgruppe, dargestellter Rolle und Einsatzorten der Bilder. Wir behandeln sie als Planungsansatz innerhalb der Brandfotografie."
+    },
+    "brief": {
+      "hu": "Hozd el a jelenlegi bemutatkozásodat, a célközönség leírását és néhány képi példát. A vizuális irány nem helyettesít üzleti stratégiát és nem jelent garantált értékesítési eredményt.",
+      "en": "Bring your current introduction, an audience description and a few visual examples. Visual direction does not replace business strategy or guarantee sales results.",
+      "de": "Bringe deinen aktuellen Auftritt, eine Zielgruppenbeschreibung und einige Bildbeispiele mit. Visuelle Ausrichtung ersetzt keine Unternehmensstrategie und garantiert keine Verkaufsergebnisse."
+    },
+    "question": {
+      "hu": "Ez külön tanácsadási díjcsomag?",
+      "en": "Is this a separate consulting package?",
+      "de": "Ist das ein separates Beratungspaket?"
+    },
+    "answer": {
+      "hu": "A vizuális pozicionálást a brand-fotózás részeként tervezzük. Önálló tanácsadási igény esetén külön ajánlatot kérhetsz.",
+      "en": "Visual positioning is planned as part of brand photography. For a standalone consulting requirement, request a separate quote.",
+      "de": "Visuelle Positionierung wird als Teil der Brandfotografie geplant. Für eigenständigen Beratungsbedarf fragen Sie nach einem separaten Angebot."
+    },
+    "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
+  },
+  {
+    "key": "fineart",
+    "slug": {
+      "hu": "muveszi-fotozas",
+      "en": "fine-art-photography",
+      "de": "kuenstlerische-fotografie"
+    },
+    "name": {
+      "hu": "Művészi fotózás",
+      "en": "Fine-art photography",
+      "de": "Künstlerische Fotografie"
+    },
+    "cluster": "art",
+    "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+    "reference": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+    "intro": {
+      "hu": "Egy előadói vagy alkotói jelenlétet nem mindig lehet hagyományos profilképbe sűríteni. A művészi fotózás a karakternek, a mozdulatnak és az egyéni képi világnak ad teret.",
+      "en": "An artistic presence cannot always fit into a conventional profile image. Fine-art photography makes room for character, movement and a personal visual language.",
+      "de": "Eine künstlerische Präsenz passt nicht immer in ein klassisches Profilbild. Künstlerische Fotografie gibt Charakter, Bewegung und einer eigenen Bildsprache Raum."
+    },
+    "result": {
+      "hu": "Színészi, táncos, előadóművészi, modell- és editorial portfólióhoz a műfaj és a saját alkotói irány együtt alakítja az anyagot. A ruhák, mozdulatok és fények a közösen kialakított koncepciót szolgálják.",
+      "en": "For acting, dance, performance, modelling and editorial portfolios, the discipline and creative direction shape the work together. Clothing, movement and light support the shared concept.",
+      "de": "Bei Schauspiel-, Tanz-, Bühnen-, Model- und Editorial-Portfolios prägen Sparte und künstlerische Richtung gemeinsam das Material. Kleidung, Bewegung und Licht unterstützen das gemeinsame Konzept."
+    },
+    "brief": {
+      "hu": "Az inspirációk mellett add meg a műfajt és a portfólió célját. Mozgásos felvételnél a térigényt, ruhákat és kellékeket is érdemes előre átbeszélni.",
+      "en": "Alongside inspiration, describe your discipline and portfolio purpose. For movement-based work, discuss space, clothing and props in advance.",
+      "de": "Nenne neben Inspirationen auch Sparte und Portfolioziel. Bei Bewegungsaufnahmen sollten Platzbedarf, Kleidung und Requisiten vorab besprochen werden."
+    },
+    "question": {
+      "hu": "Ez ugyanaz, mint a művészi akt?",
+      "en": "Is this the same as fine-art nude photography?",
+      "de": "Ist das dasselbe wie künstlerische Aktfotografie?"
+    },
+    "answer": {
+      "hu": "Nem. Ez az alkotói és előadói portfólió iránya. A művészi akt külön szolgáltatás és külön személyes egyeztetés tárgya.",
+      "en": "No. This concerns artistic and performance portfolios. Fine-art nude photography is a separate service with its own consultation.",
+      "de": "Nein. Hier geht es um künstlerische und darstellerische Portfolios. Aktfotografie ist eine separate Leistung mit eigener Abstimmung."
+    },
+    "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
+  },
+  {
+    "key": "clevel",
+    "slug": {
+      "hu": "c-level-rendezvenyfotozas",
+      "en": "c-level-event-photography",
+      "de": "c-level-eventfotografie"
+    },
+    "name": {
+      "hu": "C-level rendezvényfotózás",
+      "en": "C-level event photography",
+      "de": "C-Level-Eventfotografie"
+    },
+    "cluster": "event",
+    "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Vezetői találkozón a fontos pillanatok és a protokoll egyszerre határozzák meg a munkát. A fotózási tervnek a programot és a megjelenési elvárásokat is követnie kell.",
+      "en": "At a leadership event, key moments and protocol both shape the work. The photography plan needs to reflect the programme and publication requirements.",
+      "de": "Bei einer Führungskräfteveranstaltung bestimmen Schlüsselmomente und Protokoll die Arbeit. Der Fotoplan muss Programm und Veröffentlichungsvorgaben berücksichtigen."
+    },
+    "result": {
+      "hu": "A helyszínek és párhuzamos programok számához illeszkedő fotósi kapacitást a brief alapján tervezzük. A lényeges szereplők, a sajtóképek és a dokumentáció igényeit külön egyeztetjük.",
+      "en": "Photographer capacity is planned around the locations and simultaneous sessions in the brief. Key participants, press imagery and documentation needs are discussed separately.",
+      "de": "Die Fotografenkapazität richtet sich nach Orten und parallelen Programmpunkten im Briefing. Wichtige Beteiligte, Pressebilder und Dokumentationsbedarf werden gesondert abgestimmt."
+    },
+    "brief": {
+      "hu": "Add meg a vendégszámot, a párhuzamos programokat, a protokolláris kötöttségeket és a képek jóváhagyási útját. Zárt eseménynél a nyilvános felhasználás körét külön tisztázni kell.",
+      "en": "Include guest count, simultaneous sessions, protocol and the image approval process. For a closed event, public use must be agreed separately.",
+      "de": "Nenne Gästezahl, parallele Programmpunkte, Protokoll und Bildfreigabeprozess. Bei geschlossenen Veranstaltungen muss öffentliche Nutzung gesondert geklärt werden."
+    },
+    "question": {
+      "hu": "Mikor szükséges több fotós?",
+      "en": "When are additional photographers needed?",
+      "de": "Wann werden weitere Fotografen benötigt?"
+    },
+    "answer": {
+      "hu": "Párhuzamos programoknál és nagyobb eseménynél a kapacitást külön tervezzük. A forrás árazási logikája a vendégszámot és a párhuzamos programokat is figyelembe veszi.",
+      "en": "Capacity needs separate planning for simultaneous sessions and larger events. The source pricing logic considers guest count and parallel activity.",
+      "de": "Bei parallelen Programmpunkten und größeren Veranstaltungen wird die Kapazität gesondert geplant. Die Preislogik der Quelle berücksichtigt Gästezahl und parallele Abläufe."
+    },
+    "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
+  },
+  {
+    "key": "souvenir",
+    "slug": {
+      "hu": "emlekfotozas",
+      "en": "souvenir-photography",
+      "de": "erinnerungsfotografie"
+    },
+    "name": {
+      "hu": "Emlékfotózás",
+      "en": "Souvenir photography",
+      "de": "Erinnerungsfotografie"
+    },
+    "cluster": "event",
+    "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A rendezvény élménye kézzelfogható emlékként is továbbvihető. A fotófalnál készülő portré más feladat, mint az esemény teljes dokumentálása.",
+      "en": "An event can leave a tangible memory. A portrait at a photo wall is a different task from documenting the entire event.",
+      "de": "Eine Veranstaltung kann eine greifbare Erinnerung hinterlassen. Ein Porträt vor der Fotowand ist eine andere Aufgabe als die vollständige Eventdokumentation."
+    },
+    "result": {
+      "hu": "A nyilvános cégbemutató fotófal előtti emlékfotózást és helyszíni képnyomtatást ismertet. A háttér, a várható létszám és az átadási mód közös tervezést igényel.",
+      "en": "The public company profile describes photo-wall portraits and on-site printing. Background, expected attendance and delivery method need to be planned together.",
+      "de": "Das öffentliche Firmenprofil beschreibt Fotowandporträts und Druck vor Ort. Hintergrund, erwartete Personenzahl und Übergabeform müssen gemeinsam geplant werden."
+    },
+    "brief": {
+      "hu": "A briefben legyen benne a résztvevők száma, az esemény időtartama és a nyomtatási igény. A nyomat méretét, mennyiségét és az elérhető helyszíni kapacitást külön egyeztetjük.",
+      "en": "Include attendance, event duration and printing requirements. Print size, quantity and available on-site capacity are agreed separately.",
+      "de": "Nenne Gästezahl, Veranstaltungsdauer und Druckbedarf. Format, Stückzahl und verfügbare Kapazität vor Ort werden gesondert abgestimmt."
+    },
+    "question": {
+      "hu": "A nyomtatás automatikusan jár a rendezvényfotózáshoz?",
+      "en": "Is printing automatically included in event photography?",
+      "de": "Ist der Druck bei Eventfotografie automatisch enthalten?"
+    },
+    "answer": {
+      "hu": "Nem. A helyszíni nyomtatás külön egyeztetett feladat. A cégbemutató referenciája nem minden eseményhez járó csomagígéret.",
+      "en": "No. On-site printing is agreed separately. The company profile’s reference is not a package promise for every event.",
+      "de": "Nein. Druck vor Ort wird gesondert vereinbart. Die Referenz im Firmenprofil ist keine Paketzusage für jede Veranstaltung."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "greenbox",
+    "slug": {
+      "hu": "greenbox-fotozas",
+      "en": "green-screen-photography",
+      "de": "greenscreen-fotografie"
+    },
+    "name": {
+      "hu": "Greenbox fotózás",
+      "en": "Green-screen photography",
+      "de": "Greenscreen-Fotografie"
+    },
+    "cluster": "event",
+    "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Egy rendezvény képi világa saját háttérrel és közösen kitalált jelenettel is megjelenhet. A greenbox fotózás a felvételt utólag összeállított környezethez kapcsolja.",
+      "en": "An event’s visual identity can appear through a custom background and a planned scene. Green-screen photography combines a photograph with a composited setting.",
+      "de": "Die Bildwelt einer Veranstaltung kann durch einen eigenen Hintergrund und eine geplante Szene sichtbar werden. Greenscreen-Fotografie verbindet die Aufnahme mit einer zusammengesetzten Umgebung."
+    },
+    "result": {
+      "hu": "A greenbox fotózás önálló pontként szerepel a HIPStudio nyilvános cégbemutatójában. A háttérterv és a résztvevők megjelenése együtt határozza meg a képek karakterét.",
+      "en": "Green-screen photography has its own section in HIPStudio’s public company profile. Background design and participants’ appearance jointly shape the images.",
+      "de": "Greenscreen-Fotografie hat einen eigenen Abschnitt im öffentlichen Firmenprofil von HIPStudio. Hintergrundgestaltung und Darstellung der Beteiligten prägen gemeinsam die Bilder."
+    },
+    "brief": {
+      "hu": "Tisztázzuk a háttéranyag felhasználási jogát, a rendelkezésre álló helyet és a képek átadásának módját. A kompozit képet nem mutatjuk valós dokumentarista helyszínként.",
+      "en": "Clarify rights to the background, available space and image delivery. A composite image is not presented as documentary evidence of a real location.",
+      "de": "Zu klären sind Hintergrundrechte, Platzbedarf und Bildübergabe. Ein zusammengesetztes Bild wird nicht als dokumentarischer Beleg eines realen Ortes dargestellt."
+    },
+    "question": {
+      "hu": "Milyen háttér használható?",
+      "en": "What backgrounds can be used?",
+      "de": "Welche Hintergründe können verwendet werden?"
+    },
+    "answer": {
+      "hu": "Előre egyeztetett, felhasználható háttéranyag. Védjegyet, más alkotását vagy ügyfélképet csak megfelelő jogosultsággal lehet beépíteni.",
+      "en": "A pre-agreed background that may lawfully be used. Trademarks, other people’s work or client imagery require appropriate rights.",
+      "de": "Ein vorher abgestimmter, nutzbarer Hintergrund. Marken, fremde Werke oder Kundenbilder benötigen entsprechende Rechte."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "streaming",
+    "slug": {
+      "hu": "konferencia-streameles",
+      "en": "conference-streaming",
+      "de": "konferenz-streaming"
+    },
+    "name": {
+      "hu": "Konferencia-streamelés",
+      "en": "Conference streaming",
+      "de": "Konferenz-Streaming"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A helyszíni program a távoli közönséghez is eljuthat. A közvetítésnél a kép mellett a beszéd érthetősége, a program és a hozzáférés módja is meghatározó.",
+      "en": "A live programme can reach a remote audience. In a stream, clear speech, programme structure and access arrangements matter alongside the image.",
+      "de": "Ein Liveprogramm kann auch ein entferntes Publikum erreichen. Bei einem Stream zählen neben dem Bild verständliche Sprache, Programmstruktur und Zugangsart."
+    },
+    "result": {
+      "hu": "A nyilvános cégbemutató konferencia-streamelést és helyszíni élőkép-kivetítést ismertet. A bizalmas események teljes felvételét nem kezeli szabadon bemutatható referenciaként.",
+      "en": "The public company profile describes conference streaming and live projection at the venue. It does not treat complete recordings of confidential events as freely shareable references.",
+      "de": "Das öffentliche Firmenprofil beschreibt Konferenz-Streaming und Liveprojektion am Veranstaltungsort. Vollständige Aufzeichnungen vertraulicher Veranstaltungen werden nicht als frei vorzeigbare Referenzen behandelt."
+    },
+    "brief": {
+      "hu": "Az adás célplatformja, a nézők hozzáférése, a helyszíni internet és a hangtechnikai kapcsolódás legyen része az egyeztetésnek. A rögzítésről és utólagos hozzáférésről külön döntés szükséges.",
+      "en": "Discuss the platform, viewer access, venue internet and audio connections. Recording and later access require separate decisions.",
+      "de": "Plattform, Zuschauerzugang, Internet vor Ort und Audioanbindung gehören zur Abstimmung. Aufzeichnung und spätere Verfügbarkeit erfordern separate Entscheidungen."
+    },
+    "question": {
+      "hu": "Nyilvános vagy zárt közvetítés is tervezhető?",
+      "en": "Can a stream be public or restricted?",
+      "de": "Kann ein Stream öffentlich oder zugangsbeschränkt sein?"
+    },
+    "answer": {
+      "hu": "A hozzáférési igényt és a platform lehetőségeit előre kell egyeztetni. Ellenőrzött technikai terv nélkül nem ígérünk nézőszámot vagy hozzáférési funkciót.",
+      "en": "Access requirements and platform capabilities must be discussed in advance. We do not promise audience capacity or access features without a checked technical plan.",
+      "de": "Zugangsanforderungen und Plattformmöglichkeiten müssen vorab geklärt werden. Ohne geprüften technischen Plan werden keine Zuschauerzahlen oder Zugriffsfunktionen zugesagt."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "sports-video",
+    "slug": {
+      "hu": "sportvideo",
+      "en": "sports-video",
+      "de": "sportvideo"
+    },
+    "name": {
+      "hu": "Sportvideó",
+      "en": "Sports video",
+      "de": "Sportvideo"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A mozdulat, a tempó és az esemény rendje együtt adja a sportfelvétel történetét. A kamerák helyét a történésekhez és a biztonságos hozzáféréshez kell igazítani.",
+      "en": "Movement, pace and the event’s structure shape a sports film. Camera positions need to follow the action and safe access arrangements.",
+      "de": "Bewegung, Tempo und Veranstaltungsablauf prägen einen Sportfilm. Kamerapositionen müssen zum Geschehen und zum sicheren Zugang passen."
+    },
+    "result": {
+      "hu": "A HIPStudio cégbemutatója sportfelvételeket és az ezekből szerkesztett rövid vagy hosszabb filmeket is felsorolja. A felvétel és a hang utómunkája a kívánt végtermékhez igazodik.",
+      "en": "HIPStudio’s company profile lists sports recording and short or longer edited films. Footage and sound editing depend on the desired final work.",
+      "de": "Das Firmenprofil von HIPStudio nennt Sportaufnahmen und daraus geschnittene kurze oder längere Filme. Bild- und Tonbearbeitung richten sich nach dem gewünschten Ergebnis."
+    },
+    "brief": {
+      "hu": "Add meg a sportágat, a programot, a mozgás útvonalát és a szervezői hozzáférést. A teljes eseményrögzítés és a hangulati összefoglaló eltérő felvételi tervet igényel.",
+      "en": "Specify the sport, schedule, movement routes and organiser access. Full-event recording and a highlights film need different recording plans.",
+      "de": "Nenne Sportart, Programm, Bewegungsabläufe und Zugang über den Veranstalter. Vollständige Aufzeichnung und Highlightfilm benötigen unterschiedliche Aufnahmepläne."
+    },
+    "question": {
+      "hu": "Összefoglaló vagy teljes rögzítés készüljön?",
+      "en": "Should we record highlights or the full event?",
+      "de": "Sollen Highlights oder die gesamte Veranstaltung aufgenommen werden?"
+    },
+    "answer": {
+      "hu": "Ezt a felhasználás dönti el. A választást a forgatás előtt kell rögzíteni, mert a teljes eseményhez szükséges folyamatos lefedettség utólag nem pótolható.",
+      "en": "Intended use determines the choice. Decide before filming; continuous coverage for a full recording cannot be added afterwards.",
+      "de": "Der Verwendungszweck entscheidet. Die Wahl muss vor dem Dreh feststehen, da durchgehende Abdeckung später nicht ergänzt werden kann."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "concert-video",
+    "slug": {
+      "hu": "koncertvideo",
+      "en": "concert-video",
+      "de": "konzertvideo"
+    },
+    "name": {
+      "hu": "Koncertvideó",
+      "en": "Concert video",
+      "de": "Konzertvideo"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A koncert képe a hanggal együtt teljes. A színpadi fények, a közönség és az előadás ritmusa közös felvételi és vágási tervet kíván.",
+      "en": "Concert imagery works together with sound. Stage lighting, the audience and the performance’s rhythm need a shared recording and editing plan.",
+      "de": "Konzertbilder wirken zusammen mit dem Ton. Bühnenlicht, Publikum und Rhythmus der Aufführung brauchen einen gemeinsamen Aufnahme- und Schnittplan."
+    },
+    "result": {
+      "hu": "A nyilvános cégbemutató koncertfelvételeket, vágást és hangkeverést ismertet. A teljes előadás és a rövid promóciós anyag célját érdemes már az előkészítéskor szétválasztani.",
+      "en": "The public company profile describes concert recording, editing and audio mixing. Distinguish a complete performance from a short promotional film during planning.",
+      "de": "Das öffentliche Firmenprofil beschreibt Konzertaufnahmen, Schnitt und Tonmischung. Vollständige Aufführung und kurzer Werbefilm sollten schon bei der Planung unterschieden werden."
+    },
+    "brief": {
+      "hu": "A setlist, a hangtechnikai csatlakozás, a színpadi hozzáférés és a megjelenési jogosultságok fontos kiindulópontok. A zene felhasználását nem helyettesíti a videó megrendelése.",
+      "en": "Set list, audio connections, stage access and publication rights are important starting points. Commissioning a video does not itself secure music usage rights.",
+      "de": "Setlist, Audioanschlüsse, Bühnenzugang und Veröffentlichungsrechte sind wichtige Grundlagen. Ein Videoauftrag sichert nicht automatisch Musiknutzungsrechte."
+    },
+    "question": {
+      "hu": "A hangfelvétel is része a tervnek?",
+      "en": "Is audio recording part of the plan?",
+      "de": "Gehört die Tonaufnahme zur Planung?"
+    },
+    "answer": {
+      "hu": "Igen, a kívánt végtermékhez a hangfelvételi forrást és az utómunkát is egyeztetni kell. A konkrét technikai lehetőségeket a helyszínnel együtt tisztázzuk.",
+      "en": "Yes. Audio sources and post-production need to be agreed for the desired final film. Technical options are discussed with the venue.",
+      "de": "Ja. Tonquellen und Nachbearbeitung müssen zum gewünschten Film abgestimmt werden. Technische Möglichkeiten werden mit dem Veranstaltungsort geklärt."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "music-video",
+    "slug": {
+      "hu": "videoklip",
+      "en": "music-videos",
+      "de": "musikvideos"
+    },
+    "name": {
+      "hu": "Videoklip",
+      "en": "Music videos",
+      "de": "Musikvideos"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "Egy dal képi világa saját történetet mesélhet. A videoklipnél az előadó karaktere, a zene ritmusa és a koncepció együtt vezeti a forgatást.",
+      "en": "A song’s visual world can tell its own story. In a music video, the performer’s character, musical rhythm and concept guide the shoot together.",
+      "de": "Die Bildwelt eines Songs kann eine eigene Geschichte erzählen. Bei einem Musikvideo leiten Künstlerpersönlichkeit, Rhythmus und Konzept gemeinsam den Dreh."
+    },
+    "result": {
+      "hu": "A HIPStudio filmoldala és cégbemutatója is említi a videoklipkészítést. A szereplők, helyszínek és utómunka a közösen meghatározott ötlethez igazodnak.",
+      "en": "Both HIPStudio’s film page and company profile mention music videos. People, locations and post-production follow the agreed idea.",
+      "de": "Sowohl Filmseite als auch Firmenprofil von HIPStudio nennen Musikvideos. Personen, Orte und Nachbearbeitung folgen der gemeinsamen Idee."
+    },
+    "brief": {
+      "hu": "Az egyeztetéshez a zeneszám, az előadói irány, a költségkeret és a tervezett publikáció legyen világos. A zenei és képi jogokat a produkció előtt tisztázni kell.",
+      "en": "Bring the track, artistic direction, budget and publishing plan. Music and image rights need to be clarified before production.",
+      "de": "Für die Abstimmung sollten Musikstück, künstlerische Richtung, Budget und Veröffentlichung klar sein. Musik- und Bildrechte müssen vor der Produktion geklärt werden."
+    },
+    "question": {
+      "hu": "Kész koncepció nélkül is indulhatunk?",
+      "en": "Can we start without a finished concept?",
+      "de": "Können wir ohne fertiges Konzept beginnen?"
+    },
+    "answer": {
+      "hu": "A filmkészítési folyamat része lehet a közös ötletelés és forgatókönyv. A koncepció kidolgozásának terjedelmét és díját az ajánlatban rögzítjük.",
+      "en": "Collaborative ideation and scripting can be part of the filmmaking process. The quote defines the scope and cost of concept development.",
+      "de": "Gemeinsame Ideenentwicklung und Drehbuch können Teil der Filmproduktion sein. Umfang und Kosten der Konzeptentwicklung werden im Angebot festgelegt."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  },
+  {
+    "key": "event-video",
+    "slug": {
+      "hu": "rendezvenyvideo",
+      "en": "event-video",
+      "de": "eventvideo"
+    },
+    "name": {
+      "hu": "Rendezvényvideó",
+      "en": "Event video",
+      "de": "Eventvideo"
+    },
+    "cluster": "film",
+    "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+    "reference": "https://www.hipstudio.hu/referencia-videók",
+    "intro": {
+      "hu": "A rendezvény üzenete filmben is továbbadható. A beszédek, interjúk és hangulati képek arányát az dönti el, kinek és mire készül az anyag.",
+      "en": "An event’s message can continue through film. The balance of speeches, interviews and atmosphere depends on the audience and purpose.",
+      "de": "Die Botschaft einer Veranstaltung kann durch einen Film weiterwirken. Das Verhältnis von Reden, Interviews und Atmosphäre richtet sich nach Zielgruppe und Zweck."
+    },
+    "result": {
+      "hu": "A HIPStudio zenés vagy interjús eseményfilmet is ismertet. A cégbemutató teljes konferenciarögzítést is említ; ennek technikai és átadási terjedelmét külön kell egyeztetni.",
+      "en": "HIPStudio describes music-led or interview-based event films. The company profile also mentions full conference recording, with technical and delivery scope to be agreed separately.",
+      "de": "HIPStudio beschreibt musikalische oder interviewbasierte Eventfilme. Das Firmenprofil nennt auch vollständige Konferenzaufzeichnungen, deren Technik und Übergabeumfang gesondert geklärt werden."
+    },
+    "brief": {
+      "hu": "Küldd el a programot, a kiemelt üzeneteket és a tervezett felületeket. A rövid eseményfilm, az interjú és a teljes előadás külön végtermék lehet.",
+      "en": "Send the programme, key messages and intended channels. A short event film, an interview and a complete presentation may be separate deliverables.",
+      "de": "Sende Programm, Kernbotschaften und geplante Kanäle. Kurzer Eventfilm, Interview und vollständiger Vortrag können separate Ergebnisse sein."
+    },
+    "question": {
+      "hu": "A teljes konferenciafelvétel is lehet referencia?",
+      "en": "Can a full conference recording be used as a reference?",
+      "de": "Kann eine vollständige Konferenzaufzeichnung als Referenz dienen?"
+    },
+    "answer": {
+      "hu": "Csak megfelelő jogosultsággal. A cégbemutató külön jelzi a bizalmas események korlátait; ügyfélnevet és felvételt nem publikálunk automatikusan.",
+      "en": "Only with appropriate rights. The company profile notes restrictions for confidential events; client names and footage are not published automatically.",
+      "de": "Nur mit entsprechenden Rechten. Das Firmenprofil weist auf Grenzen bei vertraulichen Veranstaltungen hin; Kundennamen und Aufnahmen werden nicht automatisch veröffentlicht."
+    },
+    "secondarySource": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+  }
+]
