@@ -1,9 +1,14 @@
 # HIPStudio production readiness audit
 
-Audit date: 2026-09-08  
-Repository: `880rzz/HIPSTUDIO`  
-Pull request: `#1`  
+Audit date: 2026-09-08
+
+Repository: `880rzz/HIPSTUDIO`
+
+Pull request: `#1`
+
 Branch: `codex/hipstudio-static-migration`
+
+Final reviewed implementation commit: `7ab528e2cf3029fa9689d0ef9d19d34dcfed5d5b`
 
 ## 1. Executive summary
 
@@ -14,6 +19,8 @@ No P0 or P1 code defect remains after this audit. Two validation gaps were fixed
 Production cutover is not ready. Legal/privacy inputs, unresolved media classification, production hosting and edge behavior, security response headers, canonical domain/TLS/DNS verification, and explicit publication authorization remain unresolved. These are release dependencies rather than reasons to prevent an unpublished merge.
 
 **Final recommendation: C. READY TO MERGE AS UNPUBLISHED PRODUCTION CANDIDATE.**
+
+Final review of commit `7ab528e2cf3029fa9689d0ef9d19d34dcfed5d5b` found no new code defect. The complete local release suite was rerun: build, 14 static/regression tests, 16 pricing scenarios, 22 VAT invariants, HTML validation, 191 browser samples and eight Lighthouse profiles. No implementation change was required.
 
 ## 2. Current PR status
 
@@ -140,13 +147,21 @@ Reasons:
 
 Merging does not authorize deployment, indexing, DNS changes or Wix removal. PR #1 remains draft until a human chooses to mark it Ready for Review.
 
+### Exact merge blockers
+
+**None at code level.** Legal, media, hosting, redirect, publication and DNS dependencies do not block merging an unpublished candidate because no deploy workflow exists, review output is `noindex`, and the production build remains gated.
+
 ## 12. Deploy readiness
 
 **NOT READY.** LEG-01, MED-01, INF-01, INF-02 and PUB-01 remain P0 for a production cutover. A private/staging deployment would still require an approved host and access/indexing controls.
 
+Exact production deployment blockers: LEG-01, MED-01, INF-01, INF-02 and PUB-01. PUB-02 additionally blocks canonical-domain cutover. QA-01 requires public readback before cutover can be declared complete.
+
 ## 13. Indexing readiness
 
 **NOT READY.** Production legal/media approvals, canonical domain, TLS/DNS behavior, real redirects and live structured-data/robots/sitemap verification are unresolved. The current review build correctly prevents indexing.
+
+Exact indexing blockers: LEG-01, MED-01, INF-01, INF-02, PUB-01, PUB-02 and QA-01.
 
 ## 14. Cutover checklist
 
@@ -204,3 +219,5 @@ Merging does not authorize deployment, indexing, DNS changes or Wix removal. PR 
 **C. READY TO MERGE AS UNPUBLISHED PRODUCTION CANDIDATE.**
 
 PR #1 may be marked Ready for Review and, after human review, merged into `main` without publishing. Production deploy and indexing must remain blocked until the P0 release dependencies have documentary and live technical evidence. This audit does not authorize publication, merge, DNS changes or removal of Wix.
+
+Recommended next step after merge: keep `main` unpublished and open a separate, approval-gated release task to collect the legal/privacy inputs, resolve the 27 media items, select the hosting/edge layer and prepare a non-indexable staging validation. Production or DNS work should begin only after those inputs are concrete and reviewable.

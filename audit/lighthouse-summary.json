@@ -1,5 +1,5 @@
 {
-  "time": "2026-09-08T05:31:09.427Z",
+  "time": "2026-09-08T06:11:19.149Z",
   "context": "Local HTTP review build with noindex, not live PageSpeed or field data",
   "results": [
     {
@@ -14,11 +14,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 914.354,
-        "largest-contentful-paint": 1353.354,
+        "first-contentful-paint": 915.8136999999999,
+        "largest-contentful-paint": 1278.8137,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 914.354
+        "speed-index": 915.8136999999999
       },
       "failed": [
         {
@@ -69,11 +69,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 249.5385,
-        "largest-contentful-paint": 304.5385,
+        "first-contentful-paint": 248.50740000000002,
+        "largest-contentful-paint": 304.5074,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 249.5385
+        "speed-index": 248.50740000000002
       },
       "failed": [
         {
@@ -124,11 +124,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 910.1012000000001,
-        "largest-contentful-paint": 1202.1012,
+        "first-contentful-paint": 920.3967,
+        "largest-contentful-paint": 1208.3967,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 910.1012000000001
+        "speed-index": 920.3967
       },
       "failed": [
         {
@@ -179,11 +179,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 248.88670000000002,
-        "largest-contentful-paint": 286.8867,
+        "first-contentful-paint": 246.05599999999998,
+        "largest-contentful-paint": 284.056,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 248.88670000000002
+        "speed-index": 246.05599999999998
       },
       "failed": [
         {
@@ -228,11 +228,11 @@
         "seo": 66
       },
       "metrics": {
-        "first-contentful-paint": 1213.8132500000002,
-        "largest-contentful-paint": 1364.7759,
+        "first-contentful-paint": 1214.4431249999998,
+        "largest-contentful-paint": 1365.3317499999998,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 1213.8132500000002
+        "speed-index": 1214.4431249999998
       },
       "failed": [
         {
@@ -282,11 +282,11 @@
         "seo": 66
       },
       "metrics": {
-        "first-contentful-paint": 305.92875000000004,
-        "largest-contentful-paint": 366.5145,
+        "first-contentful-paint": 306.222625,
+        "largest-contentful-paint": 367.06715,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 305.92875000000004
+        "speed-index": 306.222625
       },
       "failed": [
         {
@@ -336,11 +336,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 1378.1522999999997,
-        "largest-contentful-paint": 2257.1522999999997,
+        "first-contentful-paint": 1382.1189,
+        "largest-contentful-paint": 2253.1189,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 1378.1522999999997
+        "speed-index": 1382.1189
       },
       "failed": [
         {
@@ -409,11 +409,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 381.4553,
-        "largest-contentful-paint": 419.319125,
+        "first-contentful-paint": 373.1117,
+        "largest-contentful-paint": 410.13962499999997,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 381.4553
+        "speed-index": 373.1117
       },
       "failed": [
         {
