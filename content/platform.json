@@ -1,0 +1,90 @@
+{
+  "status": "review",
+  "workingMasterBrand": "HelloÜzlet",
+  "masterBrandApprovalRequired": true,
+  "positioning": {
+    "hu": "Egy partner a céged működéséhez és növekedéséhez.",
+    "en": "One partner for the operation and growth of your business.",
+    "de": "Ein Partner für Betrieb und Wachstum Ihres Unternehmens."
+  },
+  "hero": {
+    "title": {
+      "hu": "Több idő a cégedre. Kevesebb idő a működtetésére.",
+      "en": "More time for your business. Less time running the back office.",
+      "de": "Mehr Zeit für Ihr Unternehmen. Weniger Zeit für den laufenden Betrieb."
+    },
+    "intro": {
+      "hu": "Pénzügyi, működési, digitalizációs és kommunikációs támogatás egy partneri rendszerben — a háttérműködéstől a láthatóságon át a vállalati élményekig.",
+      "en": "Financial, operational, digitalisation and communication support in one partner model — from back-office operations to visibility and corporate experiences.",
+      "de": "Finanzielle, operative, digitale und kommunikative Unterstützung in einem Partnermodell — vom Backoffice über Sichtbarkeit bis zu Unternehmenserlebnissen."
+    }
+  },
+  "primaryCta": {
+    "hu": "30 perces üzleti konzultáció",
+    "en": "30-minute business consultation",
+    "de": "30-minütige Unternehmensberatung"
+  },
+  "pillars": [
+    {
+      "key": "business",
+      "brand": "HelloÜzlet",
+      "label": {"hu":"Business / Operations","en":"Business / Operations","de":"Business / Operations"},
+      "title": {"hu":"Működés, pénzügy és vezetői kontroll","en":"Operations, finance and management control","de":"Betrieb, Finanzen und Managementsteuerung"},
+      "intro": {
+        "hu": "Külső működési partner KKV-knak: pénzügyi adminisztráció, bérszámfejtés, back office, controlling, vezetői riporting, folyamatfejlesztés és AI-automatizálási előkészítés.",
+        "en": "An external operating partner for SMEs: financial administration, payroll, back office, controlling, management reporting, process improvement and AI automation preparation.",
+        "de": "Externer Betriebspartner für KMU: Finanzadministration, Lohnabrechnung, Backoffice, Controlling, Management-Reporting, Prozessverbesserung und Vorbereitung von KI-Automatisierung."
+      },
+      "promise": {"hu":"A háttérműködést mi visszük. Te a céget vezeted.","en":"We run the background operations. You lead the business.","de":"Wir übernehmen die Hintergrundprozesse. Sie führen das Unternehmen."},
+      "services": {
+        "hu":["Pénzügyi adminisztráció","Bérszámfejtés és HR-adminisztráció","Back office és vezetői operáció","Controlling és vezetői riporting","Folyamatfejlesztés","AI readiness és automatizálási sprint"],
+        "en":["Financial administration","Payroll and HR administration","Back office and executive operations","Controlling and management reporting","Process improvement","AI readiness and automation sprint"],
+        "de":["Finanzadministration","Lohn- und HR-Administration","Backoffice und Executive Operations","Controlling und Management-Reporting","Prozessverbesserung","AI-Readiness und Automatisierungs-Sprint"]
+      }
+    },
+    {
+      "key": "creative",
+      "brand": "HIPStudio",
+      "label": {"hu":"Creative / Content","en":"Creative / Content","de":"Creative / Content"},
+      "title": {"hu":"Tartalom üzleti céllal","en":"Content built for business outcomes","de":"Content mit geschäftlichem Ziel"},
+      "intro": {
+        "hu": "Videó, fotó, podcast, employer branding és vezetői kommunikáció olyan cégeknek, amelyeknél a tartalom nem dísz, hanem üzleti eszköz.",
+        "en": "Video, photography, podcast, employer branding and executive communication for companies that use content as a business tool.",
+        "de": "Video, Fotografie, Podcast, Employer Branding und Führungskräftekommunikation für Unternehmen, die Content als Geschäftsinstrument nutzen."
+      },
+      "promise": {"hu":"Tartalom, amit nem csak megnéznek. Hanem megjegyeznek.","en":"Content people do not just watch. They remember it.","de":"Content, den man nicht nur ansieht, sondern behält."},
+      "services": {
+        "hu":["Vállalati videó","Fotó és üzleti portré","Podcast","Employer branding tartalom","CEO Content System","Content Engine és repurposing"],
+        "en":["Corporate video","Photography and executive portrait","Podcast","Employer branding content","CEO Content System","Content Engine and repurposing"],
+        "de":["Unternehmensvideo","Fotografie und Executive Portrait","Podcast","Employer-Branding-Content","CEO Content System","Content Engine und Repurposing"]
+      }
+    },
+    {
+      "key": "experiences",
+      "brand": "Flúgos",
+      "label": {"hu":"Experience / Events","en":"Experience / Events","de":"Experience / Events"},
+      "title": {"hu":"Vállalati élmények, amelyek összehozzák az embereket","en":"Corporate experiences that bring people together","de":"Unternehmenserlebnisse, die Menschen zusammenbringen"},
+      "intro": {
+        "hu": "Csapat-, vezetői-, employer- és ügyfélélmények, egyedi programok és márkázott játékformátumok vállalatoknak.",
+        "en": "Team, leadership, employer and client experiences, custom programmes and branded game formats for companies.",
+        "de": "Team-, Leadership-, Employer- und Kundenerlebnisse, individuelle Programme und gebrandete Spielformate für Unternehmen."
+      },
+      "promise": {"hu":"Élménytervezés céges célokra.","en":"Experience design for business goals.","de":"Experience Design für Unternehmensziele."},
+      "services": {
+        "hu":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Egyedi céges program","Custom Branded Game"],
+        "en":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Custom corporate programme","Custom Branded Game"],
+        "de":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Individuelles Unternehmensprogramm","Custom Branded Game"]
+      }
+    }
+  ],
+  "audience": {
+    "hu": "Elsődleges fókusz: 10–100 fős magyar KKV-k, ahol a tulajdonos vagy ügyvezető még jelentős operatív terhet visz, és nincs minden funkcióra belső szakértői kapacitás.",
+    "en": "Primary focus: Hungarian SMEs with 10–100 employees where the owner or managing director still carries significant operational load and not every function has internal expert capacity.",
+    "de": "Primärer Fokus: ungarische KMU mit 10–100 Mitarbeitenden, bei denen Eigentümer oder Geschäftsführung noch erhebliche operative Last tragen und nicht jede Funktion intern fachlich besetzt ist."
+  },
+  "crossSell": {
+    "hu": "A három pillér ugyanannak a vezetői problémának más részét oldja meg: működés, növekedés, láthatóság és kapcsolódás.",
+    "en": "The three pillars solve different parts of the same management problem: operations, growth, visibility and connection.",
+    "de": "Die drei Säulen lösen unterschiedliche Teile desselben Führungsproblems: Betrieb, Wachstum, Sichtbarkeit und Verbindung."
+  }
+}

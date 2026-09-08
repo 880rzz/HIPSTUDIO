@@ -1,9 +1,12 @@
-name: Validate unpublished migration
+name: Validate unpublished migration and unified platform
 on:
   push:
-    branches: [codex/hipstudio-static-migration]
+    branches: [codex/hipstudio-static-migration, feat/unified-business-platform]
   pull_request:
   workflow_dispatch:
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -19,12 +22,15 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - run: npm run build:all
       - run: npm test
+      - run: npm run test:platform
+      - run: npm run test:public-quote
+      - run: npm run test:quote-routing
       - run: npm run test:pricing
       - run: npm run test:html
       - run: npx playwright install --with-deps chromium
-      - name: Start local review server
+      - name: Start local HIPStudio review server
         run: |
           nohup npm run preview >/tmp/hipstudio-preview.log 2>&1 &
           for attempt in {1..20}; do
@@ -36,3 +42,15 @@ jobs:
           cat /tmp/hipstudio-preview.log
           exit 1
       - run: npm run test:browser
+      - name: Start local unified platform review server
+        run: |
+          nohup python3 -m http.server 4174 --bind 127.0.0.1 --directory dist-platform >/tmp/platform-preview.log 2>&1 &
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4174/hu/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/platform-preview.log
+          exit 1
+      - run: npm run test:browser:platform

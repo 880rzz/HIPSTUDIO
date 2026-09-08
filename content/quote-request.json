@@ -1,0 +1,101 @@
+{
+  "version": "hipstudio-quote-v1",
+  "centralEmail": "info@hipstudio.hu",
+  "responsePromise": {
+    "hu": "Az egyedi ajánlatot 24 órán belül összeállítjuk.",
+    "en": "We prepare a tailored quote within 24 hours.",
+    "de": "Wir erstellen Ihr individuelles Angebot innerhalb von 24 Stunden."
+  },
+  "principles": [
+    "No public prices or automatic price calculation.",
+    "Ask only for inputs that change scope, staffing, timing, location, rights, delivery or operational complexity.",
+    "Allow multi-pillar projects in one request.",
+    "Do not request sensitive documents or intimate/reference images in the first contact.",
+    "Use links for briefs and references instead of file uploads in v1."
+  ],
+  "pillars": [
+    {
+      "key": "business",
+      "brand": "Business / Operations",
+      "label": {"hu":"Üzleti működés","en":"Business operations","de":"Business Operations"},
+      "services": [
+        {"key":"business-operations-360","label":{"hu":"Business Operations 360","en":"Business Operations 360","de":"Business Operations 360"}},
+        {"key":"accounting-finance-admin","label":{"hu":"Könyvelési és pénzügyi adminisztrációs támogatás","en":"Accounting and finance administration support","de":"Buchhaltungs- und Finanzadministrations-Support"}},
+        {"key":"payroll-hr-admin","label":{"hu":"Bérszámfejtési és HR-adminisztrációs támogatás","en":"Payroll and HR administration support","de":"Payroll- und HR-Administrations-Support"}},
+        {"key":"controlling-reporting","label":{"hu":"Controlling és vezetői riporting","en":"Controlling and management reporting","de":"Controlling und Management Reporting"}},
+        {"key":"executive-operations","label":{"hu":"Back office és vezetői operációs támogatás","en":"Back-office and executive operations support","de":"Backoffice- und Executive-Operations-Support"}},
+        {"key":"grants","label":{"hu":"Pályázati támogatás","en":"Grant support","de":"Fördermittel-Support"}},
+        {"key":"ai-automation","label":{"hu":"AI readiness és folyamat-automatizálás","en":"AI readiness and process automation","de":"AI Readiness und Prozessautomatisierung"}},
+        {"key":"other-business","label":{"hu":"Egyéb üzleti működési igény","en":"Other business operations need","de":"Anderer Business-Operations-Bedarf"}}
+      ]
+    },
+    {
+      "key": "creative",
+      "brand": "HIPStudio",
+      "label": {"hu":"Fotó, videó, podcast és tartalom","en":"Photo, video, podcast and content","de":"Foto, Video, Podcast und Content"},
+      "services": [
+        {"key":"photo-business-portrait","group":"photo","label":{"hu":"Üzleti portré / executive portré / headshot","en":"Business / executive portrait / headshot","de":"Business-/Executive-Porträt / Headshot"}},
+        {"key":"photo-cv-portfolio","group":"photo","label":{"hu":"CV, portfólió, divat vagy személyes portré","en":"CV, portfolio, fashion or personal portrait","de":"Bewerbung, Portfolio, Mode oder persönliches Porträt"}},
+        {"key":"photo-team","group":"photo","label":{"hu":"Csapat- és csoportportré","en":"Team and group portraits","de":"Team- und Gruppenporträts"}},
+        {"key":"photo-brand","group":"photo","label":{"hu":"Brand-, corporate és vizuális pozicionálási fotózás","en":"Brand, corporate and visual-positioning photography","de":"Brand-, Corporate- und Visual-Positioning-Fotografie"}},
+        {"key":"photo-product-commercial","group":"photo","label":{"hu":"Termék-, reklám- és kampányfotózás","en":"Product, advertising and campaign photography","de":"Produkt-, Werbe- und Kampagnenfotografie"}},
+        {"key":"photo-property","group":"photo","label":{"hu":"Ingatlan-, enteriőr- és épületfotózás","en":"Property, interior and architecture photography","de":"Immobilien-, Interior- und Architekturfotografie"}},
+        {"key":"photo-aerial","group":"photo","label":{"hu":"Légi felvételek","en":"Aerial photography","de":"Luftaufnahmen"}},
+        {"key":"photo-3d-tour","group":"photo","label":{"hu":"3D virtuális séta","en":"3D virtual tour","de":"Virtueller 3D-Rundgang"}},
+        {"key":"photo-event","group":"photo","label":{"hu":"Rendezvény-, konferencia- vagy C-level fotózás","en":"Event, conference or C-level photography","de":"Event-, Konferenz- oder C-Level-Fotografie"}},
+        {"key":"photo-greenbox","group":"photo","label":{"hu":"Greenbox fotózás","en":"Green-screen photography","de":"Greenscreen-Fotografie"}},
+        {"key":"photo-souvenir-print","group":"photo","label":{"hu":"Emlékfotózás, fotófal és helyszíni nyomtatás","en":"Souvenir photography, photo wall and on-site printing","de":"Erinnerungsfotografie, Fotowand und Druck vor Ort"}},
+        {"key":"photo-fine-art","group":"photo","label":{"hu":"Művészi / glamour / boudoir fotózás","en":"Fine-art / glamour / boudoir photography","de":"Fine-Art-/Glamour-/Boudoir-Fotografie"}},
+        {"key":"video-commercial","group":"video","label":{"hu":"Reklámfilm / image film / brand film","en":"Commercial / image / brand film","de":"Werbe-/Image-/Brandfilm"}},
+        {"key":"video-interview-executive","group":"video","label":{"hu":"Interjú, vezetői és thought-leadership videó","en":"Interview, executive and thought-leadership video","de":"Interview-, Executive- und Thought-Leadership-Video"}},
+        {"key":"video-employer-branding","group":"video","label":{"hu":"Employer branding / recruitment videó","en":"Employer branding / recruitment video","de":"Employer-Branding-/Recruiting-Video"}},
+        {"key":"video-event","group":"video","label":{"hu":"Rendezvény- és konferenciavideó","en":"Event and conference video","de":"Event- und Konferenzvideo"}},
+        {"key":"video-sport-concert","group":"video","label":{"hu":"Sport-, koncert- vagy színpadi videó","en":"Sports, concert or stage video","de":"Sport-, Konzert- oder Bühnenvideo"}},
+        {"key":"video-music","group":"video","label":{"hu":"Videoklip","en":"Music video","de":"Musikvideo"}},
+        {"key":"streaming","group":"video","label":{"hu":"Konferencia-streamelés / élőkép-kivetítés","en":"Conference streaming / live projection","de":"Konferenz-Streaming / Liveprojektion"}},
+        {"key":"podcast-video","group":"podcast","label":{"hu":"Videópodcast","en":"Video podcast","de":"Video-Podcast"}},
+        {"key":"podcast-audio","group":"podcast","label":{"hu":"Audio podcast","en":"Audio podcast","de":"Audio-Podcast"}},
+        {"key":"content-engine","group":"content","label":{"hu":"Content Engine / egy felvételből több tartalom","en":"Content Engine / multiple assets from one production","de":"Content Engine / mehrere Assets aus einer Produktion"}},
+        {"key":"other-creative","group":"other","label":{"hu":"Egyéb kreatív vagy produkciós igény","en":"Other creative or production need","de":"Anderer Kreativ- oder Produktionsbedarf"}}
+      ]
+    },
+    {
+      "key": "experiences",
+      "brand": "Flúgos",
+      "label": {"hu":"Vállalati élmények és események","en":"Corporate experiences and events","de":"Corporate Experiences und Events"},
+      "services": [
+        {"key":"team-experience","label":{"hu":"Team Experience / csapatépítés","en":"Team Experience / team building","de":"Team Experience / Teambuilding"}},
+        {"key":"leadership-experience","label":{"hu":"Leadership Experience","en":"Leadership Experience","de":"Leadership Experience"}},
+        {"key":"employer-experience","label":{"hu":"Employer Experience / munkatársi esemény","en":"Employer Experience / employee event","de":"Employer Experience / Mitarbeiterevent"}},
+        {"key":"client-experience","label":{"hu":"Client Experience / ügyfélesemény","en":"Client Experience / client event","de":"Client Experience / Kundenevent"}},
+        {"key":"custom-game","label":{"hu":"Custom Branded Game / egyedi játék","en":"Custom Branded Game","de":"Custom Branded Game"}},
+        {"key":"corporate-event","label":{"hu":"Egyedi vállalati eseménykoncepció","en":"Custom corporate event concept","de":"Individuelles Corporate-Event-Konzept"}},
+        {"key":"other-experience","label":{"hu":"Egyéb élmény- vagy eseményigény","en":"Other experience or event need","de":"Anderer Experience- oder Eventbedarf"}}
+      ]
+    }
+  ],
+  "goalOptions": [
+    {"key":"operate","label":{"hu":"Működés egyszerűsítése","en":"Simplify operations","de":"Abläufe vereinfachen"}},
+    {"key":"control","label":{"hu":"Jobb pénzügyi / vezetői kontroll","en":"Improve financial / management control","de":"Finanz-/Managementkontrolle verbessern"}},
+    {"key":"grow","label":{"hu":"Növekedés támogatása","en":"Support growth","de":"Wachstum unterstützen"}},
+    {"key":"visibility","label":{"hu":"Láthatóság és kommunikáció","en":"Visibility and communication","de":"Sichtbarkeit und Kommunikation"}},
+    {"key":"recruit","label":{"hu":"Toborzás / employer branding","en":"Recruitment / employer branding","de":"Recruiting / Employer Branding"}},
+    {"key":"sales","label":{"hu":"Értékesítés támogatása","en":"Support sales","de":"Vertrieb unterstützen"}},
+    {"key":"engagement","label":{"hu":"Munkatársi vagy ügyfél-elköteleződés","en":"Employee or client engagement","de":"Mitarbeiter- oder Kundenbindung"}},
+    {"key":"document","label":{"hu":"Dokumentálás / archiválás","en":"Documentation / archive","de":"Dokumentation / Archiv"}},
+    {"key":"other","label":{"hu":"Egyéb","en":"Other","de":"Andere"}}
+  ],
+  "creativeAddons": [
+    {"key":"mobile-studio","label":{"hu":"Mobil stúdió","en":"Mobile studio","de":"Mobiles Studio"}},
+    {"key":"instant-retouch","label":{"hu":"Azonnali helyszíni retus / gyors sajtóválogatás","en":"Immediate on-site retouch / fast press selection","de":"Sofortretusche / schnelle Presseauswahl"}},
+    {"key":"stylist","label":{"hu":"Stylist","en":"Stylist","de":"Styling"}},
+    {"key":"hair","label":{"hu":"Fodrász","en":"Hair stylist","de":"Hair-Styling"}},
+    {"key":"makeup","label":{"hu":"Sminkes","en":"Make-up artist","de":"Make-up"}},
+    {"key":"art-direction","label":{"hu":"Art direction / kreatív koncepció","en":"Art direction / creative concept","de":"Art Direction / Kreativkonzept"}},
+    {"key":"express","label":{"hu":"Sürgős / expressz átadás","en":"Urgent / express delivery","de":"Dringende / Express-Lieferung"}},
+    {"key":"printing","label":{"hu":"Helyszíni nyomtatás","en":"On-site printing","de":"Druck vor Ort"}},
+    {"key":"live-projection","label":{"hu":"Helyszíni élőkép-kivetítés","en":"Live venue projection","de":"Liveprojektion vor Ort"}},
+    {"key":"subtitles","label":{"hu":"Felirat / többnyelvű verzió","en":"Subtitles / multilingual versions","de":"Untertitel / mehrsprachige Versionen"}},
+    {"key":"repurposing","label":{"hu":"Rövid videók / social / cikk / idézetkártyák","en":"Short videos / social / article / quote assets","de":"Shorts / Social / Artikel / Quote-Assets"}}
+  ]
+}
