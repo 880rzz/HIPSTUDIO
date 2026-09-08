@@ -4,6 +4,9 @@ on:
     branches: [codex/hipstudio-static-migration, feat/unified-business-platform]
   pull_request:
   workflow_dispatch:
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
