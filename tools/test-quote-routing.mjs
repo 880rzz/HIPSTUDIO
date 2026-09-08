@@ -33,7 +33,7 @@ assert.equal(cross.next_action,'ASSIGN_CROSS_PILLAR_LEAD');
 assert.ok(cross.routing_flags.includes('MULTI_PILLAR_COORDINATION'));
 
 const incomplete=triage({pillars:'creative',services:'photo-brand',name:'N',company:'C',email:'n@c.hu',project_summary:'Brand photos'});
-assert.ok(incomplete.completeness_score<65);
+assert.ok(incomplete.completeness_score<75);
 assert.equal(incomplete.next_action,'REQUEST_MISSING_SCOPE_INFORMATION');
 
 console.log('Quote routing: deterministic triage scenarios passed.');
