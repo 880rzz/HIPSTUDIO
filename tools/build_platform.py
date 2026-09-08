@@ -1,8 +1,9 @@
 # coding: utf-8
-"""Build the review-only unified Business + HIPStudio + Flúgos platform.
+"""Build the review-only unified HIPStudio master platform.
 
-This generator is intentionally separate from the stable HIPStudio migration build.
-No network or deployment is performed.
+No network or deployment is performed. HIPStudio is the approved master brand;
+Business and Flúgos remain separately identifiable specialist pillars until any
+legal/entity relationships are independently verified.
 """
 from pathlib import Path
 from html import escape
@@ -12,7 +13,7 @@ import json, os, shutil
 R = Path(__file__).resolve().parents[1]
 DATA = json.loads((R / 'content/platform.json').read_text())
 MODE = os.environ.get('BUILD_MODE', 'review')
-BASE = os.environ.get('PLATFORM_URL', 'https://www.hellouzlet.hu').rstrip('/')
+BASE = os.environ.get('PLATFORM_URL', DATA.get('masterDomain', 'https://www.hipstudio.hu')).rstrip('/')
 
 if MODE not in ('review', 'production'):
     raise SystemExit('BUILD_MODE must be review or production')
@@ -53,12 +54,12 @@ UI = {
     'trust': {'hu':'AI Trust','en':'AI Trust','de':'AI Trust'},
     'audience': {'hu':'Kinek szól','en':'Who it is for','de':'Für wen'},
     'pillars': {'hu':'Három szakmai pillér','en':'Three specialist pillars','de':'Drei Fachsäulen'},
-    'model': {'hu':'Egy partneri rendszer','en':'One partner model','de':'Ein Partnermodell'},
+    'model': {'hu':'Egy HIPStudio rendszer','en':'One HIPStudio system','de':'Ein HIPStudio-System'},
     'services': {'hu':'Fókuszterületek','en':'Focus areas','de':'Schwerpunkte'},
     'why': {'hu':'Miért egy rendszerben?','en':'Why one system?','de':'Warum in einem System?'},
-    'ctaTitle': {'hu':'Nézzük meg, hol veszít a céged időt és vezetői kapacitást.','en':'Let us identify where your business loses time and management capacity.','de':'Finden wir heraus, wo Ihr Unternehmen Zeit und Führungskapazität verliert.'},
-    'back': {'hu':'Vissza a platformhoz','en':'Back to the platform','de':'Zurück zur Plattform'},
-    'specialist': {'hu':'Szakmai márka','en':'Specialist brand','de':'Fachmarke'},
+    'ctaTitle': {'hu':'Nézzük meg, hol tudunk több terhet levenni a cégedről.','en':'Let us identify where one connected partner can remove more operational load.','de':'Finden wir heraus, wo ein vernetzter Partner mehr operative Last übernehmen kann.'},
+    'back': {'hu':'Vissza a HIPStudio rendszerhez','en':'Back to the HIPStudio system','de':'Zurück zum HIPStudio-System'},
+    'specialist': {'hu':'Szakmai pillér','en':'Specialist pillar','de':'Fachsäule'},
     'evidence': {'hu':'Bizonyíték és felelősség','en':'Evidence and responsibility','de':'Nachweis und Verantwortung'},
     'navMain': {'hu':'Fő navigáció','en':'Main navigation','de':'Hauptnavigation'},
     'navLang': {'hu':'Nyelvválasztó','en':'Languages','de':'Sprachauswahl'},
@@ -68,18 +69,12 @@ UI = {
 PILLARS = {p['key']: p for p in DATA['pillars']}
 PAGES = []
 
-def e(value):
-    return escape(str(value), quote=True)
-
+def e(value): return escape(str(value), quote=True)
 def route(key, lang):
     slug = ROUTES[key][lang]
     return f'/{lang}/' + (slug + '/' if slug else '')
-
-def absolute(key, lang):
-    return BASE + route(key, lang)
-
-def href(key, lang):
-    return route(key, lang)
+def absolute(key, lang): return BASE + route(key, lang)
+def href(key, lang): return route(key, lang)
 
 def page_title(key, lang):
     if key == 'home': return DATA['hero']['title'][lang]
@@ -91,59 +86,55 @@ def page_title(key, lang):
 def meta_title(key, lang):
     if key == 'home':
         return {
-            'hu':'HelloÜzlet | Működés, HIPStudio és vállalati élmények',
-            'en':'HelloÜzlet | Business, HIPStudio and corporate experiences',
-            'de':'HelloÜzlet | Business, HIPStudio und Unternehmenserlebnisse'
+            'hu':'HIPStudio | Business, Creative és vállalati élmények',
+            'en':'HIPStudio | Business, Creative and corporate experiences',
+            'de':'HIPStudio | Business, Creative und Unternehmenserlebnisse'
         }[lang]
     return f'{page_title(key, lang)} | {DATA["workingMasterBrand"]}'
 
 def page_desc(key, lang):
     if key == 'home': return DATA['hero']['intro'][lang]
     if key in PILLARS: return PILLARS[key]['intro'][lang]
-    if key == 'about': return DATA['crossSell'][lang]
+    if key == 'about': return DATA['integrationStory']['reason'][lang]
     if key == 'contact': return DATA['positioning'][lang]
     return {
-        'hu':'Átlátható AI-használati, emberi kontroll- és adatvédelmi elvek a közös platformhoz.',
-        'en':'Transparent AI-use, human-control and privacy principles for the unified platform.',
-        'de':'Transparente Prinzipien zu KI-Nutzung, menschlicher Kontrolle und Datenschutz für die gemeinsame Plattform.'
+        'hu':'Átlátható AI-használati, emberi kontroll- és adatvédelmi elvek a HIPStudio rendszerhez.',
+        'en':'Transparent AI-use, human-control and privacy principles for the HIPStudio system.',
+        'de':'Transparente Prinzipien zu KI-Nutzung, menschlicher Kontrolle und Datenschutz für das HIPStudio-System.'
     }[lang]
 
 def language_links(key, lang):
-    return ''.join(
-        f'<a lang="{l}" hreflang="{l}" href="{e(href(key,l))}"' + (' aria-current="page"' if l == lang else '') + f'>{l.upper()}</a>'
-        for l in LANGS
-    )
+    return ''.join(f'<a lang="{l}" hreflang="{l}" href="{e(href(key,l))}"' + (' aria-current="page"' if l == lang else '') + f'>{l.upper()}</a>' for l in LANGS)
 
 def nav(key, lang):
     items = ['business','creative','experiences','about','contact']
-    return ''.join(
-        f'<a href="{e(href(k,lang))}"' + (' aria-current="page"' if k == key else '') + f'>{e(page_title(k,lang) if k in PILLARS else UI[k][lang])}</a>'
-        for k in items
-    )
+    return ''.join(f'<a href="{e(href(k,lang))}"' + (' aria-current="page"' if k == key else '') + f'>{e(page_title(k,lang) if k in PILLARS else UI[k][lang])}</a>' for k in items)
 
 def graph(key, lang, title, desc):
     url = absolute(key, lang)
     website_id = BASE + '/#website'
+    organization_id = 'https://www.hipstudio.hu/#organization'
     nodes = [
-        {'@type':'WebSite','@id':website_id,'name':DATA['workingMasterBrand'],'url':BASE+'/' ,'inLanguage':LANGS},
+        {'@type':'WebSite','@id':website_id,'name':'HIPStudio','url':BASE+'/' ,'inLanguage':LANGS,'publisher':{'@id':organization_id}},
+        {'@type':['Organization','ProfessionalService'],'@id':organization_id,'name':'HIPStudio','url':'https://www.hipstudio.hu/','foundingDate':'2006-02-27','sameAs':['https://www.wikidata.org/wiki/Q138482177']},
         {'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':lang,'isPartOf':{'@id':website_id}},
         {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':1,'name':UI['home'][lang],'item':absolute('home',lang)}]}
     ]
     if key != 'home':
-        nodes[2]['itemListElement'].append({'@type':'ListItem','position':2,'name':title,'item':url})
+        nodes[3]['itemListElement'].append({'@type':'ListItem','position':2,'name':title,'item':url})
     if key in PILLARS:
         p = PILLARS[key]
         brand_id = BASE + f'/#brand-{key}'
         brand = {'@type':'Brand','@id':brand_id,'name':p['brand']}
         if key == 'creative':
-            brand = {'@type':['Organization','ProfessionalService'],'@id':'https://www.hipstudio.hu/#organization','name':'HIPStudio','url':'https://www.hipstudio.hu/','sameAs':['https://www.wikidata.org/wiki/Q138482177']}
+            brand = {'@type':'Brand','@id':brand_id,'name':'HIPStudio Creative','url':BASE + route('creative',lang)}
         elif key == 'experiences':
             brand['url'] = 'https://www.flugos.hu/'
         elif key == 'business':
-            brand['url'] = 'https://www.hellouzlet.hu/'
+            brand['url'] = BASE + route('business',lang)
         nodes.append(brand)
-        nodes.append({'@type':'Service','@id':url+'#service','name':p['title'][lang],'description':p['intro'][lang],'url':url,'provider':{'@id':brand.get('@id')},'serviceType':p['label'][lang]})
-        nodes[1]['mainEntity'] = {'@id':url+'#service'}
+        nodes.append({'@type':'Service','@id':url+'#service','name':p['title'][lang],'description':p['intro'][lang],'url':url,'serviceType':p['label'][lang]})
+        nodes[2]['mainEntity'] = {'@id':url+'#service'}
     return {'@context':'https://schema.org','@graph':nodes}
 
 def shell(key, lang, body):
@@ -152,7 +143,7 @@ def shell(key, lang, body):
     alternates += f'<link rel="alternate" hreflang="x-default" href="{e(absolute(key,"hu"))}">'
     ld = json.dumps(graph(key,lang,title,desc), ensure_ascii=False, separators=(',',':')).replace('<','\\u003c')
     review = f'<div class="review">{e(UI["review"][lang])}</div>' if MODE == 'review' else ''
-    html = f'''<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title(key,lang))}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="website"><meta property="og:locale" content="{LOCALES[lang]}"><meta property="og:site_name" content="{e(DATA['workingMasterBrand'])}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(href('home',lang))}">{e(DATA['workingMasterBrand'])}</a><nav class="nav" aria-label="{e(UI['navMain'][lang])}">{nav(key,lang)}</nav><nav class="langs" aria-label="{e(UI['navLang'][lang])}">{language_links(key,lang)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>{e(DATA['workingMasterBrand'])}</strong><nav aria-label="{e(UI['navFooter'][lang])}">{nav(key,lang)}</nav><p class="legal-note">Review architecture: HIPStudio, Flúgos and Business are presented as specialist pillars. No unverified ownership, employment or legal-entity relationship is asserted.</p></footer></body></html>'''
+    html = f'''<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title(key,lang))}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="website"><meta property="og:locale" content="{LOCALES[lang]}"><meta property="og:site_name" content="HIPStudio"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(href('home',lang))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['navMain'][lang])}">{nav(key,lang)}</nav><nav class="langs" aria-label="{e(UI['navLang'][lang])}">{language_links(key,lang)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['navFooter'][lang])}">{nav(key,lang)}</nav><p class="legal-note">Review architecture: HIPStudio is the master brand. Business and Flúgos are presented as specialist pillars; no unverified legal-entity or ownership relationship is asserted.</p></footer></body></html>'''
     out = D / route(key,lang).strip('/') / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -166,29 +157,31 @@ def pillar_card(p, lang, index):
 
 def pillar_page(p, lang):
     services = ''.join(f'<li>{e(s)}</li>' for s in p['services'][lang])
-    specialist = {'business':'https://www.hellouzlet.hu/','creative':'https://www.hipstudio.hu/','experiences':'https://www.flugos.hu/'}[p['key']]
-    return f'''<section class="page-hero"><a class="back" href="{e(href('home',lang))}">← {e(UI['back'][lang])}</a><p class="eyebrow">{e(p['brand'])} · {e(p['label'][lang])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section"><div class="section-head"><h2>{e(p['promise'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><h3>{e(UI['services'][lang])}</h3><ul class="service-list">{services}</ul><p class="note">{e(UI['specialist'][lang])}: <a href="{e(specialist)}" rel="external">{e(p['brand'])} ↗</a></p></section>{cta(lang)}'''
+    heritage = ''
+    if p['key'] == 'creative':
+        heritage = f'<p class="note"><strong>{e(DATA["heritage"]["headline"][lang])}</strong> {e(DATA["heritage"]["claim"][lang])}</p>'
+    elif p['key'] == 'experiences':
+        heritage = '<p class="note">Flúgos historical material is preserved separately from the current B2B offer and remains time-qualified.</p>'
+    return f'''<section class="page-hero"><a class="back" href="{e(href('home',lang))}">← {e(UI['back'][lang])}</a><p class="eyebrow">{e(p['brand'])} · {e(p['label'][lang])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section"><div class="section-head"><h2>{e(p['promise'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><h3>{e(UI['services'][lang])}</h3><ul class="service-list">{services}</ul>{heritage}</section>{cta(lang)}'''
 
 for lang in LANGS:
     cards = ''.join(pillar_card(p,lang,i+1) for i,p in enumerate(DATA['pillars']))
-    flow_labels = {
-        'hu':['Működés','Növekedés','Láthatóság','Kapcsolódás'],
-        'en':['Operate','Grow','Be seen','Connect'],
-        'de':['Betreiben','Wachsen','Sichtbar sein','Verbinden']
-    }[lang]
+    flow_labels = {'hu':['Működés','Növekedés','Láthatóság','Kapcsolódás'],'en':['Operate','Grow','Be seen','Connect'],'de':['Betreiben','Wachsen','Sichtbar sein','Verbinden']}[lang]
     flow = ''.join(f'<div><strong>0{i+1}</strong><span>{e(label)}</span></div>' for i,label in enumerate(flow_labels))
-    home = f'''<section class="hero"><div><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{e(DATA['hero']['intro'][lang])}</p><a class="button" href="{e(href('contact',lang))}">{e(DATA['primaryCta'][lang])} →</a></div><aside class="hero-side"><p class="eyebrow">{e(UI['audience'][lang])}</p><p>{e(DATA['audience'][lang])}</p></aside></section><section class="section"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><div class="pillars">{cards}</div></section><section class="dark"><div class="section"><div class="section-head"><h2>{e(UI['model'][lang])}</h2><p>{e(DATA['positioning'][lang])}</p></div><div class="flow">{flow}</div></div></section>{cta(lang)}'''
+    heritage = f'''<section class="section"><div class="section-head"><p class="eyebrow">2006 → 2026</p><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div></section>'''
+    integration = f'''<section class="dark"><div class="section"><div class="section-head"><h2>{e(DATA['integrationStory']['title'][lang])}</h2><p>{e(DATA['integrationStory']['reason'][lang])}</p></div><div class="flow">{flow}</div></div></section>'''
+    home = f'''<section class="hero"><div><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{e(DATA['hero']['intro'][lang])}</p><a class="button" href="{e(href('contact',lang))}">{e(DATA['primaryCta'][lang])} →</a></div><aside class="hero-side"><p class="eyebrow">{e(UI['audience'][lang])}</p><p>{e(DATA['audience'][lang])}</p></aside></section>{heritage}<section class="section"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><div class="pillars">{cards}</div></section>{integration}{cta(lang)}'''
     shell('home',lang,home)
     for p in DATA['pillars']:
         shell(p['key'],lang,pillar_page(p,lang))
-    about = f'''<section class="page-hero"><p class="eyebrow">{e(UI['model'][lang])}</p><h1>{e(UI['about'][lang])}</h1><p class="lead">{e(DATA['crossSell'][lang])}</p></section><section class="section"><div class="trust"><div><h2>{e(UI['why'][lang])}</h2><p>{e(DATA['hero']['intro'][lang])}</p></div><div><h2>{e(UI['audience'][lang])}</h2><p>{e(DATA['audience'][lang])}</p><p class="note">The specialist brands remain separately identifiable. Legal/entity relationships are added only after verification.</p></div></div></section>{cta(lang)}'''
+    about = f'''<section class="page-hero"><p class="eyebrow">2006 → 2026</p><h1>{e(DATA['integrationStory']['title'][lang])}</h1><p class="lead">{e(DATA['integrationStory']['reason'][lang])}</p></section><section class="section"><div class="trust"><div><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div><div><h2>{e(UI['why'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p><p class="note">The specialist pillars remain separately identifiable. Legal/entity relationships are asserted only after verification.</p></div></div></section>{cta(lang)}'''
     shell('about',lang,about)
-    contact = f'''<section class="page-hero"><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['primaryCta'][lang])}</h1><p class="lead">{e(UI['ctaTitle'][lang])}</p></section><section class="section"><div class="cards"><div class="card"><h2>Business</h2><p>{e(PILLARS['business']['intro'][lang])}</p></div><div class="card"><h2>HIPStudio</h2><p>{e(PILLARS['creative']['intro'][lang])}</p></div><div class="card"><h2>Flúgos</h2><p>{e(PILLARS['experiences']['intro'][lang])}</p></div></div><p class="note">Review build: no web form or automatic data submission is active. Contact workflow is activated only after legal/privacy approval.</p></section>'''
+    contact = f'''<section class="page-hero"><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['primaryCta'][lang])}</h1><p class="lead">{e(UI['ctaTitle'][lang])}</p></section><section class="section"><div class="cards"><div class="card"><h2>HIPStudio Business</h2><p>{e(PILLARS['business']['intro'][lang])}</p></div><div class="card"><h2>HIPStudio Creative</h2><p>{e(PILLARS['creative']['intro'][lang])}</p></div><div class="card"><h2>Flúgos by HIPStudio</h2><p>{e(PILLARS['experiences']['intro'][lang])}</p></div></div><p class="note">Review build: no web form or automatic data submission is active here. The dedicated quote flow remains separately privacy-gated.</p></section>'''
     shell('contact',lang,contact)
     trust = f'''<section class="page-hero"><p class="eyebrow">AI Trust</p><h1>{e(UI['trust'][lang])}</h1><p class="lead">{e(page_desc('trust',lang))}</p></section><section class="section"><div class="trust"><div><h2>Human control</h2><p>AI may assist research, structuring, drafting or workflow automation. Material facts, client claims, pricing, legal statements and publication decisions require human verification.</p></div><div><h2>Data minimisation</h2><p>The review build contains no analytics, marketing tags or public forms. Future AI or analytics integrations must remain behind the approved privacy and consent architecture.</p></div></div></section>'''
     shell('trust',lang,trust)
 
 (D / 'robots.txt').write_text('User-agent: *\nDisallow: /\n' if MODE == 'review' else 'User-agent: *\nAllow: /\n')
 (D / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ('' if MODE == 'review' else ''.join(f'<url><loc>{e(p["canonical"])}</loc></url>' for p in PAGES)) + '</urlset>')
-(D / 'platform-build.json').write_text(json.dumps({'mode':MODE,'base':BASE,'pages':PAGES,'pillars':[p['key'] for p in DATA['pillars']],'masterBrand':DATA['workingMasterBrand'],'masterBrandApprovalRequired':DATA['masterBrandApprovalRequired']},ensure_ascii=False,indent=2))
+(D / 'platform-build.json').write_text(json.dumps({'mode':MODE,'base':BASE,'pages':PAGES,'pillars':[p['key'] for p in DATA['pillars']],'masterBrand':DATA['workingMasterBrand'],'masterDomain':DATA.get('masterDomain'),'masterBrandApprovalRequired':DATA['masterBrandApprovalRequired']},ensure_ascii=False,indent=2))
 print(f'Built unified platform: {len(PAGES)} localized pages; mode={MODE}; base={BASE}')
