@@ -1,0 +1,97 @@
+{
+  "version": "commercial-content-v1",
+  "status": "review",
+  "principles": [
+    "Problem-led before service-led.",
+    "HIPStudio heritage claims must remain source-backed and date-specific.",
+    "Business responsibility-sensitive services remain qualified until provider and regulatory scope is approved.",
+    "Flúgos current B2B positioning must remain separate from historical archive claims.",
+    "No invented clients, results, prices, awards or legal ownership claims."
+  ],
+  "home": {
+    "problemIntro": {
+      "title": {
+        "hu": "Nem újabb beszállítóra van szükséged. Hanem kevesebb széteső feladatra.",
+        "en": "You do not need another supplier. You need fewer disconnected tasks.",
+        "de": "Sie brauchen nicht noch einen Anbieter. Sie brauchen weniger voneinander getrennte Aufgaben."
+      },
+      "intro": {
+        "hu": "A legtöbb vezetői teher nem egyetlen nagy problémából jön, hanem abból, hogy a működés, a pénzügyi kontroll, a kommunikáció és az emberekhez kapcsolódó feladatok külön rendszerekben futnak. A HIPStudio ezeket nem egyetlen szolgáltatásnak nevezi, hanem egy összekapcsolható szakmai rendszernek.",
+        "en": "Management load rarely comes from one large problem. It comes from operations, financial control, communication and people-related work running in separate systems. HIPStudio does not call this one service; we build it as a connected professional system.",
+        "de": "Führungsbelastung entsteht selten durch ein einziges großes Problem. Sie entsteht, wenn Betrieb, Finanzkontrolle, Kommunikation und menschenbezogene Aufgaben in getrennten Systemen laufen. HIPStudio nennt das nicht eine einzelne Leistung, sondern baut daraus ein vernetztes Fachsystem."
+      }
+    },
+    "problemCards": [
+      {
+        "key": "operations",
+        "pillar": "business",
+        "title": {"hu":"Túl sok minden fut az ügyvezető fejében","en":"Too much still lives in the managing director's head","de":"Zu viel steckt noch im Kopf der Geschäftsführung"},
+        "body": {"hu":"Adminisztráció, riporting, pénzügyi információk, feladatkövetés és működési rutinok nincsenek elég jól összefogva.","en":"Administration, reporting, financial information, task tracking and operating routines are not coordinated tightly enough.","de":"Administration, Reporting, Finanzinformationen, Aufgabenverfolgung und Betriebsroutinen sind nicht ausreichend gebündelt."},
+        "cta": {"hu":"HIPStudio Business","en":"HIPStudio Business","de":"HIPStudio Business"}
+      },
+      {
+        "key": "visibility",
+        "pillar": "creative",
+        "title": {"hu":"A cég jobb, mint amit kifelé mutat","en":"The business is better than what it shows externally","de":"Das Unternehmen ist besser, als es nach außen wirkt"},
+        "body": {"hu":"Nincs egységes vizuális jelenlét, vezetői kommunikáció vagy folyamatosan újrahasznosítható tartalomrendszer.","en":"There is no consistent visual presence, executive communication or continuously reusable content system.","de":"Es fehlt an konsistenter visueller Präsenz, Führungskräftekommunikation und einem kontinuierlich nutzbaren Contentsystem."},
+        "cta": {"hu":"HIPStudio Creative","en":"HIPStudio Creative","de":"HIPStudio Creative"}
+      },
+      {
+        "key": "connection",
+        "pillar": "experiences",
+        "title": {"hu":"A csapatnak vagy az ügyfeleknek több kell egy rendezvénynél","en":"Teams and clients need more than another event","de":"Teams und Kunden brauchen mehr als nur eine weitere Veranstaltung"},
+        "body": {"hu":"A valódi cél sokszor bevonás, kapcsolat, employer élmény vagy márkaélmény — nem pusztán egy program megszervezése.","en":"The real objective is often engagement, connection, employer experience or brand experience — not simply organising a programme.","de":"Das eigentliche Ziel ist oft Beteiligung, Verbindung, Employer Experience oder Markenerlebnis — nicht nur die Organisation eines Programms."},
+        "cta": {"hu":"Flúgos by HIPStudio","en":"Flúgos by HIPStudio","de":"Flúgos by HIPStudio"}
+      }
+    ],
+    "partnerBenefits": {
+      "title": {"hu":"Mi változik attól, hogy egy rendszerben dolgozunk?","en":"What changes when the work is connected?","de":"Was ändert sich, wenn die Arbeit vernetzt ist?"},
+      "items": [
+        {
+          "title": {"hu":"Kevesebb koordináció","en":"Less coordination","de":"Weniger Koordination"},
+          "body": {"hu":"Nem kell minden kapcsolódó feladatnál újra elmagyarázni az üzleti kontextust egy másik partnernek.","en":"You do not have to re-explain the business context to a different partner for every connected task.","de":"Der geschäftliche Kontext muss nicht bei jeder verbundenen Aufgabe einem neuen Partner erneut erklärt werden."}
+        },
+        {
+          "title": {"hu":"Jobb átjárás a szakterületek között","en":"Better hand-offs between disciplines","de":"Bessere Übergaben zwischen Disziplinen"},
+          "body": {"hu":"Egy működési probléma, egy employer branding projekt vagy egy vezetői kommunikációs igény nem áll meg a saját kategóriája határán.","en":"An operating problem, employer-branding project or executive-communication need rarely stops at the edge of one category.","de":"Ein Betriebsproblem, Employer-Branding-Projekt oder Kommunikationsbedarf der Führung endet selten an der Grenze einer einzelnen Kategorie."}
+        },
+        {
+          "title": {"hu":"Egyértelműbb felelősségi térkép","en":"Clearer responsibility map","de":"Klarere Verantwortungsmatrix"},
+          "body": {"hu":"A közös rendszer nem jelenti azt, hogy minden szakmai felelősség azonos. A scope, a partneri szerep és a felelősség ajánlatban és szerződésben válik egyértelművé.","en":"One system does not mean every professional responsibility is identical. Scope, partner role and responsibility become explicit in the proposal and agreement.","de":"Ein gemeinsames System bedeutet nicht identische fachliche Verantwortung. Leistungsumfang, Partnerrolle und Verantwortung werden in Angebot und Vertrag klar definiert."}
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": {"hu":"Miért változik most a HIPStudio?","en":"Why is HIPStudio changing now?","de":"Warum verändert sich HIPStudio jetzt?"},
+    "lead": {"hu":"A HIPStudio 2006-ban kreatív és kommunikációs márkaként indult. Húsz év alatt az ügyfélproblémák lettek komplexebbek — ezért a szolgáltatási rendszer is azzá válik.","en":"HIPStudio started in 2006 as a creative and communication brand. Over twenty years, client problems became more complex — so the service system is becoming more integrated as well.","de":"HIPStudio startete 2006 als Kreativ- und Kommunikationsmarke. In zwanzig Jahren wurden die Kundenprobleme komplexer — deshalb wird auch das Leistungssystem stärker integriert."},
+    "sections": [
+      {
+        "title": {"hu":"Nem márkát cserélünk. A márka hatókörét bővítjük.","en":"We are not replacing the brand. We are extending its scope.","de":"Wir ersetzen die Marke nicht. Wir erweitern ihren Wirkungsbereich."},
+        "body": {"hu":"A HIPStudio neve, kreatív múltja és szakmai bizonyíthatósága marad a központ. Erre kapcsolódik rá a működési és pénzügyi Business pillér, valamint a Flúgos tapasztalati és játéktervezési örökségére épülő Experience pillér.","en":"The HIPStudio name, creative history and verifiable professional track record remain central. The Business pillar for operations and finance, and the Experience pillar built on Flúgos experience and game-design heritage, connect to that foundation.","de":"Der Name HIPStudio, die kreative Historie und die nachweisbare fachliche Laufbahn bleiben zentral. Daran schließen sich die Business-Säule für Betrieb und Finanzen sowie die Experience-Säule auf Basis der Flúgos-Erlebnis- und Spieldesign-Tradition an."}
+      },
+      {
+        "title": {"hu":"Az ügyfél szempontjából ez egyszerűsítés","en":"For the client, this is simplification","de":"Für den Kunden ist das eine Vereinfachung"},
+        "body": {"hu":"Egy projekt indulhat fotóval vagy videóval, de kiderülhet, hogy employer branding, folyamat, riporting vagy vállalati élmény kérdés is kapcsolódik hozzá. Az integrált modell célja, hogy ezeket ne külön beszállítói szigetek között kelljen koordinálni.","en":"A project may start with photography or video and reveal an employer-branding, process, reporting or corporate-experience need. The integrated model is designed so these do not have to be coordinated across isolated supplier islands.","de":"Ein Projekt kann mit Fotografie oder Video beginnen und zugleich Employer Branding, Prozesse, Reporting oder Corporate Experience berühren. Das integrierte Modell soll vermeiden, dass diese Themen zwischen isolierten Anbieterinseln koordiniert werden müssen."}
+      },
+      {
+        "title": {"hu":"A szakmai határok ettől nem mosódnak össze","en":"Professional boundaries still remain explicit","de":"Fachliche Grenzen bleiben trotzdem klar"},
+        "body": {"hu":"A kreatív szolgáltatásoknál meglévő HIPStudio múlt igazolható. A Business újabb, felelősségérzékeny területein csak azt állítjuk élesben, amihez a szolgáltatói, szakmai és jogi felelősség igazolt. A Flúgos történeti állításait pedig külön kezeljük a jelenlegi B2B ajánlatoktól.","en":"HIPStudio's creative history is verifiable. In newer, responsibility-sensitive Business areas, production claims are limited to scopes with verified provider, professional and legal responsibility. Flúgos historical claims remain separate from current B2B offers.","de":"Die kreative Historie von HIPStudio ist nachweisbar. In neueren, verantwortungssensitiven Business-Bereichen werden nur Leistungsumfänge veröffentlicht, deren Anbieter-, fachliche und rechtliche Verantwortung geklärt ist. Historische Flúgos-Aussagen bleiben von aktuellen B2B-Angeboten getrennt."}
+      }
+    ]
+  },
+  "pillars": {
+    "business": {
+      "problem": {"hu":"A cég működik, de túl sok információ, adminisztráció és döntési előkészítés függ néhány embertől.","en":"The business operates, but too much information, administration and decision preparation depend on a few people.","de":"Das Unternehmen funktioniert, aber zu viele Informationen, administrative Aufgaben und Entscheidungsvorbereitungen hängen von wenigen Personen ab."},
+      "outcome": {"hu":"Átláthatóbb működés, strukturáltabb vezetői információ és kevesebb operatív teher — az előre jóváhagyott felelősségi körökön belül.","en":"Clearer operations, more structured management information and less operational load — within explicitly approved responsibility scopes.","de":"Transparentere Abläufe, strukturiertere Managementinformationen und weniger operative Last — innerhalb ausdrücklich freigegebener Verantwortungsbereiche."}
+    },
+    "creative": {
+      "problem": {"hu":"A cégnek van mondanivalója, de nincs egységes, folyamatosan használható tartalomrendszere hozzá.","en":"The company has something to say, but lacks a consistent and reusable content system.","de":"Das Unternehmen hat etwas zu sagen, verfügt aber nicht über ein konsistentes und wiederverwendbares Contentsystem."},
+      "outcome": {"hu":"Olyan fotó-, videó-, podcast- és vezetői tartalomrendszer, amelyet konkrét üzleti és kommunikációs célra lehet használni.","en":"A photography, video, podcast and executive-content system designed for concrete business and communication goals.","de":"Ein Foto-, Video-, Podcast- und Executive-Contentsystem für konkrete geschäftliche und kommunikative Ziele."}
+    },
+    "experiences": {
+      "problem": {"hu":"A rendezvény önmagában nem cél: a valódi kérdés az, mit szeretnénk, hogy az emberek átéljenek, megjegyezzenek vagy egymással kapcsolatban másképp csináljanak.","en":"An event is not the objective by itself; the real question is what people should experience, remember or do differently together.","de":"Eine Veranstaltung ist kein Ziel an sich; entscheidend ist, was Menschen erleben, erinnern oder im Miteinander anders tun sollen."},
+      "outcome": {"hu":"Célhoz tervezett vállalati élmény, amelynél a formátum, a játékmechanika és a résztvevői út az üzleti vagy kulturális célból indul ki.","en":"A purpose-designed corporate experience where format, game mechanics and participant journey start from the business or cultural objective.","de":"Ein zielgerichtetes Unternehmenserlebnis, bei dem Format, Spielmechanik und Teilnehmerreise vom geschäftlichen oder kulturellen Ziel ausgehen."}
+    }
+  }
+}
