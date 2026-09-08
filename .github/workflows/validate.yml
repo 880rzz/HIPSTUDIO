@@ -26,6 +26,7 @@ jobs:
       - run: npm test
       - run: npm run test:platform
       - run: npm run test:master-brand
+      - run: npm run test:domain-migration
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
