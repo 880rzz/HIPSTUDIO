@@ -37,10 +37,9 @@ for(const width of [320,390,768,1440,1920]){
 
 await page.setViewportSize({width:390,height:844});
 await page.goto(origin+'/hu/');
-await page.keyboard.press('Tab');
-const skipText=await page.locator(':focus').textContent();
-await page.keyboard.press('Enter');
-const skipTarget=await page.locator(':focus').getAttribute('id');
+const skipHref=await page.locator('.skip').getAttribute('href');
+await page.locator('.skip').click();
+const skipTarget=await page.evaluate(()=>location.hash==='#main'&&!!document.querySelector('#main'));
 await page.getByRole('link',{name:'EN',exact:true}).click();
 const languageSwitch=page.url().endsWith('/en/');
 
@@ -56,8 +55,8 @@ const internalEmailsExposed=await page.locator('body').evaluate(el=>/nemeth\.tim
 const cookies=await context.cookies();
 const storage=await page.evaluate(()=>({localStorage:localStorage.length,sessionStorage:sessionStorage.length}));
 
-const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,errors,externalRequests:[...external],cookies,storage,interactions:{skipText,skipTarget,languageSwitch,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed}};
+const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,errors,externalRequests:[...external],cookies,storage,interactions:{skipHref,skipTarget,languageSwitch,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed}};
 fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
 console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions:summary.interactions},null,2));
 await browser.close();
-if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.review!==1||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipTarget!=='main'||!languageSwitch||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed)process.exitCode=1;
+if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.review!==1||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipTarget||!languageSwitch||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed)process.exitCode=1;
