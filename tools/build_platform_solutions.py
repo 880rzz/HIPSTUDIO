@@ -9,7 +9,7 @@ D=R/'dist-platform'
 DATA=json.loads((R/'content/platform.json').read_text())
 SOLUTIONS=json.loads((R/'content/platform-solutions.json').read_text())
 MODE=os.environ.get('BUILD_MODE','review')
-BASE=os.environ.get('PLATFORM_URL','https://www.hellouzlet.hu').rstrip('/')
+BASE=os.environ.get('PLATFORM_URL',DATA.get('masterDomain','https://www.hipstudio.hu')).rstrip('/')
 LANGS=['hu','en','de']
 ROUTE_HUB={'hu':'megoldasok','en':'solutions','de':'loesungen'}
 PILLAR_ROUTE={
@@ -39,7 +39,7 @@ def contact(l):return f'/{l}/'+{'hu':'kapcsolat','en':'contact','de':'kontakt'}[
 def abs_path(path):return BASE+path
 
 def nav(l):
- items=[(home(l),DATA['workingMasterBrand']),(hub_path(l),UI['back'][l]),(pillar_path('business',l),'Business'),(pillar_path('creative',l),'HIPStudio'),(pillar_path('experiences',l),'Flúgos'),(contact(l),UI['cta'][l])]
+ items=[(home(l),'HIPStudio'),(hub_path(l),UI['back'][l]),(pillar_path('business',l),'Business'),(pillar_path('creative',l),'Creative'),(pillar_path('experiences',l),'Flúgos'),(contact(l),UI['cta'][l])]
  return ''.join(f'<a href="{e(path)}">{e(label)}</a>' for path,label in items)
 
 def lang_links(path_fn,l):
@@ -49,15 +49,15 @@ def shell(path_fn,l,title,desc,body,graph_nodes):
  path=path_fn(l);url=abs_path(path)
  alts=''.join(f'<link rel="alternate" hreflang="{x}" href="{e(abs_path(path_fn(x)))}">' for x in LANGS)+f'<link rel="alternate" hreflang="x-default" href="{e(abs_path(path_fn("hu")))}">'
  graph={'@context':'https://schema.org','@graph':[
-   {'@type':'WebSite','@id':BASE+'/#website','name':DATA['workingMasterBrand'],'url':BASE+'/'},
+   {'@type':'WebSite','@id':BASE+'/#website','name':'HIPStudio','url':BASE+'/'},
    {'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':l,'isPartOf':{'@id':BASE+'/#website'}},
-   {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':1,'name':DATA['workingMasterBrand'],'item':abs_path(home(l))},{'@type':'ListItem','position':2,'name':title,'item':url}]}
+   {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':1,'name':'HIPStudio','item':abs_path(home(l))},{'@type':'ListItem','position':2,'name':title,'item':url}]}
  ]+graph_nodes}
  ld=json.dumps(graph,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
- meta_title=f'{title} | {DATA["workingMasterBrand"]}'
- if len(meta_title)>70:meta_title=f'{title} | HelloÜzlet'
+ meta_title=f'{title} | HIPStudio'
+ if len(meta_title)>70:meta_title=f'{title[:55].rstrip()}… | HIPStudio'
  review='<div class="review">Platform review build · no production publication</div>' if MODE=='review' else ''
- html=f'''<!DOCTYPE html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alts}<link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(home(l))}">{e(DATA['workingMasterBrand'])}</a><nav class="nav" aria-label="{e(UI['mainNav'][l])}">{nav(l)}</nav><nav class="langs" aria-label="Languages">{lang_links(path_fn,l)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>{e(DATA['workingMasterBrand'])}</strong><nav aria-label="{e(UI['footerNav'][l])}">{nav(l)}</nav><p class="legal-note">Review-only cross-pillar solution architecture. No unverified client result, legal-entity ownership or endorsement claim is asserted.</p></footer></body></html>'''
+ html=f'''<!DOCTYPE html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alts}<link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(home(l))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['mainNav'][l])}">{nav(l)}</nav><nav class="langs" aria-label="Languages">{lang_links(path_fn,l)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['footerNav'][l])}">{nav(l)}</nav><p class="legal-note">Review-only cross-pillar solution architecture. No unverified client result, legal-entity ownership or endorsement claim is asserted.</p></footer></body></html>'''
  out=D/path.strip('/')/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(html)
  return {'key':'solutions' if path==hub_path(l) else 'solution','lang':l,'path':path,'canonical':url}
 
