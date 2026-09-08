@@ -53,14 +53,16 @@ for html_path in D.rglob('*.html'):
  if l not in LANG: continue
  old=OLD[l];new=LANG[l]
  raw=raw.replace(old['note'],new['note']).replace(old['faqq'],new['faqq']).replace(old['faqa'],new['faqa'])
- # Rename navigation/section links that point to the legacy pricing route.
  route=f'/{l}/{new["slug"]}/'
  raw=re.sub(r'(<a\b[^>]*href="'+re.escape(route)+r'"[^>]*>)(.*?)(</a>)',lambda m:m.group(1)+escape(new['label'])+m.group(3),raw,flags=re.S)
  raw=raw.replace('<h2>'+old['label']+'</h2>','<h2>'+new['label']+'</h2>')
  if html_path == D/l/new['slug']/'index.html':
   raw=re.sub(r'<title>.*?</title>','<title>'+escape(new['title'])+' | HIPStudio</title>',raw,count=1,flags=re.S)
   raw=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="'+escape(new['lead'],quote=True)+'">',raw,count=1)
-  raw=re.sub(r'<main id="main">.*?</main>',quote_main(l),raw,count=1,flags=re.S)
+  # Generated pages use additional attributes on <main>; match by id rather than exact opening tag.
+  raw=re.sub(r'<main\b[^>]*\bid="main"[^>]*>.*?</main>',quote_main(l),raw,count=1,flags=re.S)
+  # Defence in depth: remove any stale calculator fragment/script left outside the main replacement.
+  raw=re.sub(r'<section\b[^>]*\bdata-calculator\b[^>]*>.*?</section>','',raw,flags=re.S)
   raw=re.sub(r'<script\b[^>]*calculator\.mjs[^>]*></script>','',raw,flags=re.S)
   raw=update_graph(raw,l)
  raw=raw.replace(old['label'],new['label']) if html_path == D/l/new['slug']/'index.html' else raw
