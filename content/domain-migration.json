@@ -1,0 +1,47 @@
+{
+  "version": "domain-migration-v1",
+  "status": "review_only",
+  "activeRedirects": false,
+  "master": {
+    "brand": "HIPStudio",
+    "origin": "https://www.hipstudio.hu"
+  },
+  "principles": [
+    "Do not redirect a source URL until an equivalent or intentionally consolidated target has been reviewed.",
+    "Preserve useful historical and search equity; do not blanket-redirect every legacy URL to the homepage.",
+    "Keep Flúgos historical/archive intent separate from current B2B experience intent.",
+    "HelloÜzlet becomes a migration source for the HIPStudio Business pillar, not a master brand.",
+    "DNS, HTTP 301/410 rules and Wix retirement require separate production approval."
+  ],
+  "entrypoints": [
+    {
+      "sourceOrigin": "https://www.hellouzlet.hu",
+      "sourceRole": "former Business entrypoint",
+      "target": {
+        "hu": "https://www.hipstudio.hu/hu/uzleti-mukodes/",
+        "en": "https://www.hipstudio.hu/en/business-operations/",
+        "de": "https://www.hipstudio.hu/de/business-operations/"
+      },
+      "redirectStatus": "planned_not_active"
+    },
+    {
+      "sourceOrigin": "https://www.flugos.hu",
+      "sourceRole": "Flúgos brand and experience entrypoint",
+      "target": {
+        "hu": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
+        "en": "https://www.hipstudio.hu/en/corporate-experiences/",
+        "de": "https://www.hipstudio.hu/de/unternehmenserlebnisse/"
+      },
+      "redirectStatus": "planned_not_active",
+      "archiveException": "Historical Flúgos URLs require URL-by-URL archive mapping and must not be blindly redirected to the current sales page."
+    }
+  ],
+  "releaseGates": [
+    "complete source URL inventory for hellouzlet.hu and flugos.hu",
+    "classify each URL as 301, archive-preserve, or 410 where justified",
+    "verify target content equivalence and canonical state",
+    "approve DNS/TLS/hosting plan",
+    "approve production redirect rules",
+    "verify live redirects and Search Console after cutover"
+  ]
+}
