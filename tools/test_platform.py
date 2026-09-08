@@ -4,6 +4,8 @@ import json, subprocess, os
 
 R=Path(__file__).resolve().parents[1]
 D=R/'dist-platform'
+PLATFORM=json.loads((R/'content/platform.json').read_text())
+MASTER_DOMAIN=PLATFORM['masterDomain']
 EXPECTED_PAGES=258
 EXPECTED_SERVICE_PAGES=216
 EXPECTED_SERVICES=55
@@ -11,7 +13,9 @@ EXPECTED_FAMILIES=13
 
 
 def build(env=None):
-    e=os.environ.copy(); e.update(env or {})
+    e=os.environ.copy()
+    e.setdefault('PLATFORM_URL',MASTER_DOMAIN)
+    e.update(env or {})
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
@@ -22,6 +26,10 @@ def assert_review():
     build()
     manifest=json.loads((D/'platform-build.json').read_text())
     assert manifest['mode']=='review'
+    assert manifest['base']==MASTER_DOMAIN
+    assert manifest['masterBrand']=='HIPStudio'
+    assert manifest['masterDomain']==MASTER_DOMAIN
+    assert manifest['masterBrandApprovalRequired'] is False
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['solutions']==5
     assert manifest['serviceInventory']['version']=='unified-service-inventory-v1'
@@ -34,9 +42,9 @@ def assert_review():
     assert manifest['quoteRequest']['responseHours']==24
     assert manifest['quoteRequest']['endpointConfigured'] is False
     assert set(manifest['pillars'])=={'business','creative','experiences'}
-    assert manifest['masterBrandApprovalRequired'] is True
     expected_solution_keys={'business-operations-360','finance-control','ai-readiness','content-engine','corporate-experience-design'}
     for page in manifest['pages']:
+        assert page['canonical'].startswith(MASTER_DOMAIN+'/')
         html=(D/page['path'].strip('/')/'index.html').read_text()
         assert 'noindex,nofollow' in html
         assert f'<link rel="canonical" href="{page["canonical"]}">' in html
@@ -69,6 +77,10 @@ def assert_review():
             assert '<section class="cta">' in html
             assert 'Egyedi ajánlatot kérek' in html
             assert '?pillar=' in html and '&amp;service=' in html
+    home=(D/'hu/index.html').read_text()
+    assert '20 év tapasztalat' in home
+    assert 'Egy HIPStudio. Három szakmai pillér.' in home
+    assert 'HelloÜzlet |' not in home
     for quote_path in ['/hu/ajanlatkeres/','/en/request-a-quote/','/de/angebot-anfragen/']:
         html=(D/quote_path.strip('/')/'index.html').read_text()
         assert 'info@hipstudio.hu' in html
@@ -92,12 +104,13 @@ def assert_production_gate():
     e=os.environ.copy();e.update({'BUILD_MODE':'production','PLATFORM_URL':'https://example.com'})
     p=subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=e,capture_output=True,text=True)
     assert p.returncode != 0
-    assert 'masterBrandApproval' in (p.stdout+p.stderr)
-    assert 'publicationApproval' in (p.stdout+p.stderr)
+    combined=p.stdout+p.stderr
+    assert 'publicationApproval' in combined
+    assert 'masterBrandApproval' not in combined
 
 
 def assert_quote_endpoint_gate():
-    e={'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_MASTER_BRAND_APPROVED':'1','PLATFORM_PUBLICATION_APPROVED':'1'}
+    e={'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_PUBLICATION_APPROVED':'1'}
     env=os.environ.copy();env.update(e)
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
@@ -108,7 +121,7 @@ def assert_quote_endpoint_gate():
 
 
 def assert_isolated_production_contract():
-    build({'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_MASTER_BRAND_APPROVED':'1','PLATFORM_PUBLICATION_APPROVED':'1','QUOTE_FORM_ENDPOINT':'https://script.google.com/macros/s/test-review-endpoint/exec'})
+    build({'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_PUBLICATION_APPROVED':'1','QUOTE_FORM_ENDPOINT':'https://script.google.com/macros/s/test-review-endpoint/exec'})
     manifest=json.loads((D/'platform-build.json').read_text())
     assert manifest['mode']=='production'
     assert len(manifest['pages'])==EXPECTED_PAGES
@@ -130,4 +143,4 @@ if __name__=='__main__':
     assert_quote_endpoint_gate()
     assert_isolated_production_contract()
     build()
-    print('Unified platform tests passed')
+    print('Unified HIPStudio master platform tests passed')
