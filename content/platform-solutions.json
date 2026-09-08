@@ -1,0 +1,52 @@
+[
+  {
+    "key":"business-operations-360",
+    "pillar":"business",
+    "name":{"hu":"Business Operations 360","en":"Business Operations 360","de":"Business Operations 360"},
+    "audience":{"hu":"Túlterhelt tulajdonosok és ügyvezetők","en":"Overloaded owners and managing directors","de":"Überlastete Eigentümer und Geschäftsführungen"},
+    "problem":{"hu":"A cég növekszik, de a vezető továbbra is adminisztrációt, pénzügyi egyeztetést és operatív tűzoltást végez.","en":"The business grows, but management still spends time on administration, finance coordination and operational firefighting.","de":"Das Unternehmen wächst, doch die Führung verbringt weiterhin Zeit mit Administration, Finanzabstimmung und operativer Feuerwehrarbeit."},
+    "outcome":{"hu":"Egységesebb háttérműködés, vezetői riporting és kevesebb operatív megszakítás.","en":"A more unified operating backbone, management reporting and fewer operational interruptions.","de":"Ein einheitlicheres operatives Rückgrat, Management-Reporting und weniger operative Unterbrechungen."},
+    "includes":{"hu":["Pénzügyi és adminisztratív back office","Bér- és HR-adminisztrációs koordináció","Vezetői riporting és kontroll","Folyamatok és felelősségi pontok rendezése","Automatizálási lehetőségek feltárása"],"en":["Financial and administrative back office","Payroll and HR administration coordination","Management reporting and control","Process and responsibility clarification","Automation opportunity mapping"],"de":["Finanzielles und administratives Backoffice","Koordination von Lohn- und HR-Administration","Management-Reporting und Kontrolle","Klärung von Prozessen und Verantwortlichkeiten","Identifikation von Automatisierungspotenzial"]},
+    "related":["finance-control","ai-readiness"]
+  },
+  {
+    "key":"finance-control",
+    "pillar":"business",
+    "name":{"hu":"Finance & Control","en":"Finance & Control","de":"Finance & Control"},
+    "audience":{"hu":"Növekedő KKV-k vezetői","en":"Leaders of growing SMEs","de":"Führungskräfte wachsender KMU"},
+    "problem":{"hu":"A könyvelés elkészül, de a vezetői döntésekhez nincs időben értelmezhető pénzügyi kép, forecast vagy controlling logika.","en":"Accounting is completed, but management lacks a timely financial view, forecast and controlling logic for decisions.","de":"Die Buchhaltung ist erledigt, aber für Führungsentscheidungen fehlen zeitnahe Finanzsicht, Forecast und Controlling-Logik."},
+    "outcome":{"hu":"Döntést támogató pénzügyi kép és rendszeres vezetői kontroll.","en":"Decision-supporting financial visibility and regular management control.","de":"Entscheidungsrelevante Finanztransparenz und regelmäßige Managementsteuerung."},
+    "includes":{"hu":["Vezetői riporting","Cash-flow és forecast struktúra","Költség- és eredménykontroll","Adatminőség és felelősségi pontok","Fractional CFO irány előkészítése"],"en":["Management reporting","Cash-flow and forecast structure","Cost and performance control","Data quality and ownership","Fractional CFO readiness"],"de":["Management-Reporting","Cashflow- und Forecast-Struktur","Kosten- und Ergebniskontrolle","Datenqualität und Verantwortlichkeiten","Vorbereitung auf Fractional-CFO-Unterstützung"]},
+    "related":["business-operations-360"]
+  },
+  {
+    "key":"ai-readiness",
+    "pillar":"business",
+    "name":{"hu":"AI Readiness & Automation","en":"AI Readiness & Automation","de":"AI Readiness & Automation"},
+    "audience":{"hu":"AI-t használni akaró, de kontrollált bevezetést kereső cégek","en":"Companies seeking a controlled path to AI adoption","de":"Unternehmen, die KI kontrolliert einführen möchten"},
+    "problem":{"hu":"Van AI-érdeklődés, de nincs priorizált use case, adatkezelési keret, felelős vagy mérhető implementációs terv.","en":"There is interest in AI, but no prioritised use case, data-governance frame, owner or measurable implementation plan.","de":"Es besteht Interesse an KI, aber es fehlen priorisierte Use Cases, Datenrahmen, Verantwortliche und ein messbarer Implementierungsplan."},
+    "outcome":{"hu":"Prioritizált automatizálási roadmap emberi kontrollal és mérhető üzleti céllal.","en":"A prioritised automation roadmap with human oversight and measurable business objectives.","de":"Eine priorisierte Automatisierungs-Roadmap mit menschlicher Kontrolle und messbaren Geschäftszielen."},
+    "includes":{"hu":["AI readiness audit","Folyamat- és use-case térkép","Adat- és kockázati ellenőrzőpontok","Implementációs sprint terv","Managed AI operations irány"],"en":["AI readiness audit","Process and use-case map","Data and risk checkpoints","Implementation sprint plan","Managed AI operations path"],"de":["AI-Readiness-Audit","Prozess- und Use-Case-Karte","Daten- und Risikokontrollpunkte","Plan für Implementierungs-Sprint","Pfad zu Managed AI Operations"]},
+    "related":["business-operations-360","content-engine"]
+  },
+  {
+    "key":"content-engine",
+    "pillar":"creative",
+    "name":{"hu":"Content Engine","en":"Content Engine","de":"Content Engine"},
+    "audience":{"hu":"Rendszeres üzleti láthatóságot építő cégek és vezetők","en":"Companies and executives building consistent business visibility","de":"Unternehmen und Führungskräfte mit kontinuierlichem Sichtbarkeitsaufbau"},
+    "problem":{"hu":"A tartalom projektenként készül, nincs folyamatos rendszer, újrahasznosítás vagy üzleti témákhoz kötött publikációs motor.","en":"Content is produced project by project without a continuous system, repurposing model or business-topic publishing engine.","de":"Content entsteht projektweise ohne kontinuierliches System, Repurposing-Modell oder an Geschäftsthemen gekoppelten Publishing-Motor."},
+    "outcome":{"hu":"Egy gyártásból több üzleti csatornára tervezett, újrahasznosítható tartalomrendszer.","en":"A reusable content system designed to turn one production effort into assets for multiple business channels.","de":"Ein wiederverwendbares Content-System, das eine Produktion für mehrere Geschäftskanäle nutzbar macht."},
+    "includes":{"hu":["Long-form videó vagy podcast","Rövid videós kivágatok","Webes/SEO tartalom","LinkedIn és vezetői tartalom","Idézet- és FAQ assetek","Publikációs és repurposing rendszer"],"en":["Long-form video or podcast","Short-form video cuts","Web/SEO content","LinkedIn and executive content","Quote and FAQ assets","Publishing and repurposing system"],"de":["Long-form Video oder Podcast","Short-form Videoausschnitte","Web-/SEO-Content","LinkedIn- und Executive-Content","Zitat- und FAQ-Assets","Publishing- und Repurposing-System"]},
+    "related":["ai-readiness","corporate-experience-design"]
+  },
+  {
+    "key":"corporate-experience-design",
+    "pillar":"experiences",
+    "name":{"hu":"Corporate Experience Design","en":"Corporate Experience Design","de":"Corporate Experience Design"},
+    "audience":{"hu":"HR-, marketing- és vezetői csapatok","en":"HR, marketing and leadership teams","de":"HR-, Marketing- und Führungsteams"},
+    "problem":{"hu":"A céges esemény vagy csapatprogram önmagában programlista, miközben a valódi cél lehet együttműködés, vezetői kapcsolódás, employer engagement vagy ügyfélélmény.","en":"A corporate event can become a list of activities while the real objective is collaboration, leadership connection, employer engagement or client experience.","de":"Ein Firmenevent kann zur bloßen Programmliste werden, obwohl das eigentliche Ziel Zusammenarbeit, Führungsverbindung, Employer Engagement oder Kundenerlebnis ist."},
+    "outcome":{"hu":"Üzleti célból tervezett vállalati élmény, amelyhez a programmechanika és a kommunikáció is illeszkedik.","en":"A corporate experience designed from the business objective, with programme mechanics and communication aligned to it.","de":"Ein vom Geschäftsziel aus konzipiertes Unternehmenserlebnis mit darauf abgestimmter Programmmechanik und Kommunikation."},
+    "includes":{"hu":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Egyedi programmechanika","Custom Branded Game"],"en":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Custom programme mechanics","Custom Branded Game"],"de":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Individuelle Programmmechanik","Custom Branded Game"]},
+    "related":["content-engine"]
+  }
+]
