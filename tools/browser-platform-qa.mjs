@@ -13,7 +13,7 @@ const errors=[];const external=new Set();const results=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('request',r=>{if(!r.url().startsWith(origin)&&!r.url().startsWith('data:'))external.add(r.url())});
 
-const representative=['/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/megoldasok/','/hu/megoldasok/business-operations-360/','/hu/megoldasok/content-engine/','/hu/szolgaltatasok/','/hu/szolgaltatasok/business/finance-admin/financial-administration/','/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/','/hu/szolgaltatasok/hipstudio/video/conference-streaming/','/hu/szolgaltatasok/flugos/corporate-experience/team-experience/','/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/','/hu/ai-trust/','/hu/kapcsolat/','/hu/ajanlatkeres/'];
+const representative=['/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/rolunk/','/hu/megoldasok/','/hu/megoldasok/business-operations-360/','/hu/megoldasok/content-engine/','/hu/szolgaltatasok/','/hu/szolgaltatasok/business/finance-admin/financial-administration/','/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/','/hu/szolgaltatasok/hipstudio/video/conference-streaming/','/hu/szolgaltatasok/flugos/corporate-experience/team-experience/','/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/','/hu/ai-trust/','/hu/kapcsolat/','/hu/ajanlatkeres/'];
 for(const width of [320,390,768,1440,1920]){
   await page.setViewportSize({width,height:960});
   const paths=width===390?build.pages.map(p=>p.path):representative;
@@ -43,8 +43,22 @@ await skip.focus();
 const skipFocused=await skip.evaluate(el=>document.activeElement===el);
 await page.keyboard.press('Enter');
 const skipTarget=await page.evaluate(()=>location.hash==='#main'&&!!document.querySelector('#main'));
+const commercialHomeProblem=await page.locator('[data-commercial-layer="problem-led-home"]').count()===1;
+const commercialHomeBenefits=await page.locator('[data-commercial-layer="partner-benefits"]').count()===1;
+const problemLinks=await page.locator('[data-commercial-layer="problem-led-home"] a.card').count();
+const businessProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/uzleti-mukodes/"]').count()===1;
+const creativeProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/kreativ-tartalom/"]').count()===1;
+const experienceProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/vallalati-elmenyek/"]').count()===1;
 await page.getByRole('link',{name:'EN',exact:true}).click();
 const languageSwitch=page.url().endsWith('/en/');
+
+await page.goto(origin+'/hu/rolunk/');
+const commercialAbout=await page.locator('[data-commercial-layer="integration-story"]').count()===1;
+const aboutHas2006=await page.locator('body').innerText().then(t=>t.includes('2006'));
+
+await page.goto(origin+'/hu/uzleti-mukodes/');
+const commercialBusiness=await page.locator('[data-commercial-layer="pillar-value"]').count()===1;
+const businessHasScopeQualifier=await page.locator('body').innerText().then(t=>t.includes('előre jóváhagyott felelősségi körökön belül'));
 
 await page.goto(origin+'/hu/ajanlatkeres/');
 await page.locator('[name=pillars][value=creative]').check();
@@ -64,8 +78,9 @@ const prefillScopeVisible=await page.locator('[data-creative-scope]').isVisible(
 const cookies=await context.cookies();
 const storage=await page.evaluate(()=>({localStorage:localStorage.length,sessionStorage:sessionStorage.length}));
 
-const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,errors,externalRequests:[...external],cookies,storage,interactions:{skipHref,skipFocused,skipTarget,languageSwitch,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible}};
+const interactions={skipHref,skipFocused,skipTarget,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
+const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,errors,externalRequests:[...external],cookies,storage,interactions};
 fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
-console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions:summary.interactions},null,2));
+console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions},null,2));
 await browser.close();
-if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.review!==1||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
+if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.review!==1||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
