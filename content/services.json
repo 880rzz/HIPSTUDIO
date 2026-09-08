@@ -17,7 +17,7 @@
     "intro": {
       "hu": "Egy szakmai bemutatkozásnak rád kell hasonlítania. Az üzleti portré a személyiségedet és a szerepedet kapcsolja össze, stúdióban vagy a hozzád illő környezetben.",
       "en": "A professional introduction should feel like you. A business portrait brings together your personality and your role, in the studio or in a setting that suits you.",
-      "de": "Ein beruflicher Auftritt sollte zu dir passen. Ein Businessporträt verbindet Persönlichkeit und berufliche Rolle, im Studio oder in einem passenden Umfeld."
+      "de": "Ein beruflicher Auftritt sollte zu Ihnen passen. Ein Businessporträt verbindet Persönlichkeit und berufliche Rolle, im Studio oder in einem passenden Umfeld."
     },
     "result": {
       "hu": "LinkedInre, céges weboldalra és sajtóanyagba szánt, közösen kiválasztott portrék. A komolyabb és közvetlenebb megjelenés között a felhasználási cél segít dönteni.",
@@ -27,7 +27,7 @@
     "brief": {
       "hu": "Írd meg, milyen szakmai szerepben jelensz meg, és hol használod majd a képeket. Hozz olyan ruhát, amelyben önazonosnak érzed magad; az eltérő képkivágásokat és környezeteket előre érdemes átbeszélni.",
       "en": "Tell us about your professional role and where the images will appear. Choose clothing that feels like you; discuss different crops and settings before the session.",
-      "de": "Beschreibe deine berufliche Rolle und die geplanten Einsatzorte der Bilder. Wähle Kleidung, in der du dich wohlfühlst. Bildausschnitte und Umgebungen besprechen wir vorab."
+      "de": "Beschreiben Sie Ihre berufliche Rolle und die geplanten Einsatzorte der Bilder. Wählen Sie Kleidung, in der Sie sich wohlfühlen. Bildausschnitte und Umgebungen besprechen wir vorab."
     },
     "question": {
       "hu": "Lehet stúdión kívül is fotózni?",
@@ -58,17 +58,17 @@
     "intro": {
       "hu": "Pályakezdőként és tapasztalt szakemberként is fontos, hogy a bemutatkozásod következetes legyen. Egy önéletrajzhoz készült portré letisztultan mutat meg, túlzó beállítások nélkül.",
       "en": "Whether you are starting out or have years of experience, your introduction should be consistent. A portrait for your CV presents you clearly, without an exaggerated pose.",
-      "de": "Ob beim Berufseinstieg oder mit langjähriger Erfahrung: Dein Auftritt sollte stimmig sein. Ein Bewerbungsfoto zeigt dich klar und ohne übertriebene Inszenierung."
+      "de": "Ob beim Berufseinstieg oder mit langjähriger Erfahrung: Ihr Auftritt sollte stimmig sein. Ein Bewerbungsfoto zeigt Sie klar und ohne übertriebene Inszenierung."
     },
     "result": {
       "hu": "A cél a jelentkezésedhez illő arckép. A képet az önéletrajz formátumával és a szakmai profiloddal együtt érdemes megtervezni, nem különálló díszítőelemként.",
       "en": "The aim is a portrait that fits your application. Plan it alongside your CV layout and professional profile, rather than as an isolated decoration.",
-      "de": "Ziel ist ein Porträt, das zu deiner Bewerbung passt. Plane es gemeinsam mit dem Lebenslauf und deinem beruflichen Profil, nicht als separates Schmuckelement."
+      "de": "Ziel ist ein Porträt, das zu Ihrer Bewerbung passt. Planen Sie es gemeinsam mit dem Lebenslauf und Ihrem beruflichen Profil, nicht als separates Schmuckelement."
     },
     "brief": {
-      "hu": "Az egyeztetéshez elég a megpályázott terület és a kép tervezett használata. Teljes önéletrajzot vagy érzékeny személyes adatokat nem szükséges elküldened a fotózási igény leírásához.",
+      "hu": "Az egyeztetéshez elég a megpályázott terület és a kép tervezett használata. Teljes önéletrajzot vagy érzékeny személyes adatokat nem szükséges elküldenie a fotózási igény leírásához.",
       "en": "To plan the session, tell us your field and the intended use of the photograph. You do not need to send a full CV or sensitive personal information to describe your photography needs.",
-      "de": "Für die Planung genügen dein Berufsfeld und der Verwendungszweck. Ein vollständiger Lebenslauf oder sensible persönliche Daten sind für die Beschreibung deines Fotowunsches nicht nötig."
+      "de": "Für die Planung genügen Ihr Berufsfeld und der Verwendungszweck. Ein vollständiger Lebenslauf oder sensible persönliche Daten sind für die Beschreibung Ihres Fotowunsches nicht nötig."
     },
     "question": {
       "hu": "Mi történik, ha nem érzem magam fotogénnek?",
@@ -76,9 +76,9 @@
       "de": "Was ist, wenn ich mich nicht fotogen fühle?"
     },
     "answer": {
-      "hu": "A fotózás beszélgetéssel indul. A képeket közösen nézzük át, így a kiválasztásnál te is elmondhatod, melyik megjelenéssel tudsz azonosulni.",
+      "hu": "A fotózás beszélgetéssel indul. A képeket közösen nézzük át, így a kiválasztásnál Ön is elmondhatja, melyik megjelenéssel tud azonosulni.",
       "en": "We begin with a conversation and review the photographs together. You can say which expression feels right for you.",
-      "de": "Wir beginnen mit einem Gespräch und sehen die Bilder gemeinsam durch. Du kannst sagen, mit welchem Ausdruck du dich identifizierst."
+      "de": "Wir beginnen mit einem Gespräch und sehen die Bilder gemeinsam durch. Sie können sagen, mit welchem Ausdruck Sie sich identifizieren."
     }
   },
   {
@@ -140,17 +140,17 @@
     "intro": {
       "hu": "Egy profilképen is önmagadat szeretnéd viszontlátni. A társkereső-fotózás közvetlenebb, hétköznapibb képekből indul ki, és teret hagy a személyiségednek.",
       "en": "You want to recognise yourself in your profile photographs. Dating photography starts with a natural, everyday approach and makes room for your personality.",
-      "de": "Auch auf Profilfotos möchtest du dich wiedererkennen. Dating-Fotografie setzt auf eine natürliche, alltagsnahe Darstellung und lässt Raum für deine Persönlichkeit."
+      "de": "Auch auf Profilfotos möchten Sie sich wiedererkennen. Dating-Fotografie setzt auf eine natürliche, alltagsnahe Darstellung und lässt Raum für Ihre Persönlichkeit."
     },
     "result": {
       "hu": "Változatos, egymással összhangban álló képek készülhetnek stúdióban és kültéren. A cél nem egy idegen szerep felvétele, hanem egy olyan sorozat, amellyel szívesen mutatkozol be.",
       "en": "A varied, coherent series can be created in the studio and outdoors. The aim is a set of photographs you feel comfortable using to introduce yourself.",
-      "de": "Eine abwechslungsreiche, zusammenhängende Serie kann im Studio und im Freien entstehen. Ziel sind Bilder, mit denen du dich gerne vorstellst."
+      "de": "Eine abwechslungsreiche, zusammenhängende Serie kann im Studio und im Freien entstehen. Ziel sind Bilder, mit denen Sie sich gerne vorstellen."
     },
     "brief": {
       "hu": "Gondold át, milyen ruhák és helyzetek jellemzők rád. Az előzetes beszélgetésben a hangulatot, a helyszínt és a ruhaváltásokat is össze tudjuk hangolni.",
       "en": "Think about the clothes and settings that feel like you. During the initial conversation we can align the mood, locations and outfit changes.",
-      "de": "Überlege, welche Kleidung und Situationen zu dir passen. Im Vorgespräch stimmen wir Stimmung, Orte und Kleidungswechsel aufeinander ab."
+      "de": "Überlegen Sie, welche Kleidung und Situationen zu Ihnen passen. Im Vorgespräch stimmen wir Stimmung, Orte und Kleidungswechsel aufeinander ab."
     },
     "question": {
       "hu": "Lehet több öltözékben fotózni?",
@@ -181,17 +181,17 @@
     "intro": {
       "hu": "Egyetlen kép helyett több oldaladat szeretnéd megmutatni. A portfólió különböző hangulatokat, öltözékeket és képtípusokat fog össze egy személyes sorozattá.",
       "en": "You want to show more than one side of yourself. A portfolio brings together different moods, outfits and image types in a personal series.",
-      "de": "Du möchtest mehr als eine Seite von dir zeigen. Ein Portfolio verbindet unterschiedliche Stimmungen, Outfits und Bildarten zu einer persönlichen Serie."
+      "de": "Sie möchten mehr als eine Seite von sich zeigen. Ein Portfolio verbindet unterschiedliche Stimmungen, Outfits und Bildarten zu einer persönlichen Serie."
     },
     "result": {
       "hu": "A HIPStudio portfóliófolyamata közös koncepcióra, stúdiós vagy külső helyszínre és képkiválasztásra épül. A sorozatot a saját célodhoz érdemes igazítani, legyen az személyes bemutatkozás vagy alkotói anyag.",
       "en": "HIPStudio describes a shared concept, studio or location photography and joint image selection. Shape the series around your own purpose, from a personal introduction to a creative portfolio.",
-      "de": "HIPStudio beschreibt ein gemeinsames Konzept, Aufnahmen im Studio oder vor Ort und eine gemeinsame Bildauswahl. Die Serie richtet sich nach deinem Ziel, vom persönlichen Auftritt bis zum kreativen Portfolio."
+      "de": "HIPStudio beschreibt ein gemeinsames Konzept, Aufnahmen im Studio oder vor Ort und eine gemeinsame Bildauswahl. Die Serie richtet sich nach Ihrem Ziel, vom persönlichen Auftritt bis zum kreativen Portfolio."
     },
     "brief": {
-      "hu": "Az inspirációk mellé írd meg azt is, mit nem szeretnél. A helyszínek és öltözékek száma, a smink és a haj igénye mind az előkészítés része.",
+      "hu": "Az inspirációk mellé írja meg azt is, mit nem szeretne. A helyszínek és öltözékek száma, a smink és a haj igénye mind az előkészítés része.",
       "en": "Alongside inspiration, tell us what you do not want. Locations, outfit changes and any makeup or hair requirements belong in the planning stage.",
-      "de": "Nenne neben Inspirationen auch, was du nicht möchtest. Orte, Outfits sowie Wünsche zu Make-up und Haaren gehören zur Vorbereitung."
+      "de": "Nennen Sie neben Inspirationen auch, was Sie nicht möchten. Orte, Outfits sowie Wünsche zu Make-up und Haaren gehören zur Vorbereitung."
     },
     "question": {
       "hu": "Kérhető smink vagy fodrász?",
@@ -230,7 +230,7 @@
       "de": "HIPStudio bietet Portfolio- und Modeaufnahmen im Studio und im Freien an. Die Modegalerie liefert konkrete Bildreferenzen für die Abstimmung."
     },
     "brief": {
-      "hu": "A ruhadarabok száma mellett a kollekció karakterét és a megjelenés felületét is írd meg. A modell, a styling, a hátterek és a képarányok tisztázása segít egységes sorozatot tervezni.",
+      "hu": "A ruhadarabok száma mellett a kollekció karakterét és a megjelenés felületét is írja meg. A modell, a styling, a hátterek és a képarányok tisztázása segít egységes sorozatot tervezni.",
       "en": "Include the collection’s character and publishing channels, as well as the number of garments. Models, styling, backgrounds and aspect ratios help define a coherent series.",
       "de": "Beschreibe neben der Anzahl der Kleidungsstücke auch den Charakter der Kollektion und die Veröffentlichungskanäle. Models, Styling, Hintergründe und Seitenverhältnisse helfen bei einer stimmigen Planung."
     },
@@ -353,7 +353,7 @@
       "de": "Die Werbefotografie-Seite von HIPStudio beschreibt auch Katalogarbeiten. Eine einheitliche Serie sollte gemeinsam mit Layout- und Markenanforderungen vorbereitet werden."
     },
     "brief": {
-      "hu": "A brief része legyen a tétellista, a mintakép, a háttér és a végső képarány. Ha később bővül a katalógus, az új képek illeszkedésének igényét is jelezd.",
+      "hu": "A brief része legyen a tétellista, a mintakép, a háttér és a végső képarány. Ha később bővül a katalógus, az új képek illeszkedésének igényét is jelezze.",
       "en": "Include the item list, a sample image, background and final aspect ratio. If the catalogue will grow, mention the need to match later photographs.",
       "de": "Zum Briefing gehören Artikelliste, Musterbild, Hintergrund und endgültiges Seitenverhältnis. Wenn der Katalog erweitert wird, sollte auch die spätere Bildanpassung eingeplant werden."
     },
@@ -509,7 +509,7 @@
     "intro": {
       "hu": "A művészi akt személyes bizalomra épül. A képek előtt a határokról, az elképzelésekről és arról beszélgetünk, milyen helyzetben tudsz önmagad lenni.",
       "en": "Fine-art nude photography begins with trust. Before photographs, the conversation is about boundaries, ideas and the setting in which you can feel yourself.",
-      "de": "Künstlerische Aktfotografie beginnt mit Vertrauen. Vor den Bildern sprechen wir über Grenzen, Vorstellungen und die Situation, in der du dich wohlfühlst."
+      "de": "Künstlerische Aktfotografie beginnt mit Vertrauen. Vor den Bildern sprechen wir über Grenzen, Vorstellungen und die Situation, in der Sie sich wohlfühlen."
     },
     "result": {
       "hu": "Speier Vikó nyilvános szolgáltatásleírása előzetes beszélgetést, közös tervezést és képkiválasztást ismertet. A hangsúly a személyes, kifejező képeken van.",
@@ -550,7 +550,7 @@
     "intro": {
       "hu": "A finom gesztus, a ruha és a fény együtt adja a boudoir képek hangulatát. Az előzetes beszélgetésben azt keressük, milyen megjelenés áll közel hozzád.",
       "en": "Gesture, clothing and light create the mood of boudoir photographs. The first conversation explores the kind of expression that feels right for you.",
-      "de": "Geste, Kleidung und Licht bestimmen die Stimmung von Boudoirbildern. Im ersten Gespräch erkunden wir, welcher Ausdruck zu dir passt."
+      "de": "Geste, Kleidung und Licht bestimmen die Stimmung von Boudoirbildern. Im ersten Gespräch erkunden wir, welcher Ausdruck zu Ihnen passt."
     },
     "result": {
       "hu": "A nyilvános HIPStudio-kínálat a glamour és boudoir fotózást a művészi akttól külön csomagként is bemutatja. A közös tervezés és a személyes határok tisztelete itt is alapvető.",
@@ -558,9 +558,9 @@
       "de": "HIPStudio führt Glamour und Boudoir getrennt von künstlerischer Aktfotografie. Gemeinsame Planung und der respektvolle Umgang mit persönlichen Grenzen bleiben zentral."
     },
     "brief": {
-      "hu": "Beszéljük át a ruhákat, a takarás mértékét, a hangulatot és a képek célját. A galéria inspiráció lehet, de nem írja elő, hogyan kell megjelenned.",
+      "hu": "Beszéljük át a ruhákat, a takarás mértékét, a hangulatot és a képek célját. A galéria inspiráció lehet, de nem írja elő, hogyan kell megjelennie.",
       "en": "Discuss clothing, coverage, mood and the purpose of the images. The gallery can be inspiration, but it does not dictate how you should appear.",
-      "de": "Wir besprechen Kleidung, Bedeckung, Stimmung und Bildzweck. Die Galerie kann inspirieren, schreibt dir aber keinen bestimmten Auftritt vor."
+      "de": "Wir besprechen Kleidung, Bedeckung, Stimmung und Bildzweck. Die Galerie kann inspirieren, schreibt Ihnen aber keinen bestimmten Auftritt vor."
     },
     "question": {
       "hu": "Kell teljes aktot vállalni?",
@@ -599,7 +599,7 @@
       "de": "HIPStudio beschreibt die Zusammenarbeit der Eventfotografen mit dem Organisationsteam. Mobiles Studio, Porträts an der Pressewand und Eventvideo können ergänzend abgestimmt werden."
     },
     "brief": {
-      "hu": "A program mellett jelöld meg a fontos szereplőket, a párhuzamos helyszíneket és azokat a pillanatokat, amelyekről mindenképpen szükség van képre. A gyors sajtóválogatás igényét előre jelezd.",
+      "hu": "A program mellett jelölje meg a fontos szereplőket, a párhuzamos helyszíneket és azokat a pillanatokat, amelyekről mindenképpen szükség van képre. A gyors sajtóválogatás igényét előre jelezze.",
       "en": "Alongside the programme, identify key people, parallel locations and essential moments. Mention any need for a fast press selection in advance.",
       "de": "Nenne neben dem Programm wichtige Personen, parallele Orte und unverzichtbare Momente. Einen Bedarf an schneller Presseauswahl solltest du vorher angeben."
     },
@@ -630,7 +630,7 @@
     "source": "https://www.hipstudio.hu/rovidfilm-keszites",
     "reference": "https://www.hipstudio.hu/referencia-videók",
     "intro": {
-      "hu": "Előbb a mondanivaló, utána a film hossza. A videó akkor tervezhető jól, ha világos, kihez szól, és mit szeretnél megmutatni vele.",
+      "hu": "Előbb a mondanivaló, utána a film hossza. A videó akkor tervezhető jól, ha világos, kihez szól, és mit szeretne megmutatni vele.",
       "en": "The message comes before the running time. Video can be planned well when its audience and purpose are clear.",
       "de": "Die Botschaft kommt vor der Filmlänge. Ein Video lässt sich gut planen, wenn Zielgruppe und Zweck klar sind."
     },
@@ -796,7 +796,7 @@
     "intro": {
       "hu": "A beszélgetés akkor működik, ha a technika helyett a témára figyelhetsz. A videós podcast a hangot, a személyiséget és a képi jelenlétet kapcsolja össze.",
       "en": "A conversation works best when you can focus on the subject instead of the equipment. A video podcast brings together voice, personality and visual presence.",
-      "de": "Ein Gespräch gelingt besser, wenn du dich auf das Thema statt auf die Technik konzentrieren kannst. Ein Videopodcast verbindet Stimme, Persönlichkeit und visuelle Präsenz."
+      "de": "Ein Gespräch gelingt besser, wenn Sie sich auf das Thema statt auf die Technik konzentrieren können. Ein Videopodcast verbindet Stimme, Persönlichkeit und visuelle Präsenz."
     },
     "result": {
       "hu": "A HIPStudio tématervezést, műsorstruktúrát, hang- és videófelvételt, szerkesztést és disztribúciót ismertet. Mobil stúdióval az irodai helyszín lehetőségét is leírja.",
@@ -877,7 +877,7 @@
     "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
     "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
     "intro": {
-      "hu": "Ha a márkád minden felületen más arcot mutat, a képi jelenlétet együtt érdemes megtervezni. A brand-fotózás a szereplőket, a helyszínt és a kommunikáció célját kapcsolja össze.",
+      "hu": "Ha az Ön márkája minden felületen más arcot mutat, a képi jelenlétet együtt érdemes megtervezni. A brand-fotózás a szereplőket, a helyszínt és a kommunikáció célját kapcsolja össze.",
       "en": "When a brand looks different on every channel, its visual presence needs a shared plan. Brand photography connects people, setting and communication goals.",
       "de": "Wenn eine Marke auf jedem Kanal anders wirkt, braucht ihr visueller Auftritt einen gemeinsamen Plan. Brandfotografie verbindet Menschen, Umgebung und Kommunikationsziele."
     },
@@ -919,9 +919,9 @@
     "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
     "reference": "https://www.hipstudio.hu/reklamfoto-galeria",
     "intro": {
-      "hu": "Mit szeretnél, hogy megértsenek rólad az első képből? A vizuális pozicionálás ezt a kérdést fordítja le a fotózás céljára, stílusára és felhasználására.",
+      "hu": "Mit szeretne, hogy megértsenek Önről az első képből? A vizuális pozicionálás ezt a kérdést fordítja le a fotózás céljára, stílusára és felhasználására.",
       "en": "What should the first image help people understand about you? Visual positioning translates that question into the purpose, style and use of the photography.",
-      "de": "Was sollen Menschen schon durch das erste Bild über dich verstehen? Visuelle Positionierung übersetzt diese Frage in Ziel, Stil und Verwendung der Fotos."
+      "de": "Was sollen Menschen schon durch das erste Bild über Sie verstehen? Visuelle Positionierung übersetzt diese Frage in Ziel, Stil und Verwendung der Fotos."
     },
     "result": {
       "hu": "A cél a döntések összehangolása: kit szólítasz meg, milyen szerepben jelensz meg, és hol találkoznak a képeiddel. A brand-fotózáshoz kapcsolódó tervezési irányként kezeljük.",
@@ -941,7 +941,7 @@
     "answer": {
       "hu": "A vizuális pozicionálást a brand-fotózás részeként tervezzük. Önálló tanácsadási igény esetén külön ajánlatot kérhetsz.",
       "en": "Visual positioning is planned as part of brand photography. For a standalone consulting requirement, request a separate quote.",
-      "de": "Visuelle Positionierung wird als Teil der Brandfotografie geplant. Für eigenständigen Beratungsbedarf frage nach einem separaten Angebot."
+      "de": "Visuelle Positionierung wird als Teil der Brandfotografie geplant. Für eigenständigen Beratungsbedarf fragen Sie nach einem separaten Angebot."
     },
     "secondarySource": "https://github.com/880rzz/BANHALMI/blob/c3bc1143254a467cb8d47091e84acc2aac361ebc/pricing-huf.json"
   },

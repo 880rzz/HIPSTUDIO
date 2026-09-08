@@ -1,0 +1,23 @@
+[
+  {
+    "key": "banhalmi-norbert",
+    "slug": {"hu": "banhalmi-norbert", "en": "norbert-banhalmi", "de": "norbert-banhalmi"},
+    "name": "Bánhalmi Norbert",
+    "role": {"hu": "Alapító és szakmai partner", "en": "Founder and professional partner", "de": "Gründer und Fachpartner"},
+    "summary": {"hu": "A HIPStudio kommunikációs és kreatív márka alapítója. Az alapítás igazolt dátuma 2006. február 27.", "en": "Founder of the HIPStudio communications and creative brand. Its verified founding date is 27 February 2006.", "de": "Gründer der Kommunikations- und Kreativmarke HIPStudio. Das belegte Gründungsdatum ist der 27. Februar 2006."},
+    "url": "https://www.norbertbanhalmi.com/",
+    "sameAs": ["https://www.wikidata.org/wiki/Q56391118"],
+    "sources": ["wikidata-hipstudio", "wix-legal"]
+  },
+  {
+    "key": "speier-viko",
+    "slug": {"hu": "speier-viko", "en": "viko-speier", "de": "viko-speier"},
+    "name": "Speier Vikó",
+    "alternateName": "Speier Viktória",
+    "role": {"hu": "Szakmai partner", "en": "Professional partner", "de": "Fachpartnerin"},
+    "summary": {"hu": "A HIPStudio független szakmai partnere. A konkrét projektben betöltött szerepet az ajánlat és a szerződés rögzíti.", "en": "An independent professional partner of HIPStudio. The role in a specific project is defined in the quote and agreement.", "de": "Unabhängige Fachpartnerin von HIPStudio. Die Rolle im jeweiligen Projekt wird im Angebot und Vertrag festgelegt."},
+    "url": "https://www.vikospeier.com/",
+    "sameAs": [],
+    "sources": ["wix-legal", "wix-partners"]
+  }
+]

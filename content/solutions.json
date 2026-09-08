@@ -1,0 +1,47 @@
+[
+  {
+    "key": "executive-presence",
+    "slug": {"hu": "vezetoi-jelenlet", "en": "executive-presence", "de": "fuehrungspraesenz"},
+    "name": {"hu": "Vezetői jelenlét", "en": "Executive presence", "de": "Führungspräsenz"},
+    "audience": {"hu": "Vezetőknek, szakértőknek és vállalati csapatoknak.", "en": "For executives, specialists and corporate teams.", "de": "Für Führungskräfte, Fachleute und Unternehmensteams."},
+    "problem": {"hu": "Ha több felületen kell egységes, hiteles és felismerhető szakmai képet mutatnia.", "en": "When you need a consistent, credible and recognisable professional presence across channels.", "de": "Wenn Sie über mehrere Kanäle hinweg einen konsistenten, glaubwürdigen und wiedererkennbaren professionellen Auftritt benötigen."},
+    "approach": {"hu": "A felhasználási helyzetekből indulunk ki, majd ezekhez igazítjuk a képi irányt, a környezetet és az átadandó változatokat.", "en": "We start with the intended channels, then align the visual direction, setting and deliverable variants with them.", "de": "Wir beginnen mit den vorgesehenen Kanälen und stimmen darauf Bildsprache, Umgebung und benötigte Varianten ab."},
+    "services": ["business", "headshot", "executive", "brand", "positioning"]
+  },
+  {
+    "key": "campaign-commerce",
+    "slug": {"hu": "kampany-es-ertekesites", "en": "campaign-and-commerce", "de": "kampagne-und-vertrieb"},
+    "name": {"hu": "Kampány és értékesítés", "en": "Campaign and commerce", "de": "Kampagne und Vertrieb"},
+    "audience": {"hu": "Marketingcsapatoknak, márkáknak és termékfelelősöknek.", "en": "For marketing teams, brands and product owners.", "de": "Für Marketingteams, Marken und Produktverantwortliche."},
+    "problem": {"hu": "Ha egy termékhez vagy kampányhoz több csatornán használható, egységes vizuális anyag szükséges.", "en": "When a product or campaign needs a coherent set of visual assets for several channels.", "de": "Wenn ein Produkt oder eine Kampagne zusammenhängendes Bildmaterial für mehrere Kanäle benötigt."},
+    "approach": {"hu": "A koncepciót, a formátumokat és a felhasználási környezetet együtt tervezzük, hogy a produkció egyértelmű briefből induljon.", "en": "We plan the concept, formats and usage context together so production starts from a clear brief.", "de": "Wir planen Konzept, Formate und Nutzungskontext gemeinsam, damit die Produktion mit einem klaren Briefing beginnt."},
+    "services": ["advertising", "product", "catalogue", "fashion", "social"]
+  },
+  {
+    "key": "corporate-events",
+    "slug": {"hu": "vallalati-esemenyek", "en": "corporate-events", "de": "unternehmensveranstaltungen"},
+    "name": {"hu": "Vállalati események", "en": "Corporate events", "de": "Unternehmensveranstaltungen"},
+    "audience": {"hu": "Kommunikációs csapatoknak, rendezvényszervezőknek és vezetői programokhoz.", "en": "For communications teams, event organisers and executive programmes.", "de": "Für Kommunikationsteams, Veranstalter und Führungsprogramme."},
+    "problem": {"hu": "Ha az esemény dokumentálása mellett gyorsan használható sajtó- és kommunikációs anyagra is szükség van.", "en": "When an event needs both considered documentation and usable press or communications assets.", "de": "Wenn eine Veranstaltung sowohl sorgfältige Dokumentation als auch nutzbares Presse- und Kommunikationsmaterial braucht."},
+    "approach": {"hu": "Előre rögzítjük a programot, a kiemelt pillanatokat, a hozzáférést és az átadási prioritásokat.", "en": "We agree the programme, priority moments, access and delivery priorities before the event.", "de": "Wir stimmen Programm, Schlüsselmomente, Zugang und Übergabeprioritäten vor der Veranstaltung ab."},
+    "services": ["event", "clevel", "event-video", "streaming", "souvenir"]
+  },
+  {
+    "key": "film-editorial",
+    "slug": {"hu": "film-es-szerkesztett-tartalom", "en": "film-and-editorial-content", "de": "film-und-redaktioneller-inhalt"},
+    "name": {"hu": "Film és szerkesztett tartalom", "en": "Film and editorial content", "de": "Film und redaktioneller Inhalt"},
+    "audience": {"hu": "Márkáknak, kommunikációs csapatoknak és szakmai műsorokhoz.", "en": "For brands, communications teams and professional programmes.", "de": "Für Marken, Kommunikationsteams und Fachformate."},
+    "problem": {"hu": "Ha egy témát mozgóképpel vagy hanggal kell érthetően, következetesen és több változatban feldolgozni.", "en": "When a subject needs a clear, consistent treatment in film or audio and in several versions.", "de": "Wenn ein Thema in Film oder Audio klar, konsistent und in mehreren Fassungen aufbereitet werden soll."},
+    "approach": {"hu": "Az üzenetet és a szerkesztési tervet a forgatás előtt tisztázzuk; a terjedelem az elfogadott briefből következik.", "en": "We clarify the message and editorial plan before recording; scope follows the agreed brief.", "de": "Botschaft und redaktionellen Plan klären wir vor der Aufnahme; der Umfang folgt dem vereinbarten Briefing."},
+    "services": ["video", "shoot", "werk", "podcast", "sports-video", "concert-video", "music-video"]
+  },
+  {
+    "key": "spaces-experiences",
+    "slug": {"hu": "terek-es-elmenyek", "en": "spaces-and-experiences", "de": "raeume-und-erlebnisse"},
+    "name": {"hu": "Terek és élmények", "en": "Spaces and experiences", "de": "Räume und Erlebnisse"},
+    "audience": {"hu": "Ingatlanok, vendéglátóhelyek, intézmények és helyszínek bemutatásához.", "en": "For property, hospitality, institutions and location-led businesses.", "de": "Für Immobilien, Gastgewerbe, Institutionen und standortbezogene Unternehmen."},
+    "problem": {"hu": "Ha egy hely térélményét, részleteit és bejárhatóságát több nézőpontból kell megmutatni.", "en": "When a place needs to communicate its spatial character, detail and navigability from several viewpoints.", "de": "Wenn ein Ort seinen räumlichen Charakter, seine Details und Begehbarkeit aus mehreren Perspektiven zeigen soll."},
+    "approach": {"hu": "A helyszíni adottságokhoz választunk állóképes, légi, virtuális vagy stúdiótechnikai megoldást.", "en": "We select still, aerial, virtual or studio techniques according to the location and intended use.", "de": "Wir wählen Foto-, Luftbild-, virtuelle oder Studiotechnik passend zum Ort und zur vorgesehenen Nutzung."},
+    "services": ["property", "aerial", "virtual", "greenbox"]
+  }
+]

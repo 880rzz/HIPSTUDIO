@@ -22,7 +22,7 @@ class ReleaseTests(unittest.TestCase):
  def setUpClass(cls):
   cls.build=json.loads((R/'audit/build.json').read_text());cls.docs={p['path']:Doc((D/p['path'].strip('/')/'index.html').read_text()) for p in cls.build['pages']}
  def test_all_languages_and_metadata(self):
-  pages=self.build['pages'];self.assertEqual(len(pages),126)
+  pages=self.build['pages'];self.assertEqual(len(pages),159)
   for p in pages:
    with self.subTest(path=p['path']):
     d=self.docs[p['path']];self.assertEqual(len(d.select('h1')),1);self.assertEqual(d.select('html')[0]['lang'],p['lang'])
@@ -104,6 +104,24 @@ class ReleaseTests(unittest.TestCase):
      if u.startswith('/'):self.assertTrue(u.startswith('/HIPSTUDIO/'),u)
  def test_no_automatic_deployment(self):
   self.assertFalse((R/'.github/workflows/deploy.yml').exists());self.assertFalse((D/'CNAME').exists())
+ def test_solution_people_case_and_trust_architecture(self):
+  solutions=json.loads((R/'content/solutions.json').read_text());services={item['key'] for item in json.loads((R/'content/services.json').read_text())}
+  self.assertEqual(len(solutions),5)
+  for solution in solutions:
+   self.assertEqual(set(solution['slug']),{'hu','en','de'});self.assertTrue(set(solution['services'])<=services)
+   for lang in ['hu','en','de']:
+    self.assertTrue((D/lang/({'hu':'megoldasok','en':'solutions','de':'loesungen'}[lang])/solution['slug'][lang]/'index.html').exists())
+  people=json.loads((R/'content/people.json').read_text());self.assertEqual({p['name'] for p in people},{'Bánhalmi Norbert','Speier Vikó'})
+  cases=json.loads((R/'content/case_studies.json').read_text());self.assertEqual(cases['items'],[])
+  self.assertTrue((R/'content/case-study.schema.json').exists())
+  for path in ['provenance.json','entity.json','privacy-config.json','llms.txt']:self.assertTrue((D/path).exists(),path)
+  self.assertIn('Case studies remain unpublished', (D/'llms.txt').read_text())
+ def test_privacy_hooks_are_inert(self):
+  config=json.loads((R/'content/privacy-config.json').read_text());self.assertFalse(config['storageEnabled']);self.assertFalse(config['networkActivationEnabled']);self.assertEqual(config['optionalIntegrations'],[])
+  consent=(R/'assets/consent.mjs').read_text()
+  for token in ['fetch(', 'XMLHttpRequest', 'sendBeacon', 'localStorage', 'sessionStorage', 'document.cookie']:self.assertNotIn(token,consent)
+  redirects=json.loads((R/'ops/redirects.json').read_text());self.assertEqual(redirects['status'],'inactive-plan')
+  self.assertFalse(any((R/name).exists() for name in ['wrangler.toml','_redirects']))
  def test_gallery_accounting_and_pending_exclusion(self):
   active=json.loads((R/'content/images.json').read_text())
   pending=json.loads((R/'audit/pending-images.json').read_text())

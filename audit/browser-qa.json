@@ -1,5 +1,5 @@
 {
-  "time": "2026-09-07T18:42:03.309Z",
+  "time": "2026-09-08T05:06:33.181Z",
   "browser": "152.0.7977.77",
   "results": [
     {
@@ -84,6 +84,116 @@
     },
     {
       "path": "/hu/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/vezetoi-jelenlet/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/kampany-es-ertekesites/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/vallalati-esemenyek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/megoldasok/terek-es-elmenyek/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/esettanulmanyok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/banhalmi-norbert/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/szakertok/speier-viko/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/forrasok-es-ai-trust/",
       "width": 390,
       "status": 200,
       "overflow": false,
@@ -513,6 +623,116 @@
       "violations": []
     },
     {
+      "path": "/en/solutions/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/executive-presence/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/campaign-and-commerce/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/corporate-events/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/film-and-editorial-content/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/solutions/spaces-and-experiences/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/case-studies/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/norbert-banhalmi/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/expertise/viko-speier/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/en/sources-and-ai-trust/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
       "path": "/en/services/",
       "width": 390,
       "status": 200,
@@ -924,6 +1144,116 @@
     },
     {
       "path": "/de/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/fuehrungspraesenz/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/kampagne-und-vertrieb/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/unternehmensveranstaltungen/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/film-und-redaktioneller-inhalt/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/loesungen/raeume-und-erlebnisse/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fallstudien/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/norbert-banhalmi/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/fachleute/viko-speier/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/de/quellen-und-ai-trust/",
       "width": 390,
       "status": 200,
       "overflow": false,

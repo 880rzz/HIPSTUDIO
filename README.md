@@ -30,6 +30,11 @@ A böngészős és Lighthouse-vizsgálathoz fusson az előnézeti szerver. Megl�
 ## Tartalomszerkesztés
 
 - `content/services.json`: 32 szolgáltatás három nyelven; név, slug, bevezető, eredmény, folyamat, forrás.
+- `content/solutions.json`: 5 üzleti döntési helyzet köré rendezett megoldás és a hozzájuk tartozó, meglévő szolgáltatások.
+- `content/case_studies.json` és `content/case-study.schema.json`: bizonyítékhoz kötött esettanulmány-modell. Jóváhagyott tétel hiányában nem generál kitalált ügyféltörténetet.
+- `content/people.json`: kizárólag forrással igazolt, név szerint bemutatott szakmai partnerek és szerepek.
+- `content/provenance.json`: a lényegi állítások nyilvános forrásjegyzéke és korlátai.
+- `content/privacy-config.json` és `assets/consent.mjs`: későbbi, jogilag felülvizsgált integrációk alapértelmezetten tiltó consent felülete; jelenleg nincs regisztrált integráció, hálózati aktiválás vagy tárolás.
 - `content/site_copy.py`: közös felületi szövegek, útvonalak, GYIK, jogi felülvizsgálati tételek.
 - `content/images.json`: helyi képek, eredet, ellenőrzött HU/EN/DE képleírás és engedélyállapot.
 - `content/videos.json`: 18 referenciafilm és a showreel, ellenőrzött közvetlen médiacímek. Csak kattintáskor nyílnak meg; a filmek tárhelye továbbra is a Wix CDN.
@@ -44,11 +49,13 @@ A `tools/prepare.py` történeti importáló le van tiltva: felülírná a felü
 
 ## Felépítés és korlátok
 
-126 nyelvi oldal, 194 aktív referenciafotó, 19 közvetlen videóhivatkozás, 40 régi útvonalhoz célzott statikus alias és valódi helyi 404. A régi Bookings-oldalak a megfelelő szolgáltatási tájékoztatóhoz vezetnek. Nincs foglalási, fizetési, ügyféladatbázis- vagy automatikus emailküldési funkció. Kapcsolat: email, telefon, árajánlatkérési útmutató.
+159 nyelvi oldal, 194 aktív referenciafotó, 19 közvetlen videóhivatkozás, 40 régi útvonalhoz célzott statikus alias és valódi helyi 404. A szolgáltatásoldalak kereshető szakterületi részletek maradnak, a fő üzleti út 5 probléma- és döntésközpontú megoldásoldalra vezet. A régi Bookings-oldalak a megfelelő szolgáltatási tájékoztatóhoz vezetnek. Nincs foglalási, fizetési, ügyféladatbázis- vagy automatikus emailküldési funkció. Kapcsolat: email, telefon, árajánlatkérési útmutató.
 
 Minden nyelvi oldal saját URL-t, címet, leírást, canonicalt, kölcsönös hreflangot és forráskövethető Schema.org-gráfot kap. Nincs kitalált értékelés, árfolyam, Offer vagy partner. A képek helyben vannak, a betűk rendszerbetűk; nincs automatikus külső média, analitika vagy marketingcookie.
 
 A GitHub Pages statikus HTML-aliasai HTTP 200 + meta refresh megoldások. **Nem HTTP 301-ek.** A tényleges 301/410 és egyedi biztonsági válaszfejlécek külön infrastruktúrát igényelnek. Lásd `audit/url-mapping.json` és `audit/SECURITY_AND_REDIRECTS.md`.
+
+Az inaktív, szolgáltatófüggetlen átirányítási szerződés és az ellenőrzött cutover-sorrend az `ops/redirects.json` és `ops/REDIRECT_INFRASTRUCTURE.md` fájlban található. Ezek nem aktív edge-, DNS- vagy deploy-konfigurációk.
 
 ## Ellenőrzés és későbbi kiadás
 

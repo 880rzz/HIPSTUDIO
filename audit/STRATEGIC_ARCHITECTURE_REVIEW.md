@@ -20,6 +20,16 @@ Date: 2026-09-08. This review continues the existing static HIPStudio implementa
 - The work gallery preserves image ALT text for assistive technology but uses only a discreet `© HIPStudio` visible caption. Exact duplicate source files are displayed once across categories; a regression test enforces this.
 - The visual system uses a compact sticky header, white/black/grey palette with gold accent, Apple-platform system font stack and an Impact wordmark. Apple SF Pro is not embedded: Apple’s current font license limits use outside designated Apple-platform UI mock-ups.
 
+## B2B content and entity architecture
+
+- The primary decision path is now **Solution → Capability → Brief**. Five solution clusters describe the buyer situation, planning approach and relevant existing services. The 32 service pages remain intact as detailed capability and search landing pages.
+- Case studies use an evidence-gated JSON Schema model. The collection page explains the evidence standard; no case item is published because no approved client narrative, result or quotation is present in the source set.
+- Bánhalmi Norbert and Speier Vikó have localized profile pages. The graph reuses their stable site-level Person IDs; it does not infer employment, contracting or delivery responsibility.
+- `entity.json`, `provenance.json` and the revised `llms.txt` provide concise machine-readable entity facts, source pointers and explicit editorial limits. Each HTML page still contains one Schema.org graph.
+- `privacy-config.json` and `consent.mjs` provide a deny-by-default interface for future reviewed integrations. They make no request, write no cookie or browser storage, and register no analytics, marketing or external-media provider.
+- The production redirect contract and cutover checklist are recorded under `ops/`. They remain inactive because route-specific HTTP status codes require a separately approved edge layer and DNS cutover.
+- Hungarian and German buyer-facing copy has been normalised to a direct formal form of address in the active content sources.
+
 ## Open gates
 
 - Legal review must name the production hosting provider, processor list, retention periods, transfer safeguards, contact workflow and cookie changes before an indexable release. The current privacy page deliberately marks these as review items.

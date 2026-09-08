@@ -7,7 +7,84 @@
       "url": "https://www.hipstudio.hu/hu/",
       "key": "home",
       "lang": "hu",
-      "title": "A márkád. Teljes figyelemmel."
+      "title": "Az Ön márkája. Teljes figyelemmel."
+    },
+    {
+      "path": "/hu/megoldasok/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/",
+      "key": "solutions",
+      "lang": "hu",
+      "title": "Megoldások"
+    },
+    {
+      "path": "/hu/megoldasok/vezetoi-jelenlet/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/vezetoi-jelenlet/",
+      "key": "solution:executive-presence",
+      "lang": "hu",
+      "title": "Vezetői jelenlét"
+    },
+    {
+      "path": "/hu/megoldasok/kampany-es-ertekesites/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/kampany-es-ertekesites/",
+      "key": "solution:campaign-commerce",
+      "lang": "hu",
+      "title": "Kampány és értékesítés"
+    },
+    {
+      "path": "/hu/megoldasok/vallalati-esemenyek/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/vallalati-esemenyek/",
+      "key": "solution:corporate-events",
+      "lang": "hu",
+      "title": "Vállalati események"
+    },
+    {
+      "path": "/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/film-es-szerkesztett-tartalom/",
+      "key": "solution:film-editorial",
+      "lang": "hu",
+      "title": "Film és szerkesztett tartalom"
+    },
+    {
+      "path": "/hu/megoldasok/terek-es-elmenyek/",
+      "url": "https://www.hipstudio.hu/hu/megoldasok/terek-es-elmenyek/",
+      "key": "solution:spaces-experiences",
+      "lang": "hu",
+      "title": "Terek és élmények"
+    },
+    {
+      "path": "/hu/esettanulmanyok/",
+      "url": "https://www.hipstudio.hu/hu/esettanulmanyok/",
+      "key": "cases",
+      "lang": "hu",
+      "title": "Esettanulmányok"
+    },
+    {
+      "path": "/hu/szakertok/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/",
+      "key": "people",
+      "lang": "hu",
+      "title": "Szakértők"
+    },
+    {
+      "path": "/hu/szakertok/banhalmi-norbert/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/banhalmi-norbert/",
+      "key": "person:banhalmi-norbert",
+      "lang": "hu",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/hu/szakertok/speier-viko/",
+      "url": "https://www.hipstudio.hu/hu/szakertok/speier-viko/",
+      "key": "person:speier-viko",
+      "lang": "hu",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/hu/forrasok-es-ai-trust/",
+      "url": "https://www.hipstudio.hu/hu/forrasok-es-ai-trust/",
+      "key": "trust",
+      "lang": "hu",
+      "title": "Források és AI Trust"
     },
     {
       "path": "/hu/szolgaltatasok/",
@@ -304,6 +381,83 @@
       "title": "Your brand. Our full attention."
     },
     {
+      "path": "/en/solutions/",
+      "url": "https://www.hipstudio.hu/en/solutions/",
+      "key": "solutions",
+      "lang": "en",
+      "title": "Solutions"
+    },
+    {
+      "path": "/en/solutions/executive-presence/",
+      "url": "https://www.hipstudio.hu/en/solutions/executive-presence/",
+      "key": "solution:executive-presence",
+      "lang": "en",
+      "title": "Executive presence"
+    },
+    {
+      "path": "/en/solutions/campaign-and-commerce/",
+      "url": "https://www.hipstudio.hu/en/solutions/campaign-and-commerce/",
+      "key": "solution:campaign-commerce",
+      "lang": "en",
+      "title": "Campaign and commerce"
+    },
+    {
+      "path": "/en/solutions/corporate-events/",
+      "url": "https://www.hipstudio.hu/en/solutions/corporate-events/",
+      "key": "solution:corporate-events",
+      "lang": "en",
+      "title": "Corporate events"
+    },
+    {
+      "path": "/en/solutions/film-and-editorial-content/",
+      "url": "https://www.hipstudio.hu/en/solutions/film-and-editorial-content/",
+      "key": "solution:film-editorial",
+      "lang": "en",
+      "title": "Film and editorial content"
+    },
+    {
+      "path": "/en/solutions/spaces-and-experiences/",
+      "url": "https://www.hipstudio.hu/en/solutions/spaces-and-experiences/",
+      "key": "solution:spaces-experiences",
+      "lang": "en",
+      "title": "Spaces and experiences"
+    },
+    {
+      "path": "/en/case-studies/",
+      "url": "https://www.hipstudio.hu/en/case-studies/",
+      "key": "cases",
+      "lang": "en",
+      "title": "Case studies"
+    },
+    {
+      "path": "/en/expertise/",
+      "url": "https://www.hipstudio.hu/en/expertise/",
+      "key": "people",
+      "lang": "en",
+      "title": "Expertise"
+    },
+    {
+      "path": "/en/expertise/norbert-banhalmi/",
+      "url": "https://www.hipstudio.hu/en/expertise/norbert-banhalmi/",
+      "key": "person:banhalmi-norbert",
+      "lang": "en",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/en/expertise/viko-speier/",
+      "url": "https://www.hipstudio.hu/en/expertise/viko-speier/",
+      "key": "person:speier-viko",
+      "lang": "en",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/en/sources-and-ai-trust/",
+      "url": "https://www.hipstudio.hu/en/sources-and-ai-trust/",
+      "key": "trust",
+      "lang": "en",
+      "title": "Sources and AI Trust"
+    },
+    {
       "path": "/en/services/",
       "url": "https://www.hipstudio.hu/en/services/",
       "key": "services",
@@ -595,7 +749,84 @@
       "url": "https://www.hipstudio.hu/de/",
       "key": "home",
       "lang": "de",
-      "title": "Deine Marke. Unsere volle Aufmerksamkeit."
+      "title": "Ihre Marke. Unsere volle Aufmerksamkeit."
+    },
+    {
+      "path": "/de/loesungen/",
+      "url": "https://www.hipstudio.hu/de/loesungen/",
+      "key": "solutions",
+      "lang": "de",
+      "title": "Lösungen"
+    },
+    {
+      "path": "/de/loesungen/fuehrungspraesenz/",
+      "url": "https://www.hipstudio.hu/de/loesungen/fuehrungspraesenz/",
+      "key": "solution:executive-presence",
+      "lang": "de",
+      "title": "Führungspräsenz"
+    },
+    {
+      "path": "/de/loesungen/kampagne-und-vertrieb/",
+      "url": "https://www.hipstudio.hu/de/loesungen/kampagne-und-vertrieb/",
+      "key": "solution:campaign-commerce",
+      "lang": "de",
+      "title": "Kampagne und Vertrieb"
+    },
+    {
+      "path": "/de/loesungen/unternehmensveranstaltungen/",
+      "url": "https://www.hipstudio.hu/de/loesungen/unternehmensveranstaltungen/",
+      "key": "solution:corporate-events",
+      "lang": "de",
+      "title": "Unternehmensveranstaltungen"
+    },
+    {
+      "path": "/de/loesungen/film-und-redaktioneller-inhalt/",
+      "url": "https://www.hipstudio.hu/de/loesungen/film-und-redaktioneller-inhalt/",
+      "key": "solution:film-editorial",
+      "lang": "de",
+      "title": "Film und redaktioneller Inhalt"
+    },
+    {
+      "path": "/de/loesungen/raeume-und-erlebnisse/",
+      "url": "https://www.hipstudio.hu/de/loesungen/raeume-und-erlebnisse/",
+      "key": "solution:spaces-experiences",
+      "lang": "de",
+      "title": "Räume und Erlebnisse"
+    },
+    {
+      "path": "/de/fallstudien/",
+      "url": "https://www.hipstudio.hu/de/fallstudien/",
+      "key": "cases",
+      "lang": "de",
+      "title": "Fallstudien"
+    },
+    {
+      "path": "/de/fachleute/",
+      "url": "https://www.hipstudio.hu/de/fachleute/",
+      "key": "people",
+      "lang": "de",
+      "title": "Fachleute"
+    },
+    {
+      "path": "/de/fachleute/norbert-banhalmi/",
+      "url": "https://www.hipstudio.hu/de/fachleute/norbert-banhalmi/",
+      "key": "person:banhalmi-norbert",
+      "lang": "de",
+      "title": "Bánhalmi Norbert"
+    },
+    {
+      "path": "/de/fachleute/viko-speier/",
+      "url": "https://www.hipstudio.hu/de/fachleute/viko-speier/",
+      "key": "person:speier-viko",
+      "lang": "de",
+      "title": "Speier Vikó"
+    },
+    {
+      "path": "/de/quellen-und-ai-trust/",
+      "url": "https://www.hipstudio.hu/de/quellen-und-ai-trust/",
+      "key": "trust",
+      "lang": "de",
+      "title": "Quellen und AI Trust"
     },
     {
       "path": "/de/leistungen/",
@@ -887,5 +1118,8 @@
   ],
   "redirects": 40,
   "images": 194,
-  "css": "site.a520310feaee.css"
+  "solutions": 5,
+  "people": 2,
+  "approvedCaseStudies": 0,
+  "css": "site.c1e137bea343.css"
 }
