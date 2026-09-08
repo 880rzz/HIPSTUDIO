@@ -11,7 +11,7 @@
   ],
   "pillars": {
     "business": {
-      "brand": "HelloÜzlet",
+      "brand": "HIPStudio Business",
       "families": {
         "finance-admin": {
           "label_hu": "Pénzügyi működés",
@@ -62,7 +62,7 @@
       }
     },
     "creative": {
-      "brand": "HIPStudio",
+      "brand": "HIPStudio Creative",
       "families": {
         "photo-portrait": {
           "label_hu": "Portré és személyes megjelenés",
@@ -123,7 +123,7 @@
       }
     },
     "experiences": {
-      "brand": "Flúgos",
+      "brand": "Flúgos by HIPStudio",
       "families": {
         "corporate-experience": {
           "label_hu": "Corporate Experience Design",
