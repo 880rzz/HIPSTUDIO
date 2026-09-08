@@ -1,5 +1,5 @@
 {
-  "time": "2026-09-07T18:41:11.468Z",
+  "time": "2026-09-08T05:31:09.427Z",
   "context": "Local HTTP review build with noindex, not live PageSpeed or field data",
   "results": [
     {
@@ -14,11 +14,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 752.3510000000001,
-        "largest-contentful-paint": 1277.351,
+        "first-contentful-paint": 914.354,
+        "largest-contentful-paint": 1353.354,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 752.3510000000001
+        "speed-index": 914.354
       },
       "failed": [
         {
@@ -30,18 +30,13 @@
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0,
-          "details": "Est savings of 277 KiB"
+          "details": "Est savings of 281 KiB"
         },
         {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
           "details": "Est savings of 7 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
         },
         {
           "id": "image-delivery-insight",
@@ -57,8 +52,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5,
-          "details": "Est savings of 20 ms"
+          "score": 0,
+          "details": "Est savings of 150 ms"
         }
       ]
     },
@@ -74,11 +69,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 207.19830000000002,
-        "largest-contentful-paint": 307.1983,
+        "first-contentful-paint": 249.5385,
+        "largest-contentful-paint": 304.5385,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 207.19830000000002
+        "speed-index": 249.5385
       },
       "failed": [
         {
@@ -90,7 +85,7 @@
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0,
-          "details": "Est savings of 277 KiB"
+          "details": "Est savings of 281 KiB"
         },
         {
           "id": "document-latency-insight",
@@ -112,7 +107,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "details": "Est savings of 40 ms"
         }
       ]
     },
@@ -128,11 +124,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 755.3131000000001,
-        "largest-contentful-paint": 1205.3131,
+        "first-contentful-paint": 910.1012000000001,
+        "largest-contentful-paint": 1202.1012,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 755.3131000000001
+        "speed-index": 910.1012000000001
       },
       "failed": [
         {
@@ -144,13 +140,13 @@
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0,
-          "details": "Est savings of 38 KiB"
+          "details": "Est savings of 42 KiB"
         },
         {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "details": "Est savings of 8 KiB"
+          "details": "Est savings of 9 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -167,7 +163,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "details": "Est savings of 100 ms"
+          "details": "Est savings of 150 ms"
         }
       ]
     },
@@ -183,11 +179,11 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 205.4371,
-        "largest-contentful-paint": 285.4371,
+        "first-contentful-paint": 248.88670000000002,
+        "largest-contentful-paint": 286.8867,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 205.4371
+        "speed-index": 248.88670000000002
       },
       "failed": [
         {
@@ -199,13 +195,68 @@
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0,
-          "details": "Est savings of 38 KiB"
+          "details": "Est savings of 42 KiB"
         },
         {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "details": "Est savings of 8 KiB"
+          "details": "Est savings of 9 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "details": "Est savings of 40 ms"
+        }
+      ]
+    },
+    {
+      "name": "pricing",
+      "path": "/hu/arak/",
+      "mode": "mobile",
+      "version": "13.4.1",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": 1213.8132500000002,
+        "largest-contentful-paint": 1364.7759,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1213.8132500000002
+      },
+      "failed": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.99,
+          "details": "1.2 s"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "details": "Est savings of 22 KiB"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "details": "Est savings of 11 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -222,7 +273,7 @@
     {
       "name": "pricing",
       "path": "/hu/arak/",
-      "mode": "mobile",
+      "mode": "desktop",
       "version": "13.4.1",
       "scores": {
         "performance": 100,
@@ -231,18 +282,18 @@
         "seo": 66
       },
       "metrics": {
-        "first-contentful-paint": 1142.873875,
-        "largest-contentful-paint": 1218.44865,
+        "first-contentful-paint": 305.92875000000004,
+        "largest-contentful-paint": 366.5145,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 1142.873875
+        "speed-index": 305.92875000000004
       },
       "failed": [
         {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.99,
-          "details": "1.1 s"
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "details": "Est savings of 10 KiB"
         },
         {
           "id": "is-crawlable",
@@ -253,13 +304,85 @@
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0.5,
-          "details": "Est savings of 18 KiB"
+          "details": "Est savings of 22 KiB"
         },
         {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "details": "Est savings of 10 KiB"
+          "details": "Est savings of 11 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "name": "gallery",
+      "path": "/hu/munkaink/",
+      "mode": "mobile",
+      "version": "13.4.1",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "metrics": {
+        "first-contentful-paint": 1378.1522999999997,
+        "largest-contentful-paint": 2257.1522999999997,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1378.1522999999997
+      },
+      "failed": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.97,
+          "details": "1.4 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.94,
+          "details": "2.3 s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.99,
+          "details": "2.3 s"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0,
+          "details": "Est savings of 371 KiB"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "details": "Est savings of 62 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "details": "Est savings of 240 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -275,127 +398,6 @@
       ]
     },
     {
-      "name": "pricing",
-      "path": "/hu/arak/",
-      "mode": "desktop",
-      "version": "13.4.1",
-      "scores": {
-        "performance": 100,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 66
-      },
-      "metrics": {
-        "first-contentful-paint": 303.99137499999995,
-        "largest-contentful-paint": 324.38964999999996,
-        "total-blocking-time": 0,
-        "cumulative-layout-shift": 0,
-        "speed-index": 303.99137499999995
-      },
-      "failed": [
-        {
-          "id": "is-crawlable",
-          "title": "Page is blocked from indexing",
-          "score": 0
-        },
-        {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
-          "score": 0.5,
-          "details": "Est savings of 18 KiB"
-        },
-        {
-          "id": "document-latency-insight",
-          "title": "Document request latency",
-          "score": 0.5,
-          "details": "Est savings of 10 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0.5
-        }
-      ]
-    },
-    {
-      "name": "gallery",
-      "path": "/hu/munkaink/",
-      "mode": "mobile",
-      "version": "13.4.1",
-      "scores": {
-        "performance": 99,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 69
-      },
-      "metrics": {
-        "first-contentful-paint": 1353.7988,
-        "largest-contentful-paint": 2028.7988,
-        "total-blocking-time": 0,
-        "cumulative-layout-shift": 0,
-        "speed-index": 1353.7988
-      },
-      "failed": [
-        {
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.98,
-          "details": "1.4 s"
-        },
-        {
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.97,
-          "details": "2.0 s"
-        },
-        {
-          "id": "interactive",
-          "title": "Time to Interactive",
-          "score": 0.99,
-          "details": "2.1 s"
-        },
-        {
-          "id": "is-crawlable",
-          "title": "Page is blocked from indexing",
-          "score": 0
-        },
-        {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
-          "score": 0,
-          "details": "Est savings of 367 KiB"
-        },
-        {
-          "id": "document-latency-insight",
-          "title": "Document request latency",
-          "score": 0.5,
-          "details": "Est savings of 71 KiB"
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0.5,
-          "details": "Est savings of 228 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "details": "Est savings of 70 ms"
-        }
-      ]
-    },
-    {
       "name": "gallery",
       "path": "/hu/munkaink/",
       "mode": "desktop",
@@ -407,13 +409,19 @@
         "seo": 69
       },
       "metrics": {
-        "first-contentful-paint": 328.8572,
-        "largest-contentful-paint": 388.8572,
+        "first-contentful-paint": 381.4553,
+        "largest-contentful-paint": 419.319125,
         "total-blocking-time": 0,
         "cumulative-layout-shift": 0,
-        "speed-index": 328.8572
+        "speed-index": 381.4553
       },
       "failed": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "details": "Est savings of 11 KiB"
+        },
         {
           "id": "is-crawlable",
           "title": "Page is blocked from indexing",
@@ -422,20 +430,20 @@
         {
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
-          "score": 0.5,
-          "details": "Est savings of 310 KiB"
+          "score": 0,
+          "details": "Est savings of 350 KiB"
         },
         {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "details": "Est savings of 71 KiB"
+          "details": "Est savings of 62 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "details": "Est savings of 74 KiB"
+          "details": "Est savings of 80 KiB"
         },
         {
           "id": "lcp-discovery-insight",
@@ -454,6 +462,5 @@
         }
       ]
     }
-  ],
-  "galleryRetestTime": "2026-09-07T18:44:44.198Z"
+  ]
 }

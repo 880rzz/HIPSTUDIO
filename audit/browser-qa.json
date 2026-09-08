@@ -1,5 +1,5 @@
 {
-  "time": "2026-09-08T05:06:33.181Z",
+  "time": "2026-09-08T05:29:43.282Z",
   "browser": "152.0.7977.77",
   "results": [
     {
@@ -1923,6 +1923,28 @@
     "switched": true,
     "faqOpen": true,
     "quoteText": "Nettó: 281 890 Ft · Áfa (27%): 76 110 Ft · Bruttó összesen: 358 000 Ft. Tervezett fotóslétszám: 1. Tájékoztató összeg, nem megrendelés. ",
+    "consent": {
+      "initial": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "accepted": {
+        "necessary": true,
+        "analytics": true,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "rejected": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "localStorage": 0,
+      "sessionStorage": 0
+    },
     "actual404": 404,
     "redirect": "http://127.0.0.1:4173/hu/szolgaltatasok/oneletrajz-foto/"
   }

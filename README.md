@@ -61,6 +61,8 @@ Az inaktív, szolgáltatófüggetlen átirányítási szerződés és az ellenő
 
 Az `audit/` könyvtár tartalmazza a forrásleltárt, URL-mappinget, képeredetet, árjóváhagyást, konkurenciaelemzést és helyi QA-eredményeket. Részletes állapot: [MIGRATION_AUDIT.md](MIGRATION_AUDIT.md).
 
+A merge, deploy és indexelés külön készültségi döntése, valamint a teljes blocker-mátrix az [audit/PRODUCTION_READINESS.md](audit/PRODUCTION_READINESS.md) fájlban található.
+
 A `.github/workflows/validate.yml` kizárólag buildet és teszteket futtat; nincs telepítési joga. Az `ops/github-pages.yml.example` inaktív, kézzel indítható későbbi telepítési minta. Aktiválás előtt szükséges a jogi tartalom véglegesítése, a médiahiányok lezárása és a felhasználó külön publikálási döntése. A stúdióbérlés feltételei külön tartalmi hiányként szerepelnek.
 
 Későbbi, jóváhagyott projekt-URL-es build:

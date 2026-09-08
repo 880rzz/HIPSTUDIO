@@ -29,11 +29,18 @@ await page.locator('.mobile-menu summary').click();const mobileOpen=await page.l
 await page.getByRole('link',{name:'EN',exact:true}).click();const switched=page.url().endsWith('/en/');
 await page.goto('http://127.0.0.1:4173/hu/gyik/');const first=page.locator('.faq-list summary').first();await first.focus();await page.keyboard.press('Enter');const faqOpen=await page.locator('.faq-list details').first().getAttribute('open')!==null;
 await page.goto('http://127.0.0.1:4173/hu/arak/');await page.locator('[name=package]').selectOption('brand120');await page.locator('[name=people]').fill('2');await page.locator('[name=images]').fill('3');const quoteText=await page.locator('output').textContent();
+await page.goto('http://127.0.0.1:4173/hu/cookie-k/');
+const consent=await page.evaluate(()=>{
+ const initial=window.HIPStudioConsent.get();
+ const accepted=window.HIPStudioConsent.apply({analytics:true});
+ const rejected=window.HIPStudioConsent.reset();
+ return {initial,accepted,rejected,localStorage:localStorage.length,sessionStorage:sessionStorage.length};
+});
 const unknown=await page.goto('http://127.0.0.1:4173/does-not-exist');const actual404=unknown.status();
 await page.goto('http://127.0.0.1:4173/service-page/cv-%C3%B6n%C3%A9letrajz-fot%C3%B3z%C3%A1s/');await page.waitForURL('**/hu/szolgaltatasok/oneletrajz-foto/');const redirect=page.url();
 const cookies=await context.cookies();
-const summary={time:new Date().toISOString(),browser:await browser.version(),results,errors,externalRequests:[...external],cookies,interactions:{skip,skipTarget,mobileOpen,switched,faqOpen,quoteText,actual404,redirect}};
+const summary={time:new Date().toISOString(),browser:await browser.version(),results,errors,externalRequests:[...external],cookies,interactions:{skip,skipTarget,mobileOpen,switched,faqOpen,quoteText,consent,actual404,redirect}};
 fs.writeFileSync(root+'/audit/'+(process.env.QA_REPORT||'browser-qa.json'),JSON.stringify(summary,null,2));
 console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],interactions:summary.interactions},null,2));
 await browser.close();
-if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.violations.length)||errors.length||external.size||cookies.length||skipTarget!=='main'||!mobileOpen||!switched||!faqOpen||actual404!==404||!quoteText.replace(/\s/g,'').includes('358000'))process.exitCode=1;
+if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.violations.length)||errors.length||external.size||cookies.length||skipTarget!=='main'||!mobileOpen||!switched||!faqOpen||actual404!==404||!quoteText.replace(/\s/g,'').includes('358000')||consent.initial.analytics||!consent.accepted.analytics||consent.rejected.analytics||consent.localStorage||consent.sessionStorage)process.exitCode=1;

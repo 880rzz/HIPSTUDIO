@@ -83,12 +83,30 @@ class ReleaseTests(unittest.TestCase):
   env=dict(os.environ,BUILD_MODE='production')
   result=subprocess.run([sys.executable,str(R/'tools/build.py')],env=env,capture_output=True,text=True)
   self.assertNotEqual(result.returncode,0);self.assertIn('legal, publication',result.stderr)
+ def test_production_output_contract_with_synthetic_gates(self):
+  with tempfile.TemporaryDirectory() as temp:
+   target=Path(temp)
+   shutil.copytree(R/'content',target/'content');shutil.copytree(R/'tools',target/'tools');(target/'audit').mkdir();(target/'assets').symlink_to(R/'assets',target_is_directory=True)
+   approvals=json.loads((target/'content/approvals.json').read_text())
+   for key in ['imageRights','pricing','legal','publication']:approvals[key]=True
+   (target/'content/approvals.json').write_text(json.dumps(approvals))
+   result=subprocess.run([sys.executable,str(target/'tools/build.py')],env=dict(os.environ,BUILD_MODE='production',SITE_URL='https://www.hipstudio.hu'),capture_output=True,text=True)
+   self.assertEqual(result.returncode,0,result.stderr)
+   self.assertEqual((target/'dist/robots.txt').read_text(),'User-agent: *\nAllow: /\nSitemap: https://www.hipstudio.hu/sitemap.xml\n')
+   sitemap=(target/'dist/sitemap.xml').read_text();self.assertEqual(sitemap.count('<url>'),159)
+   home=Doc((target/'dist/hu/index.html').read_text());self.assertEqual(home.select('meta',name='robots')[0]['content'],'index,follow')
  def test_old_url_coverage(self):
   inventory=json.loads((R/'audit/source-inventory.json').read_text());mapping=json.loads((R/'audit/url-mapping.json').read_text())
   mapped={unquote(urlsplit(p['old']).path).rstrip('/') for p in mapping}
   for p in inventory['pages']:self.assertIn(unquote(urlsplit(p['url']).path).rstrip('/'),mapped)
   for m in mapping:
    self.assertTrue((D/unquote(urlsplit(m['old']).path).strip('/')/'index.html').exists())
+  old_paths={urlsplit(item['old']).path for item in mapping}
+  self.assertEqual(len(old_paths),len(mapping))
+  for item in mapping:
+   self.assertNotEqual(urlsplit(item['old']).path,urlsplit(item['new']).path)
+   self.assertNotIn(urlsplit(item['new']).path,old_paths)
+   self.assertEqual(item['plannedHttpStatus'],301);self.assertEqual(item['actualPagesStatus'],200)
  def test_github_project_base_path(self):
   with tempfile.TemporaryDirectory() as temp:
    target=Path(temp)
@@ -115,6 +133,8 @@ class ReleaseTests(unittest.TestCase):
   cases=json.loads((R/'content/case_studies.json').read_text());self.assertEqual(cases['items'],[])
   self.assertTrue((R/'content/case-study.schema.json').exists())
   for path in ['provenance.json','entity.json','privacy-config.json','llms.txt']:self.assertTrue((D/path).exists(),path)
+  provenance=json.loads((D/'provenance.json').read_text())
+  self.assertTrue(all(len(source.get('sha256',''))==64 for source in provenance['sources'].values()))
   self.assertIn('Case studies remain unpublished', (D/'llms.txt').read_text())
  def test_privacy_hooks_are_inert(self):
   config=json.loads((R/'content/privacy-config.json').read_text());self.assertFalse(config['storageEnabled']);self.assertFalse(config['networkActivationEnabled']);self.assertEqual(config['optionalIntegrations'],[])
