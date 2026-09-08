@@ -1,0 +1,128 @@
+{
+  "version": "solution-depth-v1",
+  "status": "review",
+  "principles": [
+    "No invented client, result, saving, ROI, compliance or performance claims.",
+    "Business responsibility-sensitive scopes remain qualified until provider and legal responsibility are approved.",
+    "AI pages describe readiness, governance and implementation support, not autonomous decision-making or guaranteed outcomes.",
+    "Flúgos current B2B offer remains separate from historical/archive claims.",
+    "Every flagship solution routes to the guided quote flow without public pricing."
+  ],
+  "solutions": {
+    "business-operations-360": {
+      "fit": {
+        "hu": "Akkor releváns, ha a vezető túl sok napi adminisztratív és koordinációs feladatot tart magánál, a háttérfolyamatok több ember és rendszer között széttöredeznek, és nincs egyértelmű működési ritmus.",
+        "en": "Relevant when management still carries too much daily administration and coordination, background processes are fragmented across people and systems, and there is no clear operating rhythm.",
+        "de": "Relevant, wenn die Geschäftsführung noch zu viel tägliche Administration und Koordination selbst trägt, Hintergrundprozesse über Personen und Systeme fragmentiert sind und ein klarer Betriebsrhythmus fehlt."
+      },
+      "scope": {
+        "hu": ["Pénzügyi és adminisztratív back office feltérképezése", "Bér- és HR-adminisztrációs koordinációs pontok", "Vezetői riporting és döntési információk", "Folyamatok, felelősök és átadási pontok", "Automatizálási és AI-lehetőségek priorizálása"],
+        "en": ["Financial and administrative back-office mapping", "Payroll and HR administration coordination points", "Management reporting and decision information", "Processes, owners and hand-off points", "Prioritisation of automation and AI opportunities"],
+        "de": ["Abbildung des finanziellen und administrativen Backoffice", "Koordinationspunkte für Lohn- und HR-Administration", "Management-Reporting und Entscheidungsinformationen", "Prozesse, Verantwortliche und Übergabepunkte", "Priorisierung von Automatisierungs- und KI-Potenzialen"]
+      },
+      "process": {
+        "hu": ["Diagnózis: hol fogy el vezetői idő és hol áll meg az információ.", "Tervezés: felelősségek, ritmusok, riportok és átadási pontok.", "Bevezetés: jóváhagyott scope szerint folyamatok és támogatási rutinok kialakítása.", "Kontroll: rendszeres felülvizsgálat és további automatizálási lehetőségek."],
+        "en": ["Diagnose where management time is lost and information flow breaks.", "Design responsibilities, rhythms, reporting and hand-offs.", "Implement approved processes and support routines within agreed scope.", "Review regularly and identify further automation opportunities."],
+        "de": ["Diagnose, wo Führungszeit verloren geht und Informationsflüsse abbrechen.", "Verantwortlichkeiten, Rhythmen, Reporting und Übergaben gestalten.", "Freigegebene Prozesse und Unterstützungsroutinen im vereinbarten Umfang einführen.", "Regelmäßig überprüfen und weitere Automatisierungspotenziale identifizieren."]
+      },
+      "guardrail": {
+        "hu": "A könyvelési, bérszámfejtési, adózási vagy más szabályozott szakmai felelősség csak külön jóváhagyott szolgáltatói és felelősségi modell szerint kommunikálható.",
+        "en": "Accounting, payroll, tax or other regulated professional responsibility may only be communicated under a separately approved provider and responsibility model.",
+        "de": "Verantwortung für Buchhaltung, Lohnabrechnung, Steuern oder andere regulierte Fachleistungen darf nur auf Basis eines separat freigegebenen Anbieter- und Verantwortungsmodells kommuniziert werden."
+      },
+      "quote": {"pillar": "business", "service": "business-operations-360"}
+    },
+    "finance-control": {
+      "fit": {
+        "hu": "Akkor releváns, ha a könyvelési adatok rendelkezésre állnak, de a vezetésnek nincs időben értelmezhető cash-flow, forecast, költség- vagy eredménykép a döntésekhez.",
+        "en": "Relevant when accounting data exists but management lacks timely cash-flow, forecast, cost or performance visibility for decisions.",
+        "de": "Relevant, wenn Buchhaltungsdaten vorhanden sind, der Führung jedoch zeitnahe Cashflow-, Forecast-, Kosten- oder Ergebnistransparenz für Entscheidungen fehlt."
+      },
+      "scope": {
+        "hu": ["Vezetői riporting struktúra", "Cash-flow és forecast logika", "Költség- és eredménykontroll", "Adatforrások és adatminőség", "Döntési ritmus és felelősségi pontok"],
+        "en": ["Management reporting structure", "Cash-flow and forecasting logic", "Cost and performance control", "Data sources and data quality", "Decision rhythm and ownership points"],
+        "de": ["Management-Reporting-Struktur", "Cashflow- und Forecast-Logik", "Kosten- und Ergebniskontrolle", "Datenquellen und Datenqualität", "Entscheidungsrhythmus und Verantwortlichkeiten"]
+      },
+      "process": {
+        "hu": ["Döntési kérdések és jelenlegi riportok felmérése.", "Mutatók, adatforrások és riportstruktúra meghatározása.", "Próba riporting és vezetői értelmezés.", "Rendszeres kontrollritmus kialakítása."],
+        "en": ["Assess decision questions and current reports.", "Define metrics, data sources and reporting structure.", "Pilot reporting and management interpretation.", "Establish a regular control rhythm."],
+        "de": ["Entscheidungsfragen und bestehende Reports erfassen.", "Kennzahlen, Datenquellen und Reporting-Struktur definieren.", "Reporting pilotieren und gemeinsam interpretieren.", "Regelmäßigen Steuerungsrhythmus etablieren."]
+      },
+      "guardrail": {
+        "hu": "A megoldás vezetői információs és controlling támogatás; nem jelent automatikusan könyvvizsgálói, adótanácsadói, könyvelői vagy befektetési tanácsadói felelősséget.",
+        "en": "This is management-information and controlling support; it does not automatically imply audit, tax advisory, accounting or investment-advisory responsibility.",
+        "de": "Die Lösung unterstützt Managementinformation und Controlling; sie begründet nicht automatisch Prüfungs-, Steuerberatungs-, Buchhaltungs- oder Anlageberatungsverantwortung."
+      },
+      "quote": {"pillar": "business", "service": "controlling-reporting"}
+    },
+    "ai-readiness": {
+      "fit": {
+        "hu": "Akkor releváns, ha a cég AI-t szeretne használni, de nincs priorizált use case, adat- és kockázati keret, felelős, mérési terv vagy kontrollált bevezetési folyamat.",
+        "en": "Relevant when a company wants to use AI but lacks prioritised use cases, a data and risk framework, ownership, measurement and a controlled implementation process.",
+        "de": "Relevant, wenn ein Unternehmen KI einsetzen möchte, aber priorisierte Use Cases, Daten- und Risikorahmen, Verantwortlichkeiten, Messung und ein kontrollierter Einführungsprozess fehlen."
+      },
+      "scope": {
+        "hu": ["AI readiness és folyamat audit", "Use case lista és üzleti prioritás", "Adatkezelési és emberi kontroll pontok", "Pilot / implementációs sprint terv", "Mérés, felelősök és működtetési modell"],
+        "en": ["AI readiness and process audit", "Use-case inventory and business prioritisation", "Data-handling and human-control checkpoints", "Pilot / implementation sprint plan", "Measurement, ownership and operating model"],
+        "de": ["AI-Readiness- und Prozessaudit", "Use-Case-Inventar und geschäftliche Priorisierung", "Daten- und Human-Control-Kontrollpunkte", "Pilot- / Implementierungs-Sprint-Plan", "Messung, Verantwortlichkeiten und Betriebsmodell"]
+      },
+      "process": {
+        "hu": ["Folyamatok és problémák feltérképezése.", "Use case-ek érték/kockázat szerinti priorizálása.", "Adat-, jogosultsági és emberi kontroll keret rögzítése.", "Korlátozott pilot, mérés és döntés a továbblépésről."],
+        "en": ["Map processes and problems.", "Prioritise use cases by value and risk.", "Define data, access and human-control safeguards.", "Run a limited pilot, measure and decide on further rollout."],
+        "de": ["Prozesse und Probleme erfassen.", "Use Cases nach Wert und Risiko priorisieren.", "Daten-, Zugriffs- und Human-Control-Schutzmaßnahmen definieren.", "Begrenzten Pilot durchführen, messen und über den weiteren Rollout entscheiden."]
+      },
+      "guardrail": {
+        "hu": "AI nem váltja ki az emberi jóváhagyást lényeges üzleti, jogi, pénzügyi vagy ügyfélhatású döntésekben. A konkrét adatkezelési és eszközhasználati modell külön jóváhagyást igényel.",
+        "en": "AI does not replace human approval for material business, legal, financial or customer-impact decisions. Specific data-handling and tooling models require separate approval.",
+        "de": "KI ersetzt keine menschliche Freigabe bei wesentlichen geschäftlichen, rechtlichen, finanziellen oder kundenwirksamen Entscheidungen. Konkrete Daten- und Toolmodelle benötigen separate Freigabe."
+      },
+      "quote": {"pillar": "business", "service": "ai-automation"}
+    },
+    "content-engine": {
+      "fit": {
+        "hu": "Akkor releváns, ha a cég vagy vezető rendszeresen szeretne látható lenni, de a tartalom eseti projektekből áll, nincs repurposing rendszer és minden publikáció új gyártásként indul.",
+        "en": "Relevant when a company or executive needs consistent visibility but content is produced as isolated projects, without a repurposing system and each publication starts from scratch.",
+        "de": "Relevant, wenn Unternehmen oder Führungskräfte kontinuierliche Sichtbarkeit brauchen, Content aber aus Einzelprojekten besteht, ohne Repurposing-System und jede Veröffentlichung bei null beginnt."
+      },
+      "scope": {
+        "hu": ["Téma- és üzenetrendszer", "Long-form videó vagy podcast gyártási alap", "Rövid videók és social kivágatok", "Web/SEO és vezetői tartalom", "Publikációs és repurposing workflow"],
+        "en": ["Topic and messaging system", "Long-form video or podcast production base", "Short video and social cuts", "Web/SEO and executive content", "Publishing and repurposing workflow"],
+        "de": ["Themen- und Messaging-System", "Long-form-Video- oder Podcast-Produktionsbasis", "Kurzvideos und Social-Cuts", "Web-/SEO- und Executive-Content", "Publishing- und Repurposing-Workflow"]
+      },
+      "process": {
+        "hu": ["Üzleti témák, közönség és csatornák tisztázása.", "Tartalmi pillérek és gyártási formátum kialakítása.", "Egy alapanyagból több csatornára bontott assetek előállítása.", "Publikáció, visszamérés és következő ciklus tervezése."],
+        "en": ["Clarify business topics, audience and channels.", "Define content pillars and production format.", "Turn one source production into assets for multiple channels.", "Publish, review performance and plan the next cycle."],
+        "de": ["Geschäftsthemen, Zielgruppen und Kanäle klären.", "Content-Pillars und Produktionsformat definieren.", "Eine Ausgangsproduktion in Assets für mehrere Kanäle überführen.", "Veröffentlichen, Wirkung prüfen und nächsten Zyklus planen."]
+      },
+      "guardrail": {
+        "hu": "A Content Engine nem garantál elérést, leadet vagy értékesítési eredményt; a cél egy következetesebb, újrahasznosítható tartalomrendszer kialakítása.",
+        "en": "Content Engine does not guarantee reach, leads or sales outcomes; the objective is a more consistent, reusable content system.",
+        "de": "Content Engine garantiert keine Reichweite, Leads oder Verkaufsergebnisse; Ziel ist ein konsistenteres, wiederverwendbares Content-System."
+      },
+      "quote": {"pillar": "creative", "service": "content-engine"}
+    },
+    "corporate-experience-design": {
+      "fit": {
+        "hu": "Akkor releváns, ha a céges eseménynek vagy programnak üzleti célja van — együttműködés, vezetői kapcsolódás, employer engagement vagy ügyfélélmény — és nem egyszerű programlistát szeretnétek.",
+        "en": "Relevant when a corporate event or programme has a business objective — collaboration, leadership connection, employer engagement or client experience — rather than just needing a list of activities.",
+        "de": "Relevant, wenn ein Firmenevent oder Programm ein Geschäftsziel hat — Zusammenarbeit, Führungsverbindung, Employer Engagement oder Kundenerlebnis — und nicht nur eine Aktivitätenliste benötigt wird."
+      },
+      "scope": {
+        "hu": ["Üzleti és résztvevői cél tisztázása", "Program- és játékmechanika", "Helyszín, időtartam és résztvevői profil", "Márkázás és egyedi elemek", "Kommunikációs és kreatív kapcsolódások"],
+        "en": ["Business and participant objective definition", "Programme and game mechanics", "Location, duration and participant profile", "Branding and custom elements", "Communication and creative connections"],
+        "de": ["Definition von Geschäfts- und Teilnehmerziel", "Programm- und Spielmechanik", "Ort, Dauer und Teilnehmerprofil", "Branding und individuelle Elemente", "Kommunikative und kreative Verknüpfungen"]
+      },
+      "process": {
+        "hu": ["Cél, résztvevők és keretek meghatározása.", "Koncepció és programmechanika tervezése.", "Logisztikai, hozzáférési és biztonsági korlátok egyeztetése.", "Megvalósítás és utólagos értékelés a kitűzött célhoz képest."],
+        "en": ["Define objective, participants and constraints.", "Design concept and programme mechanics.", "Align logistics, access and safety constraints.", "Deliver and review against the stated objective."],
+        "de": ["Ziel, Teilnehmer und Rahmenbedingungen definieren.", "Konzept und Programmmechanik gestalten.", "Logistik-, Zugangs- und Sicherheitsanforderungen abstimmen.", "Umsetzen und anschließend am gesetzten Ziel bewerten."]
+      },
+      "guardrail": {
+        "hu": "A történeti Flúgos futamok adatai és eredményei nem azonosak a jelenlegi B2B ajánlattal; csak időben és forrás szerint minősítve használhatók bizonyítékként.",
+        "en": "Historical Flúgos race data and results are not the same as the current B2B offer and may only be used as time-qualified, source-backed evidence.",
+        "de": "Historische Flúgos-Renn-Daten und Ergebnisse sind nicht mit dem aktuellen B2B-Angebot gleichzusetzen und dürfen nur zeitlich eingeordnet und quellenbasiert als Nachweis verwendet werden."
+      },
+      "quote": {"pillar": "experiences", "service": "corporate-event"}
+    }
+  }
+}
