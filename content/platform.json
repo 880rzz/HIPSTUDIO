@@ -1,34 +1,49 @@
 {
   "status": "review",
   "workingMasterBrand": "HIPStudio",
-  "masterBrandApprovalRequired": false,
   "masterDomain": "https://www.hipstudio.hu",
-  "founded": "2006-02-27",
+  "masterBrandApprovalRequired": false,
   "heritage": {
-    "hu": "A HIPStudio 2006 óta működő kommunikációs és kreatív márka. A húszéves szakmai alapra most üzleti működési és vállalati élménykompetenciák épülnek rá.",
-    "en": "HIPStudio has operated as a communications and creative brand since 2006. Business operations and corporate experience capabilities are now being added to this twenty-year professional foundation.",
-    "de": "HIPStudio ist seit 2006 als Kommunikations- und Kreativmarke tätig. Auf dieser zwanzigjährigen fachlichen Basis werden nun Kompetenzen für Business Operations und Corporate Experiences aufgebaut."
+    "founded": "2006-02-27",
+    "yearsIn2026": 20,
+    "claim": {
+      "hu": "A HIPStudio 2006 óta működő, igazolható szakmai múlttal rendelkező márka.",
+      "en": "HIPStudio has operated since 2006 with a verifiable professional history.",
+      "de": "HIPStudio besteht seit 2006 mit nachweisbarer fachlicher Historie."
+    },
+    "headline": {
+      "hu": "20 év tapasztalat. Most egy komplexebb üzleti partnerként.",
+      "en": "20 years of experience. Now as a more integrated business partner.",
+      "de": "20 Jahre Erfahrung. Jetzt als umfassenderer Geschäftspartner."
+    }
   },
   "integrationStory": {
-    "hu": "Az integráció célja nem három külön szolgáltatáslista egymás mellé helyezése, hanem egy komplexebb partneri modell. A HIPStudio kreatív és kommunikációs tapasztalata, a Business működési és pénzügyi támogatása, valamint a Flúgos vállalati élménytervezése egy közös ügyfélútban kapcsolódik össze. Így az ügyfélnek kevesebb beszállítót kell koordinálnia, miközben több üzleti problémát tudunk egy rendszerben kezelni.",
-    "en": "The purpose of the integration is not to place three separate service catalogues side by side, but to create a more complete partner model. HIPStudio's creative and communications experience, Business operations and finance support, and Flúgos corporate experience design are connected in one customer journey. Clients can coordinate fewer suppliers while addressing more business needs through one system.",
-    "de": "Ziel der Integration ist nicht, drei getrennte Leistungskataloge nebeneinanderzustellen, sondern ein umfassenderes Partnermodell zu schaffen. Die Kreativ- und Kommunikationserfahrung von HIPStudio, Business Operations und Finance Support sowie das Corporate Experience Design von Flúgos werden in einer gemeinsamen Customer Journey verbunden. Kunden koordinieren weniger Dienstleister und können gleichzeitig mehr geschäftliche Anforderungen in einem System lösen."
+    "title": {
+      "hu": "Egy HIPStudio. Három szakmai pillér. Több lehetőség az ügyfélnek.",
+      "en": "One HIPStudio. Three specialist pillars. More capability for the client.",
+      "de": "Ein HIPStudio. Drei Fachsäulen. Mehr Möglichkeiten für Kunden."
+    },
+    "reason": {
+      "hu": "Az ügyfelek üzleti problémái nem különülnek el szolgáltatói dobozokra. A működés, a pénzügyi kontroll, a kommunikáció és az emberek kapcsolódása gyakran ugyanannak a növekedési célnak a része. Ezért a HIPStudio 20 éves kreatív és kommunikációs alapjára egy közös rendszerben építjük rá a Business és a Flúgos kompetenciákat. Így az ügyfél kevesebb beszállítóval, kevesebb koordinációval és több összekapcsolható szakértelemmel dolgozhat.",
+      "en": "Business problems do not fit into separate supplier boxes. Operations, financial control, communication and human connection are often parts of the same growth objective. We therefore build Business and Flúgos capabilities into one system on top of HIPStudio's 20-year creative and communication foundation. Clients can work with fewer suppliers, less coordination and more connected expertise.",
+      "de": "Unternehmerische Probleme passen nicht in getrennte Lieferanten-Silos. Betrieb, Finanzkontrolle, Kommunikation und menschliche Verbindung sind oft Teile desselben Wachstumsziels. Deshalb verbinden wir Business- und Flúgos-Kompetenzen mit der 20-jährigen Kreativ- und Kommunikationsbasis von HIPStudio in einem gemeinsamen System. Kunden arbeiten mit weniger Anbietern, weniger Koordination und stärker vernetzter Expertise."
+    }
   },
   "positioning": {
-    "hu": "Egy tapasztalt partner a céged működéséhez, növekedéséhez és láthatóságához.",
-    "en": "One experienced partner for your operations, growth and visibility.",
-    "de": "Ein erfahrener Partner für Betrieb, Wachstum und Sichtbarkeit Ihres Unternehmens."
+    "hu": "Egy partner a céged működéséhez, növekedéséhez és láthatóságához.",
+    "en": "One partner for the operation, growth and visibility of your business.",
+    "de": "Ein Partner für Betrieb, Wachstum und Sichtbarkeit Ihres Unternehmens."
   },
   "hero": {
     "title": {
-      "hu": "20 év tapasztalat. Most egy komplexebb üzleti partnerként.",
-      "en": "20 years of experience. Now as a more complete business partner.",
-      "de": "20 Jahre Erfahrung. Jetzt als umfassenderer Business-Partner."
+      "hu": "Komplexebb üzleti megoldások. Egy 20 éve épülő márkától.",
+      "en": "More integrated business solutions. From a brand built over 20 years.",
+      "de": "Umfassendere Unternehmenslösungen. Von einer Marke mit 20 Jahren Erfahrung."
     },
     "intro": {
-      "hu": "A HIPStudio kreatív és kommunikációs alapjaira építve egy rendszerben kapcsoljuk össze az üzleti működést, a pénzügyi és vezetői támogatást, a tartalomgyártást és a vállalati élményeket.",
-      "en": "Building on HIPStudio's creative and communications foundation, we connect business operations, finance and management support, content production and corporate experiences in one system.",
-      "de": "Auf der kreativen und kommunikativen Basis von HIPStudio verbinden wir Business Operations, Finanz- und Management-Support, Content-Produktion und Corporate Experiences in einem System."
+      "hu": "A HIPStudio kreatív és kommunikációs alapjára most működési, pénzügyi, digitalizációs és vállalati élménykompetenciákat kapcsolunk. Egy partneri rendszerben segítünk a háttérműködéstől a láthatóságon át az emberek kapcsolódásáig.",
+      "en": "We are extending HIPStudio's creative and communication foundation with operations, finance, digitalisation and corporate-experience capabilities. One partner model can now support the business from back-office operations to visibility and human connection.",
+      "de": "Wir erweitern die kreative und kommunikative Basis von HIPStudio um Kompetenzen in Betrieb, Finanzen, Digitalisierung und Corporate Experience. Ein Partnermodell unterstützt Unternehmen vom Backoffice über Sichtbarkeit bis zur Verbindung von Menschen."
     }
   },
   "primaryCta": {
@@ -40,19 +55,18 @@
     {
       "key": "business",
       "brand": "HIPStudio Business",
-      "legacyBrand": "HelloÜzlet",
       "label": {"hu":"Business / Operations","en":"Business / Operations","de":"Business / Operations"},
       "title": {"hu":"Működés, pénzügy és vezetői kontroll","en":"Operations, finance and management control","de":"Betrieb, Finanzen und Managementsteuerung"},
       "intro": {
-        "hu": "Külső működési támogatás KKV-knak: pénzügyi adminisztráció, bér- és HR-adminisztráció, back office, controlling, vezetői riporting, folyamatfejlesztés és AI-automatizálási előkészítés.",
-        "en": "External operating support for SMEs: financial administration, payroll and HR administration, back office, controlling, management reporting, process improvement and AI automation preparation.",
-        "de": "Externer Operations-Support für KMU: Finanzadministration, Lohn- und HR-Administration, Backoffice, Controlling, Management-Reporting, Prozessverbesserung und Vorbereitung von KI-Automatisierung."
+        "hu": "Külső működési partneri irány KKV-knak: pénzügyi adminisztráció, bér- és HR-adminisztrációs támogatás, back office, controlling, vezetői riporting, folyamatfejlesztés és AI-automatizálási előkészítés. A szabályozott és felelősségi körök élesítés előtt külön jóváhagyást igényelnek.",
+        "en": "An external operating-partner direction for SMEs: financial administration, payroll and HR administration support, back office, controlling, management reporting, process improvement and AI automation preparation. Regulated and responsibility-sensitive scopes require separate approval before production.",
+        "de": "Eine externe Betriebspartner-Richtung für KMU: Finanzadministration, Lohn- und HR-Administrationssupport, Backoffice, Controlling, Management-Reporting, Prozessverbesserung und Vorbereitung von KI-Automatisierung. Regulierte und verantwortungssensitive Leistungsumfänge benötigen vor Veröffentlichung eine gesonderte Freigabe."
       },
-      "promise": {"hu":"A háttérműködést rendszerezzük, hogy te a céget vezethesd.","en":"We structure the background operations so you can lead the business.","de":"Wir strukturieren die Hintergrundprozesse, damit Sie das Unternehmen führen können."},
+      "promise": {"hu":"A háttérműködést mi fogjuk össze. Te a céget vezeted.","en":"We coordinate the background operations. You lead the business.","de":"Wir bündeln die Hintergrundprozesse. Sie führen das Unternehmen."},
       "services": {
-        "hu":["Pénzügyi adminisztráció","Bérszámfejtés és HR-adminisztráció","Back office és vezetői operáció","Controlling és vezetői riporting","Folyamatfejlesztés","AI readiness és automatizálási sprint"],
-        "en":["Financial administration","Payroll and HR administration","Back office and executive operations","Controlling and management reporting","Process improvement","AI readiness and automation sprint"],
-        "de":["Finanzadministration","Lohn- und HR-Administration","Backoffice und Executive Operations","Controlling und Management-Reporting","Prozessverbesserung","AI-Readiness und Automatisierungs-Sprint"]
+        "hu":["Pénzügyi adminisztráció","Bér- és HR-adminisztrációs támogatás","Back office és vezetői operáció","Controlling és vezetői riporting","Folyamatfejlesztés","AI readiness és automatizálási sprint"],
+        "en":["Financial administration","Payroll and HR administration support","Back office and executive operations","Controlling and management reporting","Process improvement","AI readiness and automation sprint"],
+        "de":["Finanzadministration","Lohn- und HR-Administrationssupport","Backoffice und Executive Operations","Controlling und Management-Reporting","Prozessverbesserung","AI-Readiness und Automatisierungs-Sprint"]
       }
     },
     {
@@ -61,9 +75,9 @@
       "label": {"hu":"Creative / Content","en":"Creative / Content","de":"Creative / Content"},
       "title": {"hu":"Tartalom üzleti céllal","en":"Content built for business outcomes","de":"Content mit geschäftlichem Ziel"},
       "intro": {
-        "hu": "Videó, fotó, podcast, employer branding és vezetői kommunikáció olyan cégeknek, amelyeknél a tartalom nem dísz, hanem üzleti eszköz.",
-        "en": "Video, photography, podcast, employer branding and executive communication for companies that use content as a business tool.",
-        "de": "Video, Fotografie, Podcast, Employer Branding und Führungskräftekommunikation für Unternehmen, die Content als Geschäftsinstrument nutzen."
+        "hu": "A HIPStudio 2006 óta épített kreatív kompetenciája: videó, fotó, podcast, employer branding és vezetői kommunikáció olyan cégeknek, amelyeknél a tartalom üzleti eszköz.",
+        "en": "HIPStudio's creative capability built since 2006: video, photography, podcast, employer branding and executive communication for companies that use content as a business tool.",
+        "de": "Die seit 2006 aufgebaute Kreativkompetenz von HIPStudio: Video, Fotografie, Podcast, Employer Branding und Führungskräftekommunikation für Unternehmen, die Content als Geschäftsinstrument nutzen."
       },
       "promise": {"hu":"Tartalom, amit nem csak megnéznek. Hanem megjegyeznek.","en":"Content people do not just watch. They remember it.","de":"Content, den man nicht nur ansieht, sondern behält."},
       "services": {
@@ -75,13 +89,12 @@
     {
       "key": "experiences",
       "brand": "Flúgos by HIPStudio",
-      "legacyBrand": "Flúgos",
       "label": {"hu":"Experience / Events","en":"Experience / Events","de":"Experience / Events"},
       "title": {"hu":"Vállalati élmények, amelyek összehozzák az embereket","en":"Corporate experiences that bring people together","de":"Unternehmenserlebnisse, die Menschen zusammenbringen"},
       "intro": {
-        "hu": "Csapat-, vezetői-, employer- és ügyfélélmények, egyedi programok és márkázott játékformátumok vállalatoknak.",
-        "en": "Team, leadership, employer and client experiences, custom programmes and branded game formats for companies.",
-        "de": "Team-, Leadership-, Employer- und Kundenerlebnisse, individuelle Programme und gebrandete Spielformate für Unternehmen."
+        "hu": "A Flúgos tapasztalati és játéktervezési örökségére épülő B2B irány: csapat-, vezetői-, employer- és ügyfélélmények, egyedi programok és márkázott játékformátumok.",
+        "en": "A B2B direction built on Flúgos experience and game-design heritage: team, leadership, employer and client experiences, custom programmes and branded game formats.",
+        "de": "Eine B2B-Richtung auf Basis der Flúgos-Erlebnis- und Spieldesign-Tradition: Team-, Leadership-, Employer- und Kundenerlebnisse, individuelle Programme und gebrandete Spielformate."
       },
       "promise": {"hu":"Élménytervezés céges célokra.","en":"Experience design for business goals.","de":"Experience Design für Unternehmensziele."},
       "services": {
@@ -97,8 +110,8 @@
     "de": "Primärer Fokus: ungarische KMU mit 10–100 Mitarbeitenden, bei denen Eigentümer oder Geschäftsführung noch erhebliche operative Last tragen und nicht jede Funktion intern fachlich besetzt ist."
   },
   "crossSell": {
-    "hu": "A három pillér ugyanannak az ügyfélnek különböző problémáit oldja meg: működés, növekedés, láthatóság és kapcsolódás — egy közös HIPStudio rendszerben.",
-    "en": "The three pillars solve different problems for the same client: operations, growth, visibility and connection — within one HIPStudio system.",
-    "de": "Die drei Säulen lösen unterschiedliche Probleme desselben Kunden: Betrieb, Wachstum, Sichtbarkeit und Verbindung — in einem gemeinsamen HIPStudio-System."
+    "hu": "A három pillér nem három külön világ: ugyanannak az üzleti rendszernek más részeit kapcsolja össze — működés, növekedés, láthatóság és kapcsolódás.",
+    "en": "The three pillars are not separate worlds: they connect different parts of the same business system — operations, growth, visibility and connection.",
+    "de": "Die drei Säulen sind keine getrennten Welten: Sie verbinden unterschiedliche Teile desselben Unternehmenssystems — Betrieb, Wachstum, Sichtbarkeit und Verbindung."
   }
 }
