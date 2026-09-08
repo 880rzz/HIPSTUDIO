@@ -17,6 +17,7 @@ def build(env=None):
     e.setdefault('PLATFORM_URL',MASTER_DOMAIN)
     e.update(env or {})
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
@@ -30,6 +31,8 @@ def assert_review():
     assert manifest['masterBrand']=='HIPStudio'
     assert manifest['masterDomain']==MASTER_DOMAIN
     assert manifest['masterBrandApprovalRequired'] is False
+    assert manifest['commercialContent']['version']=='commercial-content-v1'
+    assert manifest['commercialContent']['enrichedPages']==15
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['solutions']==5
     assert manifest['serviceInventory']['version']=='unified-service-inventory-v1'
@@ -80,6 +83,7 @@ def assert_review():
     home=(D/'hu/index.html').read_text()
     assert '20 év tapasztalat' in home
     assert 'Egy HIPStudio. Három szakmai pillér.' in home
+    assert 'data-commercial-layer="problem-led-home"' in home
     assert 'HelloÜzlet |' not in home
     for quote_path in ['/hu/ajanlatkeres/','/en/request-a-quote/','/de/angebot-anfragen/']:
         html=(D/quote_path.strip('/')/'index.html').read_text()
@@ -113,6 +117,7 @@ def assert_quote_endpoint_gate():
     e={'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_PUBLICATION_APPROVED':'1'}
     env=os.environ.copy();env.update(e)
     subprocess.run(['python3','tools/build_platform.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     p=subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=env,capture_output=True,text=True)
@@ -124,6 +129,7 @@ def assert_isolated_production_contract():
     build({'BUILD_MODE':'production','PLATFORM_URL':'https://example.com','PLATFORM_PUBLICATION_APPROVED':'1','QUOTE_FORM_ENDPOINT':'https://script.google.com/macros/s/test-review-endpoint/exec'})
     manifest=json.loads((D/'platform-build.json').read_text())
     assert manifest['mode']=='production'
+    assert manifest['commercialContent']['version']=='commercial-content-v1'
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['quoteRequest']['endpointConfigured'] is True
     assert (D/'robots.txt').read_text()=='User-agent: *\nAllow: /\n'
