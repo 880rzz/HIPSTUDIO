@@ -1,0 +1,149 @@
+{
+  "version": "unified-service-inventory-v1",
+  "status": "review",
+  "principles": [
+    "Every verified current or approved strategic service direction must map to exactly one pillar and one family.",
+    "Current, strategic/gated and historical/archive services must not be conflated.",
+    "No public prices are stored here.",
+    "Every customer-facing service must map to a quote_request_key or be explicitly marked archive_only.",
+    "Business services remain support/coordination directions until provider and regulated-service responsibility are approved.",
+    "Flugos historical facts remain time-qualified and separate from current B2B positioning."
+  ],
+  "pillars": {
+    "business": {
+      "brand": "HelloÜzlet",
+      "families": {
+        "finance-admin": {
+          "label_hu": "Pénzügyi működés",
+          "services": [
+            {"key":"financial-administration","label_hu":"Pénzügyi adminisztráció","status":"strategic_gated","quote_request_key":"accounting-finance-admin"},
+            {"key":"accounting-coordination","label_hu":"Könyvelési koordináció és adminisztrációs támogatás","status":"strategic_gated","quote_request_key":"accounting-finance-admin"},
+            {"key":"cashflow-forecast-structure","label_hu":"Cash-flow és forecast struktúra","status":"strategic_gated","quote_request_key":"controlling-reporting"}
+          ]
+        },
+        "people-admin": {
+          "label_hu": "Bér és HR adminisztráció",
+          "services": [
+            {"key":"payroll-support","label_hu":"Bérszámfejtési támogatás","status":"strategic_gated","quote_request_key":"payroll-hr-admin"},
+            {"key":"hr-administration","label_hu":"HR-adminisztrációs támogatás","status":"strategic_gated","quote_request_key":"payroll-hr-admin"}
+          ]
+        },
+        "operations": {
+          "label_hu": "Back office és vezetői operáció",
+          "services": [
+            {"key":"back-office-support","label_hu":"Back office támogatás","status":"strategic_gated","quote_request_key":"executive-operations"},
+            {"key":"executive-operations-support","label_hu":"Vezetői operációs támogatás","status":"strategic_gated","quote_request_key":"executive-operations"},
+            {"key":"process-improvement","label_hu":"Folyamatfejlesztés","status":"strategic_gated","quote_request_key":"business-operations-360"},
+            {"key":"operating-system-design","label_hu":"Működési rendszer kialakítása","status":"strategic_gated","quote_request_key":"business-operations-360"}
+          ]
+        },
+        "control": {
+          "label_hu": "Controlling és vezetői kontroll",
+          "services": [
+            {"key":"management-reporting","label_hu":"Vezetői riporting","status":"strategic_gated","quote_request_key":"controlling-reporting"},
+            {"key":"controlling","label_hu":"Controlling","status":"strategic_gated","quote_request_key":"controlling-reporting"},
+            {"key":"fractional-cfo-readiness","label_hu":"Fractional CFO / finance-control irány","status":"strategic_gated","quote_request_key":"controlling-reporting"}
+          ]
+        },
+        "grants": {
+          "label_hu": "Pályázati támogatás",
+          "services": [
+            {"key":"grant-support","label_hu":"Pályázati támogatás és koordináció","status":"strategic_gated","quote_request_key":"grants"}
+          ]
+        },
+        "ai-automation": {
+          "label_hu": "AI és automatizálás",
+          "services": [
+            {"key":"ai-readiness-audit","label_hu":"AI readiness audit","status":"strategic_gated","quote_request_key":"ai-automation"},
+            {"key":"automation-sprint","label_hu":"Folyamat-automatizálási sprint","status":"strategic_gated","quote_request_key":"ai-automation"},
+            {"key":"managed-ai-operations","label_hu":"Managed AI operations irány","status":"strategic_gated","quote_request_key":"ai-automation"}
+          ]
+        }
+      }
+    },
+    "creative": {
+      "brand": "HIPStudio",
+      "families": {
+        "photo-portrait": {
+          "label_hu": "Portré és személyes megjelenés",
+          "services": [
+            {"key":"business-portrait","label_hu":"Üzleti portré","status":"verified_current","quote_request_key":"photo-business-portrait"},
+            {"key":"executive-headshot","label_hu":"Executive portré / headshot","status":"verified_current","quote_request_key":"photo-business-portrait"},
+            {"key":"cv-photography","label_hu":"Önéletrajz-fotó","status":"verified_current","quote_request_key":"photo-cv-portfolio"},
+            {"key":"portfolio-photography","label_hu":"Portfólió-fotózás","status":"verified_current","quote_request_key":"photo-cv-portfolio"},
+            {"key":"fashion-photography","label_hu":"Divatfotózás","status":"verified_current","quote_request_key":"photo-cv-portfolio"},
+            {"key":"personal-portrait","label_hu":"Személyes portré / társkereső fotózás","status":"verified_current","quote_request_key":"photo-cv-portfolio"},
+            {"key":"fine-art-glamour-boudoir","label_hu":"Művészi / glamour / boudoir fotózás","status":"verified_current","quote_request_key":"photo-fine-art"}
+          ]
+        },
+        "photo-corporate": {
+          "label_hu": "Vállalati és reklámfotó",
+          "services": [
+            {"key":"team-group-portrait","label_hu":"Csapat- és csoportportré","status":"verified_current","quote_request_key":"photo-team"},
+            {"key":"brand-corporate-photography","label_hu":"Brand- és corporate fotózás","status":"verified_current","quote_request_key":"photo-brand"},
+            {"key":"product-advertising-photography","label_hu":"Termék-, reklám- és kampányfotózás","status":"verified_current","quote_request_key":"photo-product-commercial"},
+            {"key":"property-interior-architecture","label_hu":"Ingatlan-, enteriőr- és épületfotózás","status":"verified_current","quote_request_key":"photo-property"},
+            {"key":"aerial-photography","label_hu":"Légi felvételek","status":"verified_current","quote_request_key":"photo-aerial"},
+            {"key":"3d-virtual-tour","label_hu":"3D virtuális séta","status":"verified_current","quote_request_key":"photo-3d-tour"}
+          ]
+        },
+        "photo-event": {
+          "label_hu": "Rendezvényfotó és aktiváció",
+          "services": [
+            {"key":"event-conference-photography","label_hu":"Rendezvény- és konferenciafotózás","status":"verified_current","quote_request_key":"photo-event"},
+            {"key":"souvenir-photography","label_hu":"Emlékfotózás és fotófal","status":"verified_current","quote_request_key":"photo-souvenir-print"},
+            {"key":"onsite-printing","label_hu":"Helyszíni képnyomtatás","status":"verified_current","quote_request_key":"photo-souvenir-print"},
+            {"key":"greenbox-photography","label_hu":"Greenbox fotózás","status":"verified_current","quote_request_key":"photo-greenbox"}
+          ]
+        },
+        "video": {
+          "label_hu": "Videó és film",
+          "services": [
+            {"key":"commercial-brand-film","label_hu":"Reklámfilm / image film / brand film","status":"verified_current","quote_request_key":"video-commercial"},
+            {"key":"executive-interview-video","label_hu":"Interjú- és vezetői videó","status":"verified_current","quote_request_key":"video-interview-executive"},
+            {"key":"employer-branding-video","label_hu":"Employer branding / recruitment videó","status":"verified_current","quote_request_key":"video-employer-branding"},
+            {"key":"event-conference-video","label_hu":"Rendezvény- és konferenciavideó","status":"verified_current","quote_request_key":"video-event"},
+            {"key":"sports-video","label_hu":"Sportvideó","status":"verified_current","quote_request_key":"video-sport-concert"},
+            {"key":"concert-stage-video","label_hu":"Koncert- és színpadi videó","status":"verified_current","quote_request_key":"video-sport-concert"},
+            {"key":"music-video","label_hu":"Videoklip","status":"verified_current","quote_request_key":"video-music"},
+            {"key":"conference-streaming","label_hu":"Konferencia-streamelés","status":"verified_current","quote_request_key":"streaming"},
+            {"key":"live-projection","label_hu":"Helyszíni élőkép-kivetítés","status":"verified_current","quote_request_key":"streaming"}
+          ]
+        },
+        "podcast-content": {
+          "label_hu": "Podcast és tartalomrendszer",
+          "services": [
+            {"key":"video-podcast","label_hu":"Videópodcast","status":"verified_current","quote_request_key":"podcast-video"},
+            {"key":"audio-podcast","label_hu":"Audio podcast","status":"verified_current","quote_request_key":"podcast-audio"},
+            {"key":"content-engine","label_hu":"Content Engine / repurposing","status":"approved_extension","quote_request_key":"content-engine"},
+            {"key":"ceo-content-system","label_hu":"CEO Content System","status":"approved_extension","quote_request_key":"content-engine"},
+            {"key":"employer-branding-content","label_hu":"Employer branding tartalomrendszer","status":"approved_extension","quote_request_key":"content-engine"}
+          ]
+        }
+      }
+    },
+    "experiences": {
+      "brand": "Flúgos",
+      "families": {
+        "corporate-experience": {
+          "label_hu": "Corporate Experience Design",
+          "services": [
+            {"key":"team-experience","label_hu":"Team Experience / csapatépítés","status":"approved_extension","quote_request_key":"team-experience"},
+            {"key":"leadership-experience","label_hu":"Leadership Experience","status":"approved_extension","quote_request_key":"leadership-experience"},
+            {"key":"employer-experience","label_hu":"Employer Experience","status":"approved_extension","quote_request_key":"employer-experience"},
+            {"key":"client-experience","label_hu":"Client Experience","status":"approved_extension","quote_request_key":"client-experience"},
+            {"key":"custom-corporate-program","label_hu":"Egyedi vállalati program","status":"approved_extension","quote_request_key":"corporate-event"},
+            {"key":"custom-branded-game","label_hu":"Custom Branded Game","status":"approved_extension","quote_request_key":"custom-game"}
+          ]
+        },
+        "history-archive": {
+          "label_hu": "Flúgos történet és archívum",
+          "services": [
+            {"key":"flugos-futam-heritage","label_hu":"Flúgos Futam történet 2009-től","status":"archive_only","archive_only":true},
+            {"key":"flugos-futam-2019","label_hu":"Flúgos Futam 2019 archívum","status":"archive_only","archive_only":true}
+          ]
+        }
+      }
+    }
+  }
+}
