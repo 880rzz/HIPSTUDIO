@@ -63,6 +63,14 @@ class ReleaseTests(unittest.TestCase):
     self.assertTrue(m['alt'].strip());self.assertGreater(int(m['width']),0);self.assertGreater(int(m['height']),0);self.assertTrue(m['src'].startswith('/assets/'))
    for t,a in d.tags:
     if t in ['script','link','img'] and (a.get('src','').startswith('http') or a.get('rel')=='stylesheet' and a.get('href','').startswith('http')):self.fail(f'external automatic resource: {path}')
+ def test_gallery_has_no_cross_category_duplicates(self):
+  for lang,path in [('hu','munkaink'),('en','work'),('de','arbeiten')]:
+   raw=(D/lang/path/'index.html').read_text()
+   gallery_sources=re.findall(r'<div class="gallery">(.*?)</div>',raw,re.S)
+   sources=[]
+   for gallery in gallery_sources:sources+=re.findall(r'<img src="/assets/photos/([^"/]+)-960\.webp',gallery)
+   self.assertEqual(len(sources),len(set(sources)),lang)
+   self.assertTrue(all('© HIPStudio' in gallery for gallery in gallery_sources))
  def test_pricing_tax_invariants(self):
   p=json.loads((R/'content/pricing.json').read_text());self.assertEqual(p['currency'],'HUF');self.assertEqual(p['vatRate'],27)
   expected={'headshotcv':48000,'quick30':88000,'guided60':168000,'guided120':276000,'brand60':199600,'brand120':316000,'brand180':436000,'brand240':556000,'art60':276000,'art120':396000,'art180':516000,'event60':236000,'event120':356000,'event180':476000,'event240':596000,'eventFullDay':996000}

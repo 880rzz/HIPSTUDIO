@@ -7,7 +7,7 @@
       "url": "https://www.hipstudio.hu/hu/",
       "key": "home",
       "lang": "hu",
-      "title": "A képen túl."
+      "title": "A márkád. Teljes figyelemmel."
     },
     {
       "path": "/hu/szolgaltatasok/",
@@ -273,7 +273,7 @@
       "url": "https://www.hipstudio.hu/hu/fotospartnerek/",
       "key": "partners",
       "lang": "hu",
-      "title": "Fotós partnereink"
+      "title": "Történet és partnerek"
     },
     {
       "path": "/hu/impresszum/",
@@ -301,7 +301,7 @@
       "url": "https://www.hipstudio.hu/en/",
       "key": "home",
       "lang": "en",
-      "title": "Beyond the image."
+      "title": "Your brand. Our full attention."
     },
     {
       "path": "/en/services/",
@@ -567,7 +567,7 @@
       "url": "https://www.hipstudio.hu/en/photography-partners/",
       "key": "partners",
       "lang": "en",
-      "title": "Photography partners"
+      "title": "Our story and partners"
     },
     {
       "path": "/en/legal/",
@@ -595,7 +595,7 @@
       "url": "https://www.hipstudio.hu/de/",
       "key": "home",
       "lang": "de",
-      "title": "Über das Bild hinaus."
+      "title": "Deine Marke. Unsere volle Aufmerksamkeit."
     },
     {
       "path": "/de/leistungen/",
@@ -861,7 +861,7 @@
       "url": "https://www.hipstudio.hu/de/fotopartner/",
       "key": "partners",
       "lang": "de",
-      "title": "Fotopartner"
+      "title": "Geschichte und Partner"
     },
     {
       "path": "/de/impressum/",
@@ -887,5 +887,5 @@
   ],
   "redirects": 40,
   "images": 194,
-  "css": "site.751782c0e693.css"
+  "css": "site.a520310feaee.css"
 }
