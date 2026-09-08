@@ -1,17 +1,21 @@
 {
   "name": "hipstudio-static",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "build": "python3 tools/build.py",
+    "build:platform": "python3 tools/build_platform.py",
+    "build:all": "npm run build && npm run build:platform",
     "test": "python3 tools/test.py",
+    "test:platform": "python3 tools/test_platform.py",
+    "test:all": "npm test && npm run test:platform && npm run test:pricing",
     "preview": "python3 tools/serve.py",
     "test:pricing": "node tools/test-pricing.mjs",
     "test:browser": "node tools/browser-qa.mjs",
-    "test:html": "html-validate \"dist/**/*.html\"",
+    "test:html": "html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
     "test:lighthouse": "node tools/lighthouse.mjs"
   },
-  "description": "Static HU/EN/DE HIPStudio migration. No runtime dependencies; no automatic deployment.",
+  "description": "Static HU/EN/DE HIPStudio migration plus review-only unified Business + Creative + Experiences platform. No automatic deployment.",
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "html-validate": "11.14.0",
