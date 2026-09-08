@@ -1,10 +1,10 @@
 {
   "name": "hipstudio-static",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "build": "python3 tools/build.py",
-    "build:platform": "python3 tools/build_platform.py",
+    "build:platform": "python3 tools/build_platform.py && python3 tools/build_platform_solutions.py",
     "build:all": "npm run build && npm run build:platform",
     "test": "python3 tools/test.py",
     "test:platform": "python3 tools/test_platform.py",
