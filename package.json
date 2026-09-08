@@ -1,10 +1,10 @@
 {
   "name": "hipstudio-static",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "build": "python3 tools/build.py && python3 tools/remove_public_pricing.py",
-    "build:platform": "python3 tools/build_platform.py && python3 tools/build_platform_solutions.py && python3 tools/build_quote_request.py",
+    "build:platform": "python3 tools/build_platform.py && python3 tools/build_platform_solutions.py && python3 tools/build_platform_services.py && python3 tools/build_quote_request.py",
     "build:all": "npm run build && npm run build:platform",
     "test": "python3 tools/test.py",
     "test:platform": "python3 tools/test_platform.py",
@@ -19,7 +19,7 @@
     "test:html": "html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
     "test:lighthouse": "node tools/lighthouse.mjs"
   },
-  "description": "Static HU/EN/DE HIPStudio migration plus unified Business + Creative + Experiences platform, guided quote-request flow, deterministic human-reviewed lead routing, and a governed three-pillar service inventory. Public pricing is suppressed; internal pricing sources remain for audit and planning. No automatic deployment.",
+  "description": "Static HU/EN/DE HIPStudio migration plus unified Business + Creative + Experiences platform, detailed governed service pages, guided quote-request flow and deterministic human-reviewed lead routing. Public pricing is suppressed; internal pricing sources remain for audit and planning. No automatic deployment.",
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "html-validate": "11.14.0",
