@@ -75,9 +75,9 @@ function triage_(p, now) {
 
   const completeness = completeness_(p);
   let nextAction = 'HUMAN_SCOPE_REVIEW';
-  if (completeness < 65) nextAction = 'REQUEST_MISSING_SCOPE_INFORMATION';
+  if (queue === 'CROSS_PILLAR') nextAction = 'ASSIGN_CROSS_PILLAR_LEAD';
+  else if (completeness < 75) nextAction = 'REQUEST_MISSING_SCOPE_INFORMATION';
   else if (flags.indexOf('AERIAL_FEASIBILITY_REVIEW') >= 0 || flags.indexOf('STREAMING_TECHNICAL_REVIEW') >= 0) nextAction = 'TECHNICAL_FEASIBILITY_REVIEW';
-  else if (queue === 'CROSS_PILLAR') nextAction = 'ASSIGN_CROSS_PILLAR_LEAD';
 
   return {
     routing_version: HIPSTUDIO_ROUTING_VERSION,
@@ -127,7 +127,7 @@ function runRoutingSelfTest() {
   const basic = triage_({pillars:'creative',services:'photo-business-portrait',name:'A',company:'B',email:'a@b.hu',project_summary:'Executive portrait'},now);
   if (basic.queue !== 'CREATIVE' || basic.priority !== 'NORMAL') throw new Error('basic_routing');
   const cross = triage_({pillars:'business, creative',services:'ai-automation, content-engine',name:'A',company:'B',email:'a@b.hu',project_summary:'Cross-pillar',deadline:'2026-09-10'},now);
-  if (cross.queue !== 'CROSS_PILLAR' || cross.priority !== 'URGENT') throw new Error('cross_routing');
+  if (cross.queue !== 'CROSS_PILLAR' || cross.priority !== 'URGENT' || cross.next_action !== 'ASSIGN_CROSS_PILLAR_LEAD') throw new Error('cross_routing');
   const event = triage_({pillars:'creative',services:'photo-event, streaming',creative_addons:'express',photo_event_guests:'450',photo_parallel_tracks:'3',name:'A',company:'B',email:'a@b.hu',project_summary:'Conference'},now);
   if (event.priority !== 'URGENT' || event.routing_flags.indexOf('STREAMING_TECHNICAL_REVIEW') < 0) throw new Error('event_routing');
   return true;
