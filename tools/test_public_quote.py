@@ -4,6 +4,7 @@ import re
 
 R=Path(__file__).resolve().parents[1]
 D=R/'dist'
+MASTER='hipstudio.hu'
 
 PRICE_PAGES={
  'hu':D/'hu/arak/index.html',
@@ -22,7 +23,8 @@ def main():
         assert '<table' not in raw.lower()
         assert 'info@hipstudio.hu' in raw
         assert '24' in raw
-        assert 'hellouzlet.hu/' + lang + '/' in raw
+        assert MASTER + '/' + lang + '/' in raw
+        assert 'hellouzlet.hu/' + lang + '/' not in raw
         assert not re.search(r'\b(?:netHUF|grossHUF|vatHUF)\b',raw)
         for token in KNOWN_PRICE_TOKENS:
             assert token not in raw, f'{lang}: leaked known public price {token}'
@@ -33,6 +35,6 @@ def main():
     assert 'Milyen pénznemben és áfával szerepelnek az árak?' not in all_html
     assert 'What currency and VAT treatment do prices use?' not in all_html
     assert 'Welche Währung und Umsatzsteuer gelten?' not in all_html
-    print('Public pricing suppression and tailored quote routing passed')
+    print('Public pricing suppression and HIPStudio tailored quote routing passed')
 
 if __name__=='__main__': main()
