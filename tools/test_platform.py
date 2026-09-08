@@ -49,7 +49,6 @@ def assert_review():
         assert 'sessionStorage' not in html
     for key in expected_solution_keys:
         assert any('/'+key+'/' in p['path'] for p in manifest['pages'])
-    # Representative detailed service pages across all three pillars.
     expected_service_paths=[
       '/hu/szolgaltatasok/business/finance-admin/financial-administration/',
       '/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/',
@@ -62,10 +61,11 @@ def assert_review():
         html=(D/path.strip('/')/'index.html').read_text()
         if 'history-archive' in path:
             assert 'Történeti anyag' in html
-            assert 'Egyedi ajánlatot kérek' not in html
+            assert '<section class="cta">' not in html
             assert '"@type":"Service"' not in html
         else:
             assert '"@type":"Service"' in html
+            assert '<section class="cta">' in html
             assert 'Egyedi ajánlatot kérek' in html
             assert '?pillar=' in html and '&amp;service=' in html
     for quote_path in ['/hu/ajanlatkeres/','/en/request-a-quote/','/de/angebot-anfragen/']:
