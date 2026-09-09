@@ -1,7 +1,8 @@
 # coding: utf-8
 from pathlib import Path
-import json
+import json, subprocess
 R=Path(__file__).resolve().parents[1]
+subprocess.run(['npm','run','build:platform'],cwd=R,check=True)
 D=R/'dist-platform'
 P=json.loads((R/'content/privacy-governance.json').read_text(encoding='utf-8'))
 for lang,route in P['publication']['routes'].items():
