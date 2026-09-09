@@ -1,7 +1,7 @@
 name: Validate unpublished migration and unified platform
 on:
   push:
-    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening, feat/flagship-solution-deepening, feat/evidence-reference-layer, feat/legacy-url-migration-matrix, feat/business-provider-responsibility-matrix]
+    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening, feat/flagship-solution-deepening, feat/evidence-reference-layer, feat/legacy-url-migration-matrix, feat/business-provider-responsibility-matrix, feat/production-readiness-hardening]
   pull_request:
   workflow_dispatch:
 concurrency:
@@ -32,6 +32,7 @@ jobs:
       - run: npm run test:solution-depth
       - run: npm run test:evidence
       - run: npm run test:business-provider
+      - run: npm run test:release-gates
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
@@ -42,9 +43,7 @@ jobs:
         run: |
           nohup npm run preview >/tmp/hipstudio-preview.log 2>&1 &
           for attempt in {1..20}; do
-            if curl --fail --silent http://127.0.0.1:4173/hu/ >/dev/null; then
-              exit 0
-            fi
+            if curl --fail --silent http://127.0.0.1:4173/hu/ >/dev/null; then exit 0; fi
             sleep 1
           done
           cat /tmp/hipstudio-preview.log
@@ -54,9 +53,7 @@ jobs:
         run: |
           nohup python3 -m http.server 4174 --bind 127.0.0.1 --directory dist-platform >/tmp/platform-preview.log 2>&1 &
           for attempt in {1..20}; do
-            if curl --fail --silent http://127.0.0.1:4174/hu/ >/dev/null; then
-              exit 0
-            fi
+            if curl --fail --silent http://127.0.0.1:4174/hu/ >/dev/null; then exit 0; fi
             sleep 1
           done
           cat /tmp/platform-preview.log
