@@ -5,13 +5,18 @@ import json
 R=Path(__file__).resolve().parents[1]
 DATA=json.loads((R/'content/legacy-url-matrix.json').read_text())
 
-assert DATA['version']=='legacy-url-matrix-v1'
+assert DATA['version']=='legacy-url-matrix-v2'
 assert DATA['status']=='review_only'
 assert DATA['activeRedirects'] is False
 assert DATA['masterOrigin']=='https://www.hipstudio.hu'
 assert set(DATA['inventoryStatus'])=={'https://www.hellouzlet.hu','https://www.flugos.hu'}
-assert DATA['inventoryStatus']['https://www.hellouzlet.hu']['complete'] is False
-assert DATA['inventoryStatus']['https://www.flugos.hu']['complete'] is False
+hello=DATA['inventoryStatus']['https://www.hellouzlet.hu']
+flugos=DATA['inventoryStatus']['https://www.flugos.hu']
+assert hello['complete'] is True
+assert hello['mode']=='retired_source_unavailable'
+assert 'owner confirmed' in hello['reason'].lower()
+assert flugos['complete'] is False
+assert flugos['mode']=='partial_verified_inventory'
 allowed=set(DATA['decisionClasses'])
 assert allowed=={'planned_301','archive_preserve','preserve_until_archive_mirrored','candidate_410_after_review','needs_inventory'}
 
@@ -38,7 +43,10 @@ for item in entries:
 
 root_hello=next(x for x in entries if x['source']=='https://www.hellouzlet.hu/')
 assert root_hello['decision']=='planned_301'
+assert root_hello['sourceType']=='retired_html_entrypoint'
+assert root_hello['observed']=='owner_confirmed_site_retired_2026-09-09'
 assert root_hello['target']=='https://www.hipstudio.hu/hu/uzleti-mukodes/'
+assert 'No full HelloÜzlet export is required' in root_hello['activationGate']
 
 root_flugos=next(x for x in entries if x['source']=='https://www.flugos.hu/')
 assert root_flugos['decision']=='planned_301'
@@ -52,9 +60,8 @@ pdf_2019=next(x for x in entries if '048f98564e214407aa70b03dc824a35b.pdf' in x[
 assert pdf_2019['decision']=='archive_preserve'
 assert pdf_2019['target'].endswith('/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/')
 
-# A review matrix may describe planned redirects but must not contain server-rule syntax or activation flags.
 raw=(R/'content/legacy-url-matrix.json').read_text().lower()
 for forbidden in ['rewrite rule','return 301','redirect 301','netlify.toml','vercel.json']:
     assert forbidden not in raw
-
-print('Legacy URL migration matrix tests passed')
+assert 'export or crawl the full hellouzlet' not in raw
+print('Legacy URL migration matrix tests passed; HelloÜzlet retired, Flúgos inventory still gated')
