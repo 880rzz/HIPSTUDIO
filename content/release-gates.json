@@ -1,5 +1,5 @@
 {
-  "version": "production-release-gates-v4",
+  "version": "production-release-gates-v5",
   "status": "review",
   "masterDomain": "https://www.hipstudio.hu",
   "principle": "No production switch is inferred from a green CI run. Every external dependency must be verified explicitly.",
@@ -9,11 +9,12 @@
     {"id":"public-pricing","state":"ready","owner":"repository","requirement":"No public package pricing or automatic price calculator is exposed."},
     {"id":"evidence-governance","state":"ready","owner":"repository","requirement":"Client, result, testimonial and heritage claims are evidence-gated."},
     {"id":"business-provider","state":"ready_with_restrictions","owner":"business","requirement":"Unsupported direct-provider and regulated-responsibility wording remains blocked until service-level evidence is approved."},
-    {"id":"privacy-legal","state":"blocked_form_privacy_details","owner":"business","requirement":"Controller identity is approved as Hipstudió Kft. and matches the current public notice. Before live quote submission, confirm and publish the form-specific lawful basis, retention period and processors/subprocessors."},
+    {"id":"privacy-legal","state":"ready","owner":"business","requirement":"Hipstudió Kft. is the controller, Németh Tímea the human contact. Quote processing purpose, GDPR bases, 12-month unsuccessful-inquiry retention, security-log retention, processors and human-reviewed routing are documented and localized privacy pages are generated."},
     {"id":"quote-e2e","state":"blocked_external_verification","owner":"operations","requirement":"Verify browser POST to Apps Script, Sheet append, internal notifications, customer confirmation and info@ Send-As/Reply-To in the live environment."},
-    {"id":"legacy-url-inventory","state":"blocked_flugos_inventory_only","owner":"migration","requirement":"HelloÜzlet is confirmed retired and no longer requires an export. Obtain the authoritative Flúgos URL export/crawl and classify the remaining Flúgos source URLs before activating its redirects."},
-    {"id":"hosting-headers","state":"blocked_hosting_choice","owner":"infrastructure","requirement":"Select production hosting and verify TLS, cache policy, security headers, canonical host, 404/410 behavior and real 301 rules."},
-    {"id":"dns-cutover","state":"blocked_until_prior_gates","owner":"infrastructure","requirement":"Point hipstudio.hu only after staging verification and rollback plan."},
+    {"id":"legacy-url-inventory","state":"blocked_flugos_inventory_only","owner":"migration","requirement":"HelloÜzlet is confirmed retired. Obtain authoritative remaining Flúgos URL inventory before final redirect activation; flugos.hu root is intended to permanently lead to https://www.hipstudio.hu/hu/vallalati-elmenyek/."},
+    {"id":"hosting-headers","state":"blocked_repo_domain_connection","owner":"infrastructure","requirement":"Serve hipstudio.hu from repository-connected static hosting for 880rzz/HIPSTUDIO and verify TLS, canonical host, cache/security headers, 404 behavior and rollback procedure before DNS cutover."},
+    {"id":"flugos-domain","state":"blocked_until_master_live","owner":"infrastructure","requirement":"After HIPStudio master is accepted, connect flugos.hu as a specialist entry domain with a real permanent redirect to the HIPStudio Flúgos page; do not create a separate Flúgos website."},
+    {"id":"dns-cutover","state":"blocked_until_prior_gates","owner":"infrastructure","requirement":"Point hipstudio.hu only after staging/repository-host verification and rollback plan."},
     {"id":"indexing","state":"blocked_until_cutover","owner":"seo","requirement":"Remove review noindex, publish production sitemap and verify canonical/redirect behavior only after cutover."}
   ],
   "activationRule": "Production may be activated only when every blocked_* gate is resolved and documented. Green CI is necessary, not magical."
