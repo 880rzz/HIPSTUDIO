@@ -1,6 +1,6 @@
 {
-  "version": "legal-controller-v2",
-  "status": "approved_identity",
+  "version": "legal-controller-v3",
+  "status": "approved_identity_and_quote_privacy",
   "effectiveTarget": {
     "controllerName": "Hipstudió Korlátolt Felelősségű Társaság",
     "shortName": "Hipstudió Kft.",
@@ -17,7 +17,7 @@
     },
     "contactPerson": {
       "name": "Németh Tímea",
-      "role": "tulajdonos / ügyvezető / kapcsolattartó"
+      "role": "tulajdonos / ügyvezető / adatvédelmi kapcsolattartó"
     }
   },
   "currentPublicNotice": {
@@ -30,10 +30,11 @@
     "taxNumber": "14513938-2-42",
     "registryCourt": "Fővárosi Törvényszék Cégbírósága"
   },
-  "publicationState": "controller_identity_aligned",
-  "publicationRequirement": "The approved controller identity now matches the current public HIPStudio notice. Remaining production privacy work is limited to form-specific processing details such as lawful basis, retention and processors/subprocessors.",
+  "publicationState": "controller_and_quote_privacy_aligned",
+  "privacyGovernance": "content/privacy-governance.json",
+  "publicationRequirement": "Controller identity matches the current public HIPStudio notice. Quote-form lawful basis, retention, processors and localized privacy disclosures are governed separately in content/privacy-governance.json and are implemented in the generated platform.",
   "notes": [
-    "Németh Tímea is represented as owner/managing director/contact person, not as the data controller in her individual capacity.",
+    "Németh Tímea is represented as owner/managing director/privacy contact person, not as the data controller in her individual capacity.",
     "Company registration and tax identifiers remain attached to Hipstudió Kft.",
     "No individual home address or other personal identifier is invented or inferred."
   ]
