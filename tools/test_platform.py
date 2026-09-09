@@ -20,6 +20,7 @@ def build(env=None):
     subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/enrich_solution_depth.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_platform_evidence.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=e,check=True,capture_output=True,text=True)
 
@@ -38,6 +39,11 @@ def assert_review():
     assert manifest['solutionDepth']['solutions']==5
     assert manifest['solutionDepth']['localizedPages']==15
     assert manifest['solutionDepth']['publicPricing'] is False
+    assert manifest['evidenceLayer']['version']=='evidence-registry-v1'
+    assert manifest['evidenceLayer']['publishableQualified']==4
+    assert manifest['evidenceLayer']['caseStudiesPublished']==0
+    assert manifest['evidenceLayer']['enrichedPages']==9
+    assert manifest['evidenceLayer']['logoIsNotCaseStudy'] is True
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['solutions']==5
     assert manifest['serviceInventory']['version']=='unified-service-inventory-v1'
@@ -93,6 +99,13 @@ def assert_review():
     assert 'Egy HIPStudio. Három szakmai pillér.' in home
     assert 'data-commercial-layer="problem-led-home"' in home
     assert 'HelloÜzlet |' not in home
+    about=(D/'hu/rolunk/index.html').read_text()
+    assert 'data-evidence-layer="source-backed"' in about
+    assert 'Evidence ID: hipstudio-founded-2006' in about
+    experiences=(D/'hu/vallalati-elmenyek/index.html').read_text()
+    assert 'data-evidence-layer="source-backed"' in experiences
+    assert 'Evidence ID: flugos-historical-programme-scale' in experiences
+    assert 'client-01' not in experiences
     for quote_path in ['/hu/ajanlatkeres/','/en/request-a-quote/','/de/angebot-anfragen/']:
         html=(D/quote_path.strip('/')/'index.html').read_text()
         assert 'info@hipstudio.hu' in html
@@ -128,6 +141,7 @@ def assert_quote_endpoint_gate():
     subprocess.run(['python3','tools/enrich_platform_commercial.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_solutions.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/enrich_solution_depth.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
+    subprocess.run(['python3','tools/enrich_platform_evidence.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     subprocess.run(['python3','tools/build_platform_services.py'],cwd=R,env=env,check=True,capture_output=True,text=True)
     p=subprocess.run(['python3','tools/build_quote_request.py'],cwd=R,env=env,capture_output=True,text=True)
     assert p.returncode != 0
@@ -140,6 +154,8 @@ def assert_isolated_production_contract():
     assert manifest['mode']=='production'
     assert manifest['commercialContent']['version']=='commercial-content-v1'
     assert manifest['solutionDepth']['version']=='solution-depth-v1'
+    assert manifest['evidenceLayer']['version']=='evidence-registry-v1'
+    assert manifest['evidenceLayer']['caseStudiesPublished']==0
     assert len(manifest['pages'])==EXPECTED_PAGES
     assert manifest['quoteRequest']['endpointConfigured'] is True
     assert (D/'robots.txt').read_text()=='User-agent: *\nAllow: /\n'
