@@ -35,6 +35,7 @@ jobs:
       - run: npm run test:release-gates
       - run: npm run test:legal-controller
       - run: npm run test:privacy-governance
+      - run: npm run test:privacy-pages
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
