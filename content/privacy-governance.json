@@ -1,5 +1,5 @@
 {
-  "version": "hipstudio-privacy-v1",
+  "version": "hipstudio-privacy-v2",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
@@ -56,10 +56,10 @@
         "productionRequired": true
       },
       {
-        "service": "Vercel",
-        "purpose": "a hipstudio.hu és később a flugos.hu külön projektben történő webhosztolása, kapcsolati és biztonsági naplók",
+        "service": "GitHub Pages / repository-connected static hosting",
+        "purpose": "a hipstudio.hu statikus weboldalának kiszolgálása a HIPSTUDIO repóból",
         "productionRequired": true,
-        "architecture": "separate_projects_per_domain"
+        "architecture": "single_master_site"
       }
     ],
     "internationalTransfers": "Globális szolgáltató esetén az aktív szolgáltatói szerződés és beállítás szerinti jogszerű adattovábbítási mechanizmust kell alkalmazni; a publikus tájékoztató nem állíthat többet a tényleges szerződésnél és fiókbeállításnál.",
@@ -69,15 +69,17 @@
   "domainArchitecture": {
     "hipstudio": {
       "domain": "https://www.hipstudio.hu",
-      "hosting": "Vercel",
-      "project": "dedicated_project",
-      "role": "master_platform"
+      "hosting": "repository_connected_static_hosting",
+      "repository": "880rzz/HIPSTUDIO",
+      "role": "master_platform",
+      "directDomainConnection": true
     },
     "flugos": {
       "domain": "https://www.flugos.hu",
-      "hosting": "Vercel",
-      "project": "separate_dedicated_project",
-      "role": "specialist_brand_domain",
+      "role": "specialist_brand_entry_domain",
+      "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
+      "behavior": "permanent_redirect_to_hipstudio_flugos_page",
+      "separateWebsite": false,
       "activateAtFinalCutover": true
     }
   },
