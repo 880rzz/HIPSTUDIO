@@ -1,0 +1,31 @@
+{
+  "version": "legal-controller-v1",
+  "status": "review",
+  "effectiveTarget": {
+    "controllerName": "Németh Tímea",
+    "basis": "owner_instruction_2026-09-09",
+    "publicContact": {
+      "email": "info@hipstudio.hu",
+      "phone": "+36 30 221 5506",
+      "website": "https://www.hipstudio.hu/",
+      "studioAddress": "1111 Budapest, Lágymányosi utca 15."
+    }
+  },
+  "currentPublicNotice": {
+    "source": "https://www.hipstudio.hu/impresszum",
+    "checked": "2026-09-09",
+    "controllerName": "Hipstudió Korlátolt Felelősségű Társaság",
+    "shortName": "Hipstudió Kft.",
+    "registeredOffice": "1081 Budapest, Népszínház u. 25. Fe. 2.",
+    "companyRegistrationNumber": "01-09-907275",
+    "taxNumber": "14513938-2-42",
+    "registryCourt": "Fővárosi Törvényszék Cégbírósága"
+  },
+  "publicationState": "blocked_notice_mismatch",
+  "publicationRequirement": "Before production, the public privacy/imprint notice must name the same controller as the approved target and must not assign Hipstudió Kft. company identifiers to Németh Tímea as an individual.",
+  "notes": [
+    "Shared HIPStudio contact information may be reused as public contact information.",
+    "Company registration and tax identifiers remain attached to Hipstudió Kft. unless a verified legal basis says otherwise.",
+    "No individual home address or other personal identifier is invented or inferred."
+  ]
+}
