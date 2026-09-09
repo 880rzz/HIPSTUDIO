@@ -1,5 +1,5 @@
 {
-  "version": "production-release-gates-v3",
+  "version": "production-release-gates-v4",
   "status": "review",
   "masterDomain": "https://www.hipstudio.hu",
   "principle": "No production switch is inferred from a green CI run. Every external dependency must be verified explicitly.",
@@ -9,7 +9,7 @@
     {"id":"public-pricing","state":"ready","owner":"repository","requirement":"No public package pricing or automatic price calculator is exposed."},
     {"id":"evidence-governance","state":"ready","owner":"repository","requirement":"Client, result, testimonial and heritage claims are evidence-gated."},
     {"id":"business-provider","state":"ready_with_restrictions","owner":"business","requirement":"Unsupported direct-provider and regulated-responsibility wording remains blocked until service-level evidence is approved."},
-    {"id":"privacy-legal","state":"ready_with_form_details_pending","owner":"business","requirement":"Controller identity is approved as Hipstudió Kft. and matches the current public notice. Before live quote submission, confirm form-specific lawful basis, retention and processors/subprocessors."},
+    {"id":"privacy-legal","state":"blocked_form_privacy_details","owner":"business","requirement":"Controller identity is approved as Hipstudió Kft. and matches the current public notice. Before live quote submission, confirm and publish the form-specific lawful basis, retention period and processors/subprocessors."},
     {"id":"quote-e2e","state":"blocked_external_verification","owner":"operations","requirement":"Verify browser POST to Apps Script, Sheet append, internal notifications, customer confirmation and info@ Send-As/Reply-To in the live environment."},
     {"id":"legacy-url-inventory","state":"blocked_flugos_inventory_only","owner":"migration","requirement":"HelloÜzlet is confirmed retired and no longer requires an export. Obtain the authoritative Flúgos URL export/crawl and classify the remaining Flúgos source URLs before activating its redirects."},
     {"id":"hosting-headers","state":"blocked_hosting_choice","owner":"infrastructure","requirement":"Select production hosting and verify TLS, cache policy, security headers, canonical host, 404/410 behavior and real 301 rules."},
