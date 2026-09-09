@@ -1,7 +1,7 @@
 name: Validate unpublished migration and unified platform
 on:
   push:
-    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening, feat/flagship-solution-deepening, feat/evidence-reference-layer, feat/legacy-url-migration-matrix, feat/business-provider-responsibility-matrix, feat/production-readiness-hardening]
+    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening, feat/flagship-solution-deepening, feat/evidence-reference-layer, feat/legacy-url-migration-matrix, feat/business-provider-responsibility-matrix, feat/production-readiness-hardening, feat/legal-controller-and-retired-hello]
   pull_request:
   workflow_dispatch:
 concurrency:
@@ -33,6 +33,7 @@ jobs:
       - run: npm run test:evidence
       - run: npm run test:business-provider
       - run: npm run test:release-gates
+      - run: npm run test:legal-controller
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
