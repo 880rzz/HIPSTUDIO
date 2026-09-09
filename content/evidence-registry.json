@@ -1,0 +1,81 @@
+{
+  "version": "evidence-registry-v1",
+  "status": "review",
+  "policy": {
+    "publishOnlyWithItemEvidence": true,
+    "logoIsNotCaseStudy": true,
+    "historicalClaimsMustBeTimeQualified": true,
+    "noInventedClientsResultsTestimonials": true,
+    "caseStudyRequires": ["client_or_anonymized_subject_approval", "problem_evidence", "delivered_scope_evidence", "result_evidence_or_result_omitted", "publication_approval"]
+  },
+  "evidence": [
+    {
+      "id": "hipstudio-founded-2006",
+      "type": "heritage_fact",
+      "status": "publishable_qualified",
+      "claim": {
+        "hu": "A HIPStudio 2006. február 27. óta működő márka.",
+        "en": "HIPStudio has operated since 27 February 2006.",
+        "de": "HIPStudio besteht seit dem 27. Februar 2006."
+      },
+      "sourceRefs": ["provenance:hipstudio-founded"],
+      "allowedSurfaces": ["home", "about", "creative"],
+      "qualification": "heritage"
+    },
+    {
+      "id": "hipstudio-founder",
+      "type": "heritage_fact",
+      "status": "publishable_qualified",
+      "claim": {
+        "hu": "A HIPStudio alapítója Bánhalmi Norbert.",
+        "en": "HIPStudio was founded by Bánhalmi Norbert.",
+        "de": "HIPStudio wurde von Bánhalmi Norbert gegründet."
+      },
+      "sourceRefs": ["provenance:hipstudio-founder"],
+      "allowedSurfaces": ["about"],
+      "qualification": "heritage"
+    },
+    {
+      "id": "flugos-history-2009",
+      "type": "historical_fact",
+      "status": "publishable_qualified",
+      "claim": {
+        "hu": "A Flúgos koncepció története 2009-ben indult.",
+        "en": "The Flúgos concept began in 2009.",
+        "de": "Das Flúgos-Konzept begann 2009."
+      },
+      "sourceRefs": ["audit:FLUGOS_SOURCE_REVIEW"],
+      "allowedSurfaces": ["experiences", "corporate-experience-design", "history"],
+      "qualification": "historical"
+    },
+    {
+      "id": "flugos-historical-programme-scale",
+      "type": "historical_fact",
+      "status": "publishable_qualified",
+      "claim": {
+        "hu": "A források 10 jótékonysági autós futamot, 2 Night Race 4U eseményt, egy KÖKI Terminál futamot, számos vállalati csapatépítőt és összesen több mint 1000 történeti résztvevőt dokumentálnak.",
+        "en": "Sources document 10 charity car rallies, 2 Night Race 4U events, one KÖKI Terminál race, numerous corporate team-building programmes and more than 1,000 historical participants in total.",
+        "de": "Die Quellen dokumentieren 10 Charity-Autorallyes, 2 Night-Race-4U-Veranstaltungen, ein KÖKI-Terminal-Rennen, zahlreiche Firmen-Teambuildings und insgesamt mehr als 1.000 historische Teilnehmende."
+      },
+      "sourceRefs": ["audit:FLUGOS_SOURCE_REVIEW"],
+      "allowedSurfaces": ["experiences", "corporate-experience-design", "history"],
+      "qualification": "historical"
+    }
+  ],
+  "caseStudies": [],
+  "pendingEvidence": [
+    {
+      "id": "historical-client-logos",
+      "type": "logo_inventory",
+      "status": "not_case_study",
+      "sourceRef": "audit/client-logo-manifest.json",
+      "rule": "Historical logos may evidence that a logo appeared on the legacy partners page, but do not establish a current relationship, endorsement, project scope or result."
+    },
+    {
+      "id": "named-client-case-studies",
+      "type": "case_study_set",
+      "status": "blocked_pending_item_evidence",
+      "required": ["named client approval or approved anonymization", "scope evidence", "date/context", "result evidence if any result is claimed", "approved media rights"]
+    }
+  ]
+}
