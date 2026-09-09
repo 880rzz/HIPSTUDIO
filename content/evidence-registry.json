@@ -1,0 +1,68 @@
+{
+  "version": "evidence-registry-v1",
+  "status": "review",
+  "policy": "Only claims with an identified, reviewable source and appropriate usage rights may be published. Historical presence is not evidence of a current client relationship, endorsement or measurable outcome.",
+  "publicationStatuses": ["verified_public_fact", "approved_media", "historical_reference_only", "pending_review", "unpublished"],
+  "rules": {
+    "clientResult": "Requires item-level evidence for the client identity if named, the project relationship, the result or metric, and any quotation used.",
+    "testimonial": "Requires a attributable source and explicit publication approval; never infer wording from project history or logos.",
+    "currentRelationship": "Requires current relationship evidence. Historical logos or archived pages are insufficient.",
+    "media": "Requires source provenance plus publication-rights approval. Pending or unresolved provenance media must not be used as portfolio evidence.",
+    "historicalReference": "May establish historical presence on a source page only; it must be time-qualified and must not imply endorsement, current engagement or performance.",
+    "regulatedResponsibility": "Requires separate provider, contracting-party and professional-responsibility verification before publication as an own-delivery claim."
+  },
+  "evidenceSets": [
+    {
+      "key": "hipstudio-heritage",
+      "status": "verified_public_fact",
+      "supports": ["hipstudio-founded", "hipstudio-founder"],
+      "sources": ["content/provenance.json", "audit/entity-source-records.json"],
+      "allowedUse": "HIPStudio founding date, 2006 heritage and founder attribution only as described by the cited source records."
+    },
+    {
+      "key": "professional-partners",
+      "status": "verified_public_fact",
+      "supports": ["professional-partners"],
+      "sources": ["content/provenance.json", "content/people.json", "audit/entity-source-records.json", "audit/client-logo-manifest.json"],
+      "allowedUse": "Named professional-partner descriptions already present in people.json. Specific project roles remain agreement-dependent."
+    },
+    {
+      "key": "portfolio-media",
+      "status": "approved_media",
+      "supports": ["portfolio-media"],
+      "sources": ["content/provenance.json", "content/approvals.json", "content/images.json"],
+      "allowedUse": "Approved portfolio imagery according to item-level metadata and rights records. Does not by itself prove a named client relationship, result or endorsement."
+    },
+    {
+      "key": "historical-partner-logos",
+      "status": "historical_reference_only",
+      "supports": ["historical-logo-display"],
+      "sources": ["audit/client-logo-manifest.json"],
+      "allowedUse": "Historical/reference display only with non-endorsement language. Must not be used to assert a current customer, partner, client outcome or ongoing engagement."
+    },
+    {
+      "key": "pending-media",
+      "status": "pending_review",
+      "supports": [],
+      "sources": ["audit/pending-images.json"],
+      "allowedUse": "None in public portfolio or case-study evidence until the pending reason is resolved and the item is moved into the approved media inventory."
+    },
+    {
+      "key": "case-studies",
+      "status": "unpublished",
+      "supports": [],
+      "sources": ["content/case_studies.json", "content/case-study.schema.json"],
+      "allowedUse": "No public case study until the individual record is approved and every factual claim and media reference has evidence. Current inventory contains no approved case-study items."
+    }
+  ],
+  "publicClaimClasses": {
+    "heritage": ["hipstudio-heritage"],
+    "people": ["professional-partners"],
+    "portfolio": ["portfolio-media"],
+    "historicalReferences": ["historical-partner-logos"],
+    "caseStudies": [],
+    "clientResults": [],
+    "testimonials": [],
+    "currentClientRelationships": []
+  }
+}
