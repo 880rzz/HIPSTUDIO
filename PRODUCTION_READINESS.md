@@ -15,7 +15,7 @@ Green CI means the code behaved. It does not mean DNS should suddenly develop co
 - No public pricing.
 - Evidence-gated client/result/testimonial claims.
 - Business provider/responsibility matrix covering every Business service.
-- Legal-controller governance with an owner-approved target and explicit public-notice mismatch protection.
+- Legal-controller governance aligned with the owner-approved controller: Hipstudió Kft. Németh Tímea remains owner/managing director/contact person, not the controller in her individual capacity.
 - Review-safe legacy URL decision matrix; no blanket redirects.
 - HelloÜzlet recorded as a retired source; no artificial export blocker remains.
 - Guided quote-request frontend and deterministic human-reviewed routing backend.
@@ -25,7 +25,7 @@ Green CI means the code behaved. It does not mean DNS should suddenly develop co
 
 ## External gates before production
 
-1. **Privacy notice alignment** — the owner-approved controller target is Németh Tímea, while the current public HIPStudio notice still names Hipstudió Kft. This must be aligned before live form submission. Company registration/tax identifiers must stay attached to Hipstudió Kft. unless a verified legal basis says otherwise.
+1. **Quote-form privacy details** — controller identity is resolved as Hipstudió Kft. Before live personal-data collection, confirm and publish the form-specific lawful basis, retention period and processors/subprocessors. This remains a blocking gate until documented.
 2. **Quote E2E verification** — test the real browser submission against the Apps Script deployment and verify Sheet write, internal mail, customer confirmation, Reply-To and `info@hipstudio.hu` Send-As behavior.
 3. **Flúgos URL inventory** — obtain the authoritative Flúgos URL export/crawl. HelloÜzlet no longer blocks launch because the owner confirmed the old site is gone.
 4. **Production hosting** — choose the host and verify TLS, canonical host, cache/security headers, real 301/410 behavior and rollback procedure.
@@ -44,7 +44,7 @@ Public copy should sound like a capable human specialist, not a committee, a leg
 - No regulated professional responsibility without named and verified responsibility evidence.
 - No public price list unless the commercial policy is explicitly changed later.
 - No blind redirect of historical Flúgos material to a current sales page.
-- No borrowing a company's identifiers for an individual controller because two legal boxes happen to be next to each other on the same website.
+- Hipstudió Kft. is the approved data controller; company registration and tax identifiers remain attached to the company, not to Németh Tímea personally.
 - Merge is not deploy. Deploy is not DNS. DNS is not indexing. Keeping those four separate is cheaper than learning the distinction during an outage.
 
 The machine-readable source of truth is `content/release-gates.json`.
