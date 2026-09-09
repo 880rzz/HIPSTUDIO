@@ -1,0 +1,110 @@
+{
+  "version": "legacy-url-matrix-v1",
+  "status": "review_only",
+  "activeRedirects": false,
+  "masterOrigin": "https://www.hipstudio.hu",
+  "inventoryStatus": {
+    "https://www.hellouzlet.hu": {
+      "complete": false,
+      "reason": "The public site could not be reliably crawled or enumerated from current web search. Do not activate redirects until a source URL export/crawl is obtained."
+    },
+    "https://www.flugos.hu": {
+      "complete": false,
+      "reason": "Several live and historical URLs are verified, but no authoritative full URL export has yet been obtained from Wix or hosting."
+    }
+  },
+  "decisionClasses": [
+    "planned_301",
+    "archive_preserve",
+    "preserve_until_archive_mirrored",
+    "candidate_410_after_review",
+    "needs_inventory"
+  ],
+  "rules": [
+    "No redirect is active in this file.",
+    "Never blanket-redirect all legacy paths to the HIPStudio homepage.",
+    "A planned 301 requires content-intent equivalence or an explicitly approved consolidation target.",
+    "Historical Flúgos material must retain historical context and must not become a current-event or current-offer claim by redirect alone.",
+    "A 410 classification requires explicit review that no useful equivalent, archive or search/user value remains.",
+    "Query strings and downloadable-file URLs are reviewed separately from normal HTML routes."
+  ],
+  "entries": [
+    {
+      "source": "https://www.hellouzlet.hu/",
+      "sourceType": "html_entrypoint",
+      "observed": "domain_known_not_live_verified_in_this_inventory",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/uzleti-mukodes/",
+      "confidence": "medium",
+      "rationale": "HelloÜzlet is the former Business entrypoint and is approved as a migration source, not as the master brand.",
+      "activationGate": "Obtain authoritative HelloÜzlet URL inventory and verify root target equivalence before cutover."
+    },
+    {
+      "source": "https://www.flugos.hu/",
+      "sourceType": "html_entrypoint",
+      "observed": "live_verified_2026-09-09",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
+      "confidence": "high",
+      "rationale": "Current Flúgos root acts as the specialist experience/event entrypoint; the new HIPStudio Experiences pillar is the approved current B2B destination.",
+      "activationGate": "Verify final Experiences page content, canonical state and production hosting before cutover."
+    },
+    {
+      "source": "https://www.flugos.hu/rendezvenyszervezes",
+      "sourceType": "html_route",
+      "observed": "linked_from_live_root_2026-09-09_fetch_inconclusive",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
+      "confidence": "medium",
+      "rationale": "The route is linked as the event-organising entrypoint from the current Flúgos site and appears aligned with the current Experiences pillar.",
+      "activationGate": "Fetch/export the exact source page and confirm content-intent equivalence before activation."
+    },
+    {
+      "source": "https://www.flugos.hu/flugos-futam",
+      "sourceType": "html_history_route",
+      "observed": "live_verified_2026-09-09",
+      "decision": "archive_preserve",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-heritage/",
+      "confidence": "high",
+      "rationale": "The source page is primarily Flúgos Futam history and 2009-2019 heritage. Redirecting it to a current sales page would erase historical intent.",
+      "activationGate": "Confirm the generated heritage page contains the required historical facts and no current-event implication."
+    },
+    {
+      "source": "https://www.flugos.hu/_files/ugd/279667_282489bc8248449db8288b358ac8342e.pdf",
+      "sourceType": "historical_pdf",
+      "observed": "verified_public_source",
+      "decision": "preserve_until_archive_mirrored",
+      "target": null,
+      "confidence": "high",
+      "rationale": "The 10-year anniversary PDF is a primary historical source and should remain accessible until an equivalent archived copy/download exists on the HIPStudio production host.",
+      "activationGate": "Mirror with rights/provenance retained, then decide whether to 301 the PDF URL to the archived file or keep it served from the legacy origin."
+    },
+    {
+      "source": "https://www.flugos.hu/_files/ugd/279667_048f98564e214407aa70b03dc824a35b.pdf",
+      "sourceType": "historical_pdf",
+      "observed": "verified_public_source",
+      "decision": "archive_preserve",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/",
+      "confidence": "high",
+      "rationale": "The document is explicitly the 2019 rules and participation conditions; the existing 2019 archive page is the closest historical destination.",
+      "activationGate": "Preserve the original PDF as evidence/download or link it from the 2019 archive before any redirect."
+    },
+    {
+      "source": "https://www.flugos.hu/_files/ugd/279667_6432dff7056c4fada4814e740165742b.doc?dn=NevezesiLap2019.doc",
+      "sourceType": "historical_application_document",
+      "observed": "linked_from_live_history_page_2026-09-09",
+      "decision": "candidate_410_after_review",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/",
+      "confidence": "medium",
+      "rationale": "A 2019 registration form can mislead users if left as an actionable document. The 2019 archive page preserves historical context better.",
+      "activationGate": "Confirm no archival/legal reason requires retaining the downloadable form; otherwise preserve as non-actionable archive evidence instead of returning 410."
+    }
+  ],
+  "nextInventoryActions": [
+    "Export or crawl the full HelloÜzlet URL set from its hosting/CMS/search-console source.",
+    "Export the full Flúgos Wix page/file URL set, including hidden and legacy routes.",
+    "Classify every discovered URL individually and reconcile duplicates, query variants and downloadable files.",
+    "Run a target existence/canonical check against the final production build.",
+    "Generate server-specific redirect rules only after production approval."
+  ]
+}
