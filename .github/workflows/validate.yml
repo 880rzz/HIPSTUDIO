@@ -1,7 +1,7 @@
 name: Validate unpublished migration and unified platform
 on:
   push:
-    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening]
+    branches: [codex/hipstudio-static-migration, feat/unified-business-platform, feat/unified-content-migration, feat/hipstudio-master-brand, feat/commercial-content-deepening, feat/flagship-solution-deepening]
   pull_request:
   workflow_dispatch:
 concurrency:
@@ -28,6 +28,7 @@ jobs:
       - run: npm run test:master-brand
       - run: npm run test:domain-migration
       - run: npm run test:commercial-content
+      - run: npm run test:solution-depth
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
