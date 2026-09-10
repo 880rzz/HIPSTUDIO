@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build:platform",
+  "buildCommand": "python3 tools/assert_vercel_build.py && npm run build:platform",
   "outputDirectory": "dist-platform",
   "headers": [
     {
