@@ -29,19 +29,20 @@ Green CI means the code behaved. It does not mean DNS should suddenly develop co
 
 ## Domain and hosting architecture
 
-- `hipstudio.hu` is the master site and will be connected directly to the static build from repository `880rzz/HIPSTUDIO` through the repository-connected production hosting path.
-- `flugos.hu` is not a separate website. It is a specialist entry domain for Flúgos by HIPStudio.
-- The intended Flúgos destination is `https://www.hipstudio.hu/hu/vallalati-elmenyek/`.
-- The final `flugos.hu` behavior is a real permanent redirect to that HIPStudio Flúgos page after the master site is accepted.
-- A separate Flúgos content stack, duplicate SEO site or duplicate quote flow must not be created.
+- `hipstudio.hu` is the master site and will run from repository `880rzz/HIPSTUDIO` in its own dedicated Vercel project.
+- `flugos.hu` will also receive its own dedicated Vercel project at final cutover.
+- The Flúgos Vercel project is an infrastructure boundary, not a duplicated content/SEO platform. The commercial Flúgos service content remains inside the HIPStudio master platform.
+- The current intended master destination for the Flúgos pillar is `https://www.hipstudio.hu/hu/vallalati-elmenyek/`.
+- Final `flugos.hu` behavior — direct entry page, permanent redirect, or a combination for legacy paths — must be verified against the completed Flúgos URL inventory before DNS activation.
+- A duplicate Flúgos service catalogue, duplicate SEO corpus or second independent quote flow must not be created unless the owner later changes the architecture explicitly.
 
 ## External gates before production
 
 1. **Quote E2E verification** — test the real browser submission against the Apps Script deployment and verify Sheet write, internal mail, customer confirmation, Reply-To and `info@hipstudio.hu` Send-As behavior.
-2. **Flúgos URL inventory** — obtain the authoritative remaining Flúgos URL export/crawl before activating redirects for historical URLs. The root-domain destination is already decided.
-3. **Repository-connected hosting acceptance** — serve the release candidate from the repository-connected host and verify TLS, canonical host, cache/security headers, 404 behavior and rollback procedure.
+2. **Flúgos URL inventory** — obtain the authoritative remaining Flúgos URL export/crawl and classify every legacy URL for preserve, redirect or 410 behavior.
+3. **HIPStudio Vercel staging** — create a dedicated HIPSTUDIO Vercel project, deploy the review candidate and verify TLS, canonical host, cache/security headers, 404 behavior and rollback procedure.
 4. **HIPStudio DNS cutover** — connect `hipstudio.hu` only after the previous gates pass.
-5. **Flúgos domain cutover** — after HIPStudio is live and accepted, connect `flugos.hu` as a permanent entry redirect to the HIPStudio Flúgos page.
+5. **Flúgos Vercel staging and domain cutover** — create/connect the separate Flúgos Vercel project only at the end, then verify its final entry/redirect behavior before pointing `flugos.hu`.
 6. **Indexing** — only after cutover: remove review noindex, publish the production sitemap, verify canonicals/redirects and then enable search-engine discovery.
 
 ## Copy standard
@@ -54,9 +55,9 @@ Public copy should sound like a capable human specialist, not a committee, a leg
 - No guaranteed savings, grant success, compliance, reach, lead or revenue result.
 - No regulated professional responsibility without named and verified responsibility evidence.
 - No public price list unless the commercial policy is explicitly changed later.
-- No blind redirect of historical Flúgos material to a current sales page; only the root entry-domain destination is pre-approved.
+- No blind redirect of historical Flúgos material to a current sales page.
 - Hipstudió Kft. is the approved data controller; company registration and tax identifiers remain attached to the company, not to Németh Tímea personally.
-- `flugos.hu` is an entry domain, not a second site.
+- Separate Vercel projects do not mean separate competing content platforms.
 - Merge is not deploy. Deploy is not DNS. DNS is not indexing. Keeping those four separate is cheaper than learning the distinction during an outage.
 
 The machine-readable source of truth is `content/release-gates.json`.
