@@ -12,13 +12,19 @@ for lang,route in P['publication']['routes'].items():
     assert 'Hipstudió Kft.' in h
     assert 'Németh Tímea' in h
     assert 'info@hipstudio.hu' in h
-    assert '2026-09-09' in h
+    assert '2026-09-10' in h
 quote={'hu':'/hu/ajanlatkeres/','en':'/en/request-a-quote/','de':'/de/angebot-anfragen/'}
 for lang,route in quote.items():
     h=(D/route.strip('/')/'index.html').read_text(encoding='utf-8')
     assert P['publication']['routes'][lang] in h, f'quote page missing privacy link: {lang}'
+en=(D/'en/privacy/index.html').read_text(encoding='utf-8')
+de=(D/'de/datenschutz/index.html').read_text(encoding='utf-8')
+assert 'static website hosting, TLS, CDN' in en
+assert 'Hosting der statischen Website, TLS, CDN' in de
+assert 'ajánlatkérő backend, validáció' not in en
+assert 'ajánlatkérő backend, validáció' not in de
 manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
 assert manifest['privacy']['controller']=='Hipstudió Kft.'
 assert manifest['privacy']['contactPerson']=='Németh Tímea'
 assert manifest['privacy']['quoteLinked'] is True
-print('Generated privacy pages OK: localized notices and quote links verified')
+print('Generated privacy pages OK: localized notices, processors and quote links verified')
