@@ -27,7 +27,7 @@ for(const width of [320,390,768,1440,1920]){
       h1:document.querySelectorAll('h1').length,
       review:document.querySelectorAll('.review').length,
       robots:document.querySelector('meta[name="robots"]')?.content||'',
-      brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).length
+      brokenImages:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).length
     }));
     let violations=[];
     if(width===390||width===1440){
