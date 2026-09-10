@@ -29,6 +29,17 @@ for p in DST.rglob('*.html'):
         p.write_text(rewritten,encoding='utf-8')
         changed+=n
 
-# GitHub Pages serves unknown paths through its own 404 handling; preserve our custom
-# document for manual QA as well.
-print(f'Prepared GitHub Pages review artifact: prefix={PREFIX}/ rewritten_attributes={changed}')
+# The GitHub Pages environment link opens the repository root, so provide a real
+# review entry point instead of requiring reviewers to guess a language path.
+root_index=DST/'index.html'
+root_index.write_text(
+    '<!doctype html><html lang="hu"><head><meta charset="utf-8">'
+    '<meta name="robots" content="noindex,nofollow">'
+    '<meta http-equiv="refresh" content="0; url=/HIPSTUDIO/hu/">'
+    '<title>HIPStudio review</title></head><body>'
+    '<p><a href="/HIPSTUDIO/hu/">HIPStudio review megnyitása</a></p>'
+    '</body></html>',
+    encoding='utf-8'
+)
+
+print(f'Prepared GitHub Pages review artifact: prefix={PREFIX}/ rewritten_attributes={changed}; root entry created')
