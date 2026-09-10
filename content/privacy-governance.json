@@ -1,5 +1,5 @@
 {
-  "version": "hipstudio-privacy-v4",
+  "version": "hipstudio-privacy-v5",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
@@ -56,10 +56,10 @@
         "productionRequired": true
       },
       {
-        "service": "Vercel",
-        "purpose": "a statikus weboldal kiszolgálása, TLS, CDN és szükséges kapcsolati/biztonsági naplók",
+        "service": "GitHub Pages / GitHub",
+        "purpose": "a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból",
         "productionRequired": true,
-        "architecture": "separate_vercel_projects_for_hipstudio_and_flugos"
+        "architecture": "hipstudio_from_github_repository_via_pages"
       }
     ],
     "internationalTransfers": "Globális szolgáltató esetén az aktív szolgáltatói szerződés és beállítás szerinti jogszerű adattovábbítási mechanizmust kell alkalmazni; a publikus tájékoztató nem állíthat többet a tényleges szerződésnél és fiókbeállításnál.",
@@ -69,10 +69,10 @@
   "domainArchitecture": {
     "hipstudio": {
       "domain": "https://www.hipstudio.hu",
-      "hosting": "vercel",
+      "hosting": "github_pages",
       "repository": "880rzz/HIPSTUDIO",
       "role": "master_platform",
-      "separateVercelProject": true,
+      "publication": "github_pages_from_repository",
       "activateAtFinalCutover": true
     },
     "flugos": {
@@ -94,6 +94,6 @@
     },
     "quoteFormMustLinkNotice": true,
     "productionFormActivationAllowed": true,
-    "condition": "A publikált tájékoztató, a tényleges backend, a Vercel hosting és az aktuális szolgáltatói konfiguráció egyezzen; az E2E gate ettől külön továbbra is kötelező."
+    "condition": "A publikált tájékoztató, a tényleges backend, a GitHub Pages hosting és az aktuális szolgáltatói konfiguráció egyezzen; az E2E gate ettől külön továbbra is kötelező."
   }
 }
