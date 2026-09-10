@@ -1,5 +1,5 @@
 {
-  "version": "hipstudio-privacy-v5",
+  "version": "hipstudio-privacy-v6",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
@@ -21,6 +21,17 @@
     "name": "Németh Tímea",
     "role": "tulajdonos / ügyvezető / adatvédelmi kapcsolattartó",
     "capacity": "contact_person_not_individual_controller"
+  },
+  "supervisoryAuthority": {
+    "name": "Nemzeti Adatvédelmi és Információszabadság Hatóság",
+    "shortName": "NAIH",
+    "address": "1055 Budapest, Falk Miksa utca 9-11.",
+    "postalAddress": "1363 Budapest, Pf. 9.",
+    "email": "ugyfelszolgalat@naih.hu",
+    "phone": "+36 1 391 1400",
+    "website": "https://www.naih.hu/",
+    "source": "https://www.naih.hu/",
+    "verified": "2026-09-10"
   },
   "quoteForm": {
     "purpose": "Kapcsolatfelvétel, ajánlatkérés megválaszolása, az ügyfél kérésére történő szerződéskötést megelőző lépések és az ajánlat elkészítése.",
@@ -63,7 +74,7 @@
       }
     ],
     "internationalTransfers": "Globális szolgáltató esetén az aktív szolgáltatói szerződés és beállítás szerinti jogszerű adattovábbítási mechanizmust kell alkalmazni; a publikus tájékoztató nem állíthat többet a tényleges szerződésnél és fiókbeállításnál.",
-    "rights": ["hozzáférés", "helyesbítés", "törlés", "korlátozás", "adathordozhatóság a jogszabályi feltételek szerint", "tiltakozás a jogos érdeken alapuló adatkezelés ellen"],
+    "rights": ["hozzáférés", "helyesbítés", "törlés", "korlátozás", "adathordozhatóság a jogszabályi feltételek szerint", "tiltakozás a jogos érdeken alapuló adatkezelés ellen", "panasz benyújtása a felügyeleti hatósághoz"],
     "rightsContact": "info@hipstudio.hu"
   },
   "domainArchitecture": {
