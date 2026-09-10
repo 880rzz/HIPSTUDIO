@@ -1,14 +1,23 @@
 {
-  "version": "legal-controller-v1",
-  "status": "review",
+  "version": "legal-controller-v3",
+  "status": "approved_identity_and_quote_privacy",
   "effectiveTarget": {
-    "controllerName": "Németh Tímea",
+    "controllerName": "Hipstudió Korlátolt Felelősségű Társaság",
+    "shortName": "Hipstudió Kft.",
     "basis": "owner_instruction_2026-09-09",
+    "registeredOffice": "1081 Budapest, Népszínház u. 25. Fe. 2.",
+    "companyRegistrationNumber": "01-09-907275",
+    "taxNumber": "14513938-2-42",
+    "registryCourt": "Fővárosi Törvényszék Cégbírósága",
     "publicContact": {
       "email": "info@hipstudio.hu",
       "phone": "+36 30 221 5506",
       "website": "https://www.hipstudio.hu/",
       "studioAddress": "1111 Budapest, Lágymányosi utca 15."
+    },
+    "contactPerson": {
+      "name": "Németh Tímea",
+      "role": "tulajdonos / ügyvezető / adatvédelmi kapcsolattartó"
     }
   },
   "currentPublicNotice": {
@@ -21,11 +30,12 @@
     "taxNumber": "14513938-2-42",
     "registryCourt": "Fővárosi Törvényszék Cégbírósága"
   },
-  "publicationState": "blocked_notice_mismatch",
-  "publicationRequirement": "Before production, the public privacy/imprint notice must name the same controller as the approved target and must not assign Hipstudió Kft. company identifiers to Németh Tímea as an individual.",
+  "publicationState": "controller_and_quote_privacy_aligned",
+  "privacyGovernance": "content/privacy-governance.json",
+  "publicationRequirement": "Controller identity matches the current public HIPStudio notice. Quote-form lawful basis, retention, processors and localized privacy disclosures are governed separately in content/privacy-governance.json and are implemented in the generated platform.",
   "notes": [
-    "Shared HIPStudio contact information may be reused as public contact information.",
-    "Company registration and tax identifiers remain attached to Hipstudió Kft. unless a verified legal basis says otherwise.",
+    "Németh Tímea is represented as owner/managing director/privacy contact person, not as the data controller in her individual capacity.",
+    "Company registration and tax identifiers remain attached to Hipstudió Kft.",
     "No individual home address or other personal identifier is invented or inferred."
   ]
 }

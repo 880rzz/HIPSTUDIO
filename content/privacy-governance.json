@@ -1,0 +1,115 @@
+{
+  "version": "hipstudio-privacy-v7",
+  "status": "approved_for_quote_flow",
+  "basis": {
+    "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
+    "adaptation": "HIPStudio-specific controller, human contact, quote fields, submission metadata, retention and production processors",
+    "ownerInstructionDate": "2026-09-10"
+  },
+  "controller": {
+    "legalName": "Hipstudió Korlátolt Felelősségű Társaság",
+    "shortName": "Hipstudió Kft.",
+    "registeredOffice": "1081 Budapest, Népszínház u. 25. Fe. 2.",
+    "companyRegistrationNumber": "01-09-907275",
+    "taxNumber": "14513938-2-42",
+    "registryCourt": "Fővárosi Törvényszék Cégbírósága",
+    "email": "info@hipstudio.hu",
+    "phone": "+36 30 221 5506",
+    "website": "https://www.hipstudio.hu/"
+  },
+  "contactPerson": {
+    "name": "Németh Tímea",
+    "role": "tulajdonos / ügyvezető / adatvédelmi kapcsolattartó",
+    "capacity": "contact_person_not_individual_controller"
+  },
+  "supervisoryAuthority": {
+    "name": "Nemzeti Adatvédelmi és Információszabadság Hatóság",
+    "shortName": "NAIH",
+    "address": "1055 Budapest, Falk Miksa utca 9-11.",
+    "postalAddress": "1363 Budapest, Pf. 9.",
+    "email": "ugyfelszolgalat@naih.hu",
+    "phone": "+36 1 391 1400",
+    "website": "https://www.naih.hu/",
+    "source": "https://www.naih.hu/",
+    "verified": "2026-09-10"
+  },
+  "quoteForm": {
+    "purpose": "Kapcsolatfelvétel, ajánlatkérés megválaszolása, az ügyfél kérésére történő szerződéskötést megelőző lépések és az ajánlat elkészítése.",
+    "lawfulBasis": {
+      "primary": "GDPR 6. cikk (1) b) — az érintett kérésére történő szerződéskötést megelőző intézkedések",
+      "security": "GDPR 6. cikk (1) f) — arányos visszaélés-megelőzés, biztonság és hibakezelés",
+      "accountingAfterContract": "GDPR 6. cikk (1) c) — alkalmazandó számviteli és adózási jogi kötelezettség"
+    },
+    "requiredFields": ["name", "company", "email", "preferred_contact", "project_summary", "pillars", "services", "privacy_acknowledged"],
+    "optionalFieldGroups": ["phone", "project_goals", "desired_outcome", "timing", "location", "reference_url", "pillar_specific_scope"],
+    "submissionMetadata": {
+      "fields": ["page_url", "form_started_at", "submitted_at"],
+      "purpose": "Az ajánlatkérés forrásoldalának és beküldési időpontjainak rögzítése a kérés kontextusának megőrzéséhez, hibakereséshez, visszaélés-megelőzéshez és az operatív feldolgozás ellenőrizhetőségéhez.",
+      "retention": "Az ajánlatkéréshez kapcsolt metaadatok az adott megkereséssel azonos megőrzési szabály szerint kezelendők; kizárólag biztonsági naplóként kezelt technikai adatok főszabály szerint legfeljebb 90 napig tarthatók meg, kivéve incidensvizsgálat vagy jogi igény esetén."
+    },
+    "specialCategoryPolicy": "A nyilvános ajánlatkérő űrlap nem kér különleges személyes adatot; a szabad szöveges mezőkben ilyen adat megadását kerülni kell. A vállalati élményprogramok első ajánlatkérése csak általános fizikai, akadálymentesítési, kulturális, időjárási és szervezési korlátokra kérdezhet rá, egészségügyi állapotra vagy diagnózisra nem.",
+    "retention": {
+      "unsuccessfulInquiry": "Az utolsó érdemi kapcsolatot követő 12 hónap, majd törlés vagy anonimizálás.",
+      "successfulProject": "A szerződéses jogviszony ideje, majd az alkalmazandó magyar számviteli, adózási, elévülési és jogi kötelezettségek szerinti idő.",
+      "securityLogs": "Főszabály szerint legfeljebb 90 nap, kivéve incidensvizsgálat vagy jogi igény esetén.",
+      "spamHoneypot": "A csapdamezővel azonosított kéretlen beküldéseket nem kell az ajánlatkérési nyilvántartásba menteni."
+    },
+    "automatedDecisionMaking": "Nincs kizárólag automatizált, joghatással vagy hasonlóan jelentős hatással járó döntéshozatal vagy profilozás. A routing operatív előosztás, emberi felülvizsgálattal.",
+    "processors": [
+      {
+        "service": "Google Apps Script",
+        "purpose": "ajánlatkérő backend, validáció és operatív routing",
+        "productionRequired": true
+      },
+      {
+        "service": "Google Sheets",
+        "purpose": "korlátozott hozzáférésű ajánlatkérési nyilvántartás",
+        "productionRequired": true
+      },
+      {
+        "service": "Google Workspace / Gmail",
+        "purpose": "belső értesítés, ügyfél-visszaigazolás és válaszkommunikáció",
+        "productionRequired": true
+      },
+      {
+        "service": "GitHub Pages / GitHub",
+        "purpose": "a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból",
+        "productionRequired": true,
+        "architecture": "hipstudio_from_github_repository_via_pages"
+      }
+    ],
+    "internationalTransfers": "Globális szolgáltató esetén az aktív szolgáltatói szerződés és beállítás szerinti jogszerű adattovábbítási mechanizmust kell alkalmazni; a publikus tájékoztató nem állíthat többet a tényleges szerződésnél és fiókbeállításnál.",
+    "rights": ["hozzáférés", "helyesbítés", "törlés", "korlátozás", "adathordozhatóság a jogszabályi feltételek szerint", "tiltakozás a jogos érdeken alapuló adatkezelés ellen", "panasz benyújtása a felügyeleti hatósághoz"],
+    "rightsContact": "info@hipstudio.hu"
+  },
+  "domainArchitecture": {
+    "hipstudio": {
+      "domain": "https://www.hipstudio.hu",
+      "hosting": "github_pages",
+      "repository": "880rzz/HIPSTUDIO",
+      "role": "master_platform",
+      "publication": "github_pages_from_repository",
+      "activateAtFinalCutover": true
+    },
+    "flugos": {
+      "domain": "https://www.flugos.hu",
+      "hosting": "vercel",
+      "role": "specialist_entry_domain",
+      "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
+      "behavior": "separate_vercel_entry_project_with_final_redirect_or_entry_behavior_verified_before_cutover",
+      "separateVercelProject": true,
+      "separateContentPlatform": false,
+      "activateAtFinalCutover": true
+    }
+  },
+  "publication": {
+    "routes": {
+      "hu": "/hu/adatvedelem/",
+      "en": "/en/privacy/",
+      "de": "/de/datenschutz/"
+    },
+    "quoteFormMustLinkNotice": true,
+    "productionFormActivationAllowed": true,
+    "condition": "A publikált tájékoztató, a tényleges backend, a GitHub Pages hosting és az aktuális szolgáltatói konfiguráció egyezzen; az E2E gate ettől külön továbbra is kötelező."
+  }
+}

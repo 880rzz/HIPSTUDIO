@@ -1,0 +1,82 @@
+name: Publish HIPStudio review to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hipstudio-pages-review
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse review deploy when a custom Pages domain is active
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          status="$(curl -sS -o /tmp/pages.json -w '%{http_code}' \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")"
+          if [ "$status" = "404" ]; then
+            echo "GitHub Pages is not configured yet; the configure-pages step may enable it for this review deployment."
+          elif [ "$status" = "200" ]; then
+            cname="$(python3 - <<'PY'
+import json
+from pathlib import Path
+p=Path('/tmp/pages.json')
+data=json.loads(p.read_text())
+print((data.get('cname') or '').strip())
+PY
+)"
+            if [ -n "$cname" ]; then
+              echo "Review deployment blocked: GitHub Pages custom domain is active: $cname" >&2
+              exit 1
+            fi
+            echo "No custom Pages domain is active; review deployment may proceed."
+          else
+            echo "Could not safely verify GitHub Pages custom-domain state (HTTP $status). Refusing review deployment." >&2
+            cat /tmp/pages.json >&2 || true
+            exit 1
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Build review-safe HIPStudio site
+        env:
+          BUILD_MODE: review
+          PLATFORM_URL: https://www.hipstudio.hu
+          QUOTE_REQUEST_BASE_URL: https://www.hipstudio.hu
+        run: npm run build:platform
+      - run: npm run test:platform
+      - run: npm run test:privacy-governance
+      - run: npm run test:privacy-pages
+      - run: npm run test:hosting
+      - run: npm run test:html
+      - name: Prepare temporary GitHub Pages project-path artifact
+        run: python3 tools/prepare_pages_review.py
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-pages-review
+      - id: deployment
+        uses: actions/deploy-pages@v4

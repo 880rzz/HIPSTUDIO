@@ -14,6 +14,7 @@ page.on('pageerror',e=>errors.push(e.message));
 page.on('request',r=>{if(!r.url().startsWith(origin)&&!r.url().startsWith('data:'))external.add(r.url())});
 
 const representative=['/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/rolunk/','/hu/megoldasok/','/hu/megoldasok/business-operations-360/','/hu/megoldasok/content-engine/','/hu/szolgaltatasok/','/hu/szolgaltatasok/business/finance-admin/financial-administration/','/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/','/hu/szolgaltatasok/hipstudio/video/conference-streaming/','/hu/szolgaltatasok/flugos/corporate-experience/team-experience/','/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/','/hu/ai-trust/','/hu/kapcsolat/','/hu/ajanlatkeres/'];
+const legalRoutes=new Set(['/hu/adatvedelem/','/en/privacy/','/de/datenschutz/']);
 for(const width of [320,390,768,1440,1920]){
   await page.setViewportSize({width,height:960});
   const paths=width===390?build.pages.map(p=>p.path):representative;
@@ -25,6 +26,7 @@ for(const width of [320,390,768,1440,1920]){
       viewport:innerWidth,
       h1:document.querySelectorAll('h1').length,
       review:document.querySelectorAll('.review').length,
+      robots:document.querySelector('meta[name="robots"]')?.content||'',
       brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).length
     }));
     let violations=[];
@@ -83,4 +85,5 @@ const summary={time:new Date().toISOString(),browser:await browser.version(),tes
 fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
 console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions},null,2));
 await browser.close();
-if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||r.review!==1||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
+const unsafeReviewPage=r=>legalRoutes.has(r.path)?!r.robots.includes('noindex'):r.review!==1;
+if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;

@@ -10,7 +10,7 @@ import json, os, re
 
 R=Path(__file__).resolve().parents[1]
 D=R/'dist'
-QUOTE_BASE=os.environ.get('QUOTE_REQUEST_BASE_URL','https://www.hellouzlet.hu').rstrip('/')
+QUOTE_BASE=os.environ.get('QUOTE_REQUEST_BASE_URL','https://www.hipstudio.hu').rstrip('/')
 LANG={
  'hu':{'slug':'arak','quote':'ajanlatkeres','title':'Egyedi ajánlat','h1':'Minden projekt egyedi. Az ajánlat is az.','lead':'Nem teszünk közzé sablonárakat. A projekt célja, terjedelme, helyszíne, résztvevői, felhasználása, határideje és szükséges szakmai kapacitása alapján 24 órán belül egyedi ajánlatot készítünk.','button':'Részletes ajánlatkérés','label':'Egyedi ajánlat','note':'A végleges díjat minden esetben a jóváhagyott projekt-scope és az írásos ajánlat rögzíti.','faqq':'Miért nincs publikus árlista?','faqa':'Minden projekt scope-ja egyedi. A szolgáltatás, cél, helyszín, résztvevők, felhasználás és határidő alapján 24 órán belül egyedi ajánlatot készítünk.'},
  'en':{'slug':'pricing','quote':'request-a-quote','title':'Tailored quote','h1':'Every project is different. So is the quote.','lead':'We do not publish template prices. We prepare a tailored quote within 24 hours based on objective, scope, location, participants, usage, deadline and required specialist capacity.','button':'Detailed quote request','label':'Tailored quote','note':'The final fee is always defined by the approved project scope and written quote.','faqq':'Why is there no public price list?','faqa':'Every project has a different scope. We prepare a tailored quote within 24 hours based on service, objective, location, participants, usage and deadline.'},

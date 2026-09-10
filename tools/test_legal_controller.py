@@ -3,14 +3,16 @@ from pathlib import Path
 import json
 R=Path(__file__).resolve().parents[1]
 D=json.loads((R/'content/legal-controller.json').read_text())
-assert D['version']=='legal-controller-v1'
-assert D['status']=='review'
-assert D['effectiveTarget']['controllerName']=='Németh Tímea'
+assert D['version']=='legal-controller-v3'
+assert D['status']=='approved_identity_and_quote_privacy'
+assert D['effectiveTarget']['controllerName']=='Hipstudió Korlátolt Felelősségű Társaság'
+assert D['effectiveTarget']['shortName']=='Hipstudió Kft.'
+assert D['effectiveTarget']['companyRegistrationNumber']=='01-09-907275'
+assert D['effectiveTarget']['taxNumber']=='14513938-2-42'
 assert D['effectiveTarget']['publicContact']['email']=='info@hipstudio.hu'
-assert D['effectiveTarget']['publicContact']['phone']=='+36 30 221 5506'
-assert D['currentPublicNotice']['controllerName']=='Hipstudió Korlátolt Felelősségű Társaság'
-assert D['currentPublicNotice']['companyRegistrationNumber']=='01-09-907275'
-assert D['currentPublicNotice']['taxNumber']=='14513938-2-42'
-assert D['publicationState']=='blocked_notice_mismatch'
-assert 'must not assign Hipstudió Kft. company identifiers to Németh Tímea' in D['publicationRequirement']
-print('Legal controller governance OK: target approved; public notice alignment still required')
+assert D['effectiveTarget']['contactPerson']['name']=='Németh Tímea'
+assert D['currentPublicNotice']['controllerName']==D['effectiveTarget']['controllerName']
+assert D['currentPublicNotice']['companyRegistrationNumber']==D['effectiveTarget']['companyRegistrationNumber']
+assert D['publicationState']=='controller_and_quote_privacy_aligned'
+assert D['privacyGovernance']=='content/privacy-governance.json'
+print('Legal controller governance OK: Hipstudió Kft. aligned; quote privacy delegated to approved privacy governance')
