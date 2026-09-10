@@ -6,6 +6,7 @@
     "wix-legal": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.hipstudio.hu/impresszum"},
     "wix-partners": {"type": "versioned extraction and asset record", "path": "audit/client-logo-manifest.json", "url": "https://www.hipstudio.hu/partnereink"},
     "wix-services": {"type": "public source inventory", "path": "audit/source-inventory.json", "url": "https://www.hipstudio.hu/"},
+    "vikospeier-site-context": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.vikospeier.com/", "scope": "Speier Vikó Hungarian professional identity and HIPStudio Hungary contact separation; does not establish ownership, employment or corporate office."},
     "user-approval-pricing": {"type": "documented approval", "path": "audit/pricing-approval.json"},
     "user-approval-media": {"type": "documented approval", "path": "content/approvals.json"}
   },
@@ -13,6 +14,7 @@
     {"id": "hipstudio-founded", "value": "2006-02-27", "sources": ["wikidata-hipstudio", "wix-legal"]},
     {"id": "hipstudio-founder", "value": "Bánhalmi Norbert", "sources": ["wikidata-hipstudio", "wix-legal"]},
     {"id": "professional-partners", "value": ["Bánhalmi Norbert", "Speier Vikó"], "sources": ["wix-legal", "wix-partners"]},
+    {"id": "speier-viko-hipstudio-role", "value": "Independent professional photography partner and photography-services contact; Hungarian HIPStudio contact is distinct from BANHALMI Austria liaison data.", "sources": ["wix-legal", "wix-partners", "vikospeier-site-context"]},
     {"id": "service-catalogue", "value": "content/services.json", "sources": ["wix-services"]},
     {"id": "pricing", "value": "content/pricing.json", "sources": ["user-approval-pricing"]},
     {"id": "portfolio-media", "value": "content/images.json", "sources": ["user-approval-media"]}
@@ -20,6 +22,8 @@
   "limitations": [
     "No client result, testimonial, certification or performance claim is published without item-level evidence.",
     "Historical client or partner logos do not establish a current relationship or endorsement.",
+    "Speier Vikó's HIPStudio partner/contact role does not imply ownership, employment, corporate office or general representation.",
+    "BANHALMI Austria liaison contact data must not be projected into the HIPStudio Hungary contact node.",
     "AI-generated substitute portfolio images are not used."
   ]
 }

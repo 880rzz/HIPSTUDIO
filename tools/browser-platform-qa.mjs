@@ -27,7 +27,7 @@ for(const width of [320,390,768,1440,1920]){
       h1:document.querySelectorAll('h1').length,
       review:document.querySelectorAll('.review').length,
       robots:document.querySelector('meta[name="robots"]')?.content||'',
-      brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).length
+      brokenImages:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).length
     }));
     let violations=[];
     if(width===390||width===1440){
@@ -80,10 +80,11 @@ const prefillScopeVisible=await page.locator('[data-creative-scope]').isVisible(
 const cookies=await context.cookies();
 const storage=await page.evaluate(()=>({localStorage:localStorage.length,sessionStorage:sessionStorage.length}));
 
-const interactions={skipHref,skipFocused,skipTarget,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
-const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,errors,externalRequests:[...external],cookies,storage,interactions};
-fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
-console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions},null,2));
-await browser.close();
 const unsafeReviewPage=r=>legalRoutes.has(r.path)?!r.robots.includes('noindex'):r.review!==1;
-if(results.some(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length)||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
+const pageFailures=results.filter(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length).map(r=>({path:r.path,width:r.width,status:r.status,overflow:r.overflow,brokenImages:r.brokenImages,h1:r.h1,review:r.review,robots:r.robots,violations:r.violations}));
+const interactions={skipHref,skipFocused,skipTarget,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
+const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,pageFailures,errors,externalRequests:[...external],cookies,storage,interactions};
+fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
+console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,statusFailures:results.filter(r=>r.status!==200).length,brokenImageFailures:results.filter(r=>r.brokenImages).length,h1Failures:results.filter(r=>r.h1!==1).length,reviewFailures:results.filter(unsafeReviewPage).length,pageFailures,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions},null,2));
+await browser.close();
+if(pageFailures.length||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
