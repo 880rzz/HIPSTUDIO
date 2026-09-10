@@ -6,7 +6,7 @@
     "wix-legal": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.hipstudio.hu/impresszum"},
     "wix-partners": {"type": "versioned extraction and asset record", "path": "audit/client-logo-manifest.json", "url": "https://www.hipstudio.hu/partnereink"},
     "wix-services": {"type": "public source inventory", "path": "audit/source-inventory.json", "url": "https://www.hipstudio.hu/"},
-    "vikospeier-site-context": {"type": "public professional identity source", "url": "https://www.vikospeier.com/", "scope": "Speier Vikó Hungarian professional identity and HIPStudio Hungary contact separation; does not establish ownership, employment or corporate office."},
+    "vikospeier-site-context": {"type": "versioned extraction record", "path": "audit/entity-source-records.json", "url": "https://www.vikospeier.com/", "scope": "Speier Vikó Hungarian professional identity and HIPStudio Hungary contact separation; does not establish ownership, employment or corporate office."},
     "user-approval-pricing": {"type": "documented approval", "path": "audit/pricing-approval.json"},
     "user-approval-media": {"type": "documented approval", "path": "content/approvals.json"}
   },
