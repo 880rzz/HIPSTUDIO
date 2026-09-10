@@ -11,6 +11,11 @@ w=workflow.read_text(encoding='utf-8')
 assert 'python3 tools/prepare_pages_review.py' in w
 assert 'path: dist-pages-review' in w
 assert 'path: dist-platform' not in w
+assert 'Refuse review deploy when a custom Pages domain is active' in w
+assert 'https://api.github.com/repos/${GITHUB_REPOSITORY}/pages' in w
+assert "if [ -n \"$cname\" ]" in w
+assert 'Review deployment blocked: GitHub Pages custom domain is active' in w
+assert 'Refusing review deployment' in w
 
 for rel in ['tools/build_platform_services.py','tools/build_quote_request.py','tools/remove_public_pricing.py']:
     text=(R/rel).read_text(encoding='utf-8')
@@ -47,4 +52,4 @@ home=(D/'hu/index.html').read_text(encoding='utf-8')
 assert 'href="/HIPSTUDIO/' in home
 assert 'src="/HIPSTUDIO/' in home or 'href="/HIPSTUDIO/assets/' in home
 
-print('Hosting config OK: HIPStudio GitHub Pages review root and /HIPSTUDIO/ assets work; Flúgos remains separate Vercel infrastructure')
+print('Hosting config OK: GitHub Pages review root/project-path work and custom-domain deploy guard is present; Flúgos remains separate Vercel infrastructure')
