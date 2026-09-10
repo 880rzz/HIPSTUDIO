@@ -12,6 +12,9 @@ for lang,route in P['publication']['routes'].items():
     assert 'Hipstudió Kft.' in h
     assert 'Németh Tímea' in h
     assert 'info@hipstudio.hu' in h
+    assert 'Nemzeti Adatvédelmi és Információszabadság Hatóság' in h
+    assert '1055 Budapest, Falk Miksa utca 9-11.' in h
+    assert 'ugyfelszolgalat@naih.hu' in h
     assert '2026-09-10' in h
 quote={'hu':'/hu/ajanlatkeres/','en':'/en/request-a-quote/','de':'/de/angebot-anfragen/'}
 for lang,route in quote.items():
@@ -19,6 +22,8 @@ for lang,route in quote.items():
     assert P['publication']['routes'][lang] in h, f'quote page missing privacy link: {lang}'
 en=(D/'en/privacy/index.html').read_text(encoding='utf-8')
 de=(D/'de/datenschutz/index.html').read_text(encoding='utf-8')
+assert 'right to lodge a complaint with the supervisory authority' in en
+assert 'Recht, Beschwerde bei der Aufsichtsbehörde einzulegen' in de
 assert 'publishing and serving the static HIPStudio website from the GitHub repository' in en
 assert 'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository' in de
 assert 'Vercel' not in en
@@ -34,4 +39,4 @@ manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
 assert manifest['privacy']['controller']=='Hipstudió Kft.'
 assert manifest['privacy']['contactPerson']=='Németh Tímea'
 assert manifest['privacy']['quoteLinked'] is True
-print('Generated privacy pages OK: GitHub Pages disclosure, localized processors, quote links and no health-data prompt verified')
+print('Generated privacy pages OK: complaint right, GitHub Pages disclosure, localized processors, quote links and no health-data prompt verified')
