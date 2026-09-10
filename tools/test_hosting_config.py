@@ -19,6 +19,10 @@ assert 'Refusing review deployment' in w
 assert 'uses: actions/configure-pages@v5' in w
 assert 'enablement: true' in w
 
+package=(R/'package.json').read_text(encoding='utf-8')
+assert '${BUILD_MODE:-review}' in package
+assert 'python3 tools/assert_production_activation.py' in package
+
 for rel in ['tools/build_platform_services.py','tools/build_quote_request.py','tools/remove_public_pricing.py']:
     text=(R/rel).read_text(encoding='utf-8')
     assert 'https://www.hellouzlet.hu' not in text, rel
@@ -31,7 +35,17 @@ assert P['domainArchitecture']['flugos']['hosting']=='vercel'
 assert P['domainArchitecture']['flugos']['separateVercelProject'] is True
 assert P['domainArchitecture']['flugos']['separateContentPlatform'] is False
 
+# Review builds must remain allowed while release gates are intentionally blocked.
 subprocess.run(['npm','run','build:platform'],cwd=R,check=True)
+
+# A production build must fail closed while any release gate is blocked.
+production_env={'BUILD_MODE':'production','PLATFORM_PUBLICATION_APPROVED':'1','QUOTE_FORM_ENDPOINT':'https://example.invalid/quote'}
+import os
+env=os.environ.copy(); env.update(production_env)
+prod=subprocess.run(['npm','run','build:platform'],cwd=R,env=env,capture_output=True,text=True)
+assert prod.returncode != 0, 'production build unexpectedly bypassed blocked release gates'
+assert 'Production activation BLOCKED' in (prod.stdout+prod.stderr)
+
 subprocess.run(['python3','tools/prepare_pages_review.py'],cwd=R,check=True)
 D=R/'dist-pages-review'
 assert D.exists()
@@ -53,4 +67,4 @@ home=(D/'hu/index.html').read_text(encoding='utf-8')
 assert 'href="/HIPSTUDIO/' in home
 assert 'src="/HIPSTUDIO/' in home or 'href="/HIPSTUDIO/assets/' in home
 
-print('Hosting config OK: GitHub Pages review can initialize safely, root/project-path work, and custom-domain deploy guard is present; Flúgos remains separate Vercel infrastructure')
+print('Hosting config OK: GitHub Pages review is isolated and production builds fail closed on blocked release gates; Flúgos remains separate Vercel infrastructure')
