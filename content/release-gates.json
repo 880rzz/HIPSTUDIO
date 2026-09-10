@@ -1,5 +1,5 @@
 {
-  "version": "production-release-gates-v6",
+  "version": "production-release-gates-v7",
   "status": "review",
   "masterDomain": "https://www.hipstudio.hu",
   "principle": "No production switch is inferred from a green CI run. Every external dependency must be verified explicitly.",
@@ -9,12 +9,12 @@
     {"id":"public-pricing","state":"ready","owner":"repository","requirement":"No public package pricing or automatic price calculator is exposed."},
     {"id":"evidence-governance","state":"ready","owner":"repository","requirement":"Client, result, testimonial and heritage claims are evidence-gated."},
     {"id":"business-provider","state":"ready_with_restrictions","owner":"business","requirement":"Unsupported direct-provider and regulated-responsibility wording remains blocked until service-level evidence is approved."},
-    {"id":"privacy-legal","state":"ready","owner":"business","requirement":"Hipstudió Kft. is the controller and Németh Tímea the human contact. Quote purpose, GDPR Article 6(1)(b)/(f)/(c) bases, 12-month unsuccessful-inquiry retention, 90-day default security-log retention, Google processors, Vercel hosting disclosure and human-reviewed routing are documented in localized privacy pages."},
+    {"id":"privacy-legal","state":"ready","owner":"business","requirement":"Hipstudió Kft. is the controller and Németh Tímea the human contact. Quote purpose, GDPR Article 6(1)(b)/(f)/(c) bases, 12-month unsuccessful-inquiry retention, 90-day default security-log retention, Google processors, GitHub Pages hosting disclosure and human-reviewed routing are documented in localized privacy pages."},
     {"id":"quote-e2e","state":"blocked_external_verification","owner":"operations","requirement":"Verify browser POST to Apps Script, Sheet append, internal notifications, customer confirmation and info@ Send-As/Reply-To in the live environment."},
     {"id":"legacy-url-inventory","state":"blocked_flugos_inventory_only","owner":"migration","requirement":"HelloÜzlet is confirmed retired. Obtain authoritative remaining Flúgos URL inventory before final cutover and classify each legacy URL for preserve, redirect or 410 behavior."},
-    {"id":"hosting-headers","state":"blocked_vercel_project_setup","owner":"infrastructure","requirement":"Create a dedicated HIPSTUDIO Vercel project for 880rzz/HIPSTUDIO, deploy review/staging first, and verify TLS, canonical host, cache/security headers, 404 behavior and rollback procedure before DNS cutover."},
+    {"id":"hosting-headers","state":"blocked_github_pages_verification","owner":"infrastructure","requirement":"Publish a review-safe build from 880rzz/HIPSTUDIO through GitHub Pages and verify the generated site, 404 behavior, canonical output and rollback procedure before custom-domain cutover."},
     {"id":"flugos-domain","state":"blocked_separate_vercel_project","owner":"infrastructure","requirement":"At final cutover create or connect a separate Vercel project for flugos.hu. It remains a specialist entry domain for Flúgos by HIPStudio; final redirect or entry-page behavior must be verified against the completed Flúgos URL inventory before DNS activation."},
-    {"id":"dns-cutover","state":"blocked_until_prior_gates","owner":"infrastructure","requirement":"Point hipstudio.hu and later flugos.hu only after their respective Vercel staging checks, quote E2E where applicable, redirect inventory and rollback plans are green."},
+    {"id":"dns-cutover","state":"blocked_until_prior_gates","owner":"infrastructure","requirement":"Point hipstudio.hu to GitHub Pages and later flugos.hu to its separate Vercel project only after their respective staging/publication checks, quote E2E where applicable, redirect inventory and rollback plans are green."},
     {"id":"indexing","state":"blocked_until_cutover","owner":"seo","requirement":"Remove review noindex, publish production sitemap and verify canonical/redirect behavior only after cutover."}
   ],
   "activationRule": "Production may be activated only when every blocked_* gate is resolved and documented. Green CI is necessary, not magical."
