@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordedAt": "2026-09-08",
+  "recordedAt": "2026-09-10",
   "records": [
     {
       "id": "wikidata-hipstudio",
@@ -31,10 +31,20 @@
         "namedProfessionalPartners": ["Bánhalmi Norbert", "Speier Vikó"],
         "logoManifest": "audit/client-logo-manifest.json"
       }
+    },
+    {
+      "id": "vikospeier-site-context",
+      "sourceUrl": "https://www.vikospeier.com/",
+      "extractedClaims": {
+        "person": "Speier Vikó / Speier Viktória",
+        "professionalWebsite": "https://www.vikospeier.com/",
+        "interpretation": "Independent professional identity source used only to keep HIPStudio Hungary contact semantics distinct from BANHALMI Austria liaison data; it does not establish ownership, employment, officer status or general representation."
+      }
     }
   ],
   "limits": [
-    "This record preserves only facts used by the static migration and hashes of the locally retained source snapshots.",
-    "A source URL or historical logo does not prove a current engagement, endorsement, employment relationship or project result."
+    "This record preserves only facts used by the static migration and hashes of locally retained source snapshots where such snapshots are available.",
+    "A source URL or historical logo does not prove a current engagement, endorsement, employment relationship or project result.",
+    "Speier Vikó's professional identity source does not by itself establish a corporate role at Hipstudió Kft.; the canonical HIPStudio relationship remains independent professional photography partner and photography-services contact."
   ]
 }
