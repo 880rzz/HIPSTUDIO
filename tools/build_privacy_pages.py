@@ -39,10 +39,10 @@ PROCESSOR_PURPOSE={
   'en':'internal notification, customer confirmation and reply communication',
   'de':'interne Benachrichtigung, Kundenbestätigung und Antwortkommunikation'
  },
- 'Vercel':{
-  'hu':'a statikus weboldal kiszolgálása, TLS, CDN és szükséges kapcsolati/biztonsági naplók',
-  'en':'static website hosting, TLS, CDN and necessary connection/security logs',
-  'de':'Hosting der statischen Website, TLS, CDN und erforderliche Verbindungs-/Sicherheitsprotokolle'
+ 'GitHub Pages / GitHub':{
+  'hu':'a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból',
+  'en':'publishing and serving the static HIPStudio website from the GitHub repository',
+  'de':'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository'
  }
 }
 
@@ -101,7 +101,6 @@ for lang in ['hu','en','de']:
  row={'key':'privacy','lang':lang,'path':p,'canonical':url}
  if (p,lang) not in existing: manifest['pages'].append(row)
 
- # Make the generated quote page visibly link the matching privacy notice.
  quote_file=D/QUOTE[lang].strip('/')/'index.html'
  if quote_file.exists():
   qhtml=quote_file.read_text(encoding='utf-8')
