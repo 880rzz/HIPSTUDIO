@@ -2,6 +2,7 @@ from pathlib import Path
 import json
 
 R = Path(__file__).resolve().parents[1]
+D = R / 'dist'
 people = json.loads((R / 'content/people.json').read_text())
 viko = next((p for p in people if p.get('key') == 'speier-viko'), None)
 assert viko, 'Speier Viko person record missing'
@@ -21,4 +22,16 @@ assert contact == {
 serialized = json.dumps(viko, ensure_ascii=False).lower()
 assert 'banhalmi.at' not in serialized, 'BANHALMI Austria contact leaked into HIPStudio Hungary Viko record'
 assert '+4367764733262' not in serialized, 'Austrian BANHALMI liaison phone leaked into HIPStudio Hungary Viko record'
-print('Viko Speier role/contact contract OK: independent photography partner/contact; Hungarian HIPStudio contact isolated from BANHALMI Austria liaison data.')
+
+# Generated-output contract: source truth must survive the build, not merely exist in JSON.
+build = json.loads((R / 'audit/build.json').read_text())
+for lang, expected in viko['role'].items():
+    person_page = next(p for p in build['pages'] if p['key'] == 'person:speier-viko' and p['lang'] == lang)
+    partner_page = next(p for p in build['pages'] if p['key'] == 'partners' and p['lang'] == lang)
+    for page in [person_page, partner_page]:
+        html = (D / page['path'].strip('/') / 'index.html').read_text()
+        assert expected in html, f"{page['path']}: canonical Viko role missing from generated HTML"
+        assert 'viko@banhalmi.at' not in html.lower(), f"{page['path']}: BANHALMI Austria email leaked into HIPStudio output"
+        assert '+4367764733262' not in html, f"{page['path']}: BANHALMI Austria phone leaked into HIPStudio output"
+
+print('Viko Speier role/contact contract OK: source and generated pages preserve independent photography partner/contact semantics and isolate HIPStudio Hungary from BANHALMI Austria liaison data.')
