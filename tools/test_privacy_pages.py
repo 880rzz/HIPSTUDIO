@@ -19,8 +19,10 @@ for lang,route in quote.items():
     assert P['publication']['routes'][lang] in h, f'quote page missing privacy link: {lang}'
 en=(D/'en/privacy/index.html').read_text(encoding='utf-8')
 de=(D/'de/datenschutz/index.html').read_text(encoding='utf-8')
-assert 'static website hosting, TLS, CDN' in en
-assert 'Hosting der statischen Website, TLS, CDN' in de
+assert 'publishing and serving the static HIPStudio website from the GitHub repository' in en
+assert 'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository' in de
+assert 'Vercel' not in en
+assert 'Vercel' not in de
 assert 'ajánlatkérő backend, validáció' not in en
 assert 'ajánlatkérő backend, validáció' not in de
 quote_js=(D/'assets/quote-form.js').read_text(encoding='utf-8')
@@ -32,4 +34,4 @@ manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
 assert manifest['privacy']['controller']=='Hipstudió Kft.'
 assert manifest['privacy']['contactPerson']=='Németh Tímea'
 assert manifest['privacy']['quoteLinked'] is True
-print('Generated privacy pages OK: localized notices/processors, quote links and no health-data prompt verified')
+print('Generated privacy pages OK: GitHub Pages disclosure, localized processors, quote links and no health-data prompt verified')
