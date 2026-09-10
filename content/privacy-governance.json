@@ -1,5 +1,5 @@
 {
-  "version": "hipstudio-privacy-v3",
+  "version": "hipstudio-privacy-v4",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
@@ -29,9 +29,9 @@
       "security": "GDPR 6. cikk (1) f) — arányos visszaélés-megelőzés, biztonság és hibakezelés",
       "accountingAfterContract": "GDPR 6. cikk (1) c) — alkalmazandó számviteli és adózási jogi kötelezettség"
     },
-    "requiredFields": ["name", "company", "email", "project_summary", "pillars", "services", "privacy_acknowledged"],
-    "optionalFieldGroups": ["phone", "preferred_contact", "project_goals", "desired_outcome", "timing", "location", "reference_url", "pillar_specific_scope"],
-    "specialCategoryPolicy": "A nyilvános ajánlatkérő űrlap nem kér különleges személyes adatot; a szabad szöveges mezőkben ilyen adat megadását kerülni kell.",
+    "requiredFields": ["name", "company", "email", "preferred_contact", "project_summary", "pillars", "services", "privacy_acknowledged"],
+    "optionalFieldGroups": ["phone", "project_goals", "desired_outcome", "timing", "location", "reference_url", "pillar_specific_scope"],
+    "specialCategoryPolicy": "A nyilvános ajánlatkérő űrlap nem kér különleges személyes adatot; a szabad szöveges mezőkben ilyen adat megadását kerülni kell. A vállalati élményprogramok első ajánlatkérése csak általános fizikai, akadálymentesítési, kulturális, időjárási és szervezési korlátokra kérdezhet rá, egészségügyi állapotra vagy diagnózisra nem.",
     "retention": {
       "unsuccessfulInquiry": "Az utolsó érdemi kapcsolatot követő 12 hónap, majd törlés vagy anonimizálás.",
       "successfulProject": "A szerződéses jogviszony ideje, majd az alkalmazandó magyar számviteli, adózási, elévülési és jogi kötelezettségek szerinti idő.",
