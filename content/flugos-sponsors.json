@@ -1,0 +1,33 @@
+{
+  "version": "flugos-sponsors-v1",
+  "status": "historical_verified",
+  "sourcePage": "https://www.flugos.hu/flugos-futam",
+  "sourceType": "current_wix_page_and_2019_material",
+  "relationship": {
+    "hu": "szponzor / támogató",
+    "en": "sponsor / supporter",
+    "de": "Sponsor / Unterstützer"
+  },
+  "notes": {
+    "hu": "A Flúgos Futam történeti anyagai külön szponzori és támogatói kapcsolatot dokumentálnak. A logók és támogatói megjelenések időhöz kötött, történeti referenciák; önmagukban nem jelentenek jelenlegi szponzori kapcsolatot.",
+    "en": "Historical Flúgos Futam materials document sponsor and supporter relationships. Logos and supporter appearances are time-qualified historical references and do not by themselves imply a current sponsorship relationship.",
+    "de": "Historische Flúgos-Futam-Unterlagen dokumentieren Sponsor- und Unterstützerbeziehungen. Logos und Unterstützerdarstellungen sind zeitlich eingeordnete historische Referenzen und bedeuten für sich allein keine aktuelle Sponsoringbeziehung."
+  },
+  "verifiedFacts": [
+    {
+      "hu": "A Flúgos Futam oldal külön „Szponzoroknak” részt tartalmaz.",
+      "en": "The Flúgos Futam page contains a dedicated sponsor section.",
+      "de": "Die Flúgos-Futam-Seite enthält einen eigenen Sponsorenbereich."
+    },
+    {
+      "hu": "A 2019-es jubileumi anyag marketingmegjelenést és brandépítő szolgáltatást kínált támogatásért cserébe.",
+      "en": "The 2019 anniversary material offered marketing visibility and brand-building services in exchange for support.",
+      "de": "Das Jubiläumsmaterial 2019 bot Marketingpräsenz und Markenaufbauleistungen im Gegenzug für Unterstützung an."
+    },
+    {
+      "hu": "A korabeli szabályzat támogatók által felajánlott ajándékokat említ.",
+      "en": "The historical rules mention prizes donated by supporters.",
+      "de": "Die historischen Regeln erwähnen von Unterstützern gestiftete Preise."
+    }
+  ]
+}
