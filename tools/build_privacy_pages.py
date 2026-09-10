@@ -12,42 +12,46 @@ ROUTES=P['publication']['routes']
 QUOTE={'hu':'/hu/ajanlatkeres/','en':'/en/request-a-quote/','de':'/de/angebot-anfragen/'}
 
 COPY={
- 'hu':{
-  'title':'Adatkezelési tájékoztató','lead':'Így kezeljük a személyes adatokat kapcsolatfelvétel és ajánlatkérés során.','controller':'Adatkezelő','contact':'Kapcsolattartó','purpose':'Az adatkezelés célja és jogalapja','data':'Kezelt adatok','processors':'Adatfeldolgozók és szolgáltatók','retention':'Megőrzési idő','decision':'Automatizált döntéshozatal','rights':'Az Ön jogai','transfers':'Nemzetközi adattovábbítás','special':'Különleges személyes adatok','updated':'Utolsó frissítés','back':'Vissza az ajánlatkéréshez','reg':'Cégjegyzékszám','tax':'Adószám','email':'E-mail','phone':'Telefon','required':'Kötelező mezők','optional':'Opcionális mezők','contactSentence':'Németh Tímea kapcsolattartó; az adatkezelő jogi személy a Hipstudió Kft.','quotePrivacy':'Adatkezelési tájékoztató'
- },
- 'en':{
-  'title':'Privacy notice','lead':'How we process personal data when you contact us or request a quote.','controller':'Data controller','contact':'Contact person','purpose':'Purpose and legal basis','data':'Data processed','processors':'Processors and service providers','retention':'Retention','decision':'Automated decision-making','rights':'Your rights','transfers':'International transfers','special':'Special-category data','updated':'Last updated','back':'Back to quote request','reg':'Company registration number','tax':'Tax number','email':'Email','phone':'Phone','required':'Required fields','optional':'Optional fields','contactSentence':'Németh Tímea is the human contact person; the legal data controller is Hipstudió Kft.','quotePrivacy':'Privacy notice'
- },
- 'de':{
-  'title':'Datenschutzhinweise','lead':'So verarbeiten wir personenbezogene Daten bei Kontaktaufnahme und Angebotsanfragen.','controller':'Verantwortlicher','contact':'Ansprechperson','purpose':'Zweck und Rechtsgrundlage','data':'Verarbeitete Daten','processors':'Auftragsverarbeiter und Dienstleister','retention':'Speicherdauer','decision':'Automatisierte Entscheidungen','rights':'Ihre Rechte','transfers':'Internationale Übermittlungen','special':'Besondere Kategorien personenbezogener Daten','updated':'Letzte Aktualisierung','back':'Zurück zur Angebotsanfrage','reg':'Handelsregisternummer','tax':'Steuernummer','email':'E-Mail','phone':'Telefon','required':'Pflichtfelder','optional':'Optionale Felder','contactSentence':'Németh Tímea ist die persönliche Ansprechperson; rechtlich Verantwortlicher ist die Hipstudió Kft.','quotePrivacy':'Datenschutzhinweise'
- }
+ 'hu':{'title':'Adatkezelési tájékoztató','lead':'Így kezeljük a személyes adatokat kapcsolatfelvétel és ajánlatkérés során.','controller':'Adatkezelő','contact':'Kapcsolattartó','purpose':'Az adatkezelés célja és jogalapja','data':'Kezelt adatok','processors':'Adatfeldolgozók és szolgáltatók','retention':'Megőrzési idő','decision':'Automatizált döntéshozatal','rights':'Az Ön jogai','transfers':'Nemzetközi adattovábbítás','special':'Különleges személyes adatok','updated':'Utolsó frissítés','back':'Vissza az ajánlatkéréshez','reg':'Cégjegyzékszám','tax':'Adószám','email':'E-mail','phone':'Telefon','required':'Kötelező mezők','optional':'Opcionális mezők','contactSentence':'Németh Tímea kapcsolattartó; az adatkezelő jogi személy a Hipstudió Kft.','quotePrivacy':'Adatkezelési tájékoztató','contactRole':'tulajdonos / ügyvezető / adatvédelmi kapcsolattartó'},
+ 'en':{'title':'Privacy notice','lead':'How we process personal data when you contact us or request a quote.','controller':'Data controller','contact':'Contact person','purpose':'Purpose and legal basis','data':'Data processed','processors':'Processors and service providers','retention':'Retention','decision':'Automated decision-making','rights':'Your rights','transfers':'International transfers','special':'Special-category data','updated':'Last updated','back':'Back to quote request','reg':'Company registration number','tax':'Tax number','email':'Email','phone':'Phone','required':'Required fields','optional':'Optional fields','contactSentence':'Németh Tímea is the human contact person; the legal data controller is Hipstudió Kft.','quotePrivacy':'Privacy notice','contactRole':'owner / managing director / privacy contact'},
+ 'de':{'title':'Datenschutzhinweise','lead':'So verarbeiten wir personenbezogene Daten bei Kontaktaufnahme und Angebotsanfragen.','controller':'Verantwortlicher','contact':'Ansprechperson','purpose':'Zweck und Rechtsgrundlage','data':'Verarbeitete Daten','processors':'Auftragsverarbeiter und Dienstleister','retention':'Speicherdauer','decision':'Automatisierte Entscheidungen','rights':'Ihre Rechte','transfers':'Internationale Übermittlungen','special':'Besondere Kategorien personenbezogener Daten','updated':'Letzte Aktualisierung','back':'Zurück zur Angebotsanfrage','reg':'Handelsregisternummer','tax':'Steuernummer','email':'E-Mail','phone':'Telefon','required':'Pflichtfelder','optional':'Optionale Felder','contactSentence':'Németh Tímea ist die persönliche Ansprechperson; rechtlich Verantwortlicher ist die Hipstudió Kft.','quotePrivacy':'Datenschutzhinweise','contactRole':'Eigentümerin / Geschäftsführerin / Datenschutzkontakt'}
+}
+
+FIELD_LABELS={
+ 'name':{'hu':'név','en':'name','de':'Name'},
+ 'company':{'hu':'cég / szervezet','en':'company / organisation','de':'Unternehmen / Organisation'},
+ 'email':{'hu':'e-mail-cím','en':'email address','de':'E-Mail-Adresse'},
+ 'preferred_contact':{'hu':'elsődleges kapcsolattartási mód','en':'preferred contact method','de':'bevorzugter Kontaktweg'},
+ 'project_summary':{'hu':'projektleírás','en':'project summary','de':'Projektbeschreibung'},
+ 'pillars':{'hu':'kiválasztott szolgáltatási terület','en':'selected service area','de':'ausgewählter Leistungsbereich'},
+ 'services':{'hu':'kiválasztott szolgáltatások','en':'selected services','de':'ausgewählte Leistungen'},
+ 'privacy_acknowledged':{'hu':'adatkezelési tájékoztató tudomásulvétele','en':'privacy-notice acknowledgement','de':'Bestätigung der Datenschutzhinweise'},
+ 'phone':{'hu':'telefonszám','en':'phone number','de':'Telefonnummer'},
+ 'project_goals':{'hu':'projektcélok','en':'project goals','de':'Projektziele'},
+ 'desired_outcome':{'hu':'elvárt eredmény','en':'desired outcome','de':'gewünschtes Ergebnis'},
+ 'timing':{'hu':'időzítés','en':'timing','de':'Zeitplanung'},
+ 'location':{'hu':'helyszín','en':'location','de':'Ort'},
+ 'reference_url':{'hu':'referencia- vagy brief link','en':'reference or brief link','de':'Referenz- oder Briefing-Link'},
+ 'pillar_specific_scope':{'hu':'szolgáltatási területhez kapcsolódó részletek','en':'service-area-specific scope details','de':'bereichsspezifische Leistungsdetails'}
 }
 
 PROCESSOR_PURPOSE={
- 'Google Apps Script':{
-  'hu':'ajánlatkérő backend, validáció és operatív routing',
-  'en':'quote-request backend, validation and operational routing',
-  'de':'Backend für Angebotsanfragen, Validierung und operative Zuordnung'
- },
- 'Google Sheets':{
-  'hu':'korlátozott hozzáférésű ajánlatkérési nyilvántartás',
-  'en':'restricted-access quote-request register',
-  'de':'zugriffsbeschränktes Register für Angebotsanfragen'
- },
- 'Google Workspace / Gmail':{
-  'hu':'belső értesítés, ügyfél-visszaigazolás és válaszkommunikáció',
-  'en':'internal notification, customer confirmation and reply communication',
-  'de':'interne Benachrichtigung, Kundenbestätigung und Antwortkommunikation'
- },
- 'GitHub Pages / GitHub':{
-  'hu':'a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból',
-  'en':'publishing and serving the static HIPStudio website from the GitHub repository',
-  'de':'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository'
- }
+ 'Google Apps Script':{'hu':'ajánlatkérő backend, validáció és operatív routing','en':'quote-request backend, validation and operational routing','de':'Backend für Angebotsanfragen, Validierung und operative Zuordnung'},
+ 'Google Sheets':{'hu':'korlátozott hozzáférésű ajánlatkérési nyilvántartás','en':'restricted-access quote-request register','de':'zugriffsbeschränktes Register für Angebotsanfragen'},
+ 'Google Workspace / Gmail':{'hu':'belső értesítés, ügyfél-visszaigazolás és válaszkommunikáció','en':'internal notification, customer confirmation and reply communication','de':'interne Benachrichtigung, Kundenbestätigung und Antwortkommunikation'},
+ 'GitHub Pages / GitHub':{'hu':'a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból','en':'publishing and serving the static HIPStudio website from the GitHub repository','de':'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository'}
 }
 
 def e(v): return escape(str(v),quote=True)
 def ul(items): return '<ul>'+''.join(f'<li>{e(x)}</li>' for x in items)+'</ul>'
+def labels(keys,lang):
+ out=[]
+ for key in keys:
+  item=FIELD_LABELS.get(key)
+  if not item or lang not in item:
+   raise SystemExit(f'Missing {lang} privacy field label for {key}')
+  out.append(item[lang])
+ return ', '.join(out)
 
 def text_for(lang):
  q=P['quoteForm']; c=P['controller']; cp=P['contactPerson']; a=P['supervisoryAuthority']; t=COPY[lang]
@@ -61,34 +65,21 @@ def text_for(lang):
   'en':"Inquiries that do not become a contract are deleted or anonymised 12 months after the last meaningful contact. Contract/project data is kept for the relationship and then for the period required by applicable Hungarian accounting, tax, limitation and legal rules. Security logs are generally kept for no more than 90 days unless needed for incident investigation or legal claims.",
   'de':"Anfragen ohne Vertragsabschluss werden grundsätzlich 12 Monate nach dem letzten wesentlichen Kontakt gelöscht oder anonymisiert. Vertrags- und Projektdaten werden während der Geschäftsbeziehung und anschließend entsprechend den anwendbaren ungarischen Buchhaltungs-, Steuer-, Verjährungs- und Rechtspflichten aufbewahrt. Sicherheitsprotokolle werden grundsätzlich höchstens 90 Tage gespeichert, sofern sie nicht für Vorfalluntersuchungen oder Rechtsansprüche benötigt werden."
  }[lang]
- special={
-  'hu':q['specialCategoryPolicy'],
-  'en':'The public quote form does not request special-category personal data. For corporate experiences, the first inquiry may describe general physical, accessibility, cultural, weather or organisational constraints, but must not include health conditions or diagnoses. Please do not include health data, intimate information, identity-document numbers or similar sensitive information in free-text fields.',
-  'de':'Das öffentliche Anfrageformular verlangt keine besonderen Kategorien personenbezogener Daten. Bei Corporate Experiences dürfen in der ersten Anfrage allgemeine körperliche, barrierebezogene, kulturelle, wetterbedingte oder organisatorische Rahmenbedingungen beschrieben werden, jedoch keine Gesundheitszustände oder Diagnosen. Bitte übermitteln Sie in Freitextfeldern keine Gesundheitsdaten, intimen Informationen, Ausweisnummern oder vergleichbar sensible Angaben.'
- }[lang]
- decision={
-  'hu':q['automatedDecisionMaking'],
-  'en':'We do not use solely automated decision-making or profiling that produces legal or similarly significant effects. Routing is only an operational pre-classification and remains subject to human review.',
-  'de':'Wir verwenden keine ausschließlich automatisierte Entscheidungsfindung oder Profilbildung mit rechtlicher oder ähnlich erheblicher Wirkung. Das Routing ist lediglich eine operative Vorzuordnung und wird menschlich geprüft.'
- }[lang]
+ special={'hu':q['specialCategoryPolicy'],'en':'The public quote form does not request special-category personal data. For corporate experiences, the first inquiry may describe general physical, accessibility, cultural, weather or organisational constraints, but must not include health conditions or diagnoses. Please do not include health data, intimate information, identity-document numbers or similar sensitive information in free-text fields.','de':'Das öffentliche Anfrageformular verlangt keine besonderen Kategorien personenbezogener Daten. Bei Corporate Experiences dürfen in der ersten Anfrage allgemeine körperliche, barrierebezogene, kulturelle, wetterbedingte oder organisatorische Rahmenbedingungen beschrieben werden, jedoch keine Gesundheitszustände oder Diagnosen. Bitte übermitteln Sie in Freitextfeldern keine Gesundheitsdaten, intimen Informationen, Ausweisnummern oder vergleichbar sensible Angaben.'}[lang]
+ decision={'hu':q['automatedDecisionMaking'],'en':'We do not use solely automated decision-making or profiling that produces legal or similarly significant effects. Routing is only an operational pre-classification and remains subject to human review.','de':'Wir verwenden keine ausschließlich automatisierte Entscheidungsfindung oder Profilbildung mit rechtlicher oder ähnlich erheblicher Wirkung. Das Routing ist lediglich eine operative Vorzuordnung und wird menschlich geprüft.'}[lang]
  rights={
   'hu':f"A jogszabályi feltételek szerint kérhet hozzáférést, helyesbítést, törlést, korlátozást és adathordozhatóságot, továbbá tiltakozhat a jogos érdeken alapuló adatkezelés ellen. Joggyakorlás: info@hipstudio.hu. Jogosult panaszt benyújtani a felügyeleti hatósághoz is: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}.",
   'en':f"Subject to the legal conditions, you may request access, rectification, erasure, restriction and data portability, and object to processing based on legitimate interests. Contact: info@hipstudio.hu. You also have the right to lodge a complaint with the supervisory authority: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}.",
   'de':f"Unter den gesetzlichen Voraussetzungen können Sie Auskunft, Berichtigung, Löschung, Einschränkung und Datenübertragbarkeit verlangen sowie der Verarbeitung auf Grundlage berechtigter Interessen widersprechen. Kontakt: info@hipstudio.hu. Sie haben außerdem das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}."
  }[lang]
- transfer={
-  'hu':q['internationalTransfers'],
-  'en':'Where a service provider operates globally, the lawful transfer mechanism applicable to the active contract and account configuration is used. The public notice does not claim more than the actual service agreement and configuration support.',
-  'de':'Wenn ein Dienstleister global tätig ist, wird der für den aktiven Vertrag und die Kontoeinstellungen geltende rechtmäßige Übermittlungsmechanismus verwendet. Die öffentliche Information behauptet nicht mehr, als der tatsächliche Dienstleistungsvertrag und die Konfiguration belegen.'
- }[lang]
+ transfer={'hu':q['internationalTransfers'],'en':'Where a service provider operates globally, the lawful transfer mechanism applicable to the active contract and account configuration is used. The public notice does not claim more than the actual service agreement and configuration support.','de':'Wenn ein Dienstleister global tätig ist, wird der für den aktiven Vertrag und die Kontoeinstellungen geltende rechtmäßige Übermittlungsmechanismus verwendet. Die öffentliche Information behauptet nicht mehr, als der tatsächliche Dienstleistungsvertrag und die Konfiguration belegen.'}[lang]
  processors=[]
  for x in q['processors']:
   localized=PROCESSOR_PURPOSE.get(x['service'],{}).get(lang)
-  if not localized:
-   raise SystemExit(f"Missing {lang} processor purpose for {x['service']}")
+  if not localized: raise SystemExit(f"Missing {lang} processor purpose for {x['service']}")
   processors.append(f"{x['service']} — {localized}")
- required=', '.join(q['requiredFields']); optional=', '.join(q['optionalFieldGroups'])
- return f'''<section class="quote-shell"><div class="quote-intro"><p class="eyebrow">HIPStudio</p><h1>{e(t['title'])}</h1><p class="lead">{e(t['lead'])}</p></div><div class="legal prose"><h2>{e(t['controller'])}</h2><p><strong>{e(c['legalName'])}</strong> ({e(c['shortName'])})<br>{e(c['registeredOffice'])}<br>{e(t['reg'])}: {e(c['companyRegistrationNumber'])}<br>{e(t['tax'])}: {e(c['taxNumber'])}<br>{e(t['email'])}: <a href="mailto:{e(c['email'])}">{e(c['email'])}</a><br>{e(t['phone'])}: {e(c['phone'])}</p><h2>{e(t['contact'])}</h2><p><strong>{e(cp['name'])}</strong> — {e(cp['role'])}. {e(t['contactSentence'])}</p><h2>{e(t['purpose'])}</h2><p>{e(purpose)}</p><h2>{e(t['data'])}</h2><p><strong>{e(t['required'])}:</strong> {e(required)}<br><strong>{e(t['optional'])}:</strong> {e(optional)}</p><h2>{e(t['processors'])}</h2>{ul(processors)}<h2>{e(t['retention'])}</h2><p>{e(retention)}</p><h2>{e(t['decision'])}</h2><p>{e(decision)}</p><h2>{e(t['transfers'])}</h2><p>{e(transfer)}</p><h2>{e(t['rights'])}</h2><p>{e(rights)}</p><h2>{e(t['special'])}</h2><p>{e(special)}</p><h2>{e(t['updated'])}</h2><p>2026-09-10</p><p><a class="button" href="{e(QUOTE[lang])}">{e(t['back'])}</a></p></div></section>'''
+ required=labels(q['requiredFields'],lang); optional=labels(q['optionalFieldGroups'],lang)
+ return f'''<section class="quote-shell"><div class="quote-intro"><p class="eyebrow">HIPStudio</p><h1>{e(t['title'])}</h1><p class="lead">{e(t['lead'])}</p></div><div class="legal prose"><h2>{e(t['controller'])}</h2><p><strong>{e(c['legalName'])}</strong> ({e(c['shortName'])})<br>{e(c['registeredOffice'])}<br>{e(t['reg'])}: {e(c['companyRegistrationNumber'])}<br>{e(t['tax'])}: {e(c['taxNumber'])}<br>{e(t['email'])}: <a href="mailto:{e(c['email'])}">{e(c['email'])}</a><br>{e(t['phone'])}: {e(c['phone'])}</p><h2>{e(t['contact'])}</h2><p><strong>{e(cp['name'])}</strong> — {e(t['contactRole'])}. {e(t['contactSentence'])}</p><h2>{e(t['purpose'])}</h2><p>{e(purpose)}</p><h2>{e(t['data'])}</h2><p><strong>{e(t['required'])}:</strong> {e(required)}<br><strong>{e(t['optional'])}:</strong> {e(optional)}</p><h2>{e(t['processors'])}</h2>{ul(processors)}<h2>{e(t['retention'])}</h2><p>{e(retention)}</p><h2>{e(t['decision'])}</h2><p>{e(decision)}</p><h2>{e(t['transfers'])}</h2><p>{e(transfer)}</p><h2>{e(t['rights'])}</h2><p>{e(rights)}</p><h2>{e(t['special'])}</h2><p>{e(special)}</p><h2>{e(t['updated'])}</h2><p>2026-09-10</p><p><a class="button" href="{e(QUOTE[lang])}">{e(t['back'])}</a></p></div></section>'''
 
 if not D.exists(): raise SystemExit('dist-platform missing; run build_platform.py first')
 manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
@@ -100,11 +91,9 @@ for lang in ['hu','en','de']:
  out=D/p.strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(html,encoding='utf-8')
  row={'key':'privacy','lang':lang,'path':p,'canonical':url}
  if (p,lang) not in existing: manifest['pages'].append(row)
-
  quote_file=D/QUOTE[lang].strip('/')/'index.html'
  if quote_file.exists():
-  qhtml=quote_file.read_text(encoding='utf-8')
-  marker='</section>'
+  qhtml=quote_file.read_text(encoding='utf-8'); marker='</section>'
   privacy_link=f'<p class="legal-note"><a href="{e(p)}">{e(COPY[lang]["quotePrivacy"])}</a> · Hipstudió Kft. · Németh Tímea</p>'
   if privacy_link not in qhtml:
    idx=qhtml.find(marker)
