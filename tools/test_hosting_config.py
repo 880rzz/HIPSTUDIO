@@ -5,7 +5,11 @@ import json
 R=Path(__file__).resolve().parents[1]
 V=json.loads((R/'vercel.json').read_text(encoding='utf-8'))
 assert V['outputDirectory']=='dist-platform'
-assert V['buildCommand']=='npm run build:platform'
+assert V['buildCommand']=='python3 tools/assert_vercel_build.py && npm run build:platform'
+assert (R/'tools/assert_vercel_build.py').exists()
+guard=(R/'tools/assert_vercel_build.py').read_text(encoding='utf-8')
+assert "mode != 'production'" in guard
+assert "startswith('blocked_')" in guard
 headers={h['key']:h['value'] for rule in V['headers'] for h in rule['headers']}
 for key in ['X-Content-Type-Options','Referrer-Policy','X-Frame-Options','Permissions-Policy']:
     assert key in headers
@@ -22,4 +26,4 @@ assert P['domainArchitecture']['flugos']['hosting']=='vercel'
 assert P['domainArchitecture']['flugos']['separateVercelProject'] is True
 assert P['domainArchitecture']['flugos']['separateContentPlatform'] is False
 
-print('Hosting config OK: HIPStudio master defaults clean; separate Vercel projects governed')
+print('Hosting config OK: HIPStudio defaults clean; Vercel production gated; separate projects governed')
