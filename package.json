@@ -1,6 +1,6 @@
 {
   "name": "hipstudio-static",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "private": true,
   "scripts": {
     "build": "export QUOTE_REQUEST_BASE_URL=${QUOTE_REQUEST_BASE_URL:-https://www.hipstudio.hu}; python3 tools/build.py && python3 tools/remove_public_pricing.py",
@@ -30,7 +30,7 @@
     "test:html": "html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
     "test:lighthouse": "node tools/lighthouse.mjs"
   },
-  "description": "HIPStudio master platform for Business, Creative and Flúgos Experiences. hipstudio.hu is served from the HIPSTUDIO repository; flugos.hu is a specialist entry domain pointing to the Flúgos page inside HIPStudio. Privacy governance uses Hipstudió Kft. as controller and Németh Tímea as human contact. Public pricing is suppressed. No automatic production cutover.",
+  "description": "HIPStudio master platform for Business, Creative and Flúgos Experiences. hipstudio.hu will run from 880rzz/HIPSTUDIO in its own Vercel project; flugos.hu will use a separate Vercel project as the specialist entry-domain layer without duplicating the master content platform. Privacy governance uses Hipstudió Kft. as controller and Németh Tímea as human contact. Public pricing is suppressed. No automatic production cutover.",
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "html-validate": "11.14.0",
