@@ -50,7 +50,7 @@ def e(v): return escape(str(v),quote=True)
 def ul(items): return '<ul>'+''.join(f'<li>{e(x)}</li>' for x in items)+'</ul>'
 
 def text_for(lang):
- q=P['quoteForm']; c=P['controller']; cp=P['contactPerson']; t=COPY[lang]
+ q=P['quoteForm']; c=P['controller']; cp=P['contactPerson']; a=P['supervisoryAuthority']; t=COPY[lang]
  purpose={
   'hu':f"{q['purpose']} Elsődleges jogalap: {q['lawfulBasis']['primary']}. Biztonsági és visszaélés-megelőzési célból {q['lawfulBasis']['security']}. Szerződés létrejötte után szükség szerint {q['lawfulBasis']['accountingAfterContract']}.",
   'en':"We process quote-request data to respond, prepare a quote and take pre-contractual steps at your request under GDPR Article 6(1)(b). Proportionate security and abuse-prevention processing may rely on legitimate interests under Article 6(1)(f). After a contract is formed, accounting and tax data may be processed where required by law under Article 6(1)(c).",
@@ -72,9 +72,9 @@ def text_for(lang):
   'de':'Wir verwenden keine ausschließlich automatisierte Entscheidungsfindung oder Profilbildung mit rechtlicher oder ähnlich erheblicher Wirkung. Das Routing ist lediglich eine operative Vorzuordnung und wird menschlich geprüft.'
  }[lang]
  rights={
-  'hu':'A jogszabályi feltételek szerint kérhet hozzáférést, helyesbítést, törlést, korlátozást és adathordozhatóságot, továbbá tiltakozhat a jogos érdeken alapuló adatkezelés ellen. Joggyakorlás: info@hipstudio.hu.',
-  'en':'Subject to the legal conditions, you may request access, rectification, erasure, restriction and data portability, and object to processing based on legitimate interests. Contact: info@hipstudio.hu.',
-  'de':'Unter den gesetzlichen Voraussetzungen können Sie Auskunft, Berichtigung, Löschung, Einschränkung und Datenübertragbarkeit verlangen sowie der Verarbeitung auf Grundlage berechtigter Interessen widersprechen. Kontakt: info@hipstudio.hu.'
+  'hu':f"A jogszabályi feltételek szerint kérhet hozzáférést, helyesbítést, törlést, korlátozást és adathordozhatóságot, továbbá tiltakozhat a jogos érdeken alapuló adatkezelés ellen. Joggyakorlás: info@hipstudio.hu. Jogosult panaszt benyújtani a felügyeleti hatósághoz is: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}.",
+  'en':f"Subject to the legal conditions, you may request access, rectification, erasure, restriction and data portability, and object to processing based on legitimate interests. Contact: info@hipstudio.hu. You also have the right to lodge a complaint with the supervisory authority: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}.",
+  'de':f"Unter den gesetzlichen Voraussetzungen können Sie Auskunft, Berichtigung, Löschung, Einschränkung und Datenübertragbarkeit verlangen sowie der Verarbeitung auf Grundlage berechtigter Interessen widersprechen. Kontakt: info@hipstudio.hu. Sie haben außerdem das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: {a['name']} ({a['shortName']}), {a['address']}, {a['email']}, {a['phone']}, {a['website']}."
  }[lang]
  transfer={
   'hu':q['internationalTransfers'],
