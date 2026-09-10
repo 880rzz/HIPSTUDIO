@@ -55,6 +55,20 @@ if MODE=='production':
  if u.scheme!='https' or not u.netloc: raise SystemExit('QUOTE_FORM_ENDPOINT must be HTTPS')
 
 shutil.copyfile(R/'assets/quote-form.js',D/'assets/quote-form.js')
+# The first-contact form must not solicit special-category health data. Keep only
+# general accessibility/physical/cultural/weather constraints needed for scoping.
+quote_js=D/'assets/quote-form.js'
+quote_source=quote_js.read_text(encoding='utf-8')
+health_prompt_replacements={
+ 'Fizikai, akadálymentesítési, egészségügyi, kulturális vagy időjárási korlátok':'Fizikai, akadálymentesítési, kulturális vagy időjárási korlátok',
+ 'Physische, Barrierefreiheits-, gesundheitliche, kulturelle oder wetterbedingte Einschränkungen':'Physische, Barrierefreiheits-, kulturelle oder wetterbedingte Einschränkungen',
+ 'Physical, accessibility, health, cultural or weather constraints':'Physical, accessibility, cultural or weather constraints'
+}
+for old,new_label in health_prompt_replacements.items():
+ if old not in quote_source:
+  raise SystemExit(f'Expected quote health prompt missing: {old}')
+ quote_source=quote_source.replace(old,new_label)
+quote_js.write_text(quote_source,encoding='utf-8')
 shutil.copyfile(R/'assets/quote-prefill.js',D/'assets/quote-prefill.js')
 shutil.copyfile(R/'assets/quote-form.css',D/'assets/quote-form.css')
 manifest=json.loads((D/'platform-build.json').read_text())
