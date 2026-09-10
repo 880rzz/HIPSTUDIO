@@ -1,0 +1,68 @@
+{
+  "version": "hipstudio-entity-model-v1",
+  "canonicalOrigin": "https://www.hipstudio.hu",
+  "principle": "HIPStudio brand heritage, the Hipstudió Kft. legal entity and the hipstudio.hu WebSite are distinct graph nodes. Historical brand founding must not be projected as the legal company's founding date without independent legal evidence.",
+  "company": {
+    "@id": "https://www.hipstudio.hu/#company",
+    "@type": "Organization",
+    "name": "Hipstudió Kft.",
+    "legalName": "Hipstudió Korlátolt Felelősségű Társaság",
+    "url": "https://www.hipstudio.hu/",
+    "email": "info@hipstudio.hu",
+    "telephone": "+36302215506",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Népszínház u. 25. Fe. 2.",
+      "addressLocality": "Budapest",
+      "postalCode": "1081",
+      "addressCountry": "HU"
+    },
+    "identifier": [
+      {"@type": "PropertyValue", "propertyID": "companyRegistrationNumber", "value": "01-09-907275"},
+      {"@type": "PropertyValue", "propertyID": "taxNumber", "value": "14513938-2-42"}
+    ],
+    "brand": {"@id": "https://www.hipstudio.hu/#brand"}
+  },
+  "brand": {
+    "@id": "https://www.hipstudio.hu/#brand",
+    "@type": "Brand",
+    "name": "HIPStudio",
+    "url": "https://www.hipstudio.hu/",
+    "foundingDate": "2006-02-27",
+    "founder": {"@id": "https://www.hipstudio.hu/#norbert-banhalmi"},
+    "sameAs": ["https://www.wikidata.org/wiki/Q138482177"]
+  },
+  "website": {
+    "@id": "https://www.hipstudio.hu/#website",
+    "@type": "WebSite",
+    "name": "HIPStudio",
+    "url": "https://www.hipstudio.hu/",
+    "publisher": {"@id": "https://www.hipstudio.hu/#company"},
+    "about": {"@id": "https://www.hipstudio.hu/#brand"}
+  },
+  "people": {
+    "norbert": {
+      "@id": "https://www.hipstudio.hu/#norbert-banhalmi",
+      "@type": "Person",
+      "name": "Bánhalmi Norbert",
+      "url": "https://www.norbertbanhalmi.com/",
+      "sameAs": ["https://www.wikidata.org/wiki/Q56391118"],
+      "description": "Founder of the HIPStudio brand and current professional partner. Historical founder status does not imply current ownership of Hipstudió Kft."
+    },
+    "viko": {
+      "@id": "https://www.hipstudio.hu/#viko-speier",
+      "@type": "Person",
+      "name": "Speier Vikó",
+      "alternateName": "Speier Viktória",
+      "url": "https://www.vikospeier.com/",
+      "description": "Independent professional photography partner of Hipstudió Kft. and photography-services contact. This relationship does not imply ownership, employment, corporate office or general representation."
+    }
+  },
+  "relationshipRules": [
+    "Q138482177 identifies the HIPStudio brand/history node in this graph and must not be used as the legal-company identity unless authoritative legal evidence establishes that equivalence.",
+    "The 2006-02-27 date belongs to HIPStudio brand/history evidence; do not project it as Hipstudió Kft.'s legal founding date.",
+    "Bánhalmi Norbert is founder of the HIPStudio brand; do not infer current ownership of Hipstudió Kft. from founder history.",
+    "Speier Vikó is an independent professional photography partner and photography-services contact; do not infer owner, employee, officer or general-representative status.",
+    "The WebSite publisher is Hipstudió Kft.; the WebSite is about the HIPStudio brand."
+  ]
+}
