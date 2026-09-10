@@ -23,8 +23,13 @@ assert 'static website hosting, TLS, CDN' in en
 assert 'Hosting der statischen Website, TLS, CDN' in de
 assert 'ajánlatkérő backend, validáció' not in en
 assert 'ajánlatkérő backend, validáció' not in de
+quote_js=(D/'assets/quote-form.js').read_text(encoding='utf-8')
+for forbidden in ['egészségügyi','health, cultural','gesundheitliche']:
+    assert forbidden not in quote_js, f'generated quote form still solicits health data: {forbidden}'
+for required in ['Fizikai, akadálymentesítési, kulturális vagy időjárási korlátok','Physical, accessibility, cultural or weather constraints','Physische, Barrierefreiheits-, kulturelle oder wetterbedingte Einschränkungen']:
+    assert required in quote_js
 manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
 assert manifest['privacy']['controller']=='Hipstudió Kft.'
 assert manifest['privacy']['contactPerson']=='Németh Tímea'
 assert manifest['privacy']['quoteLinked'] is True
-print('Generated privacy pages OK: localized notices, processors and quote links verified')
+print('Generated privacy pages OK: localized notices/processors, quote links and no health-data prompt verified')
