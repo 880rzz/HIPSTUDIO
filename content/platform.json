@@ -101,6 +101,20 @@
         "hu":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Egyedi céges program","Custom Branded Game"],
         "en":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Custom corporate programme","Custom Branded Game"],
         "de":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Individuelles Unternehmensprogramm","Custom Branded Game"]
+      },
+      "heritage": {
+        "founded": 2009,
+        "founders": ["Németh Tímea", "Bánhalmi Norbert"],
+        "teamPrinciple": {
+          "hu": "A Flúgos Futamot Németh Tímea és Bánhalmi Norbert alapította 2009-ben. A Flúgos története azonban kezdettől csapatmunka: a programok kialakításában, szervezésében és megvalósításában az évek során több meghatározó csapattag és közreműködő vett részt. A dokumentálható csapattagokat név szerint is bemutatjuk.",
+          "en": "Flúgos Futam was founded by Németh Tímea and Bánhalmi Norbert in 2009. Its history, however, has always been a team effort: over the years, key team members and contributors helped shape, organise and deliver the programmes. Documented team members are also credited by name.",
+          "de": "Flúgos Futam wurde 2009 von Németh Tímea und Bánhalmi Norbert gegründet. Seine Geschichte war jedoch von Anfang an Teamarbeit: Über die Jahre haben prägende Teammitglieder und Mitwirkende die Programme mitentwickelt, organisiert und umgesetzt. Dokumentierte Teammitglieder werden ebenfalls namentlich genannt."
+        },
+        "historicalMilestones": {
+          "hu": ["10 jótékonysági autós futam", "2 Night Race 4U", "KÖKI bevásárlóközponti futam", "számos vállalati csapatépítő program", "több mint 1000 történeti résztvevő"],
+          "en": ["10 charity car rallies", "2 Night Race 4U events", "KÖKI shopping-centre race", "numerous corporate team-building programmes", "more than 1,000 historical participants"],
+          "de": ["10 Charity-Autorallyes", "2 Night Race 4U Veranstaltungen", "KÖKI-Einkaufszentrum-Rennen", "zahlreiche Corporate-Teamprogramme", "mehr als 1.000 historische Teilnehmende"]
+        }
       }
     }
   ],
