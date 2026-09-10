@@ -41,6 +41,7 @@ jobs:
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
       - run: npm run test:no-wix-hotlinks
+      - run: npm run test:partner-references
       - run: npm run test:pricing
       - run: npm run test:html
       - run: npx playwright install --with-deps chromium
