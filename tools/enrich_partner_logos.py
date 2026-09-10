@@ -1,8 +1,10 @@
 # coding: utf-8
-"""Render HIPStudio historical/reference logos from repository-local assets.
+"""Render HIPStudio partner logos from repository-local assets.
 
 The Wix URLs in audit/client-logo-manifest.json are provenance only. Public pages
 must load logo images exclusively from the repository-built /assets/logos/ path.
+Flúgos sponsor relationships are a separate content category and are not rendered
+by this HIPStudio partner block.
 """
 from pathlib import Path
 import json, shutil
@@ -17,7 +19,7 @@ DST.mkdir(parents=True, exist_ok=True)
 for item in MANIFEST:
     logo = SRC / f"{item['id']}.webp"
     if not logo.exists():
-        raise SystemExit(f"Missing local partner logo: {logo.relative_to(R)}")
+        raise SystemExit(f"Missing local HIPStudio partner logo: {logo.relative_to(R)}")
     shutil.copyfile(logo, DST / logo.name)
 
 css_src = R / 'assets/partners.css'
@@ -25,22 +27,22 @@ shutil.copyfile(css_src, D / 'assets/partners.css')
 
 COPY = {
     'hu': {
-        'eyebrow':'Referenciák',
-        'title':'Márkák, amelyekkel a HIPStudio története során dolgoztunk',
-        'body':'Az alábbi logók a korábbi HIPStudio partner-/referenciaoldal dokumentált anyagából származnak. Történeti referenciaként mutatjuk őket; a megjelenés önmagában nem állítás jelenlegi ügyfél- vagy partnerkapcsolatról.',
-        'alt':'HIPStudio történeti referencia logó'
+        'eyebrow':'Partnereink',
+        'title':'HIPStudio partnerek',
+        'body':'Az itt látható logók a HIPStudio partneroldalának dokumentált anyagából származnak. A képeket saját GitHub assetként tároljuk; a publikus oldal nem tölt be logót a Wix rendszeréből.',
+        'alt':'HIPStudio partner logó'
     },
     'en': {
-        'eyebrow':'References',
-        'title':'Brands HIPStudio has worked with over its history',
-        'body':'These logos come from the documented material of the former HIPStudio partners/references page. They are shown as historical references; inclusion does not by itself claim a current client or partner relationship.',
-        'alt':'HIPStudio historical reference logo'
+        'eyebrow':'Partners',
+        'title':'HIPStudio partners',
+        'body':'The logos shown here come from the documented material of the HIPStudio partners page. The images are stored as repository-local GitHub assets; the public site does not load partner logos from Wix.',
+        'alt':'HIPStudio partner logo'
     },
     'de': {
-        'eyebrow':'Referenzen',
-        'title':'Marken, mit denen HIPStudio im Laufe seiner Geschichte gearbeitet hat',
-        'body':'Diese Logos stammen aus dem dokumentierten Material der früheren HIPStudio-Partner-/Referenzseite. Sie werden als historische Referenzen gezeigt; die Darstellung allein behauptet keine aktuelle Kunden- oder Partnerbeziehung.',
-        'alt':'Historisches HIPStudio-Referenzlogo'
+        'eyebrow':'Partner',
+        'title':'HIPStudio Partner',
+        'body':'Die hier gezeigten Logos stammen aus dem dokumentierten Material der HIPStudio-Partnerseite. Die Bilder werden als lokale GitHub-Assets gespeichert; die öffentliche Website lädt keine Partnerlogos aus Wix.',
+        'alt':'HIPStudio Partnerlogo'
     }
 }
 
@@ -56,14 +58,14 @@ for lang, slug in ROUTES.items():
         for i, item in enumerate(MANIFEST, 1)
     )
     block = (
-        '<section class="section partner-references" data-partner-references>'
+        '<section class="section hipstudio-partners" data-hipstudio-partners>'
         f'<div class="section-head"><p class="eyebrow">{copy["eyebrow"]}</p><h2>{copy["title"]}</h2>'
         f'<p class="partner-note">{copy["body"]}</p></div>'
         f'<div class="partner-logo-grid">{logos}</div></section>'
     )
     marker = '<footer class="footer">'
-    if 'data-partner-references' not in html:
+    if 'data-hipstudio-partners' not in html:
         html = html.replace(marker, block + marker)
     page.write_text(html)
 
-print(f'Rendered {len(MANIFEST)} repository-local historical/reference logos on 3 About pages')
+print(f'Rendered {len(MANIFEST)} repository-local HIPStudio partner logos on 3 About pages; Flúgos sponsors remain a separate category')
