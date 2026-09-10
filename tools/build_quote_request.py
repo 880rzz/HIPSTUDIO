@@ -12,7 +12,7 @@ import json, os, shutil
 R=Path(__file__).resolve().parents[1]
 D=R/'dist-platform'
 MODE=os.environ.get('BUILD_MODE','review')
-BASE=os.environ.get('PLATFORM_URL','https://www.hellouzlet.hu').rstrip('/')
+BASE=os.environ.get('PLATFORM_URL','https://www.hipstudio.hu').rstrip('/')
 ENDPOINT=os.environ.get('QUOTE_FORM_ENDPOINT','').strip()
 DATA=json.loads((R/'content/platform.json').read_text())
 QUOTE=json.loads((R/'content/quote-request.json').read_text())
