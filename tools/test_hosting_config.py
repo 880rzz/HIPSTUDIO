@@ -29,6 +29,11 @@ subprocess.run(['npm','run','build:platform'],cwd=R,check=True)
 subprocess.run(['python3','tools/prepare_pages_review.py'],cwd=R,check=True)
 D=R/'dist-pages-review'
 assert D.exists()
+root=(D/'index.html')
+assert root.exists(), 'Pages review root index missing'
+root_html=root.read_text(encoding='utf-8')
+assert 'noindex,nofollow' in root_html
+assert 'url=/HIPSTUDIO/hu/' in root_html
 html=list(D.rglob('*.html'))
 assert html
 for p in html:
@@ -42,4 +47,4 @@ home=(D/'hu/index.html').read_text(encoding='utf-8')
 assert 'href="/HIPSTUDIO/' in home
 assert 'src="/HIPSTUDIO/' in home or 'href="/HIPSTUDIO/assets/' in home
 
-print('Hosting config OK: HIPStudio GitHub Pages review artifact works under /HIPSTUDIO/; Flúgos remains separate Vercel infrastructure')
+print('Hosting config OK: HIPStudio GitHub Pages review root and /HIPSTUDIO/ assets work; Flúgos remains separate Vercel infrastructure')
