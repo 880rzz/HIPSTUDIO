@@ -1,9 +1,9 @@
 {
-  "version": "hipstudio-privacy-v6",
+  "version": "hipstudio-privacy-v7",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
-    "adaptation": "HIPStudio-specific controller, human contact, quote fields, retention and production processors",
+    "adaptation": "HIPStudio-specific controller, human contact, quote fields, submission metadata, retention and production processors",
     "ownerInstructionDate": "2026-09-10"
   },
   "controller": {
@@ -42,6 +42,11 @@
     },
     "requiredFields": ["name", "company", "email", "preferred_contact", "project_summary", "pillars", "services", "privacy_acknowledged"],
     "optionalFieldGroups": ["phone", "project_goals", "desired_outcome", "timing", "location", "reference_url", "pillar_specific_scope"],
+    "submissionMetadata": {
+      "fields": ["page_url", "form_started_at", "submitted_at"],
+      "purpose": "Az ajánlatkérés forrásoldalának és beküldési időpontjainak rögzítése a kérés kontextusának megőrzéséhez, hibakereséshez, visszaélés-megelőzéshez és az operatív feldolgozás ellenőrizhetőségéhez.",
+      "retention": "Az ajánlatkéréshez kapcsolt metaadatok az adott megkereséssel azonos megőrzési szabály szerint kezelendők; kizárólag biztonsági naplóként kezelt technikai adatok főszabály szerint legfeljebb 90 napig tarthatók meg, kivéve incidensvizsgálat vagy jogi igény esetén."
+    },
     "specialCategoryPolicy": "A nyilvános ajánlatkérő űrlap nem kér különleges személyes adatot; a szabad szöveges mezőkben ilyen adat megadását kerülni kell. A vállalati élményprogramok első ajánlatkérése csak általános fizikai, akadálymentesítési, kulturális, időjárási és szervezési korlátokra kérdezhet rá, egészségügyi állapotra vagy diagnózisra nem.",
     "retention": {
       "unsuccessfulInquiry": "Az utolsó érdemi kapcsolatot követő 12 hónap, majd törlés vagy anonimizálás.",
