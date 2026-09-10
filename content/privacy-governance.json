@@ -1,10 +1,10 @@
 {
-  "version": "hipstudio-privacy-v2",
+  "version": "hipstudio-privacy-v3",
   "status": "approved_for_quote_flow",
   "basis": {
     "templateSource": "880rzz/BANHALMI hu/adatvedelem/index.html",
-    "adaptation": "HIPStudio-specific controller, contact person, quote fields and production processors",
-    "ownerInstructionDate": "2026-09-09"
+    "adaptation": "HIPStudio-specific controller, human contact, quote fields, retention and production processors",
+    "ownerInstructionDate": "2026-09-10"
   },
   "controller": {
     "legalName": "Hipstudió Korlátolt Felelősségű Társaság",
@@ -42,7 +42,7 @@
     "processors": [
       {
         "service": "Google Apps Script",
-        "purpose": "ajánlatkérő backend és validáció",
+        "purpose": "ajánlatkérő backend, validáció és operatív routing",
         "productionRequired": true
       },
       {
@@ -56,10 +56,10 @@
         "productionRequired": true
       },
       {
-        "service": "GitHub Pages / repository-connected static hosting",
-        "purpose": "a hipstudio.hu statikus weboldalának kiszolgálása a HIPSTUDIO repóból",
+        "service": "Vercel",
+        "purpose": "a statikus weboldal kiszolgálása, TLS, CDN és szükséges kapcsolati/biztonsági naplók",
         "productionRequired": true,
-        "architecture": "single_master_site"
+        "architecture": "separate_vercel_projects_for_hipstudio_and_flugos"
       }
     ],
     "internationalTransfers": "Globális szolgáltató esetén az aktív szolgáltatói szerződés és beállítás szerinti jogszerű adattovábbítási mechanizmust kell alkalmazni; a publikus tájékoztató nem állíthat többet a tényleges szerződésnél és fiókbeállításnál.",
@@ -69,17 +69,20 @@
   "domainArchitecture": {
     "hipstudio": {
       "domain": "https://www.hipstudio.hu",
-      "hosting": "repository_connected_static_hosting",
+      "hosting": "vercel",
       "repository": "880rzz/HIPSTUDIO",
       "role": "master_platform",
-      "directDomainConnection": true
+      "separateVercelProject": true,
+      "activateAtFinalCutover": true
     },
     "flugos": {
       "domain": "https://www.flugos.hu",
-      "role": "specialist_brand_entry_domain",
+      "hosting": "vercel",
+      "role": "specialist_entry_domain",
       "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
-      "behavior": "permanent_redirect_to_hipstudio_flugos_page",
-      "separateWebsite": false,
+      "behavior": "separate_vercel_entry_project_with_final_redirect_or_entry_behavior_verified_before_cutover",
+      "separateVercelProject": true,
+      "separateContentPlatform": false,
       "activateAtFinalCutover": true
     }
   },
@@ -91,6 +94,6 @@
     },
     "quoteFormMustLinkNotice": true,
     "productionFormActivationAllowed": true,
-    "condition": "A publikált tájékoztató, a tényleges backend és az aktuális szolgáltatói konfiguráció egyezzen; az E2E gate ettől külön továbbra is kötelező."
+    "condition": "A publikált tájékoztató, a tényleges backend, a Vercel hosting és az aktuális szolgáltatói konfiguráció egyezzen; az E2E gate ettől külön továbbra is kötelező."
   }
 }
