@@ -1,0 +1,47 @@
+name: Publish HIPStudio review to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hipstudio-pages-review
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Build review-safe HIPStudio site
+        env:
+          BUILD_MODE: review
+          PLATFORM_URL: https://www.hipstudio.hu
+          QUOTE_REQUEST_BASE_URL: https://www.hipstudio.hu
+        run: npm run build:platform
+      - run: npm run test:platform
+      - run: npm run test:privacy-governance
+      - run: npm run test:privacy-pages
+      - run: npm run test:hosting
+      - run: npm run test:html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-platform
+      - id: deployment
+        uses: actions/deploy-pages@v4
