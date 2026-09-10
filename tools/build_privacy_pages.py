@@ -23,6 +23,29 @@ COPY={
  }
 }
 
+PROCESSOR_PURPOSE={
+ 'Google Apps Script':{
+  'hu':'ajánlatkérő backend, validáció és operatív routing',
+  'en':'quote-request backend, validation and operational routing',
+  'de':'Backend für Angebotsanfragen, Validierung und operative Zuordnung'
+ },
+ 'Google Sheets':{
+  'hu':'korlátozott hozzáférésű ajánlatkérési nyilvántartás',
+  'en':'restricted-access quote-request register',
+  'de':'zugriffsbeschränktes Register für Angebotsanfragen'
+ },
+ 'Google Workspace / Gmail':{
+  'hu':'belső értesítés, ügyfél-visszaigazolás és válaszkommunikáció',
+  'en':'internal notification, customer confirmation and reply communication',
+  'de':'interne Benachrichtigung, Kundenbestätigung und Antwortkommunikation'
+ },
+ 'Vercel':{
+  'hu':'a statikus weboldal kiszolgálása, TLS, CDN és szükséges kapcsolati/biztonsági naplók',
+  'en':'static website hosting, TLS, CDN and necessary connection/security logs',
+  'de':'Hosting der statischen Website, TLS, CDN und erforderliche Verbindungs-/Sicherheitsprotokolle'
+ }
+}
+
 def e(v): return escape(str(v),quote=True)
 def ul(items): return '<ul>'+''.join(f'<li>{e(x)}</li>' for x in items)+'</ul>'
 
@@ -40,8 +63,8 @@ def text_for(lang):
  }[lang]
  special={
   'hu':q['specialCategoryPolicy'],
-  'en':'The public quote form does not request special-category personal data. Please do not include health data, intimate information, identity-document numbers or similar sensitive information in free-text fields.',
-  'de':'Das öffentliche Anfrageformular verlangt keine besonderen Kategorien personenbezogener Daten. Bitte übermitteln Sie in Freitextfeldern keine Gesundheitsdaten, intimen Informationen, Ausweisnummern oder vergleichbar sensible Angaben.'
+  'en':'The public quote form does not request special-category personal data. For corporate experiences, the first inquiry may describe general physical, accessibility, cultural, weather or organisational constraints, but must not include health conditions or diagnoses. Please do not include health data, intimate information, identity-document numbers or similar sensitive information in free-text fields.',
+  'de':'Das öffentliche Anfrageformular verlangt keine besonderen Kategorien personenbezogener Daten. Bei Corporate Experiences dürfen in der ersten Anfrage allgemeine körperliche, barrierebezogene, kulturelle, wetterbedingte oder organisatorische Rahmenbedingungen beschrieben werden, jedoch keine Gesundheitszustände oder Diagnosen. Bitte übermitteln Sie in Freitextfeldern keine Gesundheitsdaten, intimen Informationen, Ausweisnummern oder vergleichbar sensible Angaben.'
  }[lang]
  decision={
   'hu':q['automatedDecisionMaking'],
@@ -58,9 +81,14 @@ def text_for(lang):
   'en':'Where a service provider operates globally, the lawful transfer mechanism applicable to the active contract and account configuration is used. The public notice does not claim more than the actual service agreement and configuration support.',
   'de':'Wenn ein Dienstleister global tätig ist, wird der für den aktiven Vertrag und die Kontoeinstellungen geltende rechtmäßige Übermittlungsmechanismus verwendet. Die öffentliche Information behauptet nicht mehr, als der tatsächliche Dienstleistungsvertrag und die Konfiguration belegen.'
  }[lang]
- processors=[f"{x['service']} — {x['purpose']}" for x in q['processors']]
+ processors=[]
+ for x in q['processors']:
+  localized=PROCESSOR_PURPOSE.get(x['service'],{}).get(lang)
+  if not localized:
+   raise SystemExit(f"Missing {lang} processor purpose for {x['service']}")
+  processors.append(f"{x['service']} — {localized}")
  required=', '.join(q['requiredFields']); optional=', '.join(q['optionalFieldGroups'])
- return f'''<section class="quote-shell"><div class="quote-intro"><p class="eyebrow">HIPStudio</p><h1>{e(t['title'])}</h1><p class="lead">{e(t['lead'])}</p></div><div class="legal prose"><h2>{e(t['controller'])}</h2><p><strong>{e(c['legalName'])}</strong> ({e(c['shortName'])})<br>{e(c['registeredOffice'])}<br>{e(t['reg'])}: {e(c['companyRegistrationNumber'])}<br>{e(t['tax'])}: {e(c['taxNumber'])}<br>{e(t['email'])}: <a href="mailto:{e(c['email'])}">{e(c['email'])}</a><br>{e(t['phone'])}: {e(c['phone'])}</p><h2>{e(t['contact'])}</h2><p><strong>{e(cp['name'])}</strong> — {e(cp['role'])}. {e(t['contactSentence'])}</p><h2>{e(t['purpose'])}</h2><p>{e(purpose)}</p><h2>{e(t['data'])}</h2><p><strong>{e(t['required'])}:</strong> {e(required)}<br><strong>{e(t['optional'])}:</strong> {e(optional)}</p><h2>{e(t['processors'])}</h2>{ul(processors)}<h2>{e(t['retention'])}</h2><p>{e(retention)}</p><h2>{e(t['decision'])}</h2><p>{e(decision)}</p><h2>{e(t['transfers'])}</h2><p>{e(transfer)}</p><h2>{e(t['rights'])}</h2><p>{e(rights)}</p><h2>{e(t['special'])}</h2><p>{e(special)}</p><h2>{e(t['updated'])}</h2><p>2026-09-09</p><p><a class="button" href="{e(QUOTE[lang])}">{e(t['back'])}</a></p></div></section>'''
+ return f'''<section class="quote-shell"><div class="quote-intro"><p class="eyebrow">HIPStudio</p><h1>{e(t['title'])}</h1><p class="lead">{e(t['lead'])}</p></div><div class="legal prose"><h2>{e(t['controller'])}</h2><p><strong>{e(c['legalName'])}</strong> ({e(c['shortName'])})<br>{e(c['registeredOffice'])}<br>{e(t['reg'])}: {e(c['companyRegistrationNumber'])}<br>{e(t['tax'])}: {e(c['taxNumber'])}<br>{e(t['email'])}: <a href="mailto:{e(c['email'])}">{e(c['email'])}</a><br>{e(t['phone'])}: {e(c['phone'])}</p><h2>{e(t['contact'])}</h2><p><strong>{e(cp['name'])}</strong> — {e(cp['role'])}. {e(t['contactSentence'])}</p><h2>{e(t['purpose'])}</h2><p>{e(purpose)}</p><h2>{e(t['data'])}</h2><p><strong>{e(t['required'])}:</strong> {e(required)}<br><strong>{e(t['optional'])}:</strong> {e(optional)}</p><h2>{e(t['processors'])}</h2>{ul(processors)}<h2>{e(t['retention'])}</h2><p>{e(retention)}</p><h2>{e(t['decision'])}</h2><p>{e(decision)}</p><h2>{e(t['transfers'])}</h2><p>{e(transfer)}</p><h2>{e(t['rights'])}</h2><p>{e(rights)}</p><h2>{e(t['special'])}</h2><p>{e(special)}</p><h2>{e(t['updated'])}</h2><p>2026-09-10</p><p><a class="button" href="{e(QUOTE[lang])}">{e(t['back'])}</a></p></div></section>'''
 
 if not D.exists(): raise SystemExit('dist-platform missing; run build_platform.py first')
 manifest=json.loads((D/'platform-build.json').read_text(encoding='utf-8'))
