@@ -39,9 +39,11 @@ jobs:
       - run: npm run test:privacy-pages
       - run: npm run test:hosting
       - run: npm run test:html
+      - name: Prepare temporary GitHub Pages project-path artifact
+        run: python3 tools/prepare_pages_review.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist-platform
+          path: dist-pages-review
       - id: deployment
         uses: actions/deploy-pages@v4
