@@ -200,13 +200,46 @@ function sendInternal_(r) {
   sendMail_(HIPSTUDIO.INTERNAL_RECIPIENTS.join(','), subject, stripHtml_(html), html, HIPSTUDIO.CENTRAL_EMAIL);
 }
 
+const CUSTOMER_FIELDS = [
+  'name','company','email','phone','preferred_contact','pillars','services','goals','project_summary','desired_outcome','must_have',
+  'deadline','preferred_date_1','preferred_date_2','preferred_date_3','date_flexibility','location_type','location_details','reference_url',
+  'business_company_size','business_entities','business_payroll_headcount','business_monthly_invoices','business_countries','business_engagement','business_current_systems','business_process_scope','business_reporting_need',
+  'creative_people_count','creative_final_assets','creative_locations_count','creative_languages','creative_addons','creative_channels','creative_usage_rights','creative_brand_requirements',
+  'photo_outfits_setups','photo_retouched_images','photo_event_guests','photo_parallel_tracks','photo_property_spaces','photo_area_sqm','photo_print_quantity','photo_key_people_moments','photo_aerial_requirements',
+  'video_final_length','video_shoot_days','video_speakers','video_script_status','stream_platform','stream_viewers','video_audio_music','video_deliverables',
+  'podcast_speakers','podcast_episodes','podcast_episode_length','podcast_distribution','repurposing_outputs',
+  'experience_participants','experience_duration','experience_languages','experience_environment','experience_travel','experience_team_profile','experience_objective','experience_constraints','experience_branding','experience_logistics'
+];
+
+function customerLabels_(lang) {
+  const common = {
+    hu:{name:'Név',company:'Cég / szervezet',email:'E-mail',phone:'Telefon',preferred_contact:'Preferált kapcsolattartás',pillars:'Terület',services:'Szolgáltatás',goals:'Cél',project_summary:'Projekt / kiinduló helyzet',desired_outcome:'Elvárt eredmény',must_have:'Kötelező elem',deadline:'Határidő',preferred_date_1:'Első választott időpont',preferred_date_2:'Második választott időpont',preferred_date_3:'Harmadik választott időpont',date_flexibility:'Időpont rugalmassága',location_type:'Helyszíntípus',location_details:'Helyszín részletei',reference_url:'Referencia / brief'},
+    en:{name:'Name',company:'Company / organisation',email:'Email',phone:'Phone',preferred_contact:'Preferred contact method',pillars:'Area',services:'Service',goals:'Goal',project_summary:'Project / starting point',desired_outcome:'Desired outcome',must_have:'Must-have',deadline:'Deadline',preferred_date_1:'First preferred date',preferred_date_2:'Second preferred date',preferred_date_3:'Third preferred date',date_flexibility:'Date flexibility',location_type:'Location type',location_details:'Location details',reference_url:'Reference / brief'},
+    de:{name:'Name',company:'Unternehmen / Organisation',email:'E-Mail',phone:'Telefon',preferred_contact:'Bevorzugter Kontaktweg',pillars:'Bereich',services:'Leistung',goals:'Ziel',project_summary:'Projekt / Ausgangslage',desired_outcome:'Gewünschtes Ergebnis',must_have:'Pflichtanforderung',deadline:'Frist',preferred_date_1:'Erster Wunschtermin',preferred_date_2:'Zweiter Wunschtermin',preferred_date_3:'Dritter Wunschtermin',date_flexibility:'Terminflexibilität',location_type:'Ortstyp',location_details:'Ortsangaben',reference_url:'Referenz / Briefing'}
+  }[lang];
+  const out = {};
+  CUSTOMER_FIELDS.forEach(function(k){ out[k] = common[k] || k.replace(/_/g,' '); });
+  return out;
+}
+
+function customerSubmittedRows_(r, lang) {
+  const labels = customerLabels_(lang);
+  return CUSTOMER_FIELDS.filter(function(k){ return r[k] !== '' && r[k] != null; }).map(function(k){ return [labels[k], r[k]]; });
+}
+
 function sendConfirmation_(r) {
   const copy = {
-    hu:{subject:'HIPStudio — megkaptuk az ajánlatkérésedet',hello:'Köszönjük az ajánlatkérést.',promise:'Az egyedi ajánlatot 24 órán belül összeállítjuk.',id:'Ajánlatkérés azonosítója'},
-    en:{subject:'HIPStudio — we received your quote request',hello:'Thank you for your quote request.',promise:'We prepare your tailored quote within 24 hours.',id:'Request ID'},
-    de:{subject:'HIPStudio — Ihre Anfrage ist eingegangen',hello:'Vielen Dank für Ihre Anfrage.',promise:'Wir erstellen Ihr individuelles Angebot innerhalb von 24 Stunden.',id:'Anfrage-ID'}
-  }[r.language];
-  const html = '<div style="font-family:Arial,sans-serif;line-height:1.5;color:#111"><h1>' + h_(copy.hello) + '</h1><p>' + h_(copy.promise) + '</p><p><strong>' + h_(copy.id) + ':</strong> ' + h_(r.request_id) + '</p><p>HIPStudio<br><a href="mailto:' + h_(HIPSTUDIO.CENTRAL_EMAIL) + '">' + h_(HIPSTUDIO.CENTRAL_EMAIL) + '</a></p></div>';
+    hu:{subject:'HIPStudio — megérkezett az ajánlatkérésed',hello:'Köszönjük, megérkezett az ajánlatkérésed.',promise:'Hamarosan felvesszük veled a kapcsolatot.',id:'Ajánlatkérés azonosítója',details:'Az általad beküldött adatok'},
+    en:{subject:'HIPStudio — your quote request has arrived',hello:'Thank you, we received your quote request.',promise:'We will contact you shortly.',id:'Request ID',details:'The information you submitted'},
+    de:{subject:'HIPStudio — Ihre Angebotsanfrage ist eingegangen',hello:'Vielen Dank, Ihre Angebotsanfrage ist bei uns eingegangen.',promise:'Wir melden uns in Kürze bei Ihnen.',id:'Anfrage-ID',details:'Ihre übermittelten Angaben'}
+  }[r.language] || null;
+  if (!copy) throw new Error('confirmation_language');
+  const html = '<div style="font-family:Arial,sans-serif;line-height:1.5;color:#111">' +
+    '<h1>' + h_(copy.hello) + '</h1>' +
+    '<p>' + h_(copy.promise) + '</p>' +
+    '<p><strong>' + h_(copy.id) + ':</strong> ' + h_(r.request_id) + '</p>' +
+    section_(copy.details, customerSubmittedRows_(r, r.language)) +
+    '<p style="margin-top:24px">HIPStudio<br><a href="mailto:' + h_(HIPSTUDIO.CENTRAL_EMAIL) + '">' + h_(HIPSTUDIO.CENTRAL_EMAIL) + '</a></p></div>';
   sendMail_(r.email, copy.subject + ' — ' + r.request_id, stripHtml_(html), html, HIPSTUDIO.CENTRAL_EMAIL);
 }
 
