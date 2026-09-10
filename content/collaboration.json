@@ -1,0 +1,38 @@
+{
+  "version": "collaboration-v1",
+  "status": "verified_current",
+  "source": "Current hipstudio.hu Wix content verified 2026-09-10",
+  "people": [
+    {
+      "name": "Bánhalmi Norbert",
+      "role": {
+        "hu": "alapító, kreatív szakmai partner",
+        "en": "founder, creative professional partner",
+        "de": "Gründer, kreativer Fachpartner"
+      },
+      "body": {
+        "hu": "Bánhalmi Norbert 2006-ban alapította a HIPStudio kommunikációs és kreatív márkát. A jelenlegi HIPStudio-val önálló szakmai partnerként működik együtt; a szakmai kapcsolat nem jelenti a HIPStudio, a BANHALMI vagy az érintett vállalkozások jogi azonosságát.",
+        "en": "Bánhalmi Norbert founded the HIPStudio communication and creative brand in 2006. He works with the current HIPStudio as an independent professional partner; this professional relationship does not mean that HIPStudio, BANHALMI or the businesses involved are legally identical.",
+        "de": "Bánhalmi Norbert gründete 2006 die Kommunikations- und Kreativmarke HIPStudio. Mit dem heutigen HIPStudio arbeitet er als unabhängiger Fachpartner zusammen; diese fachliche Zusammenarbeit bedeutet keine rechtliche Identität von HIPStudio, BANHALMI oder den beteiligten Unternehmen."
+      }
+    },
+    {
+      "name": "Speier Vikó",
+      "role": {
+        "hu": "független szakmai fotós partner, fotós szolgáltatások kapcsolattartója",
+        "en": "independent photography partner, contact for photography services",
+        "de": "unabhängige Fotografiepartnerin, Ansprechpartnerin für Fotoleistungen"
+      },
+      "body": {
+        "hu": "Speier Vikó a HIPStudio független szakmai fotós partnere és a fotós szolgáltatások kapcsolattartója. A budapesti HIPStudio működésében szakmai partnerként vesz részt; saját vállalkozása és a Hipstudió Kft. különálló jogi entitások.",
+        "en": "Speier Vikó is HIPStudio's independent professional photography partner and the contact for photography services. She participates in HIPStudio's Budapest operations as a professional partner; her own business and Hipstudió Kft. are separate legal entities.",
+        "de": "Speier Vikó ist unabhängige Fotografiepartnerin von HIPStudio und Ansprechpartnerin für Fotoleistungen. Sie wirkt als Fachpartnerin am Budapester HIPStudio-Betrieb mit; ihr eigenes Unternehmen und die Hipstudió Kft. sind rechtlich getrennte Einheiten."
+      }
+    }
+  ],
+  "legalNote": {
+    "hu": "A HIPStudio, a Hipstudió Kft., Bánhalmi Norbert / BANHALMI és Speier Vikó önálló szakmai illetve jogi entitások. Az adott projekt szerződő fele minden esetben az ajánlatban, szerződésben és számlán megnevezett szolgáltató.",
+    "en": "HIPStudio, Hipstudió Kft., Bánhalmi Norbert / BANHALMI and Speier Vikó are separate professional and/or legal entities. The contracting party for each project is the service provider named in the proposal, agreement and invoice.",
+    "de": "HIPStudio, Hipstudió Kft., Bánhalmi Norbert / BANHALMI und Speier Vikó sind eigenständige fachliche bzw. rechtliche Einheiten. Vertragspartner eines Projekts ist jeweils der im Angebot, Vertrag und auf der Rechnung genannte Dienstleister."
+  }
+}
