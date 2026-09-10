@@ -12,7 +12,7 @@
     "telephone": "+36302215506",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1081 Budapest, Népszínház u. 25. Fe. 2.",
+      "streetAddress": "Népszínház u. 25. Fe. 2.",
       "addressLocality": "Budapest",
       "postalCode": "1081",
       "addressCountry": "HU"
