@@ -210,8 +210,9 @@ p,li{overflow-wrap:normal;word-break:normal;hyphens:none}
 .pillar:nth-child(3){border-radius:12px 34px 34px 34px;background:linear-gradient(145deg,rgba(11,23,54,.96),rgba(21,38,77,.98));color:#fff}
 .pillar:hover{background:#fff;border-color:rgba(181,150,85,.44);transform:translateY(-2px);box-shadow:var(--shadow)}
 .pillar:nth-child(3):hover{background:linear-gradient(145deg,#0b1736,#1c315f)}
-.pillar .number{font-size:.7rem;letter-spacing:.1em;color:var(--gold);margin-bottom:clamp(2.2rem,6vw,5.2rem)}
-.pillar:nth-child(2) .number,.pillar:nth-child(3) .number{margin-bottom:2rem}
+.pillar .number{font-size:.7rem;letter-spacing:.1em;color:var(--gold-text);margin-bottom:clamp(2.2rem,6vw,5.2rem)}
+.pillar:nth-child(2) .number{margin-bottom:2rem}
+.pillar:nth-child(3) .number{margin-bottom:2rem;color:var(--gold)}
 .pillar h3{max-width:18ch;margin-bottom:.85rem}
 .pillar:nth-child(3) h3{color:#fff}
 .pillar p{margin:.2rem 0 0;color:var(--muted);max-width:54ch;line-height:1.68}
