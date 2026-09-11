@@ -60,7 +60,7 @@ const aboutHas2006=await page.locator('body').innerText().then(t=>t.includes('20
 
 await page.goto(origin+'/hu/uzleti-mukodes/');
 const commercialBusiness=await page.locator('[data-commercial-layer="pillar-value"]').count()===1;
-const businessHasScopeQualifier=await page.locator('body').innerText().then(t=>t.includes('előre jóváhagyott felelősségi körökön belül'));
+const businessHasScopeQualifier=await page.locator('body').innerText().then(t=>t.includes('A szabályozott feladatokat csak tisztázott felelősségi körrel vállaljuk.'));
 
 await page.goto(origin+'/hu/ajanlatkeres/');
 await page.locator('[name=pillars][value=creative]').check();
