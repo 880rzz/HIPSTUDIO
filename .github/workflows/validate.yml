@@ -46,6 +46,10 @@ jobs:
       - run: npm run test:flugos-sponsors
       - run: npm run test:pricing
       - run: npm run test:html
+      - name: Prepare GitHub Pages review artifact
+        run: python3 tools/prepare_pages_review.py
+      - name: Validate GitHub Pages review artifact
+        run: python3 tools/test_pages_review_artifact.py
       - run: npx playwright install --with-deps chromium
       - name: Start local HIPStudio review server
         run: |
