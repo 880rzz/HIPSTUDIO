@@ -51,6 +51,20 @@ jobs:
       - name: Validate GitHub Pages review artifact
         run: python3 tools/test_pages_review_artifact.py
       - run: npx playwright install --with-deps chromium
+      - name: Start GitHub Pages project-path simulator
+        run: |
+          rm -rf pages-review-root
+          mkdir -p pages-review-root
+          cp -a dist-pages-review pages-review-root/HIPSTUDIO
+          nohup python3 -m http.server 4175 --bind 127.0.0.1 --directory pages-review-root >/tmp/pages-review.log 2>&1 &
+          for attempt in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:4175/HIPSTUDIO/hu/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/pages-review.log
+          exit 1
+      - name: Browser-test GitHub Pages review artifact
+        run: node tools/browser-pages-review-qa.mjs
       - name: Start local HIPStudio review server
         run: |
           nohup npm run preview >/tmp/hipstudio-preview.log 2>&1 &
