@@ -33,14 +33,7 @@ jobs:
           if [ "$status" = "404" ]; then
             echo "GitHub Pages is not configured yet; the configure-pages step may enable it for this review deployment."
           elif [ "$status" = "200" ]; then
-            cname="$(python3 - <<'PY'
-import json
-from pathlib import Path
-p=Path('/tmp/pages.json')
-data=json.loads(p.read_text())
-print((data.get('cname') or '').strip())
-PY
-)"
+            cname="$(python3 -c "import json; print((json.load(open('/tmp/pages.json')).get('cname') or '').strip())")"
             if [ -n "$cname" ]; then
               echo "Review deployment blocked: GitHub Pages custom domain is active: $cname" >&2
               exit 1
