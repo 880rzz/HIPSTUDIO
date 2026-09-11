@@ -83,8 +83,39 @@ const storage=await page.evaluate(()=>({localStorage:localStorage.length,session
 const unsafeReviewPage=r=>legalRoutes.has(r.path)?!r.robots.includes('noindex'):r.review!==1;
 const pageFailures=results.filter(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length).map(r=>({path:r.path,width:r.width,status:r.status,overflow:r.overflow,brokenImages:r.brokenImages,h1:r.h1,review:r.review,robots:r.robots,violations:r.violations}));
 const interactions={skipHref,skipFocused,skipTarget,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
-const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,pageFailures,errors,externalRequests:[...external],cookies,storage,interactions};
+const checks={
+  pageFailures:pageFailures.length===0,
+  pageErrors:errors.length===0,
+  externalRequests:external.size===0,
+  cookies:cookies.length===0,
+  localStorage:storage.localStorage===0,
+  sessionStorage:storage.sessionStorage===0,
+  skipHref:skipHref==='#main',
+  skipFocused,
+  skipTarget,
+  languageSwitch,
+  commercialHomeProblem,
+  commercialHomeBenefits,
+  problemLinks:problemLinks===3,
+  businessProblemLink,
+  creativeProblemLink,
+  experienceProblemLink,
+  commercialAbout,
+  aboutHas2006,
+  commercialBusiness,
+  businessHasScopeQualifier,
+  creativeServiceVisible,
+  creativeScopeVisible,
+  photoScopeVisible,
+  quoteSubmitDisabled,
+  internalEmailsHidden:!internalEmailsExposed,
+  prefillPillar,
+  prefillService,
+  prefillScopeVisible
+};
+const failedChecks=Object.entries(checks).filter(([,ok])=>!ok).map(([name])=>name);
+const summary={time:new Date().toISOString(),browser:await browser.version(),tested:results.length,results,pageFailures,errors,externalRequests:[...external],cookies,storage,interactions,checks,failedChecks};
 fs.writeFileSync(root+'/audit/browser-platform-qa.json',JSON.stringify(summary,null,2));
-console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,statusFailures:results.filter(r=>r.status!==200).length,brokenImageFailures:results.filter(r=>r.brokenImages).length,h1Failures:results.filter(r=>r.h1!==1).length,reviewFailures:results.filter(unsafeReviewPage).length,pageFailures,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions},null,2));
+console.log(JSON.stringify({tested:results.length,overflow:results.filter(r=>r.overflow).length,axeFailures:results.filter(r=>r.violations.length).length,statusFailures:results.filter(r=>r.status!==200).length,brokenImageFailures:results.filter(r=>r.brokenImages).length,h1Failures:results.filter(r=>r.h1!==1).length,reviewFailures:results.filter(unsafeReviewPage).length,pageFailures,errors,externalRequests:[...external],cookies:cookies.length,storage,interactions,checks,failedChecks},null,2));
 await browser.close();
-if(pageFailures.length||errors.length||external.size||cookies.length||storage.localStorage||storage.sessionStorage||skipHref!=='#main'||!skipFocused||!skipTarget||!languageSwitch||!commercialHomeProblem||!commercialHomeBenefits||problemLinks!==3||!businessProblemLink||!creativeProblemLink||!experienceProblemLink||!commercialAbout||!aboutHas2006||!commercialBusiness||!businessHasScopeQualifier||!creativeServiceVisible||!creativeScopeVisible||!photoScopeVisible||!quoteSubmitDisabled||internalEmailsExposed||!prefillPillar||!prefillService||!prefillScopeVisible)process.exitCode=1;
+if(failedChecks.length)process.exitCode=1;
