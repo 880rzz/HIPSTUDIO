@@ -67,7 +67,7 @@ await page.locator('[name=pillars][value=creative]').check();
 const creativeServiceVisible=await page.locator('[data-services=creative]').isVisible();
 await page.locator('[name=services][value=photo-business-portrait]').check();
 const creativeScopeVisible=await page.locator('[data-creative-scope]').isVisible();
-const photoScopeVisible=await page.getByText('Fotó-specifikus adatok',{exact:true}).isVisible();
+const photoScopeVisible=await page.locator('[data-creative-scope] [name^="photo_"]:visible').count()>0;
 const quoteSubmitDisabled=await page.locator('[data-quote-form] [type=submit]').isDisabled();
 const internalEmailsExposed=await page.locator('body').evaluate(el=>/nemeth\.timea@hipstudio\.hu|banhalmi\.norbert@hipstudio\.hu/.test(el.innerText+el.innerHTML));
 
