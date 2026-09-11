@@ -1,0 +1,68 @@
+{
+  "version": "2026-09-11T22:54+02:00",
+  "purpose": "Production media clearance layer for the unpublished HIPStudio master-site rebuild.",
+  "rules": {
+    "productionRequires": [
+      "sourceUrl",
+      "authorOrOwnerBasis",
+      "permissionStatus",
+      "creditRequirement",
+      "localSelfHostedAssetForProduction"
+    ],
+    "searchResultIsNotPermission": true,
+    "wixCdnHotlinkAllowedInProduction": false,
+    "unknownRightsDefault": "NEEDS_PERMISSION"
+  },
+  "candidates": [
+    {
+      "id": "hero-showreel-current-wix",
+      "kind": "video",
+      "intendedUse": "full-bleed home hero",
+      "sourceUrl": "https://www.hipstudio.hu/referencia-vide%C3%B3k",
+      "sourceRecord": "content/videos.json#showreel",
+      "authorOrOwnerBasis": "Displayed by HIPStudio on the current Wix property; production ownership/reuse basis still needs explicit confirmation for migration/self-hosting.",
+      "permissionStatus": "NEEDS_PERMISSION_CONFIRMATION",
+      "creditRequirement": "UNKNOWN",
+      "localSelfHostedAssetForProduction": false,
+      "productionStatus": "BLOCKED",
+      "notes": "Do not hotlink the Wix CDN. Obtain/export an approved source file, encode local MP4/WebM and create a local poster before enabling the video hero."
+    },
+    {
+      "id": "existing-local-photo-library",
+      "kind": "image-collection",
+      "intendedUse": "editorial home/service visual density",
+      "sourceUrl": "https://www.hipstudio.hu/portrefotozas-galeria",
+      "sourceRecord": "content/images.json",
+      "authorOrOwnerBasis": "Individual records carry publicationRights=user_confirmed_2026-09-07 and are already processed into local responsive WebP variants.",
+      "permissionStatus": "RECORDED_USER_CONFIRMED",
+      "creditRequirement": "VERIFY_PER_ASSET_BEFORE_VISIBLE_CREDIT_DECISION",
+      "localSelfHostedAssetForProduction": true,
+      "productionStatus": "CONDITIONALLY_CLEARED",
+      "notes": "Safe candidates for art direction only after subject/context placement review. Do not infer client/project identity from the image. Preserve per-image alt text and hashes."
+    },
+    {
+      "id": "historical-baby-photo-exhibition",
+      "kind": "third-party-mention-with-images",
+      "intendedUse": "historical evidence only",
+      "sourceUrl": "https://polgarnoemi-oldala.hupont.hu/85/babafotokiallitas",
+      "authorOrOwnerBasis": "Third-party page names HIPStudio/Bánhalmi Norbert and participating photographers; displayed images have no established migration/marketing license in the evidence reviewed.",
+      "permissionStatus": "NEEDS_PERMISSION",
+      "creditRequirement": "Photographers named on source page: Elek Anett, Pál Anita, Perényi Dorottya, Bánhalmi Norbert; exact image-to-author mapping is not established.",
+      "localSelfHostedAssetForProduction": false,
+      "productionStatus": "DO_NOT_USE_MEDIA",
+      "notes": "The textual mention may support historical provenance when carefully qualified. Images must not be copied from this page without rights and subject-consent review."
+    },
+    {
+      "id": "black-food-festival-video",
+      "kind": "video",
+      "intendedUse": "project/reference evidence only",
+      "sourceUrl": "https://vimeo.com/480130855",
+      "authorOrOwnerBasis": "Public result associated with HIPStudio; visible source credit identifies gamosvideo.com as video producer.",
+      "permissionStatus": "NEEDS_PERMISSION",
+      "creditRequirement": "Video by gamosvideo.com if usage is ever cleared.",
+      "localSelfHostedAssetForProduction": false,
+      "productionStatus": "DO_NOT_USE_MEDIA",
+      "notes": "Useful as evidence that credit chains must be preserved; not cleared for reuse."
+    }
+  ]
+}
