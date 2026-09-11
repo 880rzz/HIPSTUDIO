@@ -4,8 +4,16 @@
     "slug": {"hu": "vezetoi-jelenlet", "en": "executive-presence", "de": "fuehrungspraesenz"},
     "name": {"hu": "Vezetői jelenlét", "en": "Executive presence", "de": "Führungspräsenz"},
     "audience": {"hu": "Vezetőknek, szakértőknek és vállalati csapatoknak.", "en": "For executives, specialists and corporate teams.", "de": "Für Führungskräfte, Fachleute und Unternehmensteams."},
-    "problem": {"hu": "Ha több felületen kell egységes, hiteles és felismerhető szakmai képet mutatnia.", "en": "When you need a consistent, credible and recognisable professional presence across channels.", "de": "Wenn Sie über mehrere Kanäle hinweg einen konsistenten, glaubwürdigen und wiedererkennbaren professionellen Auftritt benötigen."},
-    "approach": {"hu": "A felhasználási helyzetekből indulunk ki, majd ezekhez igazítjuk a képi irányt, a környezetet és az átadandó változatokat.", "en": "We start with the intended channels, then align the visual direction, setting and deliverable variants with them.", "de": "Wir beginnen mit den vorgesehenen Kanälen und stimmen darauf Bildsprache, Umgebung und benötigte Varianten ab."},
+    "problem": {"hu": "Ha több felületen kell ugyanazt az embert hitelesen megmutatni, de egyetlen generikus portré nem elég LinkedInre, sajtóhoz és céges kommunikációhoz.", "en": "When one generic portrait is not enough to represent the same person credibly across LinkedIn, press and corporate communications.", "de": "Wenn ein einziges Standardporträt nicht ausreicht, um dieselbe Person auf LinkedIn, in der Presse und in der Unternehmenskommunikation glaubwürdig zu zeigen."},
+    "approach": {"hu": "Előbb azt tisztázzuk, hol és milyen szerepben jelenik meg a kép. Ez alapján választunk képi irányt, környezetet, kivágásokat és szükséges változatokat.", "en": "We first clarify where the images will appear and what role they need to support. That determines the visual direction, setting, crops and deliverable variants.", "de": "Zuerst klären wir, wo die Bilder erscheinen und welche Rolle sie unterstützen sollen. Daraus ergeben sich Bildsprache, Umgebung, Ausschnitte und benötigte Varianten."},
+    "outcome": {"hu": "Egy összehangolt képkészlet, amely nem kényszerít ugyanarra a fotóra minden felületet.", "en": "A coordinated image set that does not force one photograph to do every job.", "de": "Ein abgestimmtes Bildset, bei dem nicht ein einziges Foto jede Aufgabe übernehmen muss."},
+    "flexibility": {"hu": "Stúdió, helyszín, headshot, üzleti vagy brand portré a felhasználási cél szerint; specialistához irányítás, ha az indokolt.", "en": "Studio, location, headshot, business or brand portrait according to use; specialist routing where appropriate.", "de": "Studio, Location, Headshot, Business- oder Brandporträt je nach Einsatz; bei Bedarf Weiterleitung an Spezialisten."},
+    "evidenceStatus": "VERIFIED",
+    "evidence": [
+      "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+      "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest"
+    ],
+    "cta": {"hu": "Írd meg, hol használod a képet — ebből indulunk ki.", "en": "Tell us where the image will be used — we start there.", "de": "Sagen Sie uns, wo das Bild eingesetzt wird — dort beginnen wir."},
     "services": ["business", "headshot", "executive", "brand", "positioning"]
   },
   {
@@ -13,8 +21,13 @@
     "slug": {"hu": "kampany-es-ertekesites", "en": "campaign-and-commerce", "de": "kampagne-und-vertrieb"},
     "name": {"hu": "Kampány és értékesítés", "en": "Campaign and commerce", "de": "Kampagne und Vertrieb"},
     "audience": {"hu": "Marketingcsapatoknak, márkáknak és termékfelelősöknek.", "en": "For marketing teams, brands and product owners.", "de": "Für Marketingteams, Marken und Produktverantwortliche."},
-    "problem": {"hu": "Ha egy termékhez vagy kampányhoz több csatornán használható, egységes vizuális anyag szükséges.", "en": "When a product or campaign needs a coherent set of visual assets for several channels.", "de": "Wenn ein Produkt oder eine Kampagne zusammenhängendes Bildmaterial für mehrere Kanäle benötigt."},
-    "approach": {"hu": "A koncepciót, a formátumokat és a felhasználási környezetet együtt tervezzük, hogy a produkció egyértelmű briefből induljon.", "en": "We plan the concept, formats and usage context together so production starts from a clear brief.", "de": "Wir planen Konzept, Formate und Nutzungskontext gemeinsam, damit die Produktion mit einem klaren Briefing beginnt."},
+    "problem": {"hu": "Ha ugyanahhoz a kampányhoz több formátum kell, de a külön gyártott képek és videók könnyen szétesnek vizuálisan és briefben.", "en": "When one campaign needs several formats but separately produced assets risk drifting apart in look and brief.", "de": "Wenn eine Kampagne mehrere Formate braucht, getrennt produzierte Inhalte aber visuell und im Briefing auseinanderlaufen können."},
+    "approach": {"hu": "Egy közös felhasználási tervből indulunk: melyik csatornára mi készül, milyen képarányban, milyen üzenettel és milyen produkciós igénnyel.", "en": "We start from one usage plan: what is needed for each channel, in which aspect ratio, with which message and production requirement.", "de": "Wir beginnen mit einem gemeinsamen Nutzungsplan: was für welchen Kanal, in welchem Format, mit welcher Botschaft und welchem Produktionsbedarf entsteht."},
+    "outcome": {"hu": "Kevesebb újratervezés és következetesebb kampányanyag ugyanabból a briefből.", "en": "Less re-planning and a more coherent campaign asset set from one brief.", "de": "Weniger Neuplanung und konsistentere Kampagneninhalte aus einem gemeinsamen Briefing."},
+    "flexibility": {"hu": "Fotó, termék-, katalógus-, divat- és social formátumok kombinálhatók az elfogadott brief szerint.", "en": "Photography, product, catalogue, fashion and social formats can be combined according to the agreed brief.", "de": "Foto-, Produkt-, Katalog-, Fashion- und Social-Formate können entsprechend dem vereinbarten Briefing kombiniert werden."},
+    "evidenceStatus": "QUALIFIED",
+    "evidence": [],
+    "cta": {"hu": "Küldd el a kampány célját és a csatornákat — előbb a szükséges formátumokat rakjuk rendbe.", "en": "Send the campaign goal and channels — we will first map the formats you actually need.", "de": "Senden Sie Kampagnenziel und Kanäle — zuerst klären wir die wirklich benötigten Formate."},
     "services": ["advertising", "product", "catalogue", "fashion", "social"]
   },
   {
@@ -22,8 +35,13 @@
     "slug": {"hu": "vallalati-esemenyek", "en": "corporate-events", "de": "unternehmensveranstaltungen"},
     "name": {"hu": "Vállalati események", "en": "Corporate events", "de": "Unternehmensveranstaltungen"},
     "audience": {"hu": "Kommunikációs csapatoknak, rendezvényszervezőknek és vezetői programokhoz.", "en": "For communications teams, event organisers and executive programmes.", "de": "Für Kommunikationsteams, Veranstalter und Führungsprogramme."},
-    "problem": {"hu": "Ha az esemény dokumentálása mellett gyorsan használható sajtó- és kommunikációs anyagra is szükség van.", "en": "When an event needs both considered documentation and usable press or communications assets.", "de": "Wenn eine Veranstaltung sowohl sorgfältige Dokumentation als auch nutzbares Presse- und Kommunikationsmaterial braucht."},
-    "approach": {"hu": "Előre rögzítjük a programot, a kiemelt pillanatokat, a hozzáférést és az átadási prioritásokat.", "en": "We agree the programme, priority moments, access and delivery priorities before the event.", "de": "Wir stimmen Programm, Schlüsselmomente, Zugang und Übergabeprioritäten vor der Veranstaltung ab."},
+    "problem": {"hu": "Ha az esemény közben változik a program, gyorsan kell sajtókép, videó vagy portré, és a merev stáb emiatt kockázattá válik.", "en": "When the programme changes during an event, press images, video or portraits may be needed quickly, and a rigid crew becomes a liability.", "de": "Wenn sich das Programm während einer Veranstaltung ändert, schnell Pressebilder, Video oder Porträts gebraucht werden und ein starres Team zum Risiko wird."},
+    "approach": {"hu": "Előre rögzítjük a kötelező pillanatokat, hozzáférést és átadási prioritásokat, de a stáb a helyszínen az egyeztetett kereteken belül tud alkalmazkodni.", "en": "We agree the must-have moments, access and delivery priorities in advance, while the crew can adapt on site within the agreed scope.", "de": "Pflichtmomente, Zugang und Übergabeprioritäten werden vorab festgelegt; vor Ort kann sich das Team innerhalb des vereinbarten Rahmens anpassen."},
+    "outcome": {"hu": "Használható kommunikációs anyag akkor is, ha a rendezvény nem pontosan a forgatókönyv szerint halad.", "en": "Usable communications material even when the event does not follow the original run sheet exactly.", "de": "Nutzbares Kommunikationsmaterial auch dann, wenn die Veranstaltung nicht exakt nach Ablaufplan verläuft."},
+    "flexibility": {"hu": "Fotó, videó, rövid referenciafilm, mobil portré/press-wall és sürgős képkiválasztás a projektben előre rögzített igény szerint.", "en": "Photography, video, short reference film, mobile portrait/press-wall setup and urgent image selection where agreed in the project scope.", "de": "Foto, Video, kurzer Referenzfilm, mobiles Porträt/Press-Wall-Setup und dringende Bildauswahl, sofern im Projektumfang vereinbart."},
+    "evidenceStatus": "VERIFIED",
+    "evidence": ["https://www.hipstudio.hu/rendezvenyfotozas-budapest"],
+    "cta": {"hu": "Küldd el a programot és azt, mire kell az anyag. Megmondjuk, milyen stáb indokolt.", "en": "Send the programme and tell us what the material is for. We will tell you what crew is justified.", "de": "Senden Sie Programm und Verwendungszweck. Wir sagen Ihnen, welches Team sinnvoll ist."},
     "services": ["event", "clevel", "event-video", "streaming", "souvenir"]
   },
   {
@@ -31,8 +49,13 @@
     "slug": {"hu": "film-es-szerkesztett-tartalom", "en": "film-and-editorial-content", "de": "film-und-redaktioneller-inhalt"},
     "name": {"hu": "Film és szerkesztett tartalom", "en": "Film and editorial content", "de": "Film und redaktioneller Inhalt"},
     "audience": {"hu": "Márkáknak, kommunikációs csapatoknak és szakmai műsorokhoz.", "en": "For brands, communications teams and professional programmes.", "de": "Für Marken, Kommunikationsteams und Fachformate."},
-    "problem": {"hu": "Ha egy témát mozgóképpel vagy hanggal kell érthetően, következetesen és több változatban feldolgozni.", "en": "When a subject needs a clear, consistent treatment in film or audio and in several versions.", "de": "Wenn ein Thema in Film oder Audio klar, konsistent und in mehreren Fassungen aufbereitet werden soll."},
-    "approach": {"hu": "Az üzenetet és a szerkesztési tervet a forgatás előtt tisztázzuk; a terjedelem az elfogadott briefből következik.", "en": "We clarify the message and editorial plan before recording; scope follows the agreed brief.", "de": "Botschaft und redaktionellen Plan klären wir vor der Aufnahme; der Umfang folgt dem vereinbarten Briefing."},
+    "problem": {"hu": "Ha tudod, mit szeretnél elmondani, de még nem világos, hogy rövid videó, interjú, podcast, eseményfilm vagy más formátum szolgálja-e jól a célt.", "en": "When you know what you need to communicate but not whether a short video, interview, podcast, event film or another format will serve the goal best.", "de": "Wenn die Botschaft klar ist, aber noch nicht, ob Kurzvideo, Interview, Podcast, Eventfilm oder ein anderes Format das Ziel am besten erfüllt."},
+    "approach": {"hu": "Nem a filmhosszal kezdünk. Előbb a célt, a közönséget, a csatornákat és a rendelkezésre álló anyagot tisztázzuk; ebből következik a formátum és a stáb.", "en": "We do not start with film length. We clarify the goal, audience, channels and available material first; format and crew follow from that.", "de": "Wir beginnen nicht mit der Filmlänge. Zuerst klären wir Ziel, Publikum, Kanäle und vorhandenes Material; daraus ergeben sich Format und Team."},
+    "outcome": {"hu": "Olyan produkciós terv, amely a kommunikációs feladathoz választ formátumot, nem fordítva.", "en": "A production plan that chooses the format for the communications task, not the other way around.", "de": "Ein Produktionsplan, der das Format an die Kommunikationsaufgabe anpasst — nicht umgekehrt."},
+    "flexibility": {"hu": "A stáb, forgatókönyv, helyszín, szereplők és technikai igény a választott célhoz és briefhez skálázható.", "en": "Crew, script, locations, contributors and technical requirements can scale to the goal and agreed brief.", "de": "Team, Drehbuch, Locations, Mitwirkende und Technik lassen sich an Ziel und vereinbartes Briefing anpassen."},
+    "evidenceStatus": "VERIFIED",
+    "evidence": ["https://www.hipstudio.hu/rovidfilm-keszites"],
+    "cta": {"hu": "Ne filmhosszal kezdjük. Mondd el, mit kell elérnie.", "en": "Do not start with film length. Tell us what it needs to achieve.", "de": "Beginnen wir nicht mit der Filmlänge. Sagen Sie uns, was erreicht werden soll."},
     "services": ["video", "shoot", "werk", "podcast", "sports-video", "concert-video", "music-video"]
   },
   {
@@ -40,8 +63,13 @@
     "slug": {"hu": "terek-es-elmenyek", "en": "spaces-and-experiences", "de": "raeume-und-erlebnisse"},
     "name": {"hu": "Terek és élmények", "en": "Spaces and experiences", "de": "Räume und Erlebnisse"},
     "audience": {"hu": "Ingatlanok, vendéglátóhelyek, intézmények és helyszínek bemutatásához.", "en": "For property, hospitality, institutions and location-led businesses.", "de": "Für Immobilien, Gastgewerbe, Institutionen und standortbezogene Unternehmen."},
-    "problem": {"hu": "Ha egy hely térélményét, részleteit és bejárhatóságát több nézőpontból kell megmutatni.", "en": "When a place needs to communicate its spatial character, detail and navigability from several viewpoints.", "de": "Wenn ein Ort seinen räumlichen Charakter, seine Details und Begehbarkeit aus mehreren Perspektiven zeigen soll."},
-    "approach": {"hu": "A helyszíni adottságokhoz választunk állóképes, légi, virtuális vagy stúdiótechnikai megoldást.", "en": "We select still, aerial, virtual or studio techniques according to the location and intended use.", "de": "Wir wählen Foto-, Luftbild-, virtuelle oder Studiotechnik passend zum Ort und zur vorgesehenen Nutzung."},
+    "problem": {"hu": "Ha egy helyet nem elég egyetlen szép képpel megmutatni, mert a térarány, a bejárhatóság vagy a használati élmény is fontos.", "en": "When one attractive photograph is not enough because scale, navigability or the experience of using the place also matters.", "de": "Wenn ein schönes Einzelbild nicht genügt, weil Raumgefühl, Begehbarkeit oder Nutzungserlebnis ebenfalls wichtig sind."},
+    "approach": {"hu": "A felhasználási helyzet alapján választunk állóképet, légi, virtuális vagy stúdiótechnikai megoldást; nem minden helyszínhez ugyanazt a technikát erőltetjük.", "en": "We choose still, aerial, virtual or studio techniques according to the intended use rather than forcing the same technique onto every location.", "de": "Je nach Nutzung wählen wir Foto-, Luftbild-, virtuelle oder Studiotechnik, statt jedem Ort dieselbe Methode aufzuzwingen."},
+    "outcome": {"hu": "A térből annyi és olyan információ látszik, amennyi a döntéshez vagy bemutatáshoz ténylegesen kell.", "en": "The viewer gets the spatial information actually needed for presentation or decision-making.", "de": "Es werden genau die räumlichen Informationen sichtbar, die für Präsentation oder Entscheidung benötigt werden."},
+    "flexibility": {"hu": "Állókép, légi, virtuális vagy greenbox/stúdiótechnika a helyszín és az engedélyezett scope szerint.", "en": "Still, aerial, virtual or green-screen/studio techniques according to location and approved scope.", "de": "Foto-, Luftbild-, virtuelle oder Green-Screen/Studiotechnik je nach Ort und freigegebenem Umfang."},
+    "evidenceStatus": "QUALIFIED",
+    "evidence": [],
+    "cta": {"hu": "Mutasd meg a helyet és azt, mire kell bemutatni — utána választunk technikát.", "en": "Show us the place and what it needs to communicate — then we choose the technique.", "de": "Zeigen Sie uns den Ort und was vermittelt werden soll — danach wählen wir die Technik."},
     "services": ["property", "aerial", "virtual", "greenbox"]
   }
 ]
