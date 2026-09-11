@@ -40,6 +40,7 @@ jobs:
       - run: npm run test:service-inventory
       - run: npm run test:public-quote
       - run: npm run test:quote-routing
+      - run: npm run test:quote-email-localization
       - run: npm run test:no-wix-hotlinks
       - run: npm run test:partner-references
       - run: npm run test:flugos-sponsors
