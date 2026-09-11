@@ -65,6 +65,8 @@ jobs:
       - run: npm run test:html
       - name: Prepare temporary GitHub Pages project-path artifact
         run: python3 tools/prepare_pages_review.py
+      - name: Validate temporary GitHub Pages artifact
+        run: python3 tools/test_pages_review_artifact.py
       - uses: actions/configure-pages@v5
         with:
           enablement: true
