@@ -6,6 +6,7 @@
   --ink:#10182b;
   --muted:#5f6879;
   --gold:#b59655;
+  --gold-text:#80652f;
   --gold-soft:#e7dcc2;
   --line:rgba(11,23,54,.12);
   --line-strong:rgba(11,23,54,.2);
@@ -99,7 +100,7 @@ a:hover{text-decoration-color:var(--gold)}
   font-weight:650;
   text-transform:uppercase;
   letter-spacing:.14em;
-  color:var(--gold);
+  color:var(--gold-text);
 }
 h1,h2,h3{
   margin-top:0;
