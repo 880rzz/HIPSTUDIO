@@ -86,6 +86,13 @@ REPLACEMENTS = {
     "Experience Design für Unternehmensziele.": "Erlebnisse mit einem klaren Zweck.",
     "Primärer Fokus: ungarische KMU mit 10–100 Mitarbeitenden, bei denen Eigentümer oder Geschäftsführung noch erhebliche operative Last tragen und nicht jede Funktion intern fachlich besetzt ist.": "Wir arbeiten vor allem mit Unternehmen mit 10–100 Mitarbeitenden, bei denen die Geschäftsführung noch zu viel Tagesgeschäft selbst trägt und nicht für jede Aufgabe ein eigenes internes Team sinnvoll ist.",
     "Die drei Säulen sind keine getrennten Welten: Sie verbinden unterschiedliche Teile desselben Unternehmenssystems — Betrieb, Wachstum, Sichtbarkeit und Verbindung.": "Abläufe, Content und Menschen sind keine getrennten Welten. Wenn sie zusammenspielen, lässt sich ein Unternehmen einfacher führen und weiterentwickeln.",
+
+    # Keep browser/SEO titles concise after visible-copy replacements.
+    "<title>Tisztább működés. Jobb vezetői rálátás. | HIPStudio</title>": "<title>Üzleti működés és vezetői rálátás | HIPStudio</title>",
+    "<title>Vállalati élmények, amelyek tényleg összehozzák az embereket. | HIPStudio</title>": "<title>Vállalati élmények | HIPStudio</title>",
+    "<title>Corporate experiences that genuinely bring people together. | HIPStudio</title>": "<title>Corporate experiences | HIPStudio</title>",
+    "<title>Klarere Abläufe. Bessere Übersicht für die Geschäftsführung. | HIPStudio</title>": "<title>Business Operations | HIPStudio</title>",
+    "<title>Unternehmenserlebnisse, die Menschen wirklich zusammenbringen. | HIPStudio</title>": "<title>Unternehmenserlebnisse | HIPStudio</title>",
 }
 
 
