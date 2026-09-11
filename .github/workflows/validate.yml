@@ -85,3 +85,10 @@ jobs:
           cat /tmp/platform-preview.log
           exit 1
       - run: npm run test:browser:platform
+      - name: Upload platform browser QA diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-platform-qa
+          path: audit/browser-platform-qa.json
+          if-no-files-found: error
