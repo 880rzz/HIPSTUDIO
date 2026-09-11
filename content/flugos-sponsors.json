@@ -1,6 +1,6 @@
 {
-  "version": "flugos-sponsors-v1",
-  "status": "historical_verified",
+  "version": "flugos-sponsors-v2",
+  "status": "historical_verified_relationship_names_pending",
   "sourcePage": "https://www.flugos.hu/flugos-futam",
   "sourceType": "current_wix_page_and_2019_material",
   "relationship": {
@@ -12,6 +12,13 @@
     "hu": "A Flúgos Futam történeti anyagai külön szponzori és támogatói kapcsolatot dokumentálnak. A logók és támogatói megjelenések időhöz kötött, történeti referenciák; önmagukban nem jelentenek jelenlegi szponzori kapcsolatot.",
     "en": "Historical Flúgos Futam materials document sponsor and supporter relationships. Logos and supporter appearances are time-qualified historical references and do not by themselves imply a current sponsorship relationship.",
     "de": "Historische Flúgos-Futam-Unterlagen dokumentieren Sponsor- und Unterstützerbeziehungen. Logos und Unterstützerdarstellungen sind zeitlich eingeordnete historische Referenzen und bedeuten für sich allein keine aktuelle Sponsoringbeziehung."
+  },
+  "namedSponsors": [],
+  "logoPublicationGate": {
+    "status": "blocked_until_source_identification",
+    "rule": "Do not reuse HIPStudio partner logos or infer a Flúgos sponsor identity. A sponsor logo may be published only after the Flúgos source identifies the organisation and a repository-local logo asset has been captured.",
+    "runtimeHotlinking": "forbidden",
+    "allowedAssetOrigin": "repository-local"
   },
   "verifiedFacts": [
     {
