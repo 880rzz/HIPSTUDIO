@@ -32,7 +32,7 @@
     "test:pricing": "node tools/test-pricing.mjs",
     "test:browser": "node tools/browser-qa.mjs",
     "test:browser:platform": "node tools/browser-platform-qa.mjs",
-    "test:html": "html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
+    "test:html": "python3 tools/test_navigation_landmarks.py && html-validate \"dist/**/*.html\" \"dist-platform/**/*.html\"",
     "test:lighthouse": "node tools/lighthouse.mjs"
   },
   "description": "HIPStudio master platform for Business, Creative and Flúgos Experiences. hipstudio.hu is published from 880rzz/HIPSTUDIO through GitHub Pages; flugos.hu will use a separate Vercel project as the specialist entry-domain layer without duplicating the master content platform. Privacy governance uses Hipstudió Kft. as controller and Németh Tímea as human contact. Public pricing is suppressed. No automatic production cutover.",
