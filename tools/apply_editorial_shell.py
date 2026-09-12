@@ -75,7 +75,9 @@ HERO = {
 CTA = {'hu':'Beszéljünk róla','en':'Let’s talk','de':'Sprechen wir darüber'}
 MENU_LABEL = {'hu':'Menü megnyitása','en':'Open menu','de':'Menü öffnen'}
 CLOSE_LABEL = {'hu':'Menü bezárása','en':'Close menu','de':'Menü schließen'}
-LANG_LABEL = {'hu':'Nyelvválasztó','en':'Languages','de':'Sprachauswahl'}
+HEADER_LANG_LABEL = {'hu':'Oldal nyelvválasztó','en':'Page languages','de':'Seitensprachen'}
+MENU_LANG_LABEL = {'hu':'Menü nyelvválasztó','en':'Menu languages','de':'Menüsprachen'}
+MENU_NAV_LABEL = {'hu':'Teljes képernyős menü','en':'Fullscreen menu','de':'Vollbildmenü'}
 
 
 def lang_from_html(html):
@@ -92,7 +94,7 @@ def menu_markup(lang, current_path):
         current = ' aria-current="page"' if current_path == href else ''
         links.append(f'<a class="menu-link" href="{href}"{current}><span class="menu-title">{title}</span><span class="menu-copy">{copy}</span></a>')
     langs = ''.join(f'<a lang="{l}" hreflang="{l}" href="/{l}/">{l.upper()}</a>' for l in ('hu','en','de'))
-    return f'''<header class="header editorial-header"><a class="brand" href="/{lang}/">HIPStudio</a><nav class="langs" aria-label="{LANG_LABEL[lang]}">{langs}</nav><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="{MENU_LABEL[lang]}"><span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span></span></button></header><div class="menu-overlay" id="site-menu" data-menu-overlay hidden><div class="menu-shell"><div class="menu-head"><a class="brand" href="/{lang}/">HIPStudio</a><button class="menu-close" type="button" data-menu-close aria-label="{CLOSE_LABEL[lang]}">×</button></div><div class="menu-grid"><nav class="menu-primary" aria-label="Main navigation">{''.join(links)}</nav><aside class="menu-meta"><p class="eyebrow">HIPStudio</p><p>{HERO[lang]['lead']}</p><nav class="langs" aria-label="{LANG_LABEL[lang]}">{langs}</nav></aside></div></div></div>'''
+    return f'''<header class="header editorial-header"><a class="brand" href="/{lang}/">HIPStudio</a><nav class="langs" aria-label="{HEADER_LANG_LABEL[lang]}">{langs}</nav><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="{MENU_LABEL[lang]}"><span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span></span></button></header><div class="menu-overlay" id="site-menu" data-menu-overlay hidden><div class="menu-shell"><div class="menu-head"><a class="brand" href="/{lang}/">HIPStudio</a><button class="menu-close" type="button" data-menu-close aria-label="{CLOSE_LABEL[lang]}">×</button></div><div class="menu-grid"><nav class="menu-primary" aria-label="{MENU_NAV_LABEL[lang]}">{''.join(links)}</nav><aside class="menu-meta"><p class="eyebrow">HIPStudio</p><p>{HERO[lang]['lead']}</p><nav class="langs" aria-label="{MENU_LANG_LABEL[lang]}">{langs}</nav></aside></div></div></div>'''
 
 
 def hero_markup(lang):
