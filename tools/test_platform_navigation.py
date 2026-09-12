@@ -25,6 +25,23 @@ def fail(message):
     raise SystemExit(message)
 
 
+def nav_names(text):
+    names = []
+    for attrs in re.findall(r'<nav\b([^>]*)>', text, re.IGNORECASE):
+        label = re.search(r'aria-label="([^"]*)"', attrs)
+        labelledby = re.search(r'aria-labelledby="([^"]*)"', attrs)
+        if label:
+            names.append(('aria-label', label.group(1).strip()))
+        elif labelledby:
+            target = labelledby.group(1).strip()
+            match = re.search(rf'<[^>]+id="{re.escape(target)}"[^>]*>(.*?)</[^>]+>', text, re.IGNORECASE | re.DOTALL)
+            visible = re.sub(r'<[^>]+>', '', match.group(1)).strip() if match else target
+            names.append(('aria-labelledby', visible))
+        else:
+            names.append(('unnamed', ''))
+    return names
+
+
 def main():
     if not DIST.exists():
         fail("dist-platform missing")
@@ -56,6 +73,18 @@ def main():
             fail(f"Expected one site-menu id: {page}")
         if text.count('id="site-menu-title"') != 1:
             fail(f"Expected one menu title id: {page}")
+        names = nav_names(text)
+        if any(kind == 'unnamed' or not value for kind, value in names):
+            fail(f"Unnamed navigation landmark: {page}; navs={names}")
+        seen = set()
+        duplicates = []
+        for _, value in names:
+            normalized = value.casefold()
+            if normalized in seen:
+                duplicates.append(value)
+            seen.add(normalized)
+        if duplicates:
+            fail(f"Duplicate navigation landmark names: {page}; duplicates={duplicates}; navs={names}")
         if 'href="/hu/megoldasok/"' not in text and '<html lang="hu">' in text:
             fail(f"HU solutions entry missing: {page}")
         if 'href="/en/solutions/"' not in text and '<html lang="en">' in text:
