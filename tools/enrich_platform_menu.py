@@ -78,7 +78,7 @@ def menu_markup(lang:str,current:str,brand_href:str,langs:str):
   '<div class="menu-shell"><div class="menu-head">'
   f'<a class="menu-brand" href="{brand_href}">HIPStudio</a><button class="menu-close" type="button" aria-label="{c["close"]}" data-menu-close>×</button>'
   '</div><div class="menu-layout"><nav class="menu-primary" aria-label="'+c['label']+'">'+''.join(items)+'</nav>'
-  f'<aside class="menu-meta"><p class="eyebrow">{c["meta"]}</p><p>{c["note"]}</p><div class="menu-meta-links"><a href="mailto:info@hipstudio.hu">info@hipstudio.hu</a><a href="tel:+36302215506">+36&nbsp;30&nbsp;221&nbsp;5506</a></div></aside>'
+  f'<div class="menu-meta"><p class="eyebrow">{c["meta"]}</p><p>{c["note"]}</p><div class="menu-meta-links"><a href="mailto:info@hipstudio.hu">info@hipstudio.hu</a><a href="tel:+36302215506">+36&nbsp;30&nbsp;221&nbsp;5506</a></div></div>'
   '</div></div></div>'
  )
 
