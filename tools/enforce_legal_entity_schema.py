@@ -33,12 +33,10 @@ SCRIPT_RE = re.compile(
 )
 
 
-def normalize_graph(payload: dict) -> bool:
+def find_organization(payload: dict):
     graph = payload.get("@graph")
     if not isinstance(graph, list):
-        return False
-
-    organization = None
+        return None, graph
     for node in graph:
         if not isinstance(node, dict):
             continue
@@ -47,9 +45,12 @@ def normalize_graph(payload: dict) -> bool:
         if isinstance(node_types, str):
             node_types = [node_types]
         if node_id.endswith("/#organization") and "Organization" in node_types:
-            organization = node
-            break
+            return node, graph
+    return None, graph
 
+
+def normalize_graph(payload: dict) -> bool:
+    organization, graph = find_organization(payload)
     if organization is None:
         return False
 
@@ -89,20 +90,23 @@ def normalize_graph(payload: dict) -> bool:
     return changed
 
 
-def normalize_html(path: Path) -> bool:
+def normalize_html(path: Path) -> tuple[bool, bool]:
     text = path.read_text(encoding="utf-8")
     match = SCRIPT_RE.search(text)
     if not match:
-        return False
+        return False, False
 
     payload = json.loads(match.group(2))
-    if not normalize_graph(payload):
-        return False
+    organization, _ = find_organization(payload)
+    if organization is None:
+        return False, False
 
-    encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
-    updated = text[: match.start(2)] + encoded + text[match.end(2) :]
-    path.write_text(updated, encoding="utf-8")
-    return True
+    changed = normalize_graph(payload)
+    if changed:
+        encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+        updated = text[: match.start(2)] + encoded + text[match.end(2) :]
+        path.write_text(updated, encoding="utf-8")
+    return True, changed
 
 
 def main() -> None:
@@ -113,11 +117,19 @@ def main() -> None:
     if not html_files:
         raise SystemExit("No generated HTML files found in dist")
 
-    changed = sum(1 for path in html_files if normalize_html(path))
-    if changed != len(html_files):
-        raise SystemExit(f"Legal schema normalization incomplete: {changed}/{len(html_files)} HTML files changed")
+    eligible = 0
+    changed = 0
+    for path in html_files:
+        has_org, was_changed = normalize_html(path)
+        eligible += int(has_org)
+        changed += int(was_changed)
 
-    print(f"Legal entity schema normalized in {changed} generated HTML files")
+    if not eligible:
+        raise SystemExit("No generated HTML pages with legal Organization JSON-LD found")
+    if changed != eligible:
+        raise SystemExit(f"Legal schema normalization incomplete: {changed}/{eligible} Organization pages changed")
+
+    print(f"Legal entity schema normalized in {changed} Organization-bearing HTML files")
 
 
 if __name__ == "__main__":
