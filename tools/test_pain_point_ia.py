@@ -2,7 +2,7 @@
 """Regression gate for the evidence-backed buyer-first IA.
 
 The public/review render may expose only VERIFIED pain points. QUALIFIED/REMOVE
-items remain planning data and must never leak into generated routes.
+items remain planning data and must never leak into any generated HTML route.
 """
 from pathlib import Path
 import json
@@ -28,6 +28,10 @@ ROUTE_DIRS = {
 
 def fail(message):
     raise SystemExit(message)
+
+
+def html_path(relative):
+    return DIST / relative / "index.html"
 
 
 if DATA.get("status") != "review":
@@ -56,7 +60,11 @@ for item in items:
             if not isinstance(localized.get(lang), str) or not localized[lang].strip():
                 fail(f"missing {field}.{lang} for {item['key']}")
     evidence = item.get("evidence")
-    if status == "VERIFIED" and (not isinstance(evidence, list) or not evidence or any(not str(e).strip() for e in evidence)):
+    if status == "VERIFIED" and (
+        not isinstance(evidence, list)
+        or not evidence
+        or any(not str(entry).strip() for entry in evidence)
+    ):
         fail(f"VERIFIED pain point requires evidence: {item['key']}")
     routes = item.get("routes")
     if not isinstance(routes, list) or not routes:
@@ -68,30 +76,46 @@ for item in items:
 if not DIST.exists():
     fail("dist-platform missing; run build:platform before test:pain-points")
 
-html_by_route = {}
+# Read every generated HTML page, not only the buyer-first routes. This prevents
+# QUALIFIED/REMOVE planning markers (or VERIFIED markers on undeclared routes)
+# from leaking into service, solution, experience, contact or future pages.
+all_html = {}
+for path in sorted(DIST.rglob("*.html")):
+    relative = path.relative_to(DIST).as_posix()
+    all_html[relative] = path.read_text(encoding="utf-8")
+
+if not all_html:
+    fail("dist-platform contains no generated HTML")
+
+expected_files = {}
 for route, localized_dirs in ROUTE_DIRS.items():
     for lang, relative in localized_dirs.items():
-        path = DIST / relative / "index.html"
+        path = html_path(relative)
         if not path.exists():
             fail(f"generated route missing: {path.relative_to(R)}")
-        html_by_route[(route, lang)] = path.read_text(encoding="utf-8")
+        expected_files[(route, lang)] = path.relative_to(DIST).as_posix()
 
 for item in items:
     marker = f'data-pain-point="{item["key"]}"'
     status = item["status"]
-    if status == "VERIFIED":
-        for route in item["routes"]:
-            for lang in LANGS:
-                if marker not in html_by_route[(route, lang)]:
-                    fail(f"VERIFIED pain point not rendered: {item['key']} on {route}/{lang}")
-        for route in ROUTE_DIRS:
-            if route not in item["routes"]:
-                for lang in LANGS:
-                    if marker in html_by_route[(route, lang)]:
-                        fail(f"pain point rendered outside declared route: {item['key']} on {route}/{lang}")
-    else:
-        for (route, lang), html in html_by_route.items():
-            if marker in html:
-                fail(f"non-VERIFIED pain point leaked into generated output: {item['key']} on {route}/{lang}")
+    matching_files = {relative for relative, html in all_html.items() if marker in html}
 
-print("pain-point IA regression gate passed")
+    if status == "VERIFIED":
+        allowed_files = {
+            expected_files[(route, lang)]
+            for route in item["routes"]
+            for lang in LANGS
+        }
+        missing = sorted(allowed_files - matching_files)
+        if missing:
+            fail(f"VERIFIED pain point not rendered on declared route(s): {item['key']} -> {missing}")
+        unexpected = sorted(matching_files - allowed_files)
+        if unexpected:
+            fail(f"pain point rendered outside declared route(s): {item['key']} -> {unexpected}")
+    elif matching_files:
+        fail(
+            f"non-VERIFIED pain point leaked into generated output: "
+            f"{item['key']} -> {sorted(matching_files)}"
+        )
+
+print(f"pain-point IA regression gate passed across {len(all_html)} generated HTML files")
