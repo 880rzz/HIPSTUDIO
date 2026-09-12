@@ -25,6 +25,7 @@ jobs:
       - run: npm run build:all
       - run: npm test
       - run: npm run test:platform
+      - run: npm run test:pain-points
       - run: npm run test:master-brand
       - run: npm run test:domain-migration
       - run: npm run test:legacy-url-matrix
