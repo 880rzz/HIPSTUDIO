@@ -2,6 +2,7 @@
 """Replace generated top navigation with one accessible fullscreen editorial menu."""
 from pathlib import Path
 from html import escape
+import json
 import re
 import shutil
 
@@ -10,6 +11,7 @@ DIST = ROOT / "dist-platform"
 HEADER_RE = re.compile(r'<header class="header">.*?</header>', re.DOTALL)
 LANG_RE = re.compile(r'<html lang="(hu|en|de)">')
 LANGS_RE = re.compile(r'<nav class="langs"[^>]*>.*?</nav>', re.DOTALL)
+PRIVACY_ROUTES = json.loads((ROOT / "content/privacy-governance.json").read_text(encoding="utf-8"))["publication"]["routes"]
 
 ROUTES = {
     "solutions": {"hu": "/hu/megoldasok/", "en": "/en/solutions/", "de": "/de/loesungen/"},
@@ -22,7 +24,7 @@ ROUTES = {
 
 COPY = {
     "hu": {
-        "open": "Menü megnyitása", "close": "Menü bezárása", "title": "Menü",
+        "open": "Menü megnyitása", "close": "Menü bezárása", "title": "Menü", "languages": "Nyelvválasztó",
         "kicker": "Merre induljunk?",
         "note": "Nem szolgáltatáslistát akarunk rád borítani. Indulj abból, mi nem működik jól — innen már megmutatjuk, milyen szakmai kombináció lehet rá ésszerű válasz.",
         "items": {
@@ -36,7 +38,7 @@ COPY = {
         "contactLabel": "Kapcsolat"
     },
     "en": {
-        "open": "Open menu", "close": "Close menu", "title": "Menu",
+        "open": "Open menu", "close": "Close menu", "title": "Menu", "languages": "Languages",
         "kicker": "Where should we start?",
         "note": "We do not want to drop a service catalogue on you. Start with what is not working well; from there we can show which combination of specialist capabilities is a sensible response.",
         "items": {
@@ -50,7 +52,7 @@ COPY = {
         "contactLabel": "Contact"
     },
     "de": {
-        "open": "Menü öffnen", "close": "Menü schließen", "title": "Menü",
+        "open": "Menü öffnen", "close": "Menü schließen", "title": "Menü", "languages": "Sprachauswahl",
         "kicker": "Wo sollen wir anfangen?",
         "note": "Wir wollen keinen Leistungskatalog über Sie ausschütten. Starten Sie mit dem, was nicht gut funktioniert; daraus lässt sich ableiten, welche Fachleistungen sinnvoll zusammengehören.",
         "items": {
@@ -79,6 +81,19 @@ def active(current: str, key: str, lang: str) -> bool:
     return current == target
 
 
+def synthetic_language_nav(lang: str, current: str) -> str:
+    c = COPY[lang]
+    if current in PRIVACY_ROUTES.values():
+        targets = PRIVACY_ROUTES
+    else:
+        targets = {code: f"/{code}/" for code in ("hu", "en", "de")}
+    links = []
+    for code in ("hu", "en", "de"):
+        aria = ' aria-current="page"' if code == lang else ""
+        links.append(f'<a lang="{code}" hreflang="{code}" href="{escape(targets[code], quote=True)}"{aria}>{code.upper()}</a>')
+    return f'<nav class="langs" aria-label="{escape(c["languages"], quote=True)}">{"".join(links)}</nav>'
+
+
 def menu_markup(lang: str, current: str, langs_nav: str) -> str:
     c = COPY[lang]
     links = []
@@ -90,13 +105,12 @@ def menu_markup(lang: str, current: str, langs_nav: str) -> str:
             f'<span class="site-menu-title">{escape(title)}</span>'
             f'<span class="site-menu-copy">{escape(desc)}</span></a>'
         )
-    compact_langs = langs_nav.replace('<nav class="langs"', '<nav class="langs"')
     overlay_langs = langs_nav.replace('class="langs"', 'class="site-menu-langs"')
     return (
         '<header class="header">'
         f'<a class="brand" href="/{lang}/">HIPStudio</a>'
         '<div class="header-tools">'
-        f'{compact_langs}'
+        f'{langs_nav}'
         f'<button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="{escape(c["open"], quote=True)}">'
         '<span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span></span></button>'
         '</div></header>'
@@ -129,11 +143,11 @@ def main():
         header_match = HEADER_RE.search(text)
         if not lang_match or not header_match:
             continue
-        langs_match = LANGS_RE.search(header_match.group(0))
-        if not langs_match:
-            raise SystemExit(f"Language navigation missing from header: {page}")
         lang = lang_match.group(1)
-        replacement = menu_markup(lang, current_path(page), langs_match.group(0))
+        current = current_path(page)
+        langs_match = LANGS_RE.search(header_match.group(0))
+        langs_nav = langs_match.group(0) if langs_match else synthetic_language_nav(lang, current)
+        replacement = menu_markup(lang, current, langs_nav)
         text = text[:header_match.start()] + replacement + text[header_match.end():]
         if '/assets/platform-menu.css' not in text:
             text = text.replace('</head>', '<link rel="stylesheet" href="/assets/platform-menu.css"><script src="/assets/platform-menu.js" defer></script></head>')
