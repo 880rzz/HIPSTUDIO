@@ -1,0 +1,54 @@
+{
+  "status": "review",
+  "policyVersion": 1,
+  "updatedOn": "2026-09-12",
+  "rules": {
+    "publicationSourceIsNotRehostingPermission": true,
+    "noWixHotlinks": true,
+    "thirdPartyMediaRequiresDocumentedPermission": true,
+    "generatedMediaMustNotImplyRealClientsPeopleEventsOrFacilities": true
+  },
+  "assets": [
+    {
+      "id": "home-hero-youtube-gnuMDSWR_tg",
+      "type": "video",
+      "role": "home-hero",
+      "sourceUrl": "https://youtu.be/gnuMDSWR_tg",
+      "channelUrl": "https://www.youtube.com/@wearehipstudio",
+      "sourceClassification": "USER_CONFIRMED_FIRST_PARTY_PUBLICATION",
+      "publicationBasis": "User explicitly identified the channel as HIPStudio's first-party YouTube publication source and selected this video as the home hero film.",
+      "delivery": {
+        "current": "PRIVACY_ENHANCED_OFFICIAL_EMBED_ON_ACTIVATION",
+        "embedOrigin": "https://www.youtube-nocookie.com",
+        "initialThirdPartyRequest": false,
+        "autoplayOnlyAfterUserActivation": true,
+        "reducedMotionFallbackRequired": true
+      },
+      "rights": {
+        "officialEmbed": "ALLOWED_FOR_REVIEW",
+        "downloadOrSelfHostDerivative": "NOT_ESTABLISHED",
+        "reason": "First-party publication evidence establishes provenance, but does not by itself establish permission to download, edit or re-host the underlying audiovisual file."
+      },
+      "credit": {
+        "visibleCreditRequired": false,
+        "publisher": "HIPStudio YouTube channel",
+        "productionCredits": "VERIFY_FROM_SOURCE_BEFORE_REUSE_OUTSIDE_EMBED"
+      },
+      "productionStatus": "CLEARED_FOR_PRIVACY_ENHANCED_OFFICIAL_EMBED_ONLY"
+    },
+    {
+      "id": "hipstudio-youtube-channel",
+      "type": "publication-source",
+      "role": "reference-film-discovery",
+      "sourceUrl": "https://www.youtube.com/@wearehipstudio",
+      "sourceClassification": "USER_CONFIRMED_FIRST_PARTY_PUBLICATION",
+      "publicationBasis": "User explicitly confirmed this as the HIPStudio YouTube channel containing reference films organized into categories.",
+      "rights": {
+        "useAsEvidenceSource": "ALLOWED",
+        "embedIndividualPublishedVideos": "REQUIRES_ROUTE_LEVEL_SELECTION_AND_PROVENANCE_RECORD",
+        "downloadOrSelfHostDerivative": "NOT_ESTABLISHED"
+      },
+      "productionStatus": "SOURCE_ONLY"
+    }
+  ]
+}
