@@ -14,6 +14,7 @@ MEDIA = json.loads((R / 'content/hero-media.json').read_text())
 
 VIDEO_ID = MEDIA['videoId']
 EMBED = f"{MEDIA['embedOrigin']}/embed/{VIDEO_ID}?autoplay=1&mute=1&controls=0&loop=1&playlist={VIDEO_ID}&playsinline=1&rel=0&modestbranding=1"
+CONTACT = {'hu': 'kapcsolat', 'en': 'contact', 'de': 'kontakt'}
 
 COPY = {
     'hu': {
@@ -66,7 +67,6 @@ for path in D.rglob('index.html'):
     lang = mlang.group(1)
     c = COPY[lang]
 
-    # Add the single editorial layer after the canonical platform stylesheet.
     if '/assets/platform-editorial.css' not in html:
         html = html.replace(
             '<link rel="stylesheet" href="/assets/platform.css">',
@@ -96,12 +96,11 @@ for path in D.rglob('index.html'):
             f'<nav class="menu-primary" aria-label="{c["nav"]}">{menu_links}</nav>'
             '<aside class="menu-meta"><p class="menu-kicker">HIPStudio</p>'
             f'<p class="menu-intro">{c["intro"]}</p>'
-            f'<a class="menu-contact" href="/{lang}/contact/">hipstudio.hu</a></aside>'
+            f'<a class="menu-contact" href="/{lang}/{CONTACT[lang]}/">hipstudio.hu</a></aside>'
             '</div></div></div>'
         )
         html = html[:old_header.start()] + new_header + html[old_header.end():]
 
-    # Only the localized home route has the original .hero block.
     hero = re.search(r'<section class="hero"><div>(.*?)</div><aside class="hero-side">(.*?)</aside></section>', html, flags=re.S)
     if hero:
         copy_html, meta_html = hero.group(1), hero.group(2)
