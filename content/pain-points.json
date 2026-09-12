@@ -1,0 +1,137 @@
+{
+  "status": "review",
+  "purpose": "Buyer-first IA source layer for the HIPStudio master-site review build. This file does not authorize production publication.",
+  "principles": [
+    "Lead with the buyer problem before service mechanics.",
+    "Every solution must point to evidence or remain qualified.",
+    "Do not infer common legal identity between HIPStudio, BANHALMI/Bánhalmi Norbert, Speier Vikó or other independent providers.",
+    "Do not promote Business / Operations as a proven production offer until provider responsibility and evidence gates are satisfied."
+  ],
+  "painPoints": [
+    {
+      "key": "integrated-content",
+      "priority": 1,
+      "status": "VERIFIED",
+      "pain": {
+        "hu": "Hiteles tartalom kell, de nem akarunk külön fotós, videós és podcast beszállítókat koordinálni.",
+        "en": "We need credible content, but we do not want to coordinate separate photo, video and podcast suppliers.",
+        "de": "Wir brauchen glaubwürdigen Content, wollen aber nicht getrennt Foto-, Video- und Podcast-Anbieter koordinieren."
+      },
+      "solution": {
+        "hu": "Egy briefből összehangolt fotó-, videó- és podcastgyártás, a kommunikációs célhoz választott formátummal.",
+        "en": "Coordinated photo, video and podcast production from one brief, with the format chosen around the communication goal.",
+        "de": "Abgestimmte Foto-, Video- und Podcast-Produktion aus einem Briefing, mit einem Format, das sich am Kommunikationsziel orientiert."
+      },
+      "evidence": [
+        "Current HIPStudio home publicly lists photography/photo studio, video production and podcast production.",
+        "Current video-production page explicitly supports consultation before locking the production format.",
+        "Current event page documents adaptive event-team working and fast delivery options."
+      ],
+      "cta": {
+        "hu": "Mutasd meg, mire kell a tartalom — segítünk kiválasztani a formátumot.",
+        "en": "Tell us what the content must achieve — we will help choose the right format.",
+        "de": "Sagen Sie uns, was der Content erreichen soll — wir helfen bei der Wahl des passenden Formats."
+      },
+      "routes": ["home", "creative"]
+    },
+    {
+      "key": "adaptive-event-coverage",
+      "priority": 2,
+      "status": "VERIFIED",
+      "pain": {
+        "hu": "A rendezvény közben változik a program; egy merev stáb ilyenkor kockázat.",
+        "en": "The event changes while it is happening; a rigid production team becomes a liability.",
+        "de": "Während der Veranstaltung ändert sich der Ablauf; ein unflexibles Produktionsteam wird dann zum Risiko."
+      },
+      "solution": {
+        "hu": "A fotó- és videóstábot a programhoz és a felhasználási igényhez tervezzük, szükség esetén gyors képválogatással és mobil portrémegoldással.",
+        "en": "Photo and video coverage is planned around the programme and usage needs, with rapid image selection and mobile portrait options where agreed.",
+        "de": "Foto- und Video-Coverage wird auf Ablauf und Nutzung abgestimmt, bei Bedarf mit schneller Bildauswahl und mobilem Porträt-Setup."
+      },
+      "evidence": [
+        "Current HIPStudio event page explicitly describes adapting to organiser requests and schedule changes.",
+        "The same page describes rapid image preparation and mobile studio capability."
+      ],
+      "cta": {
+        "hu": "Küldd el a programot és azt, mire kell az anyag. Megmondjuk, milyen stáb indokolt.",
+        "en": "Send the programme and intended use. We will recommend the crew and coverage level that makes sense.",
+        "de": "Senden Sie Ablauf und Verwendungszweck. Wir empfehlen die passende Team- und Coverage-Größe."
+      },
+      "routes": ["home", "creative"]
+    },
+    {
+      "key": "format-before-film",
+      "priority": 3,
+      "status": "VERIFIED",
+      "pain": {
+        "hu": "Tudjuk, hogy videóra van szükségünk, de nem tudjuk, milyen formátum oldja meg a kommunikációs problémát.",
+        "en": "We know we need video, but not which format will actually solve the communication problem.",
+        "de": "Wir wissen, dass wir Video brauchen, aber nicht, welches Format das Kommunikationsproblem tatsächlich löst."
+      },
+      "solution": {
+        "hu": "Nem a filmhosszal kezdünk. Előbb a célt, csatornát, meglévő anyagokat és gyártási keretet tisztázzuk.",
+        "en": "We do not start with runtime. We first define the goal, channels, available material and production constraints.",
+        "de": "Wir beginnen nicht mit der Filmlänge. Zuerst klären wir Ziel, Kanäle, vorhandenes Material und Produktionsrahmen."
+      },
+      "evidence": [
+        "Current HIPStudio video page states that the initially requested format may not be the most effective way to reach the goal.",
+        "The same page describes variable production scope based on crew, script, locations, actors and technical requirements."
+      ],
+      "cta": {
+        "hu": "Ne filmhosszal kezdjük. Mondd el, mit kell elérnie.",
+        "en": "Do not start with runtime. Tell us what the film must achieve.",
+        "de": "Beginnen Sie nicht mit der Filmlänge. Sagen Sie uns, was der Film erreichen soll."
+      },
+      "routes": ["creative"]
+    },
+    {
+      "key": "specialist-portrait-routing",
+      "priority": 4,
+      "status": "VERIFIED",
+      "pain": {
+        "hu": "Nem általános stúdiófotó kell, hanem specialistára van szükségünk vezetői portréhoz vagy headshothoz.",
+        "en": "We do not need generic studio photography; we need specialist portrait or headshot expertise.",
+        "de": "Wir brauchen keine allgemeine Studiofotografie, sondern spezialisierte Portrait- oder Headshot-Kompetenz."
+      },
+      "solution": {
+        "hu": "A brief alapján a megfelelő specialistához irányítjuk a megkeresést, a szolgáltató és szerződő fél egyértelmű megjelölésével.",
+        "en": "We route the brief to the appropriate specialist while keeping the provider and contracting party explicit.",
+        "de": "Wir leiten das Briefing an die passende Spezialistin bzw. den passenden Spezialisten weiter und benennen Anbieter und Vertragspartner klar."
+      },
+      "evidence": [
+        "Current HIPStudio photography booking page routes premium headshot, brand and artistic work to Bánhalmi Norbert's specialist site.",
+        "The same page separately identifies Speier Viktória in connection with private-person/studio photography."
+      ],
+      "cta": {
+        "hu": "Írd meg, mire kell a kép; a megfelelő fotós irányba visszük a briefet.",
+        "en": "Tell us what the image is for; we will route the brief to the right photographer.",
+        "de": "Sagen Sie uns, wofür das Bild gebraucht wird; wir leiten das Briefing an die passende Fotografin bzw. den passenden Fotografen weiter."
+      },
+      "routes": ["creative"]
+    },
+    {
+      "key": "management-operations-overload",
+      "priority": 5,
+      "status": "QUALIFIED",
+      "pain": {
+        "hu": "A vezetés túl sok operatív és adminisztratív terhet visz.",
+        "en": "Management is carrying too much operational and administrative load.",
+        "de": "Die Geschäftsführung trägt zu viel operative und administrative Last."
+      },
+      "solution": {
+        "hu": "A repository jelenlegi Business / Operations koncepciója erre kínálna külső működési támogatást, de a szolgáltatói felelősségi és bizonyítéki határok még nincsenek production szinten lezárva.",
+        "en": "The current repository concept proposes external Business / Operations support for this problem, but provider responsibility and evidence boundaries are not production-ready yet.",
+        "de": "Das aktuelle Repository-Konzept sieht dafür externe Business-/Operations-Unterstützung vor, doch Anbieter-, Verantwortungs- und Evidenzgrenzen sind noch nicht produktionsreif geklärt."
+      },
+      "evidence": [
+        "Repository planning exists, but current public HIPStudio evidence does not independently establish the complete Business / Operations offer."
+      ],
+      "cta": {
+        "hu": "Review-only: production kommunikáció előtt tulajdonosi és felelősségi jóváhagyás szükséges.",
+        "en": "Review only: owner and responsibility approval is required before production communication.",
+        "de": "Nur Review: Vor einer Veröffentlichung sind Eigentümer- und Verantwortungsfreigaben erforderlich."
+      },
+      "routes": ["business"]
+    }
+  ]
+}
