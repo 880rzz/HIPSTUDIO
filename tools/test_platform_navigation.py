@@ -2,6 +2,7 @@
 """Regression checks for the generated fullscreen platform navigation."""
 from pathlib import Path
 import re
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist-platform"
@@ -27,6 +28,10 @@ def fail(message):
 def main():
     if not DIST.exists():
         fail("dist-platform missing")
+    # test_platform.py intentionally rebuilds a minimal platform fixture first.
+    # Re-apply the canonical navigation enhancer so this regression remains
+    # self-contained and tests the same generated output contract as production.
+    subprocess.run(['python3', 'tools/enhance_platform_navigation.py'], cwd=ROOT, check=True)
     pages = sorted(DIST.rglob("*.html"))
     if not pages:
         fail("No platform HTML pages found")
