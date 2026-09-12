@@ -10,9 +10,6 @@ REQUIRED=(
  'data-menu-toggle','data-menu-overlay','data-menu-close','aria-controls="site-menu"',
  'platform-menu.css','platform-menu.mjs','class="menu-primary"','class="menu-item-copy"'
 )
-FORBIDDEN=(
- '<nav class="nav"','<details class="mobile-menu"','purple','glassmorphism'
-)
 
 
 def fail(msg): raise SystemExit(msg)
@@ -29,6 +26,7 @@ def main():
   missing=[token for token in REQUIRED if token not in text]
   if missing: fail(f'Menu contract missing in {page}: {missing}')
   if '<nav class="nav"' in text: fail(f'Classic desktop nav remains in {page}')
+  if '<details class="mobile-menu"' in text: fail(f'Legacy mobile details menu remains in {page}')
   if text.count('id="site-menu"')!=1: fail(f'Menu id must be unique in {page}')
   if text.count('data-menu-toggle')!=1 or text.count('data-menu-close')!=1: fail(f'Menu controls duplicated in {page}')
   language=re.search(r'<html lang="(hu|en|de)"',text)
@@ -39,7 +37,7 @@ def main():
    if fragment not in text: fail(f'Missing localized menu copy {fragment!r} in {page}')
  if len(pages)<3: fail(f'Too few platform pages checked: {len(pages)}')
  js_text=js.read_text(encoding='utf-8')
- for token in ['Escape','aria-expanded','menu-open','event.key===\'Tab\'']:
+ for token in ['Escape','aria-expanded','menu-open',"event.key!=='Tab'"]:
   if token not in js_text: fail(f'Menu interaction contract missing: {token}')
  css_text=css.read_text(encoding='utf-8')
  if '@media(prefers-reduced-motion:reduce)' not in css_text: fail('Reduced-motion menu rule missing')
