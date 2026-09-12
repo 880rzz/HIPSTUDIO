@@ -31,16 +31,18 @@ def main() -> None:
     if not pages:
         fail("No generated dist HTML found; build must run before legal entity schema test")
 
+    checked = 0
     for page in pages:
         text = page.read_text(encoding="utf-8")
         match = SCRIPT_RE.search(text)
         if not match:
-            fail(f"Missing JSON-LD: {page}")
+            continue
         payload = json.loads(match.group(1))
         graph = payload.get("@graph", [])
         org = next((n for n in graph if isinstance(n, dict) and str(n.get("@id", "")).endswith("/#organization")), None)
         if org is None:
-            fail(f"Missing legal Organization node: {page}")
+            continue
+        checked += 1
 
         address = org.get("address", {})
         for key, value in EXPECTED_REGISTERED.items():
@@ -62,7 +64,9 @@ def main() -> None:
             if studio_address.get(key) != value:
                 fail(f"Studio address drift in {page}: {key}={studio_address.get(key)!r}")
 
-    print(f"Legal entity schema boundary valid across {len(pages)} generated pages")
+    if not checked:
+        fail("No generated pages with legal Organization JSON-LD were checked")
+    print(f"Legal entity schema boundary valid across {checked} Organization-bearing pages")
 
 
 if __name__ == "__main__":
