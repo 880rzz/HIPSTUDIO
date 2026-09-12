@@ -59,6 +59,7 @@ jobs:
           QUOTE_REQUEST_BASE_URL: https://www.hipstudio.hu
         run: npm run build:platform
       - run: npm run test:platform
+      - run: npm run test:pain-points
       - run: npm run test:privacy-governance
       - run: npm run test:privacy-pages
       - run: npm run test:hosting
