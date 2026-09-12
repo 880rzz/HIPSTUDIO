@@ -24,7 +24,7 @@ ROUTES = {
 
 COPY = {
     "hu": {
-        "open": "Menü megnyitása", "close": "Menü bezárása", "title": "Menü", "languages": "Nyelvválasztó",
+        "open": "Menü megnyitása", "close": "Menü bezárása", "title": "Menü", "languages": "Nyelvválasztó", "menuLanguages": "Nyelvválasztó a menüben",
         "kicker": "Merre induljunk?",
         "note": "Nem szolgáltatáslistát akarunk rád borítani. Indulj abból, mi nem működik jól — innen már megmutatjuk, milyen szakmai kombináció lehet rá ésszerű válasz.",
         "items": {
@@ -38,7 +38,7 @@ COPY = {
         "contactLabel": "Kapcsolat"
     },
     "en": {
-        "open": "Open menu", "close": "Close menu", "title": "Menu", "languages": "Languages",
+        "open": "Open menu", "close": "Close menu", "title": "Menu", "languages": "Languages", "menuLanguages": "Languages in menu",
         "kicker": "Where should we start?",
         "note": "We do not want to drop a service catalogue on you. Start with what is not working well; from there we can show which combination of specialist capabilities is a sensible response.",
         "items": {
@@ -52,7 +52,7 @@ COPY = {
         "contactLabel": "Contact"
     },
     "de": {
-        "open": "Menü öffnen", "close": "Menü schließen", "title": "Menü", "languages": "Sprachauswahl",
+        "open": "Menü öffnen", "close": "Menü schließen", "title": "Menü", "languages": "Sprachauswahl", "menuLanguages": "Sprachauswahl im Menü",
         "kicker": "Wo sollen wir anfangen?",
         "note": "Wir wollen keinen Leistungskatalog über Sie ausschütten. Starten Sie mit dem, was nicht gut funktioniert; daraus lässt sich ableiten, welche Fachleistungen sinnvoll zusammengehören.",
         "items": {
@@ -106,6 +106,7 @@ def menu_markup(lang: str, current: str, langs_nav: str) -> str:
             f'<span class="site-menu-copy">{escape(desc)}</span></a>'
         )
     overlay_langs = langs_nav.replace('class="langs"', 'class="site-menu-langs"')
+    overlay_langs = re.sub(r'aria-label="[^"]*"', f'aria-label="{escape(c["menuLanguages"], quote=True)}"', overlay_langs, count=1)
     return (
         '<header class="header">'
         f'<a class="brand" href="/{lang}/">HIPStudio</a>'
