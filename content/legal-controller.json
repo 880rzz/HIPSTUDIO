@@ -6,6 +6,12 @@
     "shortName": "Hipstudió Kft.",
     "basis": "owner_instruction_2026-09-09",
     "registeredOffice": "1081 Budapest, Népszínház u. 25. Fe. 2.",
+    "registeredOfficeAddress": {
+      "streetAddress": "Népszínház u. 25. Fe. 2.",
+      "postalCode": "1081",
+      "addressLocality": "Budapest",
+      "addressCountry": "HU"
+    },
     "companyRegistrationNumber": "01-09-907275",
     "taxNumber": "14513938-2-42",
     "registryCourt": "Fővárosi Törvényszék Cégbírósága",
@@ -13,7 +19,13 @@
       "email": "info@hipstudio.hu",
       "phone": "+36 30 221 5506",
       "website": "https://www.hipstudio.hu/",
-      "studioAddress": "1111 Budapest, Lágymányosi utca 15."
+      "studioAddress": "1111 Budapest, Lágymányosi utca 15.",
+      "studioPostalAddress": {
+        "streetAddress": "Lágymányosi utca 15.",
+        "postalCode": "1111",
+        "addressLocality": "Budapest",
+        "addressCountry": "HU"
+      }
     },
     "contactPerson": {
       "name": "Németh Tímea",
@@ -36,6 +48,7 @@
   "notes": [
     "Németh Tímea is represented as owner/managing director/privacy contact person, not as the data controller in her individual capacity.",
     "Company registration and tax identifiers remain attached to Hipstudió Kft.",
+    "Registered office and public studio address are separate structured locations and must not be collapsed in Organization schema.",
     "No individual home address or other personal identifier is invented or inferred."
   ]
 }
