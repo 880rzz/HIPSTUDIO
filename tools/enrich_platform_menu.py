@@ -15,6 +15,7 @@ HEADER_RE=re.compile(r'<header class="header">.*?</header>',re.DOTALL)
 LANG_RE=re.compile(r'<html lang="(hu|en|de)"')
 LANG_NAV_RE=re.compile(r'<nav class="langs".*?</nav>',re.DOTALL)
 BRAND_RE=re.compile(r'<a class="brand" href="([^"]+)">HIPStudio</a>')
+PRIVACY={'hu':'/hu/adatvedelem/','en':'/en/privacy/','de':'/de/datenschutz/'}
 
 ROUTES={
  'hu':[('business','/hu/uzleti-mukodes/'),('creative','/hu/kreativ-tartalom/'),('experiences','/hu/vallalati-elmenyek/'),('about','/hu/rolunk/'),('contact','/hu/kapcsolat/')],
@@ -57,6 +58,11 @@ def path_for(page:Path):
  parent=rel.parent.as_posix()
  return '/'+(parent+'/' if parent!='.' else '')
 
+def privacy_langs(lang):
+ return '<nav class="langs" aria-label="Languages">'+''.join(
+  f'<a lang="{code}" hreflang="{code}" href="{href}"'+(' aria-current="page"' if code==lang else '')+f'>{code.upper()}</a>'
+  for code,href in PRIVACY.items())+'</nav>'
+
 def menu_markup(lang:str,current:str,brand_href:str,langs:str):
  c=COPY[lang]
  items=[]
@@ -87,12 +93,17 @@ def main():
   language=LANG_RE.search(text)
   if not header or not language: continue
   lang=language.group(1)
+  current=path_for(page)
   old=header.group(0)
   lang_nav=LANG_NAV_RE.search(old)
   brand=BRAND_RE.search(old)
-  if not lang_nav or not brand:
+  if lang_nav and brand:
+   langs=lang_nav.group(0); brand_href=brand.group(1)
+  elif current==PRIVACY[lang]:
+   langs=privacy_langs(lang); brand_href=f'/{lang}/'
+  else:
    raise SystemExit(f'Unsupported header shape: {page}')
-  replacement=menu_markup(lang,path_for(page),brand.group(1),lang_nav.group(0))
+  replacement=menu_markup(lang,current,brand_href,langs)
   text=text[:header.start()]+replacement+text[header.end():]
   if 'platform-menu.css' not in text:
    text=text.replace('</head>','<link rel="stylesheet" href="/assets/platform-menu.css"><script type="module" src="/assets/platform-menu.mjs"></script></head>',1)
