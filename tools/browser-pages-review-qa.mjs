@@ -28,19 +28,28 @@ for(const width of [390,1440]){
   }
 }
 
+// Mobile language switching is intentionally inside the fullscreen menu.
+// Exercise the actual accessible interaction instead of relying on the legacy
+// always-visible language links that the editorial shell replaced.
 await page.setViewportSize({width:390,height:844});
 await page.goto(origin+prefix+'/hu/',{waitUntil:'networkidle'});
-const enHref=await page.getByRole('link',{name:'EN',exact:true}).getAttribute('href');
-await page.getByRole('link',{name:'EN',exact:true}).click();
+const menuToggle=page.locator('[data-menu-toggle]');
+await menuToggle.click();
+const menuOverlay=page.locator('[data-menu-overlay]');
+const menuOpen=await menuOverlay.isVisible();
+const enLink=menuOverlay.locator('a[lang="en"][hreflang="en"]').first();
+const enHref=await enLink.getAttribute('href');
+await enLink.click();
+await page.waitForURL(origin+prefix+'/en/');
 const languageSwitch=page.url()===origin+prefix+'/en/';
 
 await page.goto(origin+prefix+'/hu/ajanlatkeres/',{waitUntil:'networkidle'});
 const formAction=await page.locator('[data-quote-form]').getAttribute('action');
 const submitDisabled=await page.locator('[data-quote-form] [type=submit]').isDisabled();
 
-console.log(JSON.stringify({failures,errors,externalRequests:[...external],enHref,languageSwitch,formAction,submitDisabled},null,2));
+console.log(JSON.stringify({failures,errors,externalRequests:[...external],menuOpen,enHref,languageSwitch,formAction,submitDisabled},null,2));
 await browser.close();
 
-if(failures.length||errors.length||external.size||enHref!==prefix+'/en/'||!languageSwitch||formAction!==null||!submitDisabled){
+if(failures.length||errors.length||external.size||!menuOpen||enHref!==prefix+'/en/'||!languageSwitch||formAction!==null||!submitDisabled){
   process.exitCode=1;
 }

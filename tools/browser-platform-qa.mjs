@@ -51,6 +51,9 @@ const problemLinks=await page.locator('[data-commercial-layer="problem-led-home"
 const businessProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/uzleti-mukodes/"]').count()===1;
 const creativeProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/kreativ-tartalom/"]').count()===1;
 const experienceProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/vallalati-elmenyek/"]').count()===1;
+const menuToggle=page.locator('[data-menu-toggle]');
+await menuToggle.click();
+const menuOpen=await page.locator('[data-menu-overlay]').isVisible();
 await page.getByRole('link',{name:'EN',exact:true}).click();
 const languageSwitch=page.url().endsWith('/en/');
 
@@ -82,7 +85,7 @@ const storage=await page.evaluate(()=>({localStorage:localStorage.length,session
 
 const unsafeReviewPage=r=>legalRoutes.has(r.path)?!r.robots.includes('noindex'):r.review!==1;
 const pageFailures=results.filter(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length).map(r=>({path:r.path,width:r.width,status:r.status,overflow:r.overflow,brokenImages:r.brokenImages,h1:r.h1,review:r.review,robots:r.robots,violations:r.violations}));
-const interactions={skipHref,skipFocused,skipTarget,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
+const interactions={skipHref,skipFocused,skipTarget,menuOpen,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
 const checks={
   pageFailures:pageFailures.length===0,
   pageErrors:errors.length===0,
@@ -93,6 +96,7 @@ const checks={
   skipHref:skipHref==='#main',
   skipFocused,
   skipTarget,
+  menuOpen,
   languageSwitch,
   commercialHomeProblem,
   commercialHomeBenefits,
