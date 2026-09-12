@@ -131,7 +131,9 @@ body.menu-open{overflow:hidden}
 
 @media(max-width:900px){
   .site-header{margin-left:12px;margin-right:12px;top:8px}
-  .site-header .langs{display:none}
+  .site-header .langs{display:flex;gap:.45rem}
+  .site-header .langs a{font-size:.72rem;line-height:1}
+  .header-tools{gap:.55rem}
   .menu-primary{grid-template-columns:1fr;align-content:start}
   .menu-link,.menu-link:nth-child(n){grid-column:1;grid-row:auto}
   .menu-title{font-size:clamp(1.45rem,7vw,2.45rem)}
@@ -141,6 +143,9 @@ body.menu-open{overflow:hidden}
   .hero-film h1{max-width:14ch}
 }
 @media(max-width:560px){
+  .site-header{padding-left:.85rem}
+  .site-header .langs{gap:.34rem}
+  .site-header .langs a{font-size:.68rem}
   .menu-toggle-label{display:none}
   .menu-toggle{padding:.55rem .7rem}
   .menu-shell{width:min(100% - 24px,1280px)}
