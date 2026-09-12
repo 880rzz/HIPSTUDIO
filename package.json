@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build": "export QUOTE_REQUEST_BASE_URL=${QUOTE_REQUEST_BASE_URL:-https://www.hipstudio.hu}; python3 tools/build.py && python3 tools/enforce_viko_output.py && python3 tools/remove_public_pricing.py",
-    "build:platform": "if [ \"${BUILD_MODE:-review}\" = \"production\" ]; then python3 tools/assert_production_activation.py || exit $?; fi; export PLATFORM_URL=${PLATFORM_URL:-https://www.hipstudio.hu}; python3 tools/build_platform.py && python3 tools/enrich_flugos_heritage.py && python3 tools/enrich_flugos_sponsors.py && python3 tools/enrich_platform_commercial.py && python3 tools/enrich_partner_logos.py && python3 tools/build_platform_solutions.py && python3 tools/enrich_solution_depth.py && python3 tools/build_platform_services.py && python3 tools/build_quote_request.py && python3 tools/build_privacy_pages.py && python3 tools/humanize_platform_copy.py",
+    "build:platform": "if [ \"${BUILD_MODE:-review}\" = \"production\" ]; then python3 tools/assert_production_activation.py || exit $?; fi; export PLATFORM_URL=${PLATFORM_URL:-https://www.hipstudio.hu}; python3 tools/build_platform.py && python3 tools/enrich_flugos_heritage.py && python3 tools/enrich_flugos_sponsors.py && python3 tools/enrich_platform_commercial.py && python3 tools/enrich_partner_logos.py && python3 tools/build_platform_solutions.py && python3 tools/enrich_solution_depth.py && python3 tools/build_platform_services.py && python3 tools/build_quote_request.py && python3 tools/build_privacy_pages.py && python3 tools/humanize_platform_copy.py && python3 tools/enhance_platform_navigation.py",
     "build:all": "npm run build && npm run build:platform && python3 tools/enforce_legal_entity_schema.py",
     "test": "python3 tools/test.py && python3 tools/test_viko_role.py && python3 tools/test_legal_entity_schema.py",
-    "test:platform": "python3 tools/test_platform.py",
+    "test:platform": "python3 tools/test_platform.py && python3 tools/test_platform_navigation.py",
     "test:master-brand": "python3 tools/test_master_brand.py",
     "test:domain-migration": "python3 tools/test_domain_migration.py",
     "test:legacy-url-matrix": "python3 tools/test_legacy_url_matrix.py",
