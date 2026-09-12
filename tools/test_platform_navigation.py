@@ -1,0 +1,100 @@
+# coding: utf-8
+"""Regression checks for the generated fullscreen platform navigation."""
+from pathlib import Path
+import re
+import subprocess
+
+ROOT = Path(__file__).resolve().parents[1]
+DIST = ROOT / "dist-platform"
+
+REQUIRED = (
+    'data-menu-toggle',
+    'aria-controls="site-menu"',
+    'aria-expanded="false"',
+    'id="site-menu"',
+    'role="dialog"',
+    'aria-modal="true"',
+    'data-menu-close',
+    'class="site-menu-nav"',
+    '/assets/platform-menu.css',
+    '/assets/platform-menu.js',
+)
+
+
+def fail(message):
+    raise SystemExit(message)
+
+
+def nav_names(text):
+    names = []
+    for attrs in re.findall(r'<nav\b([^>]*)>', text, re.IGNORECASE):
+        label = re.search(r'aria-label="([^"]*)"', attrs)
+        labelledby = re.search(r'aria-labelledby="([^"]*)"', attrs)
+        if label:
+            names.append(('aria-label', label.group(1).strip()))
+        elif labelledby:
+            target = labelledby.group(1).strip()
+            match = re.search(rf'<[^>]+id="{re.escape(target)}"[^>]*>(.*?)</[^>]+>', text, re.IGNORECASE | re.DOTALL)
+            visible = re.sub(r'<[^>]+>', '', match.group(1)).strip() if match else target
+            names.append(('aria-labelledby', visible))
+        else:
+            names.append(('unnamed', ''))
+    return names
+
+
+def main():
+    if not DIST.exists():
+        fail("dist-platform missing")
+    # test_platform.py intentionally rebuilds a minimal platform fixture first.
+    # Re-apply the canonical navigation enhancer so this regression remains
+    # self-contained and tests the same generated output contract as production.
+    subprocess.run(['python3', 'tools/enhance_platform_navigation.py'], cwd=ROOT, check=True)
+    pages = sorted(DIST.rglob("*.html"))
+    if not pages:
+        fail("No platform HTML pages found")
+    for asset in (DIST / "assets/platform-menu.css", DIST / "assets/platform-menu.js"):
+        if not asset.exists() or asset.stat().st_size < 100:
+            fail(f"Navigation asset missing or empty: {asset}")
+    checked = 0
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        if '<header class="header">' not in text:
+            continue
+        checked += 1
+        for token in REQUIRED:
+            if token not in text:
+                fail(f"Missing navigation contract {token!r}: {page}")
+        header = re.search(r'<header class="header">(.*?)</header>', text, re.DOTALL)
+        if not header:
+            fail(f"Header parse failed: {page}")
+        if 'class="nav"' in header.group(1):
+            fail(f"Legacy desktop nav remains in header: {page}")
+        if text.count('id="site-menu"') != 1:
+            fail(f"Expected one site-menu id: {page}")
+        if text.count('id="site-menu-title"') != 1:
+            fail(f"Expected one menu title id: {page}")
+        names = nav_names(text)
+        if any(kind == 'unnamed' or not value for kind, value in names):
+            fail(f"Unnamed navigation landmark: {page}; navs={names}")
+        seen = set()
+        duplicates = []
+        for _, value in names:
+            normalized = value.casefold()
+            if normalized in seen:
+                duplicates.append(value)
+            seen.add(normalized)
+        if duplicates:
+            fail(f"Duplicate navigation landmark names: {page}; duplicates={duplicates}; navs={names}")
+        if 'href="/hu/megoldasok/"' not in text and '<html lang="hu">' in text:
+            fail(f"HU solutions entry missing: {page}")
+        if 'href="/en/solutions/"' not in text and '<html lang="en">' in text:
+            fail(f"EN solutions entry missing: {page}")
+        if 'href="/de/loesungen/"' not in text and '<html lang="de">' in text:
+            fail(f"DE solutions entry missing: {page}")
+    if not checked:
+        fail("No platform headers checked")
+    print(f"Fullscreen navigation contract valid across {checked} generated pages")
+
+
+if __name__ == "__main__":
+    main()
