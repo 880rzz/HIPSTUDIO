@@ -1,0 +1,42 @@
+{
+  "status": "review",
+  "policy": {
+    "runtimeSources": "LOCAL_ONLY",
+    "allowedPublicationRights": ["user_confirmed_2026-09-07"],
+    "clientClaimFromImage": false,
+    "visibleCreditRequiredWhenKnown": true
+  },
+  "assets": [
+    {
+      "id": "commercial-11",
+      "role": "event-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["home", "creative"],
+      "claimBoundary": "Published HIPStudio work sample only; does not by itself establish the depicted subject or organisation as a client."
+    },
+    {
+      "id": "portfolio-11",
+      "role": "film-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["home", "creative"],
+      "claimBoundary": "Published HIPStudio work sample only; do not infer a client, commission or endorsement from the image."
+    },
+    {
+      "id": "portrait-12",
+      "role": "specialist-portrait",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["creative"],
+      "claimBoundary": "Portfolio evidence for portrait capability only; provider routing and contracting-party boundaries remain separate."
+    }
+  ],
+  "heroVideo": {
+    "sourceRegistry": "content/hero-media.json",
+    "videoId": "gnuMDSWR_tg",
+    "sourceStatus": "USER_CONFIRMED_FIRST_PARTY",
+    "delivery": "PRIVACY_ENHANCED_CLICK_TO_LOAD",
+    "runtimeThirdPartyRequestBeforeUserAction": false
+  }
+}

@@ -45,6 +45,7 @@ jobs:
       - run: npm run test:partner-references
       - run: npm run test:flugos-sponsors
       - run: npm run test:hero-media
+      - run: python3 tools/test_platform_media.py
       - run: npm run test:pricing
       - run: npm run test:html
       - name: Prepare GitHub Pages review artifact
