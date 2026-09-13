@@ -1,17 +1,13 @@
 # coding: utf-8
-"""Validate the temporary GitHub Pages review artifact before deployment.
-
-Production HTML intentionally uses root-relative URLs for hipstudio.hu. The review
-artifact is served below /HIPSTUDIO/, so every local root-relative href/src/action
-must be rewritten to that project prefix while production canonicals stay intact.
-Every deployed content page must also remain noindex,nofollow.
-"""
+"""Validate the noindex GitHub Pages review artifact for project-path or custom-domain hosting."""
 from pathlib import Path
-import re
+import os, re
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist-pages-review"
-PREFIX = "/HIPSTUDIO/"
+raw_prefix = os.environ.get("PAGES_PREFIX", "/HIPSTUDIO").strip() or "/"
+PREFIX = "/" if raw_prefix == "/" else "/" + raw_prefix.strip("/") + "/"
+ROOT_TARGET = "/hu/" if PREFIX == "/" else PREFIX + "hu/"
 
 if not DIST.exists():
     raise SystemExit("dist-pages-review missing; run tools/prepare_pages_review.py first")
@@ -25,10 +21,8 @@ tag_attr_re = re.compile(r"([:\w-]+)\s*=\s*[\"']([^\"']*)[\"']", re.I)
 meta_tag_re = re.compile(r"<meta\b[^>]*>", re.I)
 link_tag_re = re.compile(r"<link\b[^>]*>", re.I)
 
-
 def attrs(tag):
     return {k.lower(): v for k, v in tag_attr_re.findall(tag)}
-
 
 errors = []
 checked_attrs = 0
@@ -41,12 +35,13 @@ for path in html_files:
 
     for value in attr_url_re.findall(raw):
         checked_attrs += 1
-        if value.startswith("/") and not value.startswith("//") and not value.startswith(PREFIX):
-            errors.append(f"{rel}: unprefixed local URL: {value}")
         if value.lower().startswith("javascript:"):
             errors.append(f"{rel}: javascript URL is not allowed: {value}")
+        if PREFIX != "/" and value.startswith("/") and not value.startswith("//") and not value.startswith(PREFIX):
+            errors.append(f"{rel}: unprefixed local URL: {value}")
+        if PREFIX == "/" and value.startswith("/HIPSTUDIO/"):
+            errors.append(f"{rel}: project-path prefix leaked into custom-domain artifact: {value}")
 
-    # index.html at artifact root is a synthetic noindex redirect, not a content page.
     if rel == Path("index.html"):
         continue
 
@@ -82,8 +77,8 @@ else:
     root_raw = root.read_text(encoding="utf-8")
     required_root = [
         'name="robots" content="noindex,nofollow"',
-        "url=/HIPSTUDIO/hu/",
-        'href="/HIPSTUDIO/hu/"',
+        f"url={ROOT_TARGET}",
+        f'href="{ROOT_TARGET}"',
     ]
     for token in required_root:
         if token not in root_raw:
