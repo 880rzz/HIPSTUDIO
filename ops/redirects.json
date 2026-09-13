@@ -1,10 +1,7 @@
 {
-  "version": 3,
+  "version": 2,
   "status": "inactive-plan",
-  "sources": [
-    "content/legacy-url-matrix.json",
-    "content/legacy-url-gsc-extension.json"
-  ],
+  "source": "content/legacy-url-matrix.json",
   "requirements": {
     "permanentMoves": 301,
     "removedWithoutReplacement": 410,
@@ -12,7 +9,6 @@
     "avoidChains": true,
     "rejectBlanketHomeRedirects": true,
     "requireCanonicalIndexableTargetsBeforeActivation": true,
-    "requireUniqueSourceUrlsAcrossInputs": true,
     "testBeforeCutover": true
   }
 }
