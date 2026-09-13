@@ -1,0 +1,48 @@
+{
+  "status": "review",
+  "policy": {
+    "runtimeSources": "LOCAL_ONLY",
+    "allowedPublicationRights": ["user_confirmed_2026-09-07"],
+    "clientClaimFromImage": false,
+    "visibleCreditRequiredWhenKnown": true
+  },
+  "assets": [
+    {
+      "id": "commercial-11",
+      "role": "event-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["home", "creative"],
+      "claimBoundary": "Published HIPStudio work sample only; does not by itself establish the depicted subject or organisation as a client.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. This records the observed source-publication state only; it does not waive any third-party attribution right. If an author/credit obligation becomes known, visible credit is required before continued use."
+    },
+    {
+      "id": "portfolio-11",
+      "role": "film-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["home", "creative"],
+      "claimBoundary": "Published HIPStudio work sample only; do not infer a client, commission or endorsement from the image.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. This records the observed source-publication state only; it does not waive any third-party attribution right. If an author/credit obligation becomes known, visible credit is required before continued use."
+    },
+    {
+      "id": "portrait-12",
+      "role": "specialist-portrait",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["creative"],
+      "claimBoundary": "Portfolio evidence for portrait capability only; provider routing and contracting-party boundaries remain separate.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. This records the observed source-publication state only; it does not waive any third-party attribution right. If an author/credit obligation becomes known, visible credit is required before continued use."
+    }
+  ],
+  "heroVideo": {
+    "sourceRegistry": "content/hero-media.json",
+    "videoId": "gnuMDSWR_tg",
+    "sourceStatus": "USER_CONFIRMED_FIRST_PARTY",
+    "delivery": "PRIVACY_ENHANCED_CLICK_TO_LOAD",
+    "runtimeThirdPartyRequestBeforeUserAction": false
+  }
+}
