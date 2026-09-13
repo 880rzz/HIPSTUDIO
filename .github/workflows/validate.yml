@@ -29,6 +29,7 @@ jobs:
       - run: npm run test:master-brand
       - run: npm run test:domain-migration
       - run: npm run test:legacy-url-matrix
+      - run: npm run test:gsc-legacy-redirects
       - run: npm run test:commercial-content
       - run: npm run test:solution-depth
       - run: npm run test:evidence
