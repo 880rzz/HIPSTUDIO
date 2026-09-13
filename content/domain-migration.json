@@ -1,22 +1,36 @@
 {
-  "version": "domain-migration-v1",
+  "version": "domain-migration-v2",
   "status": "review_only",
   "activeRedirects": false,
   "master": {
     "brand": "HIPStudio",
-    "origin": "https://www.hipstudio.hu"
+    "origin": "https://www.hipstudio.hu",
+    "cutoverScope": "master_domain_only"
   },
   "principles": [
     "Do not redirect a source URL until an equivalent or intentionally consolidated target has been reviewed.",
     "Preserve useful historical and search equity; do not blanket-redirect every legacy URL to the homepage.",
     "Keep Flúgos historical/archive intent separate from current B2B experience intent.",
     "HelloÜzlet becomes a migration source for the HIPStudio Business pillar, not a master brand.",
+    "Flúgos remains a specialist entry-domain and infrastructure boundary; incomplete Flúgos entry-domain inventory is tracked explicitly but does not silently redefine the hipstudio.hu master-domain release scope.",
     "DNS, HTTP 301/410 rules and Wix retirement require separate production approval."
   ],
+  "currentMasterMigration": {
+    "sourceOrigin": "https://www.hipstudio.hu",
+    "sourcePlatform": "wix",
+    "inventory": "content/legacy-url-matrix.json",
+    "inventoryStatus": "current_sitemap_and_gsc_verified",
+    "inventoryCount": 29,
+    "verified": "2026-09-13",
+    "redirectStatus": "planned_not_active",
+    "activation": "explicit_domain_cutover_approval_required"
+  },
   "entrypoints": [
     {
       "sourceOrigin": "https://www.hellouzlet.hu",
       "sourceRole": "former Business entrypoint",
+      "inventoryStatus": "retired_source_unavailable_owner_confirmed",
+      "blocksMasterCutover": false,
       "target": {
         "hu": "https://www.hipstudio.hu/hu/uzleti-mukodes/",
         "en": "https://www.hipstudio.hu/en/business-operations/",
@@ -26,22 +40,37 @@
     },
     {
       "sourceOrigin": "https://www.flugos.hu",
-      "sourceRole": "Flúgos brand and experience entrypoint",
+      "sourceRole": "Flúgos specialist brand and experience entrypoint",
+      "inventoryStatus": "partial_verified_inventory",
+      "blocksMasterCutover": false,
       "target": {
         "hu": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
         "en": "https://www.hipstudio.hu/en/corporate-experiences/",
         "de": "https://www.hipstudio.hu/de/unternehmenserlebnisse/"
       },
       "redirectStatus": "planned_not_active",
-      "archiveException": "Historical Flúgos URLs require URL-by-URL archive mapping and must not be blindly redirected to the current sales page."
+      "archiveException": "Historical Flúgos URLs require URL-by-URL archive mapping and must not be blindly redirected to the current sales page.",
+      "separateCutoverGate": "Complete the Flúgos URL/file inventory and approve its Vercel entry-domain behavior before changing flugos.hu."
     }
   ],
-  "releaseGates": [
-    "complete source URL inventory for hellouzlet.hu and flugos.hu",
-    "classify each URL as 301, archive-preserve, or 410 where justified",
-    "verify target content equivalence and canonical state",
-    "approve DNS/TLS/hosting plan",
-    "approve production redirect rules",
-    "verify live redirects and Search Console after cutover"
-  ]
+  "masterReleaseGates": [
+    "current hipstudio.hu sitemap URL inventory is complete and represented in the legacy URL matrix",
+    "classify each current hipstudio.hu URL to a semantically equivalent or intentionally consolidated final target",
+    "verify every planned target exists in the final production artifact with the intended canonical state",
+    "verify no redirect chain, loop, self-redirect or unrelated blanket-home redirect is introduced",
+    "approve hipstudio.hu DNS/TLS/hosting cutover plan",
+    "approve production redirect activation and keep rollback instructions current",
+    "after cutover verify live redirects, canonical/indexability, sitemap/robots and Search Console"
+  ],
+  "entryDomainGates": {
+    "hellouzlet.hu": [
+      "verify the known root target is live before activating the retired-domain redirect"
+    ],
+    "flugos.hu": [
+      "complete the full Flúgos Wix page/file URL inventory including historical downloads",
+      "classify each Flúgos URL as current entry redirect, archive-preserve, preserve-until-mirrored or justified 410",
+      "verify historical archive targets preserve historical intent",
+      "approve and verify the separate Vercel entry-domain behavior before changing flugos.hu"
+    ]
+  }
 }
