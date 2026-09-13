@@ -1,0 +1,79 @@
+{
+  "version": "hipstudio-url-discovery-v1",
+  "capturedAt": "2026-09-13",
+  "property": "sc-domain:hipstudio.hu",
+  "sitemap": {
+    "url": "https://www.hipstudio.hu/sitemap.xml",
+    "urlCount": 29,
+    "performanceWindow": {
+      "startDate": "2026-08-14",
+      "endDate": "2026-09-10"
+    },
+    "indexedInGscCount": 12,
+    "dataSource": "gsc-api",
+    "urls": [
+      "https://www.hipstudio.hu/",
+      "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+      "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
+      "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+      "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+      "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+      "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+      "https://www.hipstudio.hu/kapcsolat",
+      "https://www.hipstudio.hu/service-page/portfólió-és-divatfotózás",
+      "https://www.hipstudio.hu/service-page/cv-önéletrajz-fotózás",
+      "https://www.hipstudio.hu/service-page/mini-portfólió-társkereső-fotózás-1",
+      "https://www.hipstudio.hu/service-page/személyes-egyeztetés-a-stúdióban",
+      "https://www.hipstudio.hu/service-page/művészi-aktfotózás",
+      "https://www.hipstudio.hu/service-page/glamour-boudoir-fotózás",
+      "https://www.hipstudio.hu/service-page/személyes-egyeztetés-online",
+      "https://www.hipstudio.hu/service-page/üzleti-kreatív-portréfotózás",
+      "https://www.hipstudio.hu/rendezvenyfotozas",
+      "https://www.hipstudio.hu/referencia-videók",
+      "https://www.hipstudio.hu/reklam-fotozas-budapest",
+      "https://www.hipstudio.hu/ingatlanfotozas",
+      "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+      "https://www.hipstudio.hu/impresszum",
+      "https://www.hipstudio.hu/rovidfilm-keszites",
+      "https://www.hipstudio.hu/reklamfoto-galeria",
+      "https://www.hipstudio.hu/podcast-keszites",
+      "https://www.hipstudio.hu/fotostudio-budapest",
+      "https://www.hipstudio.hu/epulet-fotozas-galeria",
+      "https://www.hipstudio.hu/partnereink",
+      "https://www.hipstudio.hu/portrefotozas-galeria"
+    ]
+  },
+  "gscLandingPages": {
+    "window": {
+      "startDate": "2026-06-01",
+      "endDate": "2026-09-10"
+    },
+    "settledThrough": "2026-09-10",
+    "dataSource": "gsc-api",
+    "rowCount": 17,
+    "urls": [
+      "https://www.hipstudio.hu/",
+      "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+      "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+      "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
+      "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+      "https://www.hipstudio.hu/service-page/m%C5%B1v%C3%A9szi-aktfot%C3%B3z%C3%A1s",
+      "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+      "https://www.hipstudio.hu/rovidfilm-keszites",
+      "https://www.hipstudio.hu/kapcsolat",
+      "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+      "https://www.hipstudio.hu/epulet-fotozas-galeria",
+      "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+      "https://www.hipstudio.hu/reklam-fotozas-budapest",
+      "https://www.hipstudio.hu/service-page/mini-portf%C3%B3li%C3%B3-t%C3%A1rskeres%C5%91-fot%C3%B3z%C3%A1s-1",
+      "https://www.hipstudio.hu/reklamfoto-galeria",
+      "https://www.hipstudio.hu/service-page/cv-%C3%B6n%C3%A9letrajz-fot%C3%B3z%C3%A1s",
+      "https://www.hipstudio.hu/service-page/szem%C3%A9lyes-egyeztet%C3%A9s-online"
+    ]
+  },
+  "notes": [
+    "This file is a preserved discovery snapshot for migration completeness tests; it is not a live redirect configuration.",
+    "Percent-encoded GSC landing-page URLs are normalized by the regression test before comparison with the migration matrix.",
+    "The sitemap snapshot is authoritative for current public routes as captured; GSC adds evidence for search-visible variants and settled landing pages."
+  ]
+}
