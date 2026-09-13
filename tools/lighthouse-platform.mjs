@@ -50,12 +50,14 @@ for(const [name,path] of targets){
       const result=await lighthouse(baseUrl+path,options);
       if(!result?.lhr) throw new Error(`Lighthouse returned no result for ${path} (${mode})`);
       fs.writeFileSync(`${auditDir}/lighthouse-platform-${name}-${mode}.json`,result.report);
-      const scores=Object.fromEntries(Object.entries(result.lhr.categories).map(([key,value])=>[key,Math.round(value.score*100)]));
+      const rawScores=Object.fromEntries(Object.entries(result.lhr.categories).map(([key,value])=>[key,value.score*100]));
+      const scores=Object.fromEntries(Object.entries(rawScores).map(([key,value])=>[key,Math.round(value)]));
       const metrics=Object.fromEntries(Object.keys(metricLimits).map(key=>[key,result.lhr.audits[key].numericValue]));
-      const row={name,path,mode,version:result.lhr.lighthouseVersion,scores,metrics};
+      const row={name,path,mode,version:result.lhr.lighthouseVersion,scores,rawScores,metrics};
       results.push(row);
       for(const [category,min] of Object.entries(thresholds)){
-        if((scores[category]??0)<min) failures.push(`${name}/${mode}: ${category} ${scores[category]??0} < ${min}`);
+        const actual=rawScores[category]??0;
+        if(actual<min) failures.push(`${name}/${mode}: ${category} ${actual.toFixed(1)} < ${min}`);
       }
       for(const [metric,max] of Object.entries(metricLimits)){
         if((metrics[metric]??Infinity)>max) failures.push(`${name}/${mode}: ${metric} ${metrics[metric]} > ${max}`);
