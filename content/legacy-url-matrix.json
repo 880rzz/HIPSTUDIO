@@ -11,7 +11,8 @@
       "sitemapUrl": "https://www.hipstudio.hu/sitemap.xml",
       "sitemapUrlCount": 29,
       "gscSettledThrough": "2026-09-10",
-      "reason": "The connected Google Search Console property and the current public sitemap were read on 2026-09-13. All 29 current sitemap URLs are represented in this migration contract; Search Console also exposed current indexed/service-page variants. Historical URLs outside the current sitemap remain discoverable evidence, not a reason to omit the current-site migration contract."
+      "discoveryArtifact": "audit/hipstudio-url-discovery-2026-09-13.json",
+      "reason": "The current sitemap and connected Search Console landing-page evidence are preserved in the discovery artifact and must remain fully covered by this migration contract."
     },
     "https://www.hellouzlet.hu": {
       "complete": true,
@@ -49,7 +50,7 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/",
       "confidence": "high",
-      "rationale": "The current root is the Hungarian HIPStudio home entrypoint; the new platform publishes the Hungarian home at /hu/.",
+      "rationale": "Hungarian root moves to the localized Hungarian home.",
       "activationGate": "Enable only at domain cutover after the /hu/ production canonical is live and verified."
     },
     {
@@ -59,7 +60,7 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/kapcsolat/",
       "confidence": "high",
-      "rationale": "Direct contact/consultation intent is preserved by the new localized contact route.",
+      "rationale": "Direct contact intent is preserved.",
       "activationGate": "Verify the target is production-live and quote submission remains disabled until separately approved."
     },
     {
@@ -69,8 +70,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/adatvedelem/",
       "confidence": "high",
-      "rationale": "The generated privacy/legal page contains the canonical Hipstudió Kft. controller and legal contact data required for the replacement platform.",
-      "activationGate": "Verify the production privacy page matches the approved controller/legal governance before redirect activation."
+      "rationale": "The replacement legal/privacy route carries the governed controller information.",
+      "activationGate": "Verify the production privacy page matches approved legal governance before activation."
     },
     {
       "source": "https://www.hipstudio.hu/partnereink",
@@ -79,8 +80,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/rolunk/",
       "confidence": "high",
-      "rationale": "The new About route carries the governed collaboration/partner presentation and repository-local partner evidence without inflating legal relationships.",
-      "activationGate": "Verify partner provenance and the About target on the production build."
+      "rationale": "The governed About route preserves partner/collaboration context.",
+      "activationGate": "Verify partner provenance and the production About target."
     },
     {
       "source": "https://www.hipstudio.hu/fotostudio-budapest",
@@ -89,8 +90,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/",
       "confidence": "high",
-      "rationale": "The old photography hub spans portrait, corporate, event and specialist photography; the governed HIPStudio creative service hub preserves that breadth better than a single narrow service page.",
-      "activationGate": "Verify the creative service hub is production-live and all VERIFIED photography families remain reachable."
+      "rationale": "The old studio hub spans multiple photography families and maps to the governed HIPStudio service hub.",
+      "activationGate": "Verify the service hub is production-live."
     },
     {
       "source": "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
@@ -99,8 +100,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/",
       "confidence": "high",
-      "rationale": "Public fixed pricing is intentionally suppressed in the new governed platform; the closest safe destination is the creative service hub, from which users can request a tailored quote or follow specialist routing.",
-      "activationGate": "Confirm no public pricing leaks and the tailored quote path remains review-disabled until explicit activation."
+      "rationale": "Fixed public pricing is intentionally suppressed; the service hub preserves discovery and consultation intent.",
+      "activationGate": "Confirm no public pricing leaks and quote submission remains separately gated."
     },
     {
       "source": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
@@ -109,8 +110,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/cv-photography/",
       "confidence": "high",
-      "rationale": "Exact service-intent replacement for CV photography.",
-      "activationGate": "Verify the service target is production-live and provider-routing language remains accurate."
+      "rationale": "Exact CV-photography replacement.",
+      "activationGate": "Verify the service target is production-live and provider routing remains accurate."
     },
     {
       "source": "https://www.hipstudio.hu/portrefotozas-galeria",
@@ -119,8 +120,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/",
       "confidence": "high",
-      "rationale": "The legacy gallery covers multiple portrait/CV variants; the portrait service family is the closest consolidated replacement without misrepresenting one subtype as the whole gallery.",
-      "activationGate": "Verify the portrait family page is production-live and routes to current VERIFIED portrait services."
+      "rationale": "The broad portrait gallery consolidates to the portrait family without over-narrowing intent.",
+      "activationGate": "Verify the portrait family is production-live."
     },
     {
       "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
@@ -129,8 +130,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/portfolio-photography/",
       "confidence": "high",
-      "rationale": "Exact portfolio-photography service replacement.",
-      "activationGate": "Verify the service target is production-live and provider boundaries remain explicit."
+      "rationale": "Exact portfolio-photography replacement.",
+      "activationGate": "Verify the target is production-live."
     },
     {
       "source": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
@@ -139,8 +140,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/portfolio-photography/",
       "confidence": "high",
-      "rationale": "The gallery and service share the same portfolio-photography intent; the governed service page is the closest replacement.",
-      "activationGate": "Verify the target is production-live and no unlicensed legacy gallery media is implied."
+      "rationale": "The portfolio gallery and service share the same governed intent.",
+      "activationGate": "Verify the target is production-live and no legacy image-right claim is imported."
     },
     {
       "source": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
@@ -149,8 +150,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/fine-art-glamour-boudoir/",
       "confidence": "high",
-      "rationale": "The replacement service family explicitly covers fine-art, glamour and boudoir photography while preserving specialist/provider routing.",
-      "activationGate": "Verify the target is production-live and does not inherit unsupported package/pricing claims from Wix."
+      "rationale": "Governed fine-art/glamour/boudoir specialist replacement.",
+      "activationGate": "Verify provider routing and absence of legacy package claims."
     },
     {
       "source": "https://www.hipstudio.hu/muveszi-aktfotozas-galeria",
@@ -159,8 +160,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/fine-art-glamour-boudoir/",
       "confidence": "high",
-      "rationale": "The legacy gallery has the same specialist fine-art/glamour/boudoir intent as the governed service route.",
-      "activationGate": "Verify the target is production-live and no legacy image-right assumptions are carried into the new page."
+      "rationale": "The legacy gallery shares the governed specialist intent.",
+      "activationGate": "Verify the target is production-live and no legacy image rights are assumed."
     },
     {
       "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
@@ -169,8 +170,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/product-advertising-photography/",
       "confidence": "high",
-      "rationale": "Exact product/advertising/campaign photography replacement for the legacy advertising-photography page.",
-      "activationGate": "Verify the service target is production-live and only source-verified claims are rendered."
+      "rationale": "Exact product/advertising-photography replacement.",
+      "activationGate": "Verify the target is production-live and only verified claims render."
     },
     {
       "source": "https://www.hipstudio.hu/reklamfoto-galeria",
@@ -179,8 +180,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/product-advertising-photography/",
       "confidence": "high",
-      "rationale": "The legacy advertising gallery consolidates safely into the governed advertising-photography service route.",
-      "activationGate": "Verify the target is production-live and no unverified legacy client/media claim is imported."
+      "rationale": "The advertising gallery consolidates to the governed advertising service.",
+      "activationGate": "Verify the target is production-live and no unverified client/media claim is imported."
     },
     {
       "source": "https://www.hipstudio.hu/ingatlanfotozas",
@@ -189,7 +190,7 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/property-interior-architecture/",
       "confidence": "high",
-      "rationale": "Exact governed replacement for property/interior/architecture photography.",
+      "rationale": "Exact property/interior/architecture replacement.",
       "activationGate": "Verify the target is production-live."
     },
     {
@@ -199,8 +200,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/property-interior-architecture/",
       "confidence": "high",
-      "rationale": "The legacy property/architecture gallery maps to the same governed service intent.",
-      "activationGate": "Verify the target is production-live and gallery rights are not implied by the redirect."
+      "rationale": "The architecture gallery maps to the same governed service intent.",
+      "activationGate": "Verify the target is production-live."
     },
     {
       "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
@@ -209,8 +210,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-event/event-conference-photography/",
       "confidence": "high",
-      "rationale": "Exact event/conference photography replacement; this stays in the creative photography pillar rather than being conflated with Flúgos event design.",
-      "activationGate": "Verify the target is production-live and unsupported historic volume/superlative claims remain excluded."
+      "rationale": "Exact event/conference-photography replacement.",
+      "activationGate": "Verify the target is production-live and unsupported volume claims remain excluded."
     },
     {
       "source": "https://www.hipstudio.hu/rendezvenyfotozas",
@@ -219,8 +220,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-event/event-conference-photography/",
       "confidence": "high",
-      "rationale": "The current Wix alias already redirects to the Budapest event-photography page; cutover collapses the chain directly to the final governed target.",
-      "activationGate": "Activate as one direct permanent redirect; do not preserve the Wix redirect chain."
+      "rationale": "Collapse the existing Wix redirect chain directly to the final governed target.",
+      "activationGate": "Activate as one direct permanent redirect."
     },
     {
       "source": "https://www.hipstudio.hu/rovidfilm-keszites",
@@ -229,8 +230,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/video/commercial-brand-film/",
       "confidence": "high",
-      "rationale": "The legacy page is primarily commercial/image-film production; the governed commercial/brand-film service is the closest replacement.",
-      "activationGate": "Verify the target is production-live and unsupported old ROI/statistical claims are absent."
+      "rationale": "Closest governed commercial/brand-film replacement.",
+      "activationGate": "Verify the target is production-live and unsupported historical ROI claims are absent."
     },
     {
       "source": "https://www.hipstudio.hu/referencia-videók",
@@ -239,8 +240,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/video/",
       "confidence": "high",
-      "rationale": "The legacy route is a broad video-reference entrypoint; the video service family is the closest governed replacement without pretending every historical reference is cleared for republication.",
-      "activationGate": "Verify the target is production-live and media provenance rules remain enforced."
+      "rationale": "Broad video-reference intent consolidates to the governed video family.",
+      "activationGate": "Verify the target is production-live and provenance rules remain enforced."
     },
     {
       "source": "https://www.hipstudio.hu/podcast-keszites",
@@ -249,18 +250,18 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/podcast-content/video-podcast/",
       "confidence": "high",
-      "rationale": "The current page promotes video podcast production; the governed video-podcast service is the closest exact replacement.",
-      "activationGate": "Verify the target is production-live and current scope is preserved without fixed-price promises."
+      "rationale": "Exact governed video-podcast replacement.",
+      "activationGate": "Verify the target is production-live without fixed-price promises."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/portfólió-és-divatfotózás",
       "sourceType": "wix_service_page",
       "observed": "sitemap_verified_2026-09-13",
       "decision": "planned_301",
-      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/portfolio-photography/",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/",
       "confidence": "high",
-      "rationale": "Wix booking/service detail for portfolio/fashion photography maps to the governed portfolio service.",
-      "activationGate": "Verify the target is production-live and no Wix booking action remains exposed."
+      "rationale": "The Wix page combines portfolio and fashion photography, so the shared portrait family preserves both intents without discarding the fashion half.",
+      "activationGate": "Verify the portrait family is production-live and both portfolio and fashion services remain reachable."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/cv-önéletrajz-fotózás",
@@ -269,8 +270,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/cv-photography/",
       "confidence": "high",
-      "rationale": "Wix booking/service detail for CV photography maps directly to the governed CV service.",
-      "activationGate": "Verify the target is production-live and no Wix booking action remains exposed."
+      "rationale": "Exact governed CV service.",
+      "activationGate": "Verify the target is production-live and Wix booking is not exposed."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/mini-portfólió-társkereső-fotózás-1",
@@ -279,8 +280,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/personal-portrait/",
       "confidence": "high",
-      "rationale": "The Wix mini-portfolio/dating service is best represented by the governed personal portrait/dating photography route.",
-      "activationGate": "Verify the target is production-live and no legacy package price is reproduced."
+      "rationale": "Closest governed personal-portrait/dating replacement.",
+      "activationGate": "Verify the target is production-live without legacy package prices."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/személyes-egyeztetés-a-stúdióban",
@@ -289,8 +290,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/kapcsolat/",
       "confidence": "high",
-      "rationale": "The old booking item is consultation/contact intent; the new contact route is the safe replacement while booking/quote activation remains separately gated.",
-      "activationGate": "Verify the contact target is production-live; do not auto-enable booking or quote submission."
+      "rationale": "Consultation/booking intent maps safely to governed contact while submission remains gated.",
+      "activationGate": "Verify the target is production-live; do not enable booking automatically."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/művészi-aktfotózás",
@@ -299,8 +300,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/fine-art-glamour-boudoir/",
       "confidence": "high",
-      "rationale": "The Wix fine-art nude service maps to the governed specialist fine-art/glamour/boudoir route.",
-      "activationGate": "Verify provider routing and the absence of legacy fixed-price/package claims."
+      "rationale": "Governed specialist fine-art route.",
+      "activationGate": "Verify provider routing and absence of legacy package claims."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/glamour-boudoir-fotózás",
@@ -309,8 +310,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/fine-art-glamour-boudoir/",
       "confidence": "high",
-      "rationale": "The Wix glamour/boudoir service shares the governed specialist replacement route.",
-      "activationGate": "Verify provider routing and the absence of legacy fixed-price/package claims."
+      "rationale": "Governed specialist glamour/boudoir route.",
+      "activationGate": "Verify provider routing and absence of legacy package claims."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/személyes-egyeztetés-online",
@@ -319,8 +320,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/kapcsolat/",
       "confidence": "high",
-      "rationale": "The old online consultation booking item becomes the governed contact/consultation route.",
-      "activationGate": "Verify the contact target is production-live; do not auto-enable booking or quote submission."
+      "rationale": "Online consultation maps to governed contact while submission remains gated.",
+      "activationGate": "Verify the target is production-live; do not enable booking automatically."
     },
     {
       "source": "https://www.hipstudio.hu/service-page/üzleti-kreatív-portréfotózás",
@@ -329,8 +330,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/",
       "confidence": "high",
-      "rationale": "The Wix business/creative portrait booking item maps directly to the governed business portrait service.",
-      "activationGate": "Verify the target is production-live and specialist/provider boundaries remain explicit."
+      "rationale": "Exact governed business-portrait replacement.",
+      "activationGate": "Verify specialist/provider boundaries remain explicit."
     },
     {
       "source": "https://www.hellouzlet.hu/",
@@ -339,7 +340,7 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/uzleti-mukodes/",
       "confidence": "high",
-      "rationale": "HelloÜzlet was the former Business entrypoint and is now confirmed retired. The Business pillar is the approved consolidation target.",
+      "rationale": "Retired former Business entrypoint consolidates to the approved Business pillar.",
       "activationGate": "Verify the target exists on production hosting before enabling the known root redirect. No full HelloÜzlet export is required."
     },
     {
@@ -349,8 +350,8 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
       "confidence": "high",
-      "rationale": "Current Flúgos root acts as the specialist experience/event entrypoint; the new HIPStudio Experiences pillar is the approved current B2B destination.",
-      "activationGate": "Verify final Experiences page content, canonical state and production hosting before cutover."
+      "rationale": "Specialist experience entrypoint maps to the approved current Experiences pillar.",
+      "activationGate": "Verify final Experiences content and production canonical before cutover."
     },
     {
       "source": "https://www.flugos.hu/rendezvenyszervezes",
@@ -359,7 +360,7 @@
       "decision": "planned_301",
       "target": "https://www.hipstudio.hu/hu/vallalati-elmenyek/",
       "confidence": "medium",
-      "rationale": "The route is linked as the event-organising entrypoint from the current Flúgos site and appears aligned with the current Experiences pillar.",
+      "rationale": "Likely event-organising entrypoint aligned with Experiences.",
       "activationGate": "Fetch/export the exact source page and confirm content-intent equivalence before activation."
     },
     {
@@ -369,8 +370,8 @@
       "decision": "archive_preserve",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-heritage/",
       "confidence": "high",
-      "rationale": "The source page is primarily Flúgos Futam history and 2009-2019 heritage. Redirecting it to a current sales page would erase historical intent.",
-      "activationGate": "Confirm the generated heritage page contains the required historical facts and no current-event implication."
+      "rationale": "Historical Flúgos Futam intent must remain historical.",
+      "activationGate": "Confirm the generated heritage page preserves historical context."
     },
     {
       "source": "https://www.flugos.hu/_files/ugd/279667_282489bc8248449db8288b358ac8342e.pdf",
@@ -379,8 +380,8 @@
       "decision": "preserve_until_archive_mirrored",
       "target": null,
       "confidence": "high",
-      "rationale": "The 10-year anniversary PDF is a primary historical source and should remain accessible until an equivalent archived copy/download exists on the HIPStudio production host.",
-      "activationGate": "Mirror with rights/provenance retained, then decide whether to 301 the PDF URL to the archived file or keep it served from the legacy origin."
+      "rationale": "Primary historical source should remain accessible until an equivalent archived copy exists.",
+      "activationGate": "Mirror with rights/provenance retained before deciding redirect behavior."
     },
     {
       "source": "https://www.flugos.hu/_files/ugd/279667_048f98564e214407aa70b03dc824a35b.pdf",
@@ -389,8 +390,8 @@
       "decision": "archive_preserve",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/",
       "confidence": "high",
-      "rationale": "The document is explicitly the 2019 rules and participation conditions; the existing 2019 archive page is the closest historical destination.",
-      "activationGate": "Preserve the original PDF as evidence/download or link it from the 2019 archive before any redirect."
+      "rationale": "2019 rules map to the existing 2019 historical archive.",
+      "activationGate": "Preserve the PDF as evidence/download or link it from the archive before redirect activation."
     },
     {
       "source": "https://www.flugos.hu/_files/ugd/279667_6432dff7056c4fada4814e740165742b.doc?dn=NevezesiLap2019.doc",
@@ -399,12 +400,12 @@
       "decision": "candidate_410_after_review",
       "target": "https://www.hipstudio.hu/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/",
       "confidence": "medium",
-      "rationale": "A 2019 registration form can mislead users if left as an actionable document. The 2019 archive page preserves historical context better.",
-      "activationGate": "Confirm no archival/legal reason requires retaining the downloadable form; otherwise preserve as non-actionable archive evidence instead of returning 410."
+      "rationale": "Expired registration form should not remain actionable; archive destination preserves context.",
+      "activationGate": "Confirm no archival/legal reason requires retaining the downloadable form; otherwise preserve it as non-actionable archive evidence instead of returning 410."
     }
   ],
   "nextInventoryActions": [
-    "Keep the current hipstudio.hu sitemap/GSC URL set synchronized with this contract until cutover.",
+    "Keep the preserved hipstudio.hu sitemap/GSC discovery artifact synchronized with the migration matrix until cutover.",
     "Export the full Flúgos Wix page/file URL set, including hidden and legacy routes.",
     "Classify every discovered Flúgos URL individually and reconcile duplicates, query variants and downloadable files.",
     "Run target existence/canonical checks against the final production build.",
