@@ -1,5 +1,6 @@
 # coding: utf-8
 from pathlib import Path
+from urllib.parse import urlsplit
 import json
 
 R = Path(__file__).resolve().parents[1]
@@ -18,6 +19,7 @@ mapping_by_old = {item['old']: item for item in MAPPING}
 assert len(mapping_by_old) == len(MAPPING), 'duplicate old URL in audit/url-mapping.json'
 
 root = 'https://www.hipstudio.hu/'
+home_paths = {'/', '/hu', '/hu/'}
 missing = []
 invalid = []
 for page in pages:
@@ -33,14 +35,26 @@ for page in pages:
     target = item.get('new', '')
     if not target.startswith('https://www.hipstudio.hu/'):
         invalid.append((url, 'target'))
+        continue
+    parsed = urlsplit(target)
+    normalized_path = parsed.path.rstrip('/') or '/'
     if target == url:
         invalid.append((url, 'self-loop'))
+    if normalized_path in {'/', '/hu'}:
+        invalid.append((url, 'blanket-home-target'))
 
 assert not missing, f'GSC-visible legacy URLs missing from migration map: {missing}'
 assert not invalid, f'Invalid GSC legacy redirect mappings: {invalid}'
 
-# Active SEO value must never depend on a generic blanket-home redirect.
-non_root_targets = [mapping_by_old[p['url']]['new'] for p in pages if p['url'] != root]
-assert all(t != root for t in non_root_targets), 'legacy URLs must map to semantically specific destinations'
+# Active SEO value must never depend on the bare or localized homepage,
+# including query/fragment variants of those home routes.
+for page in pages:
+    if page['url'] == root:
+        continue
+    target = mapping_by_old[page['url']]['new']
+    parsed = urlsplit(target)
+    assert (parsed.path.rstrip('/') or '/') not in {'/', '/hu'}, (
+        f'legacy URL must map to a semantically specific destination: {page["url"]} -> {target}'
+    )
 
 print(f'GSC legacy redirect coverage passed for {len(pages)-1} visible legacy URLs')
