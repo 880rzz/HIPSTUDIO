@@ -11,10 +11,12 @@ w=workflow.read_text(encoding='utf-8')
 assert 'python3 tools/prepare_pages_review.py' in w
 assert 'path: dist-pages-review' in w
 assert 'path: dist-platform' not in w
-assert 'Refuse review deploy when a custom Pages domain is active' in w
+assert 'Allow only the approved temporary review custom domain' in w
+assert 'REVIEW_CUSTOM_DOMAIN: hip.vipach.at' in w
 assert 'https://api.github.com/repos/${GITHUB_REPOSITORY}/pages' in w
-assert "if [ -n \"$cname\" ]" in w
-assert 'Review deployment blocked: GitHub Pages custom domain is active' in w
+assert 'if [ -n "$cname" ] && [ "$cname" != "$REVIEW_CUSTOM_DOMAIN" ]; then' in w
+assert 'Review deployment blocked: unexpected GitHub Pages custom domain is active' in w
+assert 'Approved temporary review custom domain is active' in w
 assert 'Refusing review deployment' in w
 assert 'uses: actions/configure-pages@v5' in w
 assert 'enablement: true' in w
@@ -67,4 +69,4 @@ home=(D/'hu/index.html').read_text(encoding='utf-8')
 assert 'href="/HIPSTUDIO/' in home
 assert 'src="/HIPSTUDIO/' in home or 'href="/HIPSTUDIO/assets/' in home
 
-print('Hosting config OK: GitHub Pages review is isolated and production builds fail closed on blocked release gates; Flúgos remains separate Vercel infrastructure')
+print('Hosting config OK: GitHub Pages review permits only hip.vipach.at as a temporary custom domain, remains noindex, and production builds fail closed; Flúgos remains separate Vercel infrastructure')
