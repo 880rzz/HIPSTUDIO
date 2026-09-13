@@ -29,6 +29,18 @@ const metricLimits={
 const results=[];
 const failures=[];
 
+async function killChromeWithCleanupRetry(chrome){
+  for(let attempt=1; attempt<=3; attempt+=1){
+    try{
+      await chrome.kill();
+      return;
+    }catch(error){
+      if(error?.code!=='ENOTEMPTY' || attempt===3) throw error;
+      await new Promise(resolve=>setTimeout(resolve,200*attempt));
+    }
+  }
+}
+
 for(const [name,path] of targets){
   for(const mode of ['mobile','desktop']){
     const chrome=await chromeLauncher.launch({
@@ -64,7 +76,7 @@ for(const [name,path] of targets){
       }
       console.log(JSON.stringify(row));
     } finally {
-      await chrome.kill();
+      await killChromeWithCleanupRetry(chrome);
     }
   }
 }

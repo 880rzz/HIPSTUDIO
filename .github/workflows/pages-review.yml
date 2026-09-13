@@ -23,9 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Refuse review deploy when a custom Pages domain is active
+      - name: Allow only the approved temporary review custom domain
         env:
           GH_TOKEN: ${{ github.token }}
+          REVIEW_CUSTOM_DOMAIN: hip.vipach.at
         run: |
           set -euo pipefail
           status="$(curl -sS -o /tmp/pages.json -w '%{http_code}' \
@@ -37,11 +38,15 @@ jobs:
             echo "GitHub Pages is not configured yet; the configure-pages step may enable it for this review deployment."
           elif [ "$status" = "200" ]; then
             cname="$(python3 -c "import json; print((json.load(open('/tmp/pages.json')).get('cname') or '').strip())")"
-            if [ -n "$cname" ]; then
-              echo "Review deployment blocked: GitHub Pages custom domain is active: $cname" >&2
+            if [ -n "$cname" ] && [ "$cname" != "$REVIEW_CUSTOM_DOMAIN" ]; then
+              echo "Review deployment blocked: unexpected GitHub Pages custom domain is active: $cname" >&2
               exit 1
             fi
-            echo "No custom Pages domain is active; review deployment may proceed."
+            if [ "$cname" = "$REVIEW_CUSTOM_DOMAIN" ]; then
+              echo "Approved temporary review custom domain is active: $REVIEW_CUSTOM_DOMAIN"
+            else
+              echo "No custom Pages domain is active; review deployment may proceed."
+            fi
           else
             echo "Could not safely verify GitHub Pages custom-domain state (HTTP $status). Refusing review deployment." >&2
             cat /tmp/pages.json >&2 || true
