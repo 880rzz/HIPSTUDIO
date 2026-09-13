@@ -1,12 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "status": "inactive-plan",
-  "source": "audit/url-mapping.json",
+  "source": "content/legacy-url-matrix.json",
   "requirements": {
     "permanentMoves": 301,
     "removedWithoutReplacement": 410,
     "preserveQueryString": true,
     "avoidChains": true,
+    "rejectBlanketHomeRedirects": true,
+    "requireCanonicalIndexableTargetsBeforeActivation": true,
     "testBeforeCutover": true
   }
 }
