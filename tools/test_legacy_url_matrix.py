@@ -5,11 +5,18 @@ import json
 
 R=Path(__file__).resolve().parents[1]
 DATA=json.loads((R/'content/legacy-url-matrix.json').read_text())
+OPS=json.loads((R/'ops/redirects.json').read_text())
 
 assert DATA['version']=='legacy-url-matrix-v3'
 assert DATA['status']=='review_only'
 assert DATA['activeRedirects'] is False
 assert DATA['masterOrigin']=='https://www.hipstudio.hu'
+assert OPS['status']=='inactive-plan'
+assert OPS['source']=='content/legacy-url-matrix.json'
+assert OPS['requirements']['preserveQueryString'] is True
+assert OPS['requirements']['avoidChains'] is True
+assert OPS['requirements']['rejectBlanketHomeRedirects'] is True
+assert OPS['requirements']['requireCanonicalIndexableTargetsBeforeActivation'] is True
 assert set(DATA['inventoryStatus'])=={
     'https://www.hipstudio.hu',
     'https://www.hellouzlet.hu',
@@ -68,7 +75,7 @@ for item in entries:
         target_path=urlsplit(target).path.rstrip('/') or '/'
         if item['source'].startswith('https://www.hipstudio.hu') and item['decision']=='planned_301':
             assert source_path != target_path, item
-            assert target_path != '/', f'legacy route must not blanket-redirect to home: {item}'
+            assert target_path not in {'/','/hu'}, f'legacy route must not blanket-redirect to home: {item}'
     if item['decision']=='planned_301':
         assert target, item
     if item['decision']=='candidate_410_after_review':
@@ -116,4 +123,4 @@ raw=(R/'content/legacy-url-matrix.json').read_text().lower()
 for forbidden in ['rewrite rule','return 301','redirect 301','netlify.toml','vercel.json']:
     assert forbidden not in raw
 assert 'export or crawl the full hellouzlet' not in raw
-print('Legacy URL migration matrix tests passed; current HIPStudio routes are semantically mapped and redirects remain review-gated')
+print('Legacy URL migration matrix tests passed; governed matrix is the inactive operational redirect source and current HIPStudio routes remain semantically mapped')
