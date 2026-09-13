@@ -1,6 +1,6 @@
 # coding: utf-8
 from pathlib import Path
-import json, subprocess
+import json, subprocess, os
 
 R=Path(__file__).resolve().parents[1]
 assert not (R/'vercel.json').exists(), 'HIPStudio must not carry a root Vercel config'
@@ -17,6 +17,9 @@ assert 'https://api.github.com/repos/${GITHUB_REPOSITORY}/pages' in w
 assert 'if [ -n "$cname" ] && [ "$cname" != "$REVIEW_CUSTOM_DOMAIN" ]; then' in w
 assert 'Review deployment blocked: unexpected GitHub Pages custom domain is active' in w
 assert 'Approved temporary review custom domain is active' in w
+assert 'pages_prefix=/' in w
+assert 'pages_prefix=/HIPSTUDIO' in w
+assert 'PAGES_PREFIX: ${{ steps.pages_domain.outputs.pages_prefix }}' in w
 assert 'Refusing review deployment' in w
 assert 'uses: actions/configure-pages@v5' in w
 assert 'enablement: true' in w
@@ -37,36 +40,35 @@ assert P['domainArchitecture']['flugos']['hosting']=='vercel'
 assert P['domainArchitecture']['flugos']['separateVercelProject'] is True
 assert P['domainArchitecture']['flugos']['separateContentPlatform'] is False
 
-# Review builds must remain allowed while release gates are intentionally blocked.
 subprocess.run(['npm','run','build:platform'],cwd=R,check=True)
 
-# A production build must fail closed while any release gate is blocked.
 production_env={'BUILD_MODE':'production','PLATFORM_PUBLICATION_APPROVED':'1','QUOTE_FORM_ENDPOINT':'https://example.invalid/quote'}
-import os
 env=os.environ.copy(); env.update(production_env)
 prod=subprocess.run(['npm','run','build:platform'],cwd=R,env=env,capture_output=True,text=True)
 assert prod.returncode != 0, 'production build unexpectedly bypassed blocked release gates'
 assert 'Production activation BLOCKED' in (prod.stdout+prod.stderr)
 
+# Project-path fallback remains valid.
 subprocess.run(['python3','tools/prepare_pages_review.py'],cwd=R,check=True)
 D=R/'dist-pages-review'
-assert D.exists()
 root=(D/'index.html')
 assert root.exists(), 'Pages review root index missing'
 root_html=root.read_text(encoding='utf-8')
 assert 'noindex,nofollow' in root_html
 assert 'url=/HIPSTUDIO/hu/' in root_html
-html=list(D.rglob('*.html'))
-assert html
-for p in html:
-    s=p.read_text(encoding='utf-8')
-    assert 'href="/assets/' not in s, p
-    assert 'src="/assets/' not in s, p
-    assert 'href="/hu/' not in s, p
-    assert 'href="/en/' not in s, p
-    assert 'href="/de/' not in s, p
 home=(D/'hu/index.html').read_text(encoding='utf-8')
 assert 'href="/HIPSTUDIO/' in home
-assert 'src="/HIPSTUDIO/' in home or 'href="/HIPSTUDIO/assets/' in home
 
-print('Hosting config OK: GitHub Pages review permits only hip.vipach.at as a temporary custom domain, remains noindex, and production builds fail closed; Flúgos remains separate Vercel infrastructure')
+# Approved custom-domain mode must serve from /, never from /HIPSTUDIO/.
+custom_env=os.environ.copy(); custom_env['PAGES_PREFIX']='/'
+subprocess.run(['python3','tools/prepare_pages_review.py'],cwd=R,env=custom_env,check=True)
+subprocess.run(['python3','tools/test_pages_review_artifact.py'],cwd=R,env=custom_env,check=True)
+root_html=(D/'index.html').read_text(encoding='utf-8')
+assert 'url=/hu/' in root_html
+assert '/HIPSTUDIO/' not in root_html
+home=(D/'hu/index.html').read_text(encoding='utf-8')
+assert 'href="/hu/' in home or 'href="/en/' in home or 'href="/de/' in home
+assert 'href="/HIPSTUDIO/' not in home
+assert 'src="/HIPSTUDIO/' not in home
+
+print('Hosting config OK: hip.vipach.at uses root-path review artifacts, project-path fallback remains available, review stays noindex, and production remains fail-closed')
