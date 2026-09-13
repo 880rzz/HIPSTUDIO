@@ -5,17 +5,21 @@ import * as chromeLauncher from 'chrome-launcher';
 
 const auditDir=fileURLToPath(new URL('../audit',import.meta.url));
 const baseUrl=process.env.LH_BASE_URL||'http://127.0.0.1:4174';
+const context=process.env.LH_CONTEXT||'review';
 const targets=process.env.LH_TARGETS?JSON.parse(process.env.LH_TARGETS):[
   ['home','/hu/'],
   ['creative','/hu/kreativ-tartalom/'],
   ['contact','/hu/kapcsolat/'],
   ['ai-trust','/hu/ai-trust/']
 ];
+const seoMinimum=context==='production'
+  ? Number(process.env.LH_MIN_SEO||90)
+  : Number(process.env.LH_REVIEW_MIN_SEO||65);
 const thresholds={
   performance:Number(process.env.LH_MIN_PERFORMANCE||80),
   accessibility:Number(process.env.LH_MIN_ACCESSIBILITY||95),
   'best-practices':Number(process.env.LH_MIN_BEST_PRACTICES||95),
-  seo:Number(process.env.LH_MIN_SEO||90)
+  seo:seoMinimum
 };
 const metricLimits={
   'largest-contentful-paint':Number(process.env.LH_MAX_LCP_MS||3500),
@@ -65,7 +69,10 @@ for(const [name,path] of targets){
 
 const summary={
   time:new Date().toISOString(),
-  context:'HIPStudio dist-platform local review build; synthetic Lighthouse gate, not field data',
+  context,
+  note:context==='review'
+    ? 'Review builds are intentionally noindex. The review SEO floor only guards unexpected Lighthouse regressions; production SEO remains gated at >=90 plus the canonical metadata/indexability regression suite.'
+    : 'Production Lighthouse SEO threshold is enforced at >=90.',
   baseUrl,
   thresholds,
   metricLimits,
@@ -77,4 +84,4 @@ if(failures.length){
   console.error('Platform Lighthouse release gate failed:\n'+failures.map(item=>`- ${item}`).join('\n'));
   process.exit(1);
 }
-console.log(`Platform Lighthouse release gate passed for ${results.length} audits.`);
+console.log(`Platform Lighthouse ${context} gate passed for ${results.length} audits.`);
