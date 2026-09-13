@@ -16,8 +16,10 @@ assert 'Hipstudió Kft.' in g['privacy-legal']['requirement']
 assert 'Németh Tímea' in g['privacy-legal']['requirement']
 assert '12-month' in g['privacy-legal']['requirement']
 assert 'GitHub Pages' in g['privacy-legal']['requirement']
-assert g['legacy-url-inventory']['state']=='blocked_flugos_inventory_only'
+assert g['legacy-url-inventory']['state']=='blocked_hipstudio_and_flugos_inventory'
 assert 'HelloÜzlet is confirmed retired' in g['legacy-url-inventory']['requirement']
+assert 'hipstudio.hu URL inventory' in g['legacy-url-inventory']['requirement']
+assert 'Flúgos URL inventory' in g['legacy-url-inventory']['requirement']
 assert g['hosting-headers']['state']=='blocked_github_pages_verification'
 assert 'GitHub Pages' in g['hosting-headers']['requirement']
 assert '880rzz/HIPSTUDIO' in g['hosting-headers']['requirement']
@@ -26,4 +28,4 @@ assert 'separate Vercel project for flugos.hu' in g['flugos-domain']['requiremen
 for key in ['quote-e2e','legacy-url-inventory','hosting-headers','flugos-domain','dns-cutover','indexing']:
     assert g[key]['state'].startswith('blocked_')
 assert 'every blocked_* gate is resolved' in D['activationRule']
-print('Production release gates OK:', len(g), 'gates; GitHub Pages master hosting and Flúgos Vercel boundary explicit')
+print('Production release gates OK:', len(g), 'gates; HIPStudio + Flúgos URL inventory blocks cutover until reconciled')
