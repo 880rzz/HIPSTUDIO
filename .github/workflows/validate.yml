@@ -47,6 +47,7 @@ jobs:
       - run: npm run test:flugos-sponsors
       - run: npm run test:hero-media
       - run: python3 tools/test_platform_media.py
+      - run: npm run test:editorial-shell
       - run: npm run test:pricing
       - run: npm run test:html
       - name: Prepare GitHub Pages review artifact
@@ -87,6 +88,8 @@ jobs:
           done
           cat /tmp/platform-preview.log
           exit 1
+      - name: Enforce platform Lighthouse performance gate
+        run: CHROME_PATH="$(node -e "const {chromium}=require('playwright'); process.stdout.write(chromium.executablePath())")" npm run test:lighthouse:platform
       - run: npm run test:browser:platform
       - name: Upload platform browser QA diagnostics
         if: always()
@@ -94,4 +97,11 @@ jobs:
         with:
           name: browser-platform-qa
           path: audit/browser-platform-qa.json
+          if-no-files-found: error
+      - name: Upload platform Lighthouse diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-platform-qa
+          path: audit/lighthouse-platform-*.json
           if-no-files-found: error
