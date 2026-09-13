@@ -1,0 +1,27 @@
+{
+  "source": "Google Search Console via GSC Wizard",
+  "property": "sc-domain:hipstudio.hu",
+  "settledThrough": "2026-09-10",
+  "capturedAt": "2026-09-13",
+  "searchType": "web",
+  "note": "Snapshot of top landing pages with current GSC visibility used only to harden migration coverage. Root remains canonical entrypoint; every non-root legacy URL must have an explicit migration target.",
+  "pages": [
+    {"url":"https://www.hipstudio.hu/","clicks":33,"impressions":8350},
+    {"url":"https://www.hipstudio.hu/muveszi-aktfotozas-budapest","clicks":17,"impressions":234},
+    {"url":"https://www.hipstudio.hu/muveszi-aktfotozas-galeria","clicks":7,"impressions":77},
+    {"url":"https://www.hipstudio.hu/fotozas-arak-idopontfoglalas","clicks":5,"impressions":152},
+    {"url":"https://www.hipstudio.hu/rendezvenyfotozas-budapest","clicks":4,"impressions":399},
+    {"url":"https://www.hipstudio.hu/service-page/m%C5%B1v%C3%A9szi-aktfot%C3%B3z%C3%A1s","clicks":3,"impressions":41},
+    {"url":"https://www.hipstudio.hu/kapcsolat","clicks":1,"impressions":65},
+    {"url":"https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest","clicks":1,"impressions":121},
+    {"url":"https://www.hipstudio.hu/portfolio-fotozas-budapest","clicks":1,"impressions":45},
+    {"url":"https://www.hipstudio.hu/epulet-fotozas-galeria","clicks":0,"impressions":28},
+    {"url":"https://www.hipstudio.hu/portfolio-fotozas-galeria","clicks":0,"impressions":1},
+    {"url":"https://www.hipstudio.hu/reklam-fotozas-budapest","clicks":0,"impressions":27},
+    {"url":"https://www.hipstudio.hu/reklamfoto-galeria","clicks":0,"impressions":29},
+    {"url":"https://www.hipstudio.hu/rovidfilm-keszites","clicks":0,"impressions":584},
+    {"url":"https://www.hipstudio.hu/service-page/cv-%C3%B6n%C3%A9letrajz-fot%C3%B3z%C3%A1s","clicks":0,"impressions":4},
+    {"url":"https://www.hipstudio.hu/service-page/mini-portf%C3%B3li%C3%B3-t%C3%A1rskeres%C5%91-fot%C3%B3z%C3%A1s-1","clicks":0,"impressions":14},
+    {"url":"https://www.hipstudio.hu/service-page/szem%C3%A9lyes-egyeztet%C3%A9s-online","clicks":0,"impressions":1}
+  ]
+}
