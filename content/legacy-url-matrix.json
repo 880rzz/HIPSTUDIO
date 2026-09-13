@@ -1,9 +1,14 @@
 {
-  "version": "legacy-url-matrix-v2",
+  "version": "legacy-url-matrix-v3",
   "status": "review_only",
   "activeRedirects": false,
   "masterOrigin": "https://www.hipstudio.hu",
   "inventoryStatus": {
+    "https://www.hipstudio.hu": {
+      "complete": false,
+      "mode": "public_verified_partial_inventory",
+      "reason": "Current HIPStudio URLs were re-audited from live/publicly indexed pages on 2026-09-13. The matrix now covers the currently verified root, legal/contact and major creative-service routes, but remains open until sitemap/Search Console/repository historical inventories are reconciled for hidden and historically indexed paths."
+    },
     "https://www.hellouzlet.hu": {
       "complete": true,
       "mode": "retired_source_unavailable",
@@ -17,6 +22,7 @@
   },
   "decisionClasses": [
     "planned_301",
+    "preserve_canonical",
     "archive_preserve",
     "preserve_until_archive_mirrored",
     "candidate_410_after_review",
@@ -26,12 +32,124 @@
     "No redirect is active in this file.",
     "Never blanket-redirect all legacy paths to the HIPStudio homepage.",
     "A planned 301 requires content-intent equivalence or an explicitly approved consolidation target.",
+    "Current hipstudio.hu legacy subpages must map to the closest semantic new route, never to home merely because the old route is being retired.",
+    "Same-origin legacy mappings activate only at production cutover after the destination exists, is canonical and is indexable.",
     "Historical Flúgos material must retain historical context and must not become a current-event or current-offer claim by redirect alone.",
     "A 410 classification requires explicit review that no useful equivalent, archive or search/user value remains.",
     "Query strings and downloadable-file URLs are reviewed separately from normal HTML routes.",
     "A retired source that no longer has a retrievable CMS/site inventory is not kept as an artificial launch blocker when the owner confirms the source is gone."
   ],
   "entries": [
+    {
+      "source": "https://www.hipstudio.hu/",
+      "sourceType": "current_canonical_entrypoint",
+      "observed": "live_verified_2026-09-13",
+      "decision": "preserve_canonical",
+      "target": "https://www.hipstudio.hu/hu/",
+      "confidence": "high",
+      "rationale": "The production hostname remains hipstudio.hu; the localized HU root is the approved master-platform entrypoint after cutover.",
+      "activationGate": "Switch the root routing only after the HU platform root is production-ready and the custom domain cutover is explicitly approved."
+    },
+    {
+      "source": "https://www.hipstudio.hu/kapcsolat",
+      "sourceType": "current_html_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/kapcsolat/",
+      "confidence": "high",
+      "rationale": "The current contact page and the new localized Contact page have the same primary user intent.",
+      "activationGate": "Verify the localized Contact route is canonical, indexable and contains the correct HIPStudio contact/provider boundaries before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/impresszum",
+      "sourceType": "current_legal_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/adatvedelem/",
+      "confidence": "high",
+      "rationale": "The current combined Impressum/privacy page maps to the governed localized legal/privacy surface containing controller and privacy information.",
+      "activationGate": "Verify the destination retains complete company/controller/impressum facts and GDPR disclosures before redirect activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/rovidfilm-keszites",
+      "sourceType": "current_creative_service_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/video/commercial-brand-film/",
+      "confidence": "high",
+      "rationale": "The legacy page is explicitly about reklámfilm/image-film/video production; the verified commercial-brand-film service is the closest semantic successor.",
+      "activationGate": "Verify the service destination is generated, canonical, indexable and preserves video-production intent before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+      "sourceType": "current_creative_service_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-event/",
+      "confidence": "high",
+      "rationale": "The legacy page is led by rendezvényfotózás and also references event video; the governed event-photography family is the closest non-home consolidation target and keeps event-specific intent.",
+      "activationGate": "Verify the event family links prominently to both event photography and event video where appropriate before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/reklam-fotozas-budapest",
+      "sourceType": "current_creative_service_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/product-advertising-photography/",
+      "confidence": "high",
+      "rationale": "The legacy page is specifically creative/product/advertising photography, matching the verified product-advertising-photography service.",
+      "activationGate": "Verify destination copy remains evidence-backed and retains product/reklám/kampány photography search intent before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/epulet-fotozas-galeria",
+      "sourceType": "current_gallery_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-corporate/property-interior-architecture/",
+      "confidence": "high",
+      "rationale": "The legacy gallery is dedicated to ingatlan/enteriőr/épület photography, exactly matching the governed property-interior-architecture service.",
+      "activationGate": "Verify the destination contains representative cleared media or an honest service presentation before redirect activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+      "sourceType": "current_creative_service_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/portfolio-photography/",
+      "confidence": "high",
+      "rationale": "The legacy page is explicitly portfolio/fashion/personal photography and its primary route intent is portfolio photography.",
+      "activationGate": "Verify the destination preserves independent-provider/contact semantics for Speier Vikó and does not imply employment or legal identity."
+    },
+    {
+      "source": "https://www.hipstudio.hu/portfolio-fotozas-galeria",
+      "sourceType": "current_gallery_route",
+      "observed": "public_index_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/portfolio-photography/",
+      "confidence": "high",
+      "rationale": "The indexed gallery supports the same portfolio-photography intent and should consolidate into the canonical portfolio service rather than create a duplicate thin gallery route.",
+      "activationGate": "Confirm cleared representative portfolio media is available on the destination or linked from it before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+      "sourceType": "current_creative_service_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/szolgaltatasok/hipstudio/photo-portrait/fine-art-glamour-boudoir/",
+      "confidence": "high",
+      "rationale": "The legacy page's artistic nude/glamour/boudoir intent maps directly to the verified fine-art-glamour-boudoir service while keeping provider boundaries explicit.",
+      "activationGate": "Verify destination routing/provider copy is accurate and no legacy public pricing is carried forward before activation."
+    },
+    {
+      "source": "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+      "sourceType": "current_booking_router_route",
+      "observed": "live_verified_2026-09-13",
+      "decision": "planned_301",
+      "target": "https://www.hipstudio.hu/hu/kreativ-tartalom/",
+      "confidence": "medium",
+      "rationale": "The old page primarily routes users among photography/provider options and exposes legacy booking/pricing. The new Creative hub is a safer canonical router because public pricing and provider identity must remain governed separately.",
+      "activationGate": "Before activation, verify the Creative hub clearly routes portfolio/personal photography to the appropriate provider and executive/headshot/brand/fine-art specialist work to the evidenced specialist route."
+    },
     {
       "source": "https://www.hellouzlet.hu/",
       "sourceType": "retired_html_entrypoint",
@@ -80,7 +198,7 @@
       "target": null,
       "confidence": "high",
       "rationale": "The 10-year anniversary PDF is a primary historical source and should remain accessible until an equivalent archived copy/download exists on the HIPStudio production host.",
-      "activationGate": "Mirror with rights/provenance retained, then decide whether to 301 the PDF URL to the archived file or keep it served from the legacy origin."
+      "activationGate": "Mirror with rights/provenance retained, then decide whether to redirect the PDF URL to the archived file or keep it served from the legacy origin."
     },
     {
       "source": "https://www.flugos.hu/_files/ugd/279667_048f98564e214407aa70b03dc824a35b.pdf",
@@ -104,8 +222,9 @@
     }
   ],
   "nextInventoryActions": [
+    "Reconcile the current hipstudio.hu sitemap and Search Console indexed-page inventory against this matrix; add every hidden or historically indexed route individually.",
     "Export the full Flúgos Wix page/file URL set, including hidden and legacy routes.",
-    "Classify every discovered Flúgos URL individually and reconcile duplicates, query variants and downloadable files.",
+    "Classify every discovered legacy URL individually and reconcile duplicates, query variants and downloadable files.",
     "Run a target existence/canonical check against the final production build.",
     "Generate server-specific redirect rules only after production approval."
   ]
