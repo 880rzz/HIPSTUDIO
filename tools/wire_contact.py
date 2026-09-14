@@ -34,7 +34,7 @@ for rel, c in CONTACTS.items():
 <h2>{c['title']}</h2>
 <p>{c['text']}</p>
 <div class="contact-live__actions"><a class="button" href="{c['quote']}">{c['quote_label']}</a></div>
-<div class="contact-live__details"><a href="mailto:info@hipstudio.hu">{c['email_label']}: info@hipstudio.hu</a><a href="tel:+36302215506">{c['phone_label']}: +36 30 221 5506</a></div>
+<div class="contact-live__details"><a href="mailto:info@hipstudio.hu">{c['email_label']}: info@hipstudio.hu</a><a href="tel:+36302215506">{c['phone_label']}: +36&nbsp;30&nbsp;221&nbsp;5506</a></div>
 </section>'''
     if '</main>' not in html:
         raise SystemExit(f'missing </main> in {rel}')
