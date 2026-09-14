@@ -1,0 +1,96 @@
+{
+  "time": "2026-09-14T15:00:15.206Z",
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "path": "/hu/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 320,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 390,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 768,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1440,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/hu/",
+      "width": 1920,
+      "status": 200,
+      "overflow": false,
+      "scrollWidth": 1920,
+      "brokenImages": 0,
+      "h1": 1,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "cookies": [],
+  "interactions": {
+    "skip": "Ugrás a tartalomra",
+    "skipTarget": "main",
+    "mobileOpen": true,
+    "switched": true,
+    "faqOpen": true,
+    "pricingState": {
+      "calculator": false,
+      "tables": 0,
+      "huf": false,
+      "quoteHref": "https://www.hipstudio.hu/hu/ajanlatkeres/"
+    },
+    "consent": {
+      "initial": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "accepted": {
+        "necessary": true,
+        "analytics": true,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "rejected": {
+        "necessary": true,
+        "analytics": false,
+        "marketing": false,
+        "externalMedia": false
+      },
+      "localStorage": 0,
+      "sessionStorage": 0
+    },
+    "actual404": 404,
+    "redirect": "http://127.0.0.1:4173/hu/szolgaltatasok/oneletrajz-foto/"
+  }
+}

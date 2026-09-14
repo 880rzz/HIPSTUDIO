@@ -9,6 +9,8 @@ LEGAL = json.loads((ROOT / "content/legal-controller.json").read_text(encoding="
 TARGET = LEGAL["effectiveTarget"]
 REGISTERED = TARGET["registeredOfficeAddress"]
 STUDIO = TARGET["publicContact"]["studioPostalAddress"]
+WIKIDATA = "https://www.wikidata.org/wiki/Q138482177"
+FOUNDED = "2006-02-27"
 SCRIPT_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.DOTALL)
 
 
@@ -37,7 +39,11 @@ def normalize(path: Path):
 
     org["legalName"] = TARGET["controllerName"]
     org["address"] = {"@type": "PostalAddress", **REGISTERED}
-    org.pop("foundingDate", None)
+    org["foundingDate"] = FOUNDED
+    same_as = org.get("sameAs", [])
+    if isinstance(same_as, str):
+        same_as = [same_as]
+    org["sameAs"] = [WIKIDATA] + [value for value in same_as if value != WIKIDATA]
 
     studio_id = org["@id"].replace("/#organization", "/#budapest-studio")
     org["location"] = {"@id": studio_id}

@@ -9,6 +9,7 @@ LEGAL = json.loads((ROOT / "content/legal-controller.json").read_text(encoding="
 TARGET = LEGAL["effectiveTarget"]
 REGISTERED = TARGET["registeredOfficeAddress"]
 STUDIO = TARGET["publicContact"]["studioPostalAddress"]
+WIKIDATA = "https://www.wikidata.org/wiki/Q138482177"
 SCRIPT_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 
 
@@ -29,8 +30,11 @@ def main():
                 fail(f"Legal name drift: {page}")
             if org.get("address") != {"@type":"PostalAddress", **REGISTERED}:
                 fail(f"Registered office drift: {page}")
-            if "foundingDate" in org:
-                fail(f"Unverified Kft foundingDate in Organization: {page}")
+            if org.get("foundingDate") != "2006-02-27":
+                fail(f"Wix/Wikidata founding date drift: {page}")
+            same_as = org.get("sameAs", [])
+            if not isinstance(same_as, list) or not same_as or same_as[0] != WIKIDATA:
+                fail(f"Wikidata-first sameAs contract drift: {page}")
             studio_id = org.get("location", {}).get("@id")
             if not studio_id or not studio_id.endswith("/#budapest-studio"):
                 fail(f"Missing studio reference: {page}")
