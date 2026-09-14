@@ -37,18 +37,11 @@ Verify on the published review URL:
 
 Do not connect the custom domain from the review workflow itself.
 
-## 2. Quote backend storage: exact source-backed behaviour
+## 2. Quote backend delivery: exact source-backed behaviour
 
 Source: `apps-script/HIPStudioQuoteRequest.gs`.
 
-The Apps Script `setup()` function uses Script Properties key `SHEET_ID`.
-
-- If `SHEET_ID` exists, it opens that spreadsheet by ID.
-- If `SHEET_ID` does not exist, it creates a new Google Sheet file named **`HIPStudio - Ajánlatkérések`** and stores the resulting spreadsheet ID in Script Properties as `SHEET_ID`.
-- Inside that spreadsheet, the operative tab is **`Ajánlatkérések`**.
-- `appendRecord_()` reads `SHEET_ID`, opens the spreadsheet by ID, takes a ScriptLock and appends the normalized record to that tab.
-
-Therefore a Drive search for a file named only `Ajánlatkérések` is not authoritative. The file title is `HIPStudio - Ajánlatkérések`; `Ajánlatkérések` is the tab name. If the connected Drive account still cannot see the file, the most likely operational explanation is that the Apps Script deployment/setup belongs to another Google account or Drive context. This must be verified in the account that owns the web-app deployment before live activation.
+The Apps Script is email-only. It validates and routes the request, sends a structured internal notification, and sends a localized confirmation to the requester. It does not create or update a Google Sheet and does not use Script Properties for storage. The `setup()` function runs the routing self-test and verifies whether `info@hipstudio.hu` is available as a Gmail sender alias.
 
 ## 3. Quote E2E acceptance
 
@@ -58,24 +51,21 @@ Before testing:
 
 1. Open the Apps Script project that owns the deployed web app.
 2. Run `setup()` once if necessary.
-3. Confirm the returned `sheetUrl` opens the expected `HIPStudio - Ajánlatkérések` spreadsheet.
-4. Confirm the `Ajánlatkérések` tab exists and its first row matches the current backend headers.
-5. Confirm `info@hipstudio.hu` is available as a Gmail Send-As alias if production mail should use that From address. If the alias is unavailable, the code intentionally falls back to the executing account as From while keeping Reply-To as `info@hipstudio.hu`.
-6. Build the exact release-candidate SHA with `BUILD_MODE=production`, the approved `SITE_URL=https://www.hipstudio.hu`, and the production quote endpoint configured. Serve that artifact only in a controlled browser harness or temporary non-indexed preview environment. Do not use the review Pages artifact for this test.
+3. Confirm `info@hipstudio.hu` is available as a Gmail Send-As alias if production mail should use that From address. If the alias is unavailable, the code intentionally falls back to the executing account as From while keeping Reply-To as `info@hipstudio.hu`.
+4. Build the exact release-candidate SHA with `BUILD_MODE=production`, the approved `SITE_URL=https://www.hipstudio.hu`, and the production quote endpoint configured. Serve that artifact only in a controlled browser harness or temporary non-indexed preview environment. Do not use the review Pages artifact for this test.
 
 Run one clearly labelled internal E2E submission from that controlled production-mode candidate. Use non-customer test data and explicitly state that it is a test.
 
 Verify all of the following from the same request ID:
 
 - browser receives `{ok:true, requestId:...}`;
-- one row is appended to `Ajánlatkérések`;
-- `page_url`, normalized payload and routing fields are present as designed;
-- internal notification reaches the configured internal recipients;
+- the internal notification contains the request ID, `page_url`, submitted brief and routing fields;
+- the internal notification reaches the configured internal recipients;
 - customer confirmation reaches the test mailbox;
 - Reply-To is `info@hipstudio.hu`;
 - From is `info@hipstudio.hu` only when the verified alias is available;
 - routing remains an operational suggestion with human review, not an automated acceptance/rejection or price decision;
-- no duplicate row or duplicate mail set is generated from one submission.
+- no duplicate mail set is generated from one submission.
 
 Only after this succeeds may the `quote-e2e` release gate be changed from blocked to ready.
 

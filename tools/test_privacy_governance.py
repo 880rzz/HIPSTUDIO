@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 R=Path(__file__).resolve().parents[1]
 P=json.loads((R/'content/privacy-governance.json').read_text(encoding='utf-8'))
-assert P['version']=='hipstudio-privacy-v7'
+assert P['version']=='hipstudio-privacy-v8'
 assert P['status']=='approved_for_quote_flow'
 assert P['controller']['shortName']=='Hipstudió Kft.'
 assert P['contactPerson']['name']=='Németh Tímea'
@@ -23,7 +23,13 @@ assert set(q['submissionMetadata']['fields'])=={'page_url','form_started_at','su
 assert '90 nap' in q['submissionMetadata']['retention']
 assert 'panasz benyújtása a felügyeleti hatósághoz' in q['rights']
 services={x['service'] for x in q['processors']}
-assert {'Google Apps Script','Google Sheets','Google Workspace / Gmail','GitHub Pages / GitHub'} <= services
+assert {'Google Apps Script','Google Workspace / Gmail','GitHub Pages / GitHub'} <= services
+assert 'Google Sheets' not in services
+backend=(R/'apps-script/HIPStudioQuoteRequest.gs').read_text(encoding='utf-8')
+for forbidden in ['SpreadsheetApp','SHEET_ID','appendRecord_','ensureSheet_']:
+    assert forbidden not in backend, f'email-only backend drift: {forbidden}'
+assert 'sendInternal_(record);' in backend
+assert 'sendConfirmation_(record);' in backend
 assert 'Vercel' not in services
 assert P['domainArchitecture']['hipstudio']['repository']=='880rzz/HIPSTUDIO'
 assert P['domainArchitecture']['hipstudio']['hosting']=='github_pages'

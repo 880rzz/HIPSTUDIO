@@ -10,7 +10,6 @@ const HIPSTUDIO = Object.freeze({
     'nemeth.timea@hipstudio.hu',
     'banhalmi.norbert@hipstudio.hu'
   ],
-  SHEET_NAME: 'Ajánlatkérések',
   PAYLOAD_VERSION: 'hipstudio-quote-v1',
   MAX_PAYLOAD_BYTES: 80000,
   MAX_SUBMISSIONS_PER_EMAIL_10_MIN: 5,
@@ -63,7 +62,6 @@ function doPost(e) {
       raw_json: JSON.stringify(Object.assign({},p,{triage:triage}))
     });
 
-    appendRecord_(record);
     sendInternal_(record);
     sendConfirmation_(record);
     return json_({ok:true, requestId:requestId});
@@ -75,20 +73,10 @@ function doPost(e) {
 
 function setup() {
   if (typeof runRoutingSelfTest === 'function') runRoutingSelfTest();
-  const props = PropertiesService.getScriptProperties();
-  let id = props.getProperty('SHEET_ID');
-  let ss;
-  if (id) ss = SpreadsheetApp.openById(id);
-  else {
-    ss = SpreadsheetApp.create('HIPStudio - Ajánlatkérések');
-    id = ss.getId();
-    props.setProperty('SHEET_ID', id);
-  }
-  ensureSheet_(ss);
-  console.log('SHEET_ID=' + id);
-  console.log('Spreadsheet=' + ss.getUrl());
-  console.log('Sender alias available=' + senderOptions_().aliasAvailable);
-  return {sheetId:id, sheetUrl:ss.getUrl(), senderAliasAvailable:senderOptions_().aliasAvailable, routingVersion:HIPSTUDIO_ROUTING_VERSION};
+  const sender = senderOptions_();
+  console.log('Sender alias available=' + sender.aliasAvailable);
+  console.log('Routing version=' + HIPSTUDIO_ROUTING_VERSION);
+  return {senderAliasAvailable:sender.aliasAvailable, routingVersion:HIPSTUDIO_ROUTING_VERSION};
 }
 
 function normalize_(src) {
@@ -123,63 +111,6 @@ function rateLimit_(email) {
   const count = Number(cache.get(key) || 0) + 1;
   if (count > HIPSTUDIO.MAX_SUBMISSIONS_PER_EMAIL_10_MIN) throw new Error('rate_limit');
   cache.put(key, String(count), 600);
-}
-
-function appendRecord_(record) {
-  const id = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
-  if (!id) throw new Error('SHEET_ID_not_configured_run_setup');
-  const lock = LockService.getScriptLock();
-  lock.waitLock(10000);
-  try {
-    const sh = ensureSheet_(SpreadsheetApp.openById(id));
-    sh.appendRow(HEADERS.map(function(h){ return record[h] == null ? '' : record[h]; }));
-  } finally { lock.releaseLock(); }
-}
-
-function ensureSheet_(ss) {
-  let sh = ss.getSheetByName(HIPSTUDIO.SHEET_NAME);
-  if (!sh) sh = ss.insertSheet(HIPSTUDIO.SHEET_NAME);
-  if (sh.getLastRow() === 0) {
-    ensureColumns_(sh, HEADERS.length);
-    sh.getRange(1,1,1,HEADERS.length).setValues([HEADERS]);
-    sh.setFrozenRows(1);
-    return sh;
-  }
-
-  const oldHeaders = sh.getRange(1,1,1,sh.getLastColumn()).getValues()[0].map(function(v){return String(v||'').trim();});
-  while (oldHeaders.length && !oldHeaders[oldHeaders.length-1]) oldHeaders.pop();
-  if (oldHeaders.join('|') !== HEADERS.join('|')) migrateSheetSchema_(sh, oldHeaders);
-  return sh;
-}
-
-function migrateSheetSchema_(sh, oldHeaders) {
-  if (!oldHeaders.length) throw new Error('sheet_headers_missing');
-  const seen = {};
-  oldHeaders.forEach(function(h){
-    if (!h) throw new Error('sheet_blank_header');
-    if (seen[h]) throw new Error('sheet_duplicate_header:' + h);
-    if (HEADERS.indexOf(h) < 0) throw new Error('sheet_unknown_header:' + h);
-    seen[h] = true;
-  });
-
-  const values = sh.getRange(1,1,sh.getLastRow(),oldHeaders.length).getValues();
-  const index = {};
-  oldHeaders.forEach(function(h,i){index[h]=i;});
-  const migrated = values.slice(1).map(function(row){
-    return HEADERS.map(function(h){ return index[h] == null ? '' : row[index[h]]; });
-  });
-
-  ensureColumns_(sh, HEADERS.length);
-  sh.clearContents();
-  sh.getRange(1,1,1,HEADERS.length).setValues([HEADERS]);
-  if (migrated.length) sh.getRange(2,1,migrated.length,HEADERS.length).setValues(migrated);
-  sh.setFrozenRows(1);
-  console.log('Migrated quote Sheet schema from ' + oldHeaders.length + ' to ' + HEADERS.length + ' columns; preserved rows=' + migrated.length);
-}
-
-function ensureColumns_(sh, required) {
-  const current = sh.getMaxColumns();
-  if (current < required) sh.insertColumnsAfter(current, required-current);
 }
 
 const CUSTOMER_FIELDS = [
