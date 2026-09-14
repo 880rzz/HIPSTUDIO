@@ -80,5 +80,8 @@ for rel, quote in [
     assert quote in contact, rel
     assert 'mailto:info@hipstudio.hu' in contact, rel
     assert 'tel:+36302215506' in contact, rel
+    assert '+36&nbsp;30&nbsp;221&nbsp;5506' in contact, rel
+    assert '>Telefon: +36 30 221 5506<' not in contact, rel
+    assert '>Phone: +36 30 221 5506<' not in contact, rel
 
 print('Human first-principles gate passed for HU/EN/DE, three-area separation, scope qualifier, hero contrast and contact wiring')
