@@ -104,4 +104,19 @@ for rel in ('hu/ai-trust/index.html', 'de/ai-trust/index.html'):
     assert 'AI may assist research' not in html, rel
     assert 'The review build contains no analytics' not in html, rel
 
+editorial_service_pages = list(D.glob('*/**/index.html'))
+editorial_service_pages = [p for p in editorial_service_pages if 'data-service-source=' in p.read_text(encoding='utf-8')]
+assert len(editorial_service_pages) == 69, f'expected 69 evidence-backed editorial service pages, got {len(editorial_service_pages)}'
+for rel, needles in {
+    'hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/index.html': [
+        'Milyen eredményre tervezzük?', 'Mit érdemes előre tisztázni?', '"@type":"FAQPage"'],
+    'en/services/hipstudio/photo-portrait/business-portrait/index.html': [
+        'What result do we design for?', 'What should we clarify first?', '"@type":"FAQPage"'],
+    'de/leistungen/hipstudio/video/conference-streaming/index.html': [
+        'Auf welches Ergebnis arbeiten wir hin?', 'Was sollten wir zuerst klären?', '"@type":"FAQPage"'],
+}.items():
+    html = (D / rel).read_text(encoding='utf-8')
+    for needle in needles:
+        assert needle in html, f'{rel}: missing editorial service depth {needle!r}'
+
 print('Human first-principles gate passed for HU/EN/DE, three-area separation, scope qualifier, hero contrast and contact wiring')

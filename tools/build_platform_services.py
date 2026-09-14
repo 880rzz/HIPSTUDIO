@@ -11,6 +11,7 @@ R=Path(__file__).resolve().parents[1]
 D=R/'dist-platform'
 INV=json.loads((R/'content/service-inventory.json').read_text())
 DATA=json.loads((R/'content/platform.json').read_text())
+DETAILS={item['key']:item for item in json.loads((R/'content/services.json').read_text())}
 MODE=os.environ.get('BUILD_MODE','review')
 BASE=os.environ.get('PLATFORM_URL','https://www.hipstudio.hu').rstrip('/')
 LANGS=['hu','en','de']
@@ -41,6 +42,9 @@ UI={
  'all':{'hu':'Összes szolgáltatás','en':'All services','de':'Alle Leistungen'},'families':{'hu':'Szolgáltatáscsaládok','en':'Service families','de':'Leistungsfamilien'},'services':{'hu':'Konkrét szolgáltatások','en':'Specific services','de':'Konkrete Leistungen'},'quote':{'hu':'Egyedi ajánlatot kérek','en':'Request a tailored quote','de':'Individuelles Angebot anfragen'},'archive':{'hu':'Történeti archívum','en':'Historical archive','de':'Historisches Archiv'},'back':{'hu':'Vissza a szolgáltatásokhoz','en':'Back to services','de':'Zurück zu den Leistungen'},'status':{'hu':'Publikációs státusz','en':'Publication status','de':'Publikationsstatus'},'mainNav':{'hu':'Fő navigáció','en':'Main navigation','de':'Hauptnavigation'},'footerNav':{'hu':'Lábléc navigáció','en':'Footer navigation','de':'Fußnavigation'},
  'langNav':{'hu':'Nyelvválasztó','en':'Languages','de':'Sprachauswahl'},'skip':{'hu':'Ugrás a tartalomhoz','en':'Skip to content','de':'Zum Inhalt springen'},
  'footerNote':{'hu':'A szolgáltatási lista igazolt forrásokra épül. Nem közlünk nyilvános árat, kitalált ügyféleredményt, tulajdonosi állítást vagy nem igazolt szabályozott szakmai felelősséget.','en':'The service inventory is based on verified sources. No public price, invented client result, ownership claim or unsupported regulated-service responsibility is published.','de':'Das Leistungsangebot beruht auf geprüften Quellen. Es werden keine öffentlichen Preise, erfundenen Kundenergebnisse, Eigentumsbehauptungen oder unbelegten Verantwortlichkeiten für regulierte Leistungen veröffentlicht.'}
+ ,'result':{'hu':'Milyen eredményre tervezzük?','en':'What result do we design for?','de':'Auf welches Ergebnis arbeiten wir hin?'}
+ ,'brief':{'hu':'Mit érdemes előre tisztázni?','en':'What should we clarify first?','de':'Was sollten wir zuerst klären?'}
+ ,'sourceBasis':{'hu':'Forrásalap','en':'Source basis','de':'Quellengrundlage'}
 }
 STATUS={
  'verified_current':{'hu':'Jelenlegi, forrással igazolt szolgáltatás. A konkrét scope minden esetben egyedi ajánlatban rögzül.','en':'Current, source-verified service. The exact scope is confirmed in a tailored quote.','de':'Aktuelle, quellengeprüfte Leistung. Der genaue Umfang wird im individuellen Angebot festgelegt.'},
@@ -66,6 +70,24 @@ def label(service,l):
  if l=='hu': return service['label_hu']
  pair=NAMES.get(service['key'])
  return pair[0] if l=='en' and pair else pair[1] if pair else service['label_hu']
+
+# Only exact, evidence-preserving matches are connected. Ambiguous or newly
+# proposed services deliberately retain the qualified inventory description.
+DETAIL_MAP={
+ 'business-portrait':'business','executive-headshot':'executive','cv-photography':'cv',
+ 'portfolio-photography':'portfolio','fashion-photography':'fashion','personal-portrait':'dating',
+ 'fine-art-glamour-boudoir':'boudoir','brand-corporate-photography':'brand',
+ 'product-advertising-photography':'advertising','property-interior-architecture':'property',
+ 'aerial-photography':'aerial','3d-virtual-tour':'virtual','event-conference-photography':'event',
+ 'souvenir-photography':'souvenir','greenbox-photography':'greenbox',
+ 'commercial-brand-film':'video','event-conference-video':'event-video','sports-video':'sports-video',
+ 'concert-stage-video':'concert-video','music-video':'music-video','conference-streaming':'streaming',
+ 'video-podcast':'podcast','audio-podcast':'podcast'
+}
+
+def detail_for(service):
+ key=DETAIL_MAP.get(service['key'])
+ return DETAILS.get(key) if key else None
 def family_label(fk,fam,l):
  if l=='hu':return fam['label_hu']
  return FAMILY.get(fk,{}).get(l,fam['label_hu'])
@@ -79,7 +101,8 @@ def shell(path_fn,l,title,desc,body,crumbs,service_node=None):
  bc=[]
  for pos,(name,p) in enumerate(crumbs,1):bc.append({'@type':'ListItem','position':pos,'name':name,'item':absu(p)})
  graph=[{'@type':'WebSite','@id':BASE+'/#website','name':DATA['workingMasterBrand'],'url':BASE+'/'},{'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':l,'isPartOf':{'@id':BASE+'/#website'}},{'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':bc}]
- if service_node:graph.append(service_node)
+ if service_node:
+  graph.extend(service_node if isinstance(service_node,list) else [service_node])
  ld=json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
  review='<div class="review">Platform review build · no production publication</div>' if MODE=='review' else ''
  meta=f'{title} | {DATA["workingMasterBrand"]}'
@@ -114,15 +137,22 @@ for pk,pdata in INV['pillars'].items():
   for s in fam['services']:
    for l in LANGS:
     title=label(s,l);fl=family_label(fk,fam,l);status=s['status'];archive=s.get('archive_only',False)
-    desc=STATUS[status][l]
+    detail=detail_for(s) if status=='verified_current' else None
+    desc=detail['intro'][l] if detail else STATUS[status][l]
     if archive:
      cta=f'<section class="cta"><h2>{e(UI["archive"][l])}</h2><p>{e(STATUS["archive_only"][l])}</p></section>'
      service_node=None
     else:
      qp=quote_path(l,pk,s['quote_request_key'])
      cta=f'<section class="cta"><h2>{e(UI["quote"][l])}</h2><p>{e(STATUS[status][l])}</p><a class="button" href="{e(qp)}">{e(UI["quote"][l])} →</a></section>'
-     service_node={'@type':'Service','@id':absu(service_path(pk,fk,s['key'],l))+'#service','name':title,'serviceType':title,'description':desc,'url':absu(service_path(pk,fk,s['key'],l))}
-    body=f'<section class="page-hero"><a class="back" href="{e(family_path(pk,fk,l))}">← {e(fl)}</a><p class="eyebrow">{e(pdata["brand"])} · {e(UI["status"][l])}</p><h1>{e(title)}</h1><p class="lead">{e(desc)}</p></section><section class="section"><div class="section-head"><h2>{e(fl)}</h2><p>{e(PILLAR_INTRO[pk][l])}</p></div><p class="note">{e(STATUS[status][l])}</p></section>{cta}'
+     service_url=absu(service_path(pk,fk,s['key'],l))
+     service_node={'@type':'Service','@id':service_url+'#service','name':title,'serviceType':title,'description':desc,'url':service_url}
+     if detail:
+      service_node=[service_node,{'@type':'FAQPage','@id':service_url+'#faq','mainEntity':[{'@type':'Question','name':detail['question'][l],'acceptedAnswer':{'@type':'Answer','text':detail['answer'][l]}}]}]
+    if detail:
+     depth=f'<section class="section service-editorial-depth" data-service-source="{e(detail["key"])}"><div class="section-head"><p class="eyebrow">{e(UI["sourceBasis"][l])}</p><h2>{e(UI["result"][l])}</h2><p>{e(detail["result"][l])}</p></div><div class="trust"><div><h3>{e(UI["brief"][l])}</h3><p>{e(detail["brief"][l])}</p></div><div><h3>{e(detail["question"][l])}</h3><p>{e(detail["answer"][l])}</p></div></div></section>'
+    else: depth=''
+    body=f'<section class="page-hero"><a class="back" href="{e(family_path(pk,fk,l))}">← {e(fl)}</a><p class="eyebrow">{e(pdata["brand"])} · {e(UI["status"][l])}</p><h1>{e(title)}</h1><p class="lead">{e(desc)}</p></section>{depth}<section class="section"><div class="section-head"><h2>{e(fl)}</h2><p>{e(PILLAR_INTRO[pk][l])}</p></div><p class="note">{e(STATUS[status][l])}</p></section>{cta}'
     new.append(shell(lambda x,pk=pk,fk=fk,s=s:service_path(pk,fk,s['key'],x),l,title,desc,body,[(DATA['workingMasterBrand'],home(l)),(UI['all'][l],root_path(l)),(PILLAR_TITLE[pk][l],pillar_path(pk,l)),(fl,family_path(pk,fk,l)),(title,service_path(pk,fk,s['key'],l))],service_node))
 for p in new:
  if (p['path'],p['lang']) not in existing:manifest['pages'].append(p)
