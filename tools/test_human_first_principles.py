@@ -1,5 +1,6 @@
 # coding: utf-8
 from pathlib import Path
+import re
 
 R = Path(__file__).resolve().parents[1]
 D = R / 'dist-platform'
@@ -26,11 +27,13 @@ checks = {
     ]
 }
 
+human_css_link = re.compile(r'<link\b[^>]*href=["\']/assets/human-first-principles\.css["\'][^>]*>', re.I)
+
 for rel, needles in checks.items():
     p = D / rel
     assert p.exists(), rel
     s = p.read_text(encoding='utf-8')
-    assert 'href="/assets/human-first-principles.css"' in s, rel
+    assert human_css_link.search(s), f'{rel}: human stylesheet link missing'
     for needle in needles:
         assert needle in s, f'{rel}: missing {needle!r}'
 
