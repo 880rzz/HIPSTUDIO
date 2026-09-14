@@ -6,11 +6,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist-platform'
 LINK = '<link rel="stylesheet" href="/assets/human-first-principles.css">'
 HEAD_END = re.compile(r'</head\s*>', re.I)
+VALID_LINK = re.compile(r'<link\b[^>]*href=["\']/assets/human-first-principles\.css["\'][^>]*>', re.I)
 
 changed = 0
 for path in DIST.rglob('*.html'):
     raw = path.read_text(encoding='utf-8')
-    if '/assets/human-first-principles.css' in raw:
+    if VALID_LINK.search(raw):
         continue
     out, n = HEAD_END.subn(LINK + '</head>', raw, count=1)
     if n != 1:
