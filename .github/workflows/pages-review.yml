@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Allow only the approved temporary review custom domain
+        id: pages_domain
         env:
           GH_TOKEN: ${{ github.token }}
           REVIEW_CUSTOM_DOMAIN: hip.vipach.at
@@ -36,6 +37,7 @@ jobs:
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")"
           if [ "$status" = "404" ]; then
             echo "GitHub Pages is not configured yet; the configure-pages step may enable it for this review deployment."
+            echo "pages_prefix=/HIPSTUDIO" >> "$GITHUB_OUTPUT"
           elif [ "$status" = "200" ]; then
             cname="$(python3 -c "import json; print((json.load(open('/tmp/pages.json')).get('cname') or '').strip())")"
             if [ -n "$cname" ] && [ "$cname" != "$REVIEW_CUSTOM_DOMAIN" ]; then
@@ -44,8 +46,10 @@ jobs:
             fi
             if [ "$cname" = "$REVIEW_CUSTOM_DOMAIN" ]; then
               echo "Approved temporary review custom domain is active: $REVIEW_CUSTOM_DOMAIN"
+              echo "pages_prefix=/" >> "$GITHUB_OUTPUT"
             else
               echo "No custom Pages domain is active; review deployment may proceed."
+              echo "pages_prefix=/HIPSTUDIO" >> "$GITHUB_OUTPUT"
             fi
           else
             echo "Could not safely verify GitHub Pages custom-domain state (HTTP $status). Refusing review deployment." >&2
@@ -72,9 +76,13 @@ jobs:
       - run: npm run test:privacy-pages
       - run: npm run test:hosting
       - run: npm run test:html
-      - name: Prepare temporary GitHub Pages project-path artifact
+      - name: Prepare temporary GitHub Pages review artifact
+        env:
+          PAGES_PREFIX: ${{ steps.pages_domain.outputs.pages_prefix }}
         run: python3 tools/prepare_pages_review.py
       - name: Validate temporary GitHub Pages artifact
+        env:
+          PAGES_PREFIX: ${{ steps.pages_domain.outputs.pages_prefix }}
         run: python3 tools/test_pages_review_artifact.py
       - uses: actions/configure-pages@v5
         with:
