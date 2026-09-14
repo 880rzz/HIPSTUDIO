@@ -23,7 +23,6 @@ FIELD_LABELS={
 
 PROCESSOR_PURPOSE={
  'Google Apps Script':{'hu':'ajánlatkérő backend, validáció és operatív routing','en':'quote-request backend, validation and operational routing','de':'Backend für Angebotsanfragen, Validierung und operative Zuordnung'},
- 'Google Sheets':{'hu':'korlátozott hozzáférésű ajánlatkérési nyilvántartás','en':'restricted-access quote-request register','de':'zugriffsbeschränktes Register für Angebotsanfragen'},
  'Google Workspace / Gmail':{'hu':'belső értesítés, ügyfél-visszaigazolás és válaszkommunikáció','en':'internal notification, customer confirmation and reply communication','de':'interne Benachrichtigung, Kundenbestätigung und Antwortkommunikation'},
  'GitHub Pages / GitHub':{'hu':'a statikus HIPStudio weboldal publikálása és kiszolgálása a GitHub repóból','en':'publishing and serving the static HIPStudio website from the GitHub repository','de':'Veröffentlichung und Auslieferung der statischen HIPStudio-Website aus dem GitHub-Repository'}
 }

@@ -8,11 +8,10 @@ A publikus űrlap nem számol és nem jelenít meg árat. A beküldött projekt-
 
 1. a rendszer normalizálja és validálja a briefet;
 2. a `QuoteRouting.gs` kizárólag operatív triage-javaslatot készít;
-3. egy normalizált sor kerül a `HIPStudio - Ajánlatkérések` Google Sheetbe;
-4. belső értesítés megy a `nemeth.timea@hipstudio.hu` és `banhalmi.norbert@hipstudio.hu` címekre;
-5. az ügyfél automatikus visszaigazolást kap;
-6. a központi kapcsolati és Reply-To cím `info@hipstudio.hu`;
-7. minden rekord kap egy `response_due_at` időpontot, amely a beérkezéstől számított 24 óra.
+3. rendezett belső értesítés megy a `nemeth.timea@hipstudio.hu` és `banhalmi.norbert@hipstudio.hu` címekre;
+4. az ügyfél automatikus visszaigazolást kap;
+5. a központi kapcsolati és Reply-To cím `info@hipstudio.hu`;
+6. minden kérés kap egy azonosítót és egy 24 órás válasz-határidőt az e-mailben.
 
 A belső címzettek nincsenek benne a publikus JavaScriptben vagy HTML-ben.
 
@@ -35,14 +34,13 @@ A routing minden esetben emberi felülvizsgálatot igényel.
 
 ## Első telepítés
 
-1. Hozz létre egy Google Apps Script projektet abban a Google Workspace-fiókban, amely jogosult a HIPStudio levelezésére és a lead Sheet kezelésére.
+1. Hozz létre egy Google Apps Script projektet abban a Google Workspace-fiókban, amely jogosult a HIPStudio levelezésére.
 2. Másold be **mindkét** Apps Script fájlt ugyanabba a projektbe:
    - `HIPStudioQuoteRequest.gs`
    - `QuoteRouting.gs`
 3. Futtasd kézzel a `runRoutingSelfTest()` függvényt. Ennek hibamentesen `true` értékkel kell lefutnia.
-4. Futtasd egyszer kézzel a `setup()` függvényt, és engedélyezd a szükséges Gmail/Sheets jogosultságokat.
-5. A `setup()` létrehozza vagy megnyitja a `HIPStudio - Ajánlatkérések` Sheetet, és a Script Properties alatt eltárolja a `SHEET_ID` értéket.
-6. Ellenőrizd a logban a Sheet URL-jét, a routing verzióját és azt, hogy az `info@hipstudio.hu` elérhető-e Gmail küldési aliasként.
+4. Futtasd egyszer kézzel a `setup()` függvényt, és engedélyezd a szükséges Gmail-jogosultságot.
+5. Ellenőrizd a logban a routing verzióját és azt, hogy az `info@hipstudio.hu` elérhető-e Gmail küldési aliasként.
 
 ## Feladó cím
 
@@ -70,7 +68,6 @@ A platform build production módban blokkol, ha ez az endpoint nincs megadva.
 
 Élesítés előtt minimum HU / EN / DE nyelven egy-egy tesztajánlatot küldj be, és ellenőrizd:
 
-- létrejön-e pontosan egy Sheet-sor;
 - helyes-e a request ID és a 24 órás `response_due_at`;
 - a `queue`, `priority`, `complexity_score`, `completeness_score`, `next_action` és `routing_flags` megfelel-e a briefnek;
 - az `owner` üres marad-e, amíg ember nem osztja ki;
@@ -89,8 +86,8 @@ Ha az Apps Script Web App közvetlen böngészős hívása az éles környezetbe
 Production előtt külön jóváhagyandó:
 
 - az ajánlatkérés pontos jogalapja és tájékoztató szövege;
-- megőrzési idő a Sheetben és a Gmailben;
-- a Sheethez és a postaládákhoz hozzáférő személyek köre;
+- megőrzési idő a Gmailben;
+- a postaládákhoz hozzáférő személyek köre;
 - a Google Workspace adatfeldolgozói szerepe és releváns szerződéses feltételei;
 - érintetti joggyakorlás és törlési folyamat;
 - a referencia/brief linkek kezelése;
@@ -106,6 +103,5 @@ Production előtt külön jóváhagyandó:
 - A belső címzettek csak a szerveroldali scriptben szerepelnek.
 - A payload mérete korlátozott.
 - Honeypot és e-mail alapú rövid idejű rate limit működik.
-- A Sheet append ScriptLock alatt történik.
-- A teljes normalizált payload és a routing eredmény a `raw_json` mezőben auditálható.
+- A teljes beküldött brief és a routing eredmény rendezett belső e-mailben érkezik meg.
 - Deployment URL és bármilyen későbbi secret nem kerülhet a repositoryba.
