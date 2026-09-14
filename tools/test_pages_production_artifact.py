@@ -34,7 +34,15 @@ for rel in ['hu/ajanlatkeres/index.html', 'en/request-a-quote/index.html', 'de/a
     s = (D / rel).read_text(encoding='utf-8')
     m = re.search(r'data-endpoint="([^"]+)"', s)
     assert m and m.group(1).startswith('https://script.google.com/macros/s/') and m.group(1).endswith('/exec'), rel
-    assert 'disabled' not in re.search(r'<button[^>]*type="submit"[^>]*>', s).group(0), rel
+    assert '<script defer src="/assets/quote-form.js"></script>' in s, rel
+
+# The guided form, including its submit button, is rendered by quote-form.js.
+# Validate the runtime contract instead of expecting dynamic markup in HTML.
+quote_js = (D / 'assets/quote-form.js').read_text(encoding='utf-8')
+assert 'type="submit"' in quote_js
+assert "(!endpoint?'disabled':'')" in quote_js
+assert "if(!endpoint){error.textContent=t.review" in quote_js
+assert "fetch(endpoint,{method:'POST'" in quote_js
 
 all_html = '\n'.join(p.read_text(encoding='utf-8') for p in D.rglob('*.html'))
 assert 'hip.vipach.at' not in all_html
