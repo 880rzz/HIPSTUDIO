@@ -1,5 +1,6 @@
 # coding: utf-8
 from pathlib import Path
+import re
 
 R = Path(__file__).resolve().parents[1]
 D = R / 'dist-platform'
@@ -26,11 +27,15 @@ checks = {
     ]
 }
 
+body_re = re.compile(r'<body\b[^>]*\bclass=["\']([^"\']*)["\'][^>]*>', re.I)
+
 for rel, needles in checks.items():
     p = D / rel
     assert p.exists(), rel
     s = p.read_text(encoding='utf-8')
-    assert 'class="human-first-principles"' in s, rel
+    body = body_re.search(s)
+    assert body, f'{rel}: body class missing'
+    assert 'human-first-principles' in body.group(1).split(), f'{rel}: human class missing'
     assert 'href="/assets/human-first-principles.css"' in s, rel
     for needle in needles:
         assert needle in s, f'{rel}: missing {needle!r}'
@@ -48,7 +53,7 @@ for rel in checks:
     for phrase in banned:
         assert phrase not in s, f'{rel}: promotional phrase leaked: {phrase}'
 
-css = (D / 'assets/human-first-principles.css')
+css = D / 'assets/human-first-principles.css'
 assert css.exists(), 'human-first-principles.css not copied to dist-platform'
 style = css.read_text(encoding='utf-8')
 assert 'grid-template-columns:repeat(3,minmax(0,1fr))' in style
