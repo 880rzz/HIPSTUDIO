@@ -1,149 +1,38 @@
-/* HIPStudio human / first-principles layer.
-   Purpose: remove promotional decoration and make the three operating areas unmistakable. */
+/* HIPStudio /human first-principles visual layer.
+   Loaded only by the final platform build, so selectors are intentionally global. */
+body{background:#f7f6f2;letter-spacing:0}
+.header{top:0;max-width:none;margin:0;padding:.9rem clamp(1rem,3vw,2.5rem);border:0;border-bottom:1px solid rgba(11,23,54,.14);border-radius:0;box-shadow:none;background:rgba(247,246,242,.96);backdrop-filter:blur(12px)}
+.hero,.page-hero{padding-top:clamp(4.5rem,8vw,7rem)}
+.hero::before,.hero::after,.page-hero::after,.dark::before{display:none}
+h1,h2,h3{letter-spacing:-.035em}
+h1{max-width:14ch;font-weight:620}
+.lead{max-width:58ch;color:#303746}
+.button{border-radius:4px;box-shadow:none;padding:.82rem 1.05rem}
+.section-head{grid-template-columns:minmax(220px,.62fr) minmax(0,1.38fr)}
 
-body.human-first-principles{
-  background:#f7f6f2;
-  letter-spacing:0;
-}
-
-.human-first-principles .header{
-  top:0;
-  max-width:none;
-  margin:0;
-  padding:.9rem clamp(1rem,3vw,2.5rem);
-  border:0;
-  border-bottom:1px solid rgba(11,23,54,.14);
-  border-radius:0;
-  box-shadow:none;
-  background:rgba(247,246,242,.96);
-  backdrop-filter:blur(12px);
-}
-
-.human-first-principles .hero,
-.human-first-principles .page-hero{
-  padding-top:clamp(4.5rem,8vw,7rem);
-}
-
-.human-first-principles .hero::before,
-.human-first-principles .hero::after,
-.human-first-principles .page-hero::after,
-.human-first-principles .dark::before{
-  display:none;
-}
-
-.human-first-principles h1,
-.human-first-principles h2,
-.human-first-principles h3{
-  letter-spacing:-.035em;
-}
-
-.human-first-principles h1{
-  max-width:14ch;
-  font-weight:620;
-}
-
-.human-first-principles .lead{
-  max-width:58ch;
-  color:#303746;
-}
-
-.human-first-principles .button{
-  border-radius:4px;
-  box-shadow:none;
-  padding:.82rem 1.05rem;
-}
-
-.human-first-principles .section-head{
-  grid-template-columns:minmax(220px,.62fr) minmax(0,1.38fr);
-}
-
-/* Three areas are peers, not three marketing cards. */
-.human-first-principles .pillars{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  grid-template-rows:auto;
-  gap:0;
-  border-top:1px solid rgba(11,23,54,.16);
-  border-bottom:1px solid rgba(11,23,54,.16);
-}
-
-.human-first-principles .pillar,
-.human-first-principles .pillar:nth-child(1),
-.human-first-principles .pillar:nth-child(2),
-.human-first-principles .pillar:nth-child(3){
-  grid-row:auto;
-  min-height:430px;
-  padding:clamp(1.6rem,3vw,2.5rem);
-  border:0;
-  border-right:1px solid rgba(11,23,54,.16);
-  border-radius:0;
-  box-shadow:none;
-  transform:none;
-}
-
-.human-first-principles .pillar:last-child{border-right:0}
-.human-first-principles .pillar:nth-child(1){background:#eeeae1;color:#10182b}
-.human-first-principles .pillar:nth-child(2){background:#fff;color:#10182b}
-.human-first-principles .pillar:nth-child(3){background:#0b1736;color:#fff}
-.human-first-principles .pillar:hover,
-.human-first-principles .pillar:nth-child(3):hover{
-  transform:none;
-  box-shadow:none;
-  border-color:inherit;
-  filter:brightness(.985);
-}
-
-.human-first-principles .pillar .number{
-  margin-bottom:clamp(3rem,8vw,6rem);
-  font-size:.68rem;
-}
-
-.human-first-principles .pillar h3{
-  max-width:13ch;
-  font-size:clamp(1.45rem,2.2vw,2rem);
-}
-
-.human-first-principles .pillar p{
-  max-width:38ch;
-  line-height:1.62;
-}
-
-.human-first-principles .pillar:nth-child(3) h3{color:#fff}
-.human-first-principles .pillar:nth-child(3) p{color:rgba(255,255,255,.78)}
-
-.human-first-principles .dark{
-  border-radius:0;
-}
-
-.human-first-principles .flow{
-  grid-template-columns:repeat(3,minmax(0,1fr));
-}
-.human-first-principles .flow div:nth-child(n+4){display:none}
-
-.human-first-principles .card,
-.human-first-principles .note,
-.human-first-principles .cta{
-  border-radius:4px;
-  box-shadow:none;
-}
+/* Three areas are peers, not three interchangeable marketing cards. */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto;gap:0;border-top:1px solid rgba(11,23,54,.16);border-bottom:1px solid rgba(11,23,54,.16)}
+.pillar,.pillar:nth-child(1),.pillar:nth-child(2),.pillar:nth-child(3){grid-row:auto;min-height:430px;padding:clamp(1.6rem,3vw,2.5rem);border:0;border-right:1px solid rgba(11,23,54,.16);border-radius:0;box-shadow:none;transform:none}
+.pillar:last-child{border-right:0}
+.pillar:nth-child(1){background:#eeeae1;color:#10182b}
+.pillar:nth-child(2){background:#fff;color:#10182b}
+.pillar:nth-child(3){background:#0b1736;color:#fff}
+.pillar:hover,.pillar:nth-child(3):hover{transform:none;box-shadow:none;border-color:inherit;filter:brightness(.985)}
+.pillar .number{margin-bottom:clamp(3rem,8vw,6rem);font-size:.68rem}
+.pillar h3{max-width:13ch;font-size:clamp(1.45rem,2.2vw,2rem)}
+.pillar p{max-width:38ch;line-height:1.62}
+.pillar:nth-child(3) h3{color:#fff}
+.pillar:nth-child(3) p{color:rgba(255,255,255,.78)}
+.dark{border-radius:0}
+.flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+.flow div:nth-child(n+4){display:none}
+.card,.note,.cta{border-radius:4px;box-shadow:none}
 
 @media (max-width:900px){
-  .human-first-principles .hero,
-  .human-first-principles .section-head{
-    grid-template-columns:1fr;
-  }
-  .human-first-principles .pillars{
-    grid-template-columns:1fr;
-  }
-  .human-first-principles .pillar,
-  .human-first-principles .pillar:nth-child(1),
-  .human-first-principles .pillar:nth-child(2),
-  .human-first-principles .pillar:nth-child(3){
-    min-height:0;
-    border-right:0;
-    border-bottom:1px solid rgba(11,23,54,.16);
-  }
-  .human-first-principles .pillar:last-child{border-bottom:0}
-  .human-first-principles .pillar .number{margin-bottom:2rem}
-  .human-first-principles .flow{grid-template-columns:1fr}
+  .hero,.section-head{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .pillar,.pillar:nth-child(1),.pillar:nth-child(2),.pillar:nth-child(3){min-height:0;border-right:0;border-bottom:1px solid rgba(11,23,54,.16)}
+  .pillar:last-child{border-bottom:0}
+  .pillar .number{margin-bottom:2rem}
+  .flow{grid-template-columns:1fr}
 }
