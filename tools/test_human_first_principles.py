@@ -84,4 +84,24 @@ for rel, quote in [
     assert '>Telefon: +36 30 221 5506<' not in contact, rel
     assert '>Phone: +36 30 221 5506<' not in contact, rel
 
+localized_contracts = {
+    'hu/kapcsolat/index.html': ['Ugrás a tartalomhoz', 'az automatikus űrlapküldés nincs bekapcsolva'],
+    'de/kontakt/index.html': ['Zum Inhalt springen', 'Die automatische Formularübermittlung ist deaktiviert'],
+    'hu/megoldasok/business-operations-360/index.html': ['Szakterület:', 'A megoldások csak igazolt tartalomra épülnek.'],
+    'de/loesungen/business-operations-360/index.html': ['Kompetenzbereich:', 'Die Lösungen beruhen ausschließlich auf geprüften Inhalten.'],
+    'hu/szolgaltatasok/hipstudio/video/conference-streaming/index.html': ['Ugrás a tartalomhoz', 'A szolgáltatási lista igazolt forrásokra épül.'],
+    'de/leistungen/hipstudio/video/conference-streaming/index.html': ['Zum Inhalt springen', 'Das Leistungsangebot beruht auf geprüften Quellen.'],
+}
+for rel, needles in localized_contracts.items():
+    html = (D / rel).read_text(encoding='utf-8')
+    for needle in needles:
+        assert needle in html, f'{rel}: missing localized copy {needle!r}'
+    assert 'Review-only cross-pillar solution architecture.' not in html, rel
+    assert 'Service inventory is evidence-gated.' not in html, rel
+
+for rel in ('hu/ai-trust/index.html', 'de/ai-trust/index.html'):
+    html = (D / rel).read_text(encoding='utf-8')
+    assert 'AI may assist research' not in html, rel
+    assert 'The review build contains no analytics' not in html, rel
+
 print('Human first-principles gate passed for HU/EN/DE, three-area separation, scope qualifier, hero contrast and contact wiring')

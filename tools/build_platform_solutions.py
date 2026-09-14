@@ -27,7 +27,14 @@ UI={
  'cta':{'hu':'30 perces üzleti konzultáció','en':'30-minute business consultation','de':'30-minütige Unternehmensberatung'},
  'back':{'hu':'Összes megoldás','en':'All solutions','de':'Alle Lösungen'},
  'mainNav':{'hu':'Fő navigáció','en':'Main navigation','de':'Hauptnavigation'},
- 'footerNav':{'hu':'Lábléc navigáció','en':'Footer navigation','de':'Fußnavigation'}
+ 'footerNav':{'hu':'Lábléc navigáció','en':'Footer navigation','de':'Fußnavigation'},
+ 'langNav':{'hu':'Nyelvválasztó','en':'Languages','de':'Sprachauswahl'},
+ 'skip':{'hu':'Ugrás a tartalomhoz','en':'Skip to content','de':'Zum Inhalt springen'},
+ 'specialist':{'hu':'Szakterület','en':'Area of expertise','de':'Kompetenzbereich'},
+ 'footerNote':{
+  'hu':'A megoldások csak igazolt tartalomra épülnek. Nem közlünk nem igazolt ügyféleredményt, jogi vagy tulajdonosi kapcsolatot.',
+  'en':'Solutions are based on verified content only. No unverified client result, legal relationship or ownership claim is published.',
+  'de':'Die Lösungen beruhen ausschließlich auf geprüften Inhalten. Nicht belegte Kundenergebnisse, Rechts- oder Eigentumsbeziehungen werden nicht veröffentlicht.'}
 }
 
 def e(v):return escape(str(v),quote=True)
@@ -57,7 +64,7 @@ def shell(path_fn,l,title,desc,body,graph_nodes):
  meta_title=f'{title} | HIPStudio'
  if len(meta_title)>70:meta_title=f'{title[:55].rstrip()}… | HIPStudio'
  review='<div class="review">Platform review build · no production publication</div>' if MODE=='review' else ''
- html=f'''<!DOCTYPE html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alts}<link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(home(l))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['mainNav'][l])}">{nav(l)}</nav><nav class="langs" aria-label="Languages">{lang_links(path_fn,l)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['footerNav'][l])}">{nav(l)}</nav><p class="legal-note">Review-only cross-pillar solution architecture. No unverified client result, legal-entity ownership or endorsement claim is asserted.</p></footer></body></html>'''
+ html=f'''<!DOCTYPE html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alts}<link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">{e(UI['skip'][l])}</a>{review}<header class="header"><a class="brand" href="{e(home(l))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['mainNav'][l])}">{nav(l)}</nav><nav class="langs" aria-label="{e(UI['langNav'][l])}">{lang_links(path_fn,l)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['footerNav'][l])}">{nav(l)}</nav><p class="legal-note">{e(UI['footerNote'][l])}</p></footer></body></html>'''
  out=D/path.strip('/')/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(html)
  return {'key':'solutions' if path==hub_path(l) else 'solution','lang':l,'path':path,'canonical':url}
 
@@ -73,7 +80,7 @@ for l in LANGS:
  for item in SOLUTIONS:
   includes=''.join(f'<li>{e(x)}</li>' for x in item['includes'][l])
   related=''.join(f'<a class="card" href="{e(solution_path(next(s for s in SOLUTIONS if s["key"]==k),l))}"><h3>{e(next(s for s in SOLUTIONS if s["key"]==k)["name"][l])}</h3><span aria-hidden="true">↗</span></a>' for k in item.get('related',[]))
-  body=f'''<section class="page-hero"><a class="back" href="{e(hub_path(l))}">← {e(UI['back'][l])}</a><p class="eyebrow">{e(item['audience'][l])}</p><h1>{e(item['name'][l])}</h1><p class="lead">{e(item['problem'][l])}</p></section><section class="section"><div class="section-head"><h2>{e(UI['outcome'][l])}</h2><p>{e(item['outcome'][l])}</p></div><h3>{e(UI['includes'][l])}</h3><ul class="service-list">{includes}</ul><p class="note">Specialist pillar: <a href="{e(pillar_path(item['pillar'],l))}">{e(item['pillar'])} ↗</a></p></section>{('<section class="section"><h2>'+e(UI['related'][l])+'</h2><div class="cards">'+related+'</div></section>') if related else ''}<section class="cta"><h2>{e(UI['cta'][l])}</h2><a class="button" href="{e(contact(l))}">{e(UI['cta'][l])} →</a></section>'''
+  body=f'''<section class="page-hero"><a class="back" href="{e(hub_path(l))}">← {e(UI['back'][l])}</a><p class="eyebrow">{e(item['audience'][l])}</p><h1>{e(item['name'][l])}</h1><p class="lead">{e(item['problem'][l])}</p></section><section class="section"><div class="section-head"><h2>{e(UI['outcome'][l])}</h2><p>{e(item['outcome'][l])}</p></div><h3>{e(UI['includes'][l])}</h3><ul class="service-list">{includes}</ul><p class="note">{e(UI['specialist'][l])}: <a href="{e(pillar_path(item['pillar'],l))}">{e(item['pillar'])} ↗</a></p></section>{('<section class="section"><h2>'+e(UI['related'][l])+'</h2><div class="cards">'+related+'</div></section>') if related else ''}<section class="cta"><h2>{e(UI['cta'][l])}</h2><a class="button" href="{e(contact(l))}">{e(UI['cta'][l])} →</a></section>'''
   service={'@type':'Service','@id':abs_path(solution_path(item,l))+'#service','name':item['name'][l],'description':item['problem'][l],'serviceType':item['name'][l],'url':abs_path(solution_path(item,l))}
   new.append(shell(lambda x,it=item:solution_path(it,x),l,item['name'][l],item['problem'][l],body,[service]))
 for p in new:

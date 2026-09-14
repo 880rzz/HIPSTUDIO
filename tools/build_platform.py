@@ -63,7 +63,30 @@ UI = {
     'evidence': {'hu':'Bizonyíték és felelősség','en':'Evidence and responsibility','de':'Nachweis und Verantwortung'},
     'navMain': {'hu':'Fő navigáció','en':'Main navigation','de':'Hauptnavigation'},
     'navLang': {'hu':'Nyelvválasztó','en':'Languages','de':'Sprachauswahl'},
-    'navFooter': {'hu':'Lábléc navigáció','en':'Footer navigation','de':'Fußnavigation'}
+    'navFooter': {'hu':'Lábléc navigáció','en':'Footer navigation','de':'Fußnavigation'},
+    'skip': {'hu':'Ugrás a tartalomhoz','en':'Skip to content','de':'Zum Inhalt springen'},
+    'footerNote': {
+        'hu':'A HIPStudio a főmárka; a Business és a Flúgos elkülöníthető szakmai területek. Nem állítunk nem igazolt jogi, tulajdonosi vagy szervezeti kapcsolatot.',
+        'en':'HIPStudio is the master brand; Business and Flúgos remain distinct areas of expertise. No unverified legal, ownership or organisational relationship is asserted.',
+        'de':'HIPStudio ist die Hauptmarke; Business und Flúgos bleiben klar erkennbare Kompetenzbereiche. Nicht belegte Rechts-, Eigentums- oder Organisationsbeziehungen werden nicht behauptet.'},
+    'aboutNote': {
+        'hu':'A szakmai területek külön azonosíthatók. Jogi és szervezeti kapcsolatot csak ellenőrzött forrás alapján állítunk.',
+        'en':'The areas of expertise remain separately identifiable. Legal and organisational relationships are stated only when supported by verified sources.',
+        'de':'Die Kompetenzbereiche bleiben einzeln erkennbar. Rechtliche und organisatorische Beziehungen nennen wir nur auf Grundlage geprüfter Quellen.'},
+    'contactReview': {
+        'hu':'Review build: az automatikus űrlapküldés nincs bekapcsolva; az ajánlatkérő folyamat külön adatvédelmi kapu mögött marad.',
+        'en':'Review build: automatic form submission is disabled; the quote-request flow remains behind its separate privacy gate.',
+        'de':'Review-Build: Die automatische Formularübermittlung ist deaktiviert; die Angebotsanfrage bleibt hinter ihrer eigenen Datenschutzfreigabe.'},
+    'humanControl': {'hu':'Emberi kontroll','en':'Human control','de':'Menschliche Kontrolle'},
+    'humanControlBody': {
+        'hu':'Az AI segítheti a kutatást, rendszerezést, szövegalkotást vagy munkafolyamat-automatizálást. A lényeges tények, ügyfélállítások, árak, jogi szövegek és publikációs döntések emberi ellenőrzést igényelnek.',
+        'en':'AI may assist research, structuring, drafting or workflow automation. Material facts, client claims, pricing, legal statements and publication decisions require human verification.',
+        'de':'KI kann Recherche, Strukturierung, Entwürfe oder die Automatisierung von Abläufen unterstützen. Wesentliche Fakten, Kundenaussagen, Preise, Rechtstexte und Veröffentlichungsentscheidungen werden von Menschen geprüft.'},
+    'dataMinimisation': {'hu':'Adatminimalizálás','en':'Data minimisation','de':'Datenminimierung'},
+    'dataMinimisationBody': {
+        'hu':'A review build nem tartalmaz analitikát, marketingcímkét vagy nyilvános űrlapot. Jövőbeli AI- vagy analitikai integráció csak a jóváhagyott adatvédelmi és hozzájárulási rendszer mögött aktiválható.',
+        'en':'The review build contains no analytics, marketing tags or public forms. Future AI or analytics integrations must remain behind the approved privacy and consent architecture.',
+        'de':'Der Review-Build enthält keine Analyse- oder Marketing-Tags und keine öffentlichen Formulare. Künftige KI- oder Analyse-Integrationen dürfen nur hinter der freigegebenen Datenschutz- und Einwilligungsarchitektur aktiviert werden.'}
 }
 
 PILLARS = {p['key']: p for p in DATA['pillars']}
@@ -143,7 +166,7 @@ def shell(key, lang, body):
     alternates += f'<link rel="alternate" hreflang="x-default" href="{e(absolute(key,"hu"))}">'
     ld = json.dumps(graph(key,lang,title,desc), ensure_ascii=False, separators=(',',':')).replace('<','\\u003c')
     review = f'<div class="review">{e(UI["review"][lang])}</div>' if MODE == 'review' else ''
-    html = f'''<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title(key,lang))}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="website"><meta property="og:locale" content="{LOCALES[lang]}"><meta property="og:site_name" content="HIPStudio"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">Skip</a>{review}<header class="header"><a class="brand" href="{e(href('home',lang))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['navMain'][lang])}">{nav(key,lang)}</nav><nav class="langs" aria-label="{e(UI['navLang'][lang])}">{language_links(key,lang)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['navFooter'][lang])}">{nav(key,lang)}</nav><p class="legal-note">Review architecture: HIPStudio is the master brand. Business and Flúgos are presented as specialist pillars; no unverified legal-entity or ownership relationship is asserted.</p></footer></body></html>'''
+    html = f'''<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(meta_title(key,lang))}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{'noindex,nofollow' if MODE=='review' else 'index,follow'}"><link rel="canonical" href="{e(url)}">{alternates}<meta property="og:type" content="website"><meta property="og:locale" content="{LOCALES[lang]}"><meta property="og:site_name" content="HIPStudio"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="/assets/platform.css"><script type="application/ld+json">{ld}</script></head><body><a class="skip" href="#main">{e(UI['skip'][lang])}</a>{review}<header class="header"><a class="brand" href="{e(href('home',lang))}">HIPStudio</a><nav class="nav" aria-label="{e(UI['navMain'][lang])}">{nav(key,lang)}</nav><nav class="langs" aria-label="{e(UI['navLang'][lang])}">{language_links(key,lang)}</nav></header><main id="main">{body}</main><footer class="footer"><strong>HIPStudio</strong><nav aria-label="{e(UI['navFooter'][lang])}">{nav(key,lang)}</nav><p class="legal-note">{e(UI['footerNote'][lang])}</p></footer></body></html>'''
     out = D / route(key,lang).strip('/') / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -174,11 +197,12 @@ for lang in LANGS:
     shell('home',lang,home)
     for p in DATA['pillars']:
         shell(p['key'],lang,pillar_page(p,lang))
-    about = f'''<section class="page-hero"><p class="eyebrow">2006 → 2026</p><h1>{e(DATA['integrationStory']['title'][lang])}</h1><p class="lead">{e(DATA['integrationStory']['reason'][lang])}</p></section><section class="section"><div class="trust"><div><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div><div><h2>{e(UI['why'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p><p class="note">The specialist pillars remain separately identifiable. Legal/entity relationships are asserted only after verification.</p></div></div></section>{cta(lang)}'''
+    about = f'''<section class="page-hero"><p class="eyebrow">2006 → 2026</p><h1>{e(DATA['integrationStory']['title'][lang])}</h1><p class="lead">{e(DATA['integrationStory']['reason'][lang])}</p></section><section class="section"><div class="trust"><div><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div><div><h2>{e(UI['why'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p><p class="note">{e(UI['aboutNote'][lang])}</p></div></div></section>{cta(lang)}'''
     shell('about',lang,about)
-    contact = f'''<section class="page-hero"><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['primaryCta'][lang])}</h1><p class="lead">{e(UI['ctaTitle'][lang])}</p></section><section class="section"><div class="cards"><div class="card"><h2>HIPStudio Business</h2><p>{e(PILLARS['business']['intro'][lang])}</p></div><div class="card"><h2>HIPStudio Creative</h2><p>{e(PILLARS['creative']['intro'][lang])}</p></div><div class="card"><h2>Flúgos by HIPStudio</h2><p>{e(PILLARS['experiences']['intro'][lang])}</p></div></div><p class="note">Review build: no web form or automatic data submission is active here. The dedicated quote flow remains separately privacy-gated.</p></section>'''
+    contact_review = f'<p class="note">{e(UI["contactReview"][lang])}</p>' if MODE == 'review' else ''
+    contact = f'''<section class="page-hero"><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['primaryCta'][lang])}</h1><p class="lead">{e(UI['ctaTitle'][lang])}</p></section><section class="section"><div class="cards"><div class="card"><h2>HIPStudio Business</h2><p>{e(PILLARS['business']['intro'][lang])}</p></div><div class="card"><h2>HIPStudio Creative</h2><p>{e(PILLARS['creative']['intro'][lang])}</p></div><div class="card"><h2>Flúgos by HIPStudio</h2><p>{e(PILLARS['experiences']['intro'][lang])}</p></div></div>{contact_review}</section>'''
     shell('contact',lang,contact)
-    trust = f'''<section class="page-hero"><p class="eyebrow">AI Trust</p><h1>{e(UI['trust'][lang])}</h1><p class="lead">{e(page_desc('trust',lang))}</p></section><section class="section"><div class="trust"><div><h2>Human control</h2><p>AI may assist research, structuring, drafting or workflow automation. Material facts, client claims, pricing, legal statements and publication decisions require human verification.</p></div><div><h2>Data minimisation</h2><p>The review build contains no analytics, marketing tags or public forms. Future AI or analytics integrations must remain behind the approved privacy and consent architecture.</p></div></div></section>'''
+    trust = f'''<section class="page-hero"><p class="eyebrow">AI Trust</p><h1>{e(UI['trust'][lang])}</h1><p class="lead">{e(page_desc('trust',lang))}</p></section><section class="section"><div class="trust"><div><h2>{e(UI['humanControl'][lang])}</h2><p>{e(UI['humanControlBody'][lang])}</p></div><div><h2>{e(UI['dataMinimisation'][lang])}</h2><p>{e(UI['dataMinimisationBody'][lang])}</p></div></div></section>'''
     shell('trust',lang,trust)
 
 (D / 'robots.txt').write_text('User-agent: *\nDisallow: /\n' if MODE == 'review' else 'User-agent: *\nAllow: /\n')
