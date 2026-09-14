@@ -1,10 +1,16 @@
 # coding: utf-8
 from pathlib import Path
 import re
+import subprocess
 
 R = Path(__file__).resolve().parents[1]
 D = R / 'dist-platform'
-assert D.exists(), 'dist-platform missing; run build:platform first'
+
+# test_platform.py intentionally rebuilds the lower-level platform during its
+# isolated contract checks. Recreate the canonical final platform before testing
+# the post-processing layer that users actually see.
+subprocess.run(['npm', 'run', 'build:platform'], cwd=R, check=True)
+assert D.exists(), 'dist-platform missing after build:platform'
 
 checks = {
     'hu/index.html': [
