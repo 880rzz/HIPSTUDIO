@@ -1,10 +1,10 @@
 {
   "name": "hipstudio-static",
-  "version": "0.19.1",
+  "version": "0.20.0",
   "private": true,
   "scripts": {
     "build": "export QUOTE_REQUEST_BASE_URL=${QUOTE_REQUEST_BASE_URL:-https://www.hipstudio.hu}; python3 tools/build.py && python3 tools/enforce_viko_output.py && python3 tools/remove_public_pricing.py",
-    "build:platform": "if [ \"${BUILD_MODE:-review}\" = \"production\" ]; then python3 tools/assert_production_activation.py || exit $?; fi; export PLATFORM_URL=${PLATFORM_URL:-https://www.hipstudio.hu}; python3 tools/build_platform.py && python3 tools/enrich_flugos_heritage.py && python3 tools/enrich_flugos_sponsors.py && python3 tools/enrich_platform_commercial.py && python3 tools/enrich_partner_logos.py && python3 tools/build_platform_solutions.py && python3 tools/enrich_solution_depth.py && python3 tools/build_platform_services.py && python3 tools/build_quote_request.py && python3 tools/build_privacy_pages.py && python3 tools/humanize_platform_copy.py && python3 tools/apply_editorial_shell.py && python3 tools/enrich_pain_point_ia.py && python3 tools/apply_human_first_principles.py && python3 tools/fix_human_body_class.py && python3 tools/ensure_human_stylesheet.py",
+    "build:platform": "export PLATFORM_URL=${PLATFORM_URL:-https://www.hipstudio.hu}; if [ \"${BUILD_MODE:-review}\" = \"production\" ]; then python3 tools/assert_production_activation.py || exit $?; fi; python3 tools/build_platform.py && python3 tools/enrich_flugos_heritage.py && python3 tools/enrich_flugos_sponsors.py && python3 tools/enrich_platform_commercial.py && python3 tools/enrich_partner_logos.py && python3 tools/build_platform_solutions.py && python3 tools/enrich_solution_depth.py && python3 tools/build_platform_services.py && python3 tools/build_quote_request.py && python3 tools/build_privacy_pages.py && python3 tools/humanize_platform_copy.py && python3 tools/apply_editorial_shell.py && python3 tools/enrich_pain_point_ia.py && python3 tools/apply_human_first_principles.py && python3 tools/fix_human_body_class.py && python3 tools/ensure_human_stylesheet.py && python3 tools/restore_business_scope_qualifier.py && python3 tools/wire_contact.py",
     "build:all": "npm run build && npm run build:platform && python3 tools/enforce_legal_entity_schema.py",
     "test": "python3 tools/test.py && python3 tools/test_viko_role.py && python3 tools/test_legal_entity_schema.py",
     "test:platform": "python3 tools/test_platform.py && python3 tools/test_human_first_principles.py",
@@ -31,6 +31,7 @@
     "test:hero-media": "python3 tools/test_hero_media.py",
     "test:editorial-shell": "python3 tools/test_editorial_shell.py",
     "test:pain-points": "npm run build:platform && python3 tools/test_pain_point_ia.py",
+    "test:pages-production": "python3 tools/test_pages_production_artifact.py",
     "test:all": "npm test && npm run test:platform && npm run test:master-brand && npm run test:domain-migration && npm run test:legacy-url-matrix && npm run test:commercial-content && npm run test:solution-depth && npm run test:evidence && npm run test:business-provider && npm run test:release-gates && npm run test:legal-controller && npm run test:privacy-governance && npm run test:privacy-pages && npm run test:hosting && npm run test:service-inventory && npm run test:public-quote && npm run test:quote-routing && npm run test:quote-email-localization && npm run test:no-wix-hotlinks && npm run test:partner-references && npm run test:flugos-sponsors && npm run test:hero-media && npm run test:editorial-shell && npm run test:pain-points && npm run test:pricing",
     "preview": "python3 tools/serve.py",
     "test:pricing": "node tools/test-pricing.mjs",
@@ -40,7 +41,7 @@
     "test:lighthouse": "node tools/lighthouse.mjs",
     "test:lighthouse:platform": "node tools/lighthouse-platform.mjs"
   },
-  "description": "HIPStudio master platform for Business, Creative and Flúgos Experiences. hipstudio.hu is published from 880rzz/HIPSTUDIO through GitHub Pages; flugos.hu will use a separate Vercel project as the specialist entry-domain layer without duplicating the master content platform. Privacy governance uses Hipstudió Kft. as controller and Németh Tímea as human contact. Public pricing is suppressed. No automatic production cutover.",
+  "description": "HIPStudio master platform for Business, Creative and Flúgos Experiences. https://www.hipstudio.hu is the production canonical domain published from 880rzz/HIPSTUDIO through GitHub Pages. Quote submission is activated only from a verified HTTPS backend supplied through the QUOTE_FORM_ENDPOINT secret. Flúgos remains a separate specialist entry-domain layer. Privacy governance uses Hipstudió Kft. as controller and Németh Tímea as human contact. Public pricing is suppressed.",
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
     "html-validate": "11.14.0",

@@ -1,4 +1,4 @@
-name: Publish HIPStudio review to GitHub Pages
+name: Publish HIPStudio production to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: hipstudio-pages-review
+  group: hipstudio-pages-production
   cancel-in-progress: false
 
 jobs:
@@ -23,11 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Allow only the approved temporary review custom domain
-        id: pages_domain
+      - name: Require the approved production custom domain
         env:
           GH_TOKEN: ${{ github.token }}
-          REVIEW_CUSTOM_DOMAIN: hip.vipach.at
+          PRODUCTION_CUSTOM_DOMAIN: www.hipstudio.hu
         run: |
           set -euo pipefail
           status="$(curl -sS -o /tmp/pages.json -w '%{http_code}' \
@@ -35,27 +34,17 @@ jobs:
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages")"
-          if [ "$status" = "404" ]; then
-            echo "GitHub Pages is not configured yet; the configure-pages step may enable it for this review deployment."
-            echo "pages_prefix=/HIPSTUDIO" >> "$GITHUB_OUTPUT"
-          elif [ "$status" = "200" ]; then
-            cname="$(python3 -c "import json; print((json.load(open('/tmp/pages.json')).get('cname') or '').strip())")"
-            if [ -n "$cname" ] && [ "$cname" != "$REVIEW_CUSTOM_DOMAIN" ]; then
-              echo "Review deployment blocked: unexpected GitHub Pages custom domain is active: $cname" >&2
-              exit 1
-            fi
-            if [ "$cname" = "$REVIEW_CUSTOM_DOMAIN" ]; then
-              echo "Approved temporary review custom domain is active: $REVIEW_CUSTOM_DOMAIN"
-              echo "pages_prefix=/" >> "$GITHUB_OUTPUT"
-            else
-              echo "No custom Pages domain is active; review deployment may proceed."
-              echo "pages_prefix=/HIPSTUDIO" >> "$GITHUB_OUTPUT"
-            fi
-          else
-            echo "Could not safely verify GitHub Pages custom-domain state (HTTP $status). Refusing review deployment." >&2
+          if [ "$status" != "200" ]; then
+            echo "Production deployment blocked: could not verify GitHub Pages configuration (HTTP $status)." >&2
             cat /tmp/pages.json >&2 || true
             exit 1
           fi
+          cname="$(python3 -c "import json; print((json.load(open('/tmp/pages.json')).get('cname') or '').strip())")"
+          if [ "$cname" != "$PRODUCTION_CUSTOM_DOMAIN" ]; then
+            echo "Production deployment blocked: expected $PRODUCTION_CUSTOM_DOMAIN, found ${cname:-<none>}." >&2
+            exit 1
+          fi
+          echo "Production custom domain verified: $PRODUCTION_CUSTOM_DOMAIN"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -64,31 +53,51 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - name: Build review-safe HIPStudio site
+      - name: Validate review-safe build before production
         env:
           BUILD_MODE: review
           PLATFORM_URL: https://www.hipstudio.hu
           QUOTE_REQUEST_BASE_URL: https://www.hipstudio.hu
+        run: |
+          npm run build:platform
+          npm run test:platform
+          npm run test:pain-points
+          npm run test:privacy-governance
+          npm run test:privacy-pages
+          npm run test:hosting
+          npm run test:html
+      - name: Require live quote backend secret
+        env:
+          QUOTE_FORM_ENDPOINT: ${{ secrets.QUOTE_FORM_ENDPOINT }}
+        run: |
+          set -euo pipefail
+          if [ -z "$QUOTE_FORM_ENDPOINT" ]; then
+            echo "Production deployment blocked: GitHub secret QUOTE_FORM_ENDPOINT is missing." >&2
+            exit 1
+          fi
+          case "$QUOTE_FORM_ENDPOINT" in
+            https://script.google.com/macros/s/*/exec) ;;
+            *) echo "Production deployment blocked: QUOTE_FORM_ENDPOINT is not a deployed Google Apps Script /exec URL." >&2; exit 1 ;;
+          esac
+      - name: Build production HIPStudio site
+        env:
+          BUILD_MODE: production
+          PLATFORM_URL: https://www.hipstudio.hu
+          QUOTE_REQUEST_BASE_URL: https://www.hipstudio.hu
+          PLATFORM_PUBLICATION_APPROVED: '1'
+          PRODUCTION_CUTOVER_APPROVED: '1'
+          QUOTE_FORM_ENDPOINT: ${{ secrets.QUOTE_FORM_ENDPOINT }}
         run: npm run build:platform
-      - run: npm run test:platform
-      - run: npm run test:pain-points
-      - run: npm run test:privacy-governance
-      - run: npm run test:privacy-pages
-      - run: npm run test:hosting
       - run: npm run test:html
-      - name: Prepare temporary GitHub Pages review artifact
-        env:
-          PAGES_PREFIX: ${{ steps.pages_domain.outputs.pages_prefix }}
-        run: python3 tools/prepare_pages_review.py
-      - name: Validate temporary GitHub Pages artifact
-        env:
-          PAGES_PREFIX: ${{ steps.pages_domain.outputs.pages_prefix }}
-        run: python3 tools/test_pages_review_artifact.py
+      - name: Prepare www.hipstudio.hu production artifact
+        run: python3 tools/prepare_pages_production.py
+      - name: Validate www.hipstudio.hu production artifact
+        run: python3 tools/test_pages_production_artifact.py
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist-pages-review
+          path: dist-pages-production
       - id: deployment
         uses: actions/deploy-pages@v4

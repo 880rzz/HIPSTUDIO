@@ -7,6 +7,7 @@ body{background:#f7f6f2;letter-spacing:0}
 h1,h2,h3{letter-spacing:-.035em}
 h1{max-width:14ch;font-weight:620}
 .lead{max-width:58ch;color:#303746}
+.hero-film .lead{color:#f4f1e8}
 .button{border-radius:4px;box-shadow:none;padding:.82rem 1.05rem}
 .section-head{grid-template-columns:minmax(220px,.62fr) minmax(0,1.38fr)}
 
@@ -27,6 +28,11 @@ h1{max-width:14ch;font-weight:620}
 .flow{grid-template-columns:repeat(3,minmax(0,1fr))}
 .flow div:nth-child(n+4){display:none}
 .card,.note,.cta{border-radius:4px;box-shadow:none}
+.contact-live{margin-top:2rem;padding:clamp(1.25rem,3vw,2rem);border-top:1px solid rgba(11,23,54,.18);border-bottom:1px solid rgba(11,23,54,.18)}
+.contact-live__actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.contact-live__details{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;margin-top:1.25rem}
+.contact-live__details a{font-weight:600}
+.scope-qualifier{margin-top:1.25rem;padding:1rem 1.1rem;border-left:2px solid #b79c44;background:rgba(183,156,68,.08)}
 
 @media (max-width:900px){
   .hero,.section-head{grid-template-columns:1fr}
@@ -35,4 +41,5 @@ h1{max-width:14ch;font-weight:620}
   .pillar:last-child{border-bottom:0}
   .pillar .number{margin-bottom:2rem}
   .flow{grid-template-columns:1fr}
+  .contact-live__actions,.contact-live__details{flex-direction:column;align-items:flex-start}
 }

@@ -64,5 +64,21 @@ assert 'grid-template-columns:repeat(3,minmax(0,1fr))' in style
 assert '.pillar:nth-child(1){background:#eeeae1' in style
 assert '.pillar:nth-child(2){background:#fff' in style
 assert '.pillar:nth-child(3){background:#0b1736' in style
+assert '.hero-film .lead{color:#f4f1e8}' in style, 'dark film hero lead contrast protection missing'
 
-print('Human first-principles regression gate passed for HU/EN/DE and three-area separation')
+business = (D/'hu/uzleti-mukodes/index.html').read_text(encoding='utf-8')
+assert 'data-business-scope-qualifier' in business
+assert 'A szabályozott feladatokat csak tisztázott felelősségi körrel vállaljuk.' in business
+
+for rel, quote in [
+    ('hu/kapcsolat/index.html','/hu/ajanlatkeres/'),
+    ('en/contact/index.html','/en/request-a-quote/'),
+    ('de/kontakt/index.html','/de/angebot-anfragen/'),
+]:
+    contact=(D/rel).read_text(encoding='utf-8')
+    assert 'data-contact-live' in contact, rel
+    assert quote in contact, rel
+    assert 'mailto:info@hipstudio.hu' in contact, rel
+    assert 'tel:+36302215506' in contact, rel
+
+print('Human first-principles gate passed for HU/EN/DE, three-area separation, scope qualifier, hero contrast and contact wiring')
