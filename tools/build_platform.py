@@ -201,7 +201,8 @@ def pillar_page(p, lang):
     }[lang]
     gallery = ''
     if p['key'] == 'creative':
-        photos = ''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(IMAGES[image_id]["alt"][lang])}" loading="lazy" decoding="async"><figcaption>{e(IMAGES[image_id]["alt"][lang])}</figcaption></figure>' for image_id in ('portrait-04','commercial-05','property-16'))
+        protected_label = {'hu':'Védett tartalom','en':'Protected content','de':'Geschützter Inhalt'}[lang]
+        photos = ''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(protected_label)}" loading="lazy" decoding="async"><figcaption>{e(protected_label)}</figcaption></figure>' for image_id in ('portrait-04','commercial-05','property-16'))
         gallery = f'<div class="editorial-photo-grid">{photos}</div>'
     return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
