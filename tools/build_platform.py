@@ -212,8 +212,16 @@ def pillar_page(p, lang):
     gallery = ''
     if p['key'] == 'creative':
         protected_label = {'hu':'Védett tartalom','en':'Protected content','de':'Geschützter Inhalt'}[lang]
-        photos = ''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(protected_label)}" loading="lazy" decoding="async"><figcaption>{e(protected_label)}</figcaption></figure>' for image_id in ('portrait-04','commercial-05','property-16'))
-        gallery = f'<div class="editorial-photo-grid">{photos}</div>'
+        groups = {
+            'hu':[('Fotó — portré és személyes jelenlét','/hu/szolgaltatasok/hipstudio/photo-portrait/',['portrait-04','portrait-25','portfolio-14']),('Fotó — céges és reklám','/hu/szolgaltatasok/hipstudio/photo-corporate/',['commercial-05','commercial-11','property-16']),('Fotó — esemény és konferencia','/hu/szolgaltatasok/hipstudio/photo-event/',['commercial-30','property-23','commercial-44'])],
+            'en':[('Photography — portrait and personal presence','/en/services/hipstudio/photo-portrait/',['portrait-04','portrait-25','portfolio-14']),('Photography — corporate and advertising','/en/services/hipstudio/photo-corporate/',['commercial-05','commercial-11','property-16']),('Photography — events and conferences','/en/services/hipstudio/photo-event/',['commercial-30','property-23','commercial-44'])],
+            'de':[('Fotografie — Porträt und persönlicher Auftritt','/de/leistungen/hipstudio/photo-portrait/',['portrait-04','portrait-25','portfolio-14']),('Fotografie — Unternehmen und Werbung','/de/leistungen/hipstudio/photo-corporate/',['commercial-05','commercial-11','property-16']),('Fotografie — Events und Konferenzen','/de/leistungen/hipstudio/photo-event/',['commercial-30','property-23','commercial-44'])]
+        }[lang]
+        blocks=[]
+        for title,service_href,images in groups:
+            photos=''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(protected_label)}" loading="lazy" decoding="async"><figcaption>{e(protected_label)}</figcaption></figure>' for image_id in images)
+            blocks.append(f'<details class="service-reference"><summary>{e(title)}</summary><div class="editorial-photo-grid">{photos}</div><p><a class="text-link" href="{service_href}">{e(labels[2])} →</a></p></details>')
+        gallery=''.join(blocks)
     return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
 for lang in LANGS:
