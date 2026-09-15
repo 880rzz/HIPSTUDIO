@@ -13,6 +13,7 @@ import json, os, shutil
 R = Path(__file__).resolve().parents[1]
 DATA = json.loads((R / 'content/platform.json').read_text())
 COMMERCIAL = json.loads((R / 'content/commercial-content.json').read_text())
+HERO_MEDIA = json.loads((R / 'content/hero-media.json').read_text())
 IMAGES = {item['id']:item for item in json.loads((R / 'content/images.json').read_text())}
 MODE = os.environ.get('BUILD_MODE', 'review')
 BASE = os.environ.get('PLATFORM_URL', DATA.get('masterDomain', 'https://www.hipstudio.hu')).rstrip('/')
@@ -221,8 +222,14 @@ def pillar_page(p, lang):
         for title,service_href,images in groups:
             photos=''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(protected_label)}" loading="lazy" decoding="async"><figcaption>{e(protected_label)}</figcaption></figure>' for image_id in images)
             blocks.append(f'<details class="service-reference"><summary>{e(title)}</summary><div class="editorial-photo-grid">{photos}</div><p><a class="text-link" href="{service_href}">{e(labels[2])} →</a></p></details>')
+        video_copy={'hu':'Videó — márka-, vezetői és eseményfilmek a HIPStudio referencia-videóiból.','en':'Video — brand, executive and event films from HIPStudio reference videos.','de':'Video — Marken-, Executive- und Eventfilme aus den HIPStudio-Referenzvideos.'}[lang]
+        podcast_copy={'hu':'Podcast — videós és audio podcastok, valamint a hozzájuk tartozó tartalomrendszer.','en':'Podcast — video and audio podcasts with the surrounding content system.','de':'Podcast — Video- und Audio-Podcasts mit dem dazugehörigen Contentsystem.'}[lang]
+        channel=HERO_MEDIA['channelUrl']
+        blocks.append(f'<details class="service-reference"><summary>Videó</summary><p>{e(video_copy)}</p><p><a class="text-link" href="{channel}">Referencia-videók megnyitása →</a></p></details>')
+        blocks.append(f'<details class="service-reference"><summary>Podcast</summary><p>{e(podcast_copy)}</p><p><a class="text-link" href="{channel}">Referencia-videók megnyitása →</a></p></details>')
         gallery=''.join(blocks)
-    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
+    history=f'''<section class="section editorial-history"><p class="eyebrow">2006 → 2026</p><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></section>'''
+    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section>{history}<section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
 for lang in LANGS:
     cards = ''.join(pillar_card(p,lang,i+1) for i,p in enumerate(DATA['pillars']))
