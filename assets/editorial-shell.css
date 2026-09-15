@@ -39,3 +39,6 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .home-three-doors .pillar .arrow{margin-top:auto}
 @keyframes hero-drift{from{transform:scale(1.06) translate3d(-1.5%,0,0)}to{transform:scale(1.1) translate3d(1.5%,-1%,0)}}
 @media(prefers-reduced-motion:reduce){.hero-film .hero-art{animation:none;transform:none}}
+
+/* Keep the absolute editorial header clear of page introductions and forms. */
+.quote-shell,.page-hero{padding-top:clamp(8rem,12vw,11rem)!important}
