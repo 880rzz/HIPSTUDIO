@@ -56,11 +56,11 @@
       "key": "business",
       "brand": "HIPStudio Business",
       "label": {"hu":"Business / Operations","en":"Business / Operations","de":"Business / Operations"},
-      "title": {"hu":"Működés, pénzügy és vezetői kontroll","en":"Operations, finance and management control","de":"Betrieb, Finanzen und Managementsteuerung"},
+      "title": {"hu":"Üzletfejlesztés","en":"Business development","de":"Geschäftsentwicklung"},
       "intro": {
-        "hu": "Külső működési partneri irány KKV-knak: pénzügyi adminisztráció, bér- és HR-adminisztrációs támogatás, back office, controlling, vezetői riporting, folyamatfejlesztés és AI-automatizálási előkészítés. A szabályozott és felelősségi körök élesítés előtt külön jóváhagyást igényelnek.",
-        "en": "An external operating-partner direction for SMEs: financial administration, payroll and HR administration support, back office, controlling, management reporting, process improvement and AI automation preparation. Regulated and responsibility-sensitive scopes require separate approval before production.",
-        "de": "Eine externe Betriebspartner-Richtung für KMU: Finanzadministration, Lohn- und HR-Administrationssupport, Backoffice, Controlling, Management-Reporting, Prozessverbesserung und Vorbereitung von KI-Automatisierung. Regulierte und verantwortungssensitive Leistungsumfänge benötigen vor Veröffentlichung eine gesonderte Freigabe."
+        "hu": "Rendet teszünk a működésben, hogy a vezető kevesebb operatív zajjal és jobb információval dolgozhasson.",
+        "en": "We bring order to operations so management can work with less operational noise and better information.",
+        "de": "Wir bringen Ordnung in die Abläufe, damit die Geschäftsführung mit weniger operativem Lärm und besseren Informationen arbeiten kann."
       },
       "promise": {"hu":"A háttérműködést mi fogjuk össze. Te a céget vezeted.","en":"We coordinate the background operations. You lead the business.","de":"Wir bündeln die Hintergrundprozesse. Sie führen das Unternehmen."},
       "services": {
@@ -73,34 +73,34 @@
       "key": "creative",
       "brand": "HIPStudio Creative",
       "label": {"hu":"Creative / Content","en":"Creative / Content","de":"Creative / Content"},
-      "title": {"hu":"Tartalom üzleti céllal","en":"Content built for business outcomes","de":"Content mit geschäftlichem Ziel"},
+      "title": {"hu":"Tartalomgyártás","en":"Content production","de":"Content-Produktion"},
       "intro": {
-        "hu": "A HIPStudio 2006 óta épített kreatív kompetenciája: videó, fotó, podcast, employer branding és vezetői kommunikáció olyan cégeknek, amelyeknél a tartalom üzleti eszköz.",
-        "en": "HIPStudio's creative capability built since 2006: video, photography, podcast, employer branding and executive communication for companies that use content as a business tool.",
-        "de": "Die seit 2006 aufgebaute Kreativkompetenz von HIPStudio: Video, Fotografie, Podcast, Employer Branding und Führungskräftekommunikation für Unternehmen, die Content als Geschäftsinstrument nutzen."
+        "hu": "Fotó, videó és podcast egy kézből, a felhasználási célhoz és a márka valódi karakteréhez igazítva.",
+        "en": "Photography, video and podcasts from one team, shaped around their real use and the character of the brand.",
+        "de": "Fotografie, Video und Podcast aus einer Hand, abgestimmt auf den tatsächlichen Einsatz und den Charakter der Marke."
       },
       "promise": {"hu":"Tartalom, amit nem csak megnéznek. Hanem megjegyeznek.","en":"Content people do not just watch. They remember it.","de":"Content, den man nicht nur ansieht, sondern behält."},
       "services": {
-        "hu":["Vállalati videó","Fotó és üzleti portré","Podcast","Employer branding tartalom","CEO Content System","Content Engine és repurposing"],
-        "en":["Corporate video","Photography and executive portrait","Podcast","Employer branding content","CEO Content System","Content Engine and repurposing"],
-        "de":["Unternehmensvideo","Fotografie und Executive Portrait","Podcast","Employer-Branding-Content","CEO Content System","Content Engine und Repurposing"]
+        "hu":["Fotó","Videó","Podcast"],
+        "en":["Photography","Video","Podcast"],
+        "de":["Fotografie","Video","Podcast"]
       }
     },
     {
       "key": "experiences",
       "brand": "Flúgos by HIPStudio",
       "label": {"hu":"Experience / Events","en":"Experience / Events","de":"Experience / Events"},
-      "title": {"hu":"Vállalati élmények, amelyek összehozzák az embereket","en":"Corporate experiences that bring people together","de":"Unternehmenserlebnisse, die Menschen zusammenbringen"},
+      "title": {"hu":"Rendezvényszervezés","en":"Event production","de":"Veranstaltungsproduktion"},
       "intro": {
-        "hu": "A Flúgos tapasztalati és játéktervezési örökségére épülő B2B irány: csapat-, vezetői-, employer- és ügyfélélmények, egyedi programok és márkázott játékformátumok.",
-        "en": "A B2B direction built on Flúgos experience and game-design heritage: team, leadership, employer and client experiences, custom programmes and branded game formats.",
-        "de": "Eine B2B-Richtung auf Basis der Flúgos-Erlebnis- und Spieldesign-Tradition: Team-, Leadership-, Employer- und Kundenerlebnisse, individuelle Programme und gebrandete Spielformate."
+        "hu": "Céges és privát események, ahol a program, a résztvevők és a megvalósítás egyetlen átgondolt rendszert alkot.",
+        "en": "Corporate and private events where the programme, participants and delivery form one considered whole.",
+        "de": "Firmen- und Privatveranstaltungen, bei denen Programm, Teilnehmende und Umsetzung ein durchdachtes Ganzes bilden."
       },
       "promise": {"hu":"Élménytervezés céges célokra.","en":"Experience design for business goals.","de":"Experience Design für Unternehmensziele."},
       "services": {
-        "hu":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Egyedi céges program","Custom Branded Game"],
-        "en":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Custom corporate programme","Custom Branded Game"],
-        "de":["Team Experience","Leadership Experience","Employer Experience","Client Experience","Individuelles Unternehmensprogramm","Custom Branded Game"]
+        "hu":["Flúgos Futam","Céges csapatépítés","Leány- és legénybúcsú","Egyedi rendezvény"],
+        "en":["Flúgos Futam","Corporate team building","Hen and stag events","Custom events"],
+        "de":["Flúgos Futam","Firmen-Teambuilding","Junggesellinnen- und Junggesellenabschiede","Individuelle Veranstaltungen"]
       },
       "heritage": {
         "founded": 2009,

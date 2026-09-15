@@ -28,25 +28,25 @@ shutil.copyfile(css_src, D / 'assets/partners.css')
 COPY = {
     'hu': {
         'eyebrow':'Partnereink',
-        'title':'HIPStudio partnerek',
-        'body':'Az itt látható logók a HIPStudio partneroldalának dokumentált anyagából származnak. A képeket saját GitHub assetként tároljuk; a publikus oldal nem tölt be logót a Wix rendszeréből.',
+        'title':'Akikkel már együtt dolgoztunk',
+        'body':'Dokumentált korábbi együttműködések. A logók nem jelentenek jelenlegi megbízást vagy ajánlást.',
         'alt':'HIPStudio partner logó'
     },
     'en': {
         'eyebrow':'Partners',
-        'title':'HIPStudio partners',
-        'body':'The logos shown here come from the documented material of the HIPStudio partners page. The images are stored as repository-local GitHub assets; the public site does not load partner logos from Wix.',
+        'title':'Selected collaborations',
+        'body':'Documented previous collaborations. Logos do not imply a current engagement or endorsement.',
         'alt':'HIPStudio partner logo'
     },
     'de': {
         'eyebrow':'Partner',
-        'title':'HIPStudio Partner',
-        'body':'Die hier gezeigten Logos stammen aus dem dokumentierten Material der HIPStudio-Partnerseite. Die Bilder werden als lokale GitHub-Assets gespeichert; die öffentliche Website lädt keine Partnerlogos aus Wix.',
+        'title':'Ausgewählte Zusammenarbeiten',
+        'body':'Dokumentierte frühere Zusammenarbeiten. Logos bedeuten keinen aktuellen Auftrag und keine Empfehlung.',
         'alt':'HIPStudio Partnerlogo'
     }
 }
 
-ROUTES = {'hu':'rolunk','en':'about','de':'ueber-uns'}
+ROUTES = {'hu':'partnerek','en':'partners','de':'partner'}
 for lang, slug in ROUTES.items():
     page = D / lang / slug / 'index.html'
     html = page.read_text()

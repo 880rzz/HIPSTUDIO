@@ -9,7 +9,7 @@ const external=new Set();
 page.on('pageerror',e=>errors.push(e.message));
 page.on('request',r=>{if(!r.url().startsWith(origin)&&!r.url().startsWith('data:'))external.add(r.url())});
 
-const routes=['/','/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/rolunk/','/hu/ajanlatkeres/'];
+const routes=['/','/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/partnerek/','/hu/ajanlatkeres/'];
 const failures=[];
 for(const width of [390,1440]){
   await page.setViewportSize({width,height:900});

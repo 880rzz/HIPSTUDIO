@@ -15,33 +15,33 @@ shutil.copyfile(R / 'assets/editorial-shell.js', D / 'assets/editorial-shell.js'
 
 MENU = {
     'hu': [
-        ('business', 'Szolgáltatások', 'Amit ténylegesen megoldunk a működés, tartalom és vállalati élmény oldaláról.'),
-        ('creative', 'Kreatív tartalom', 'Fotó, film, podcast és a kapcsolódó tartalom egy koordinációs pontból.'),
-        ('experiences', 'Vállalati élmények', 'Amikor az eseménynek nem programnak, hanem jól megtervezett közös élménynek kell érződnie.'),
-        ('about', 'Rólunk', 'Kik dolgoznak a háttérben, hogyan oszlik meg a felelősség, és hogyan épül fel a közös munka.'),
-        ('contact', 'Kapcsolat', 'Mondd el, mit kell elérni. Innen együtt rakjuk össze a szükséges formátumot és stábot.')
+        ('home', 'Főoldal', 'Röviden a HIPStudio-ról.'),
+        ('creative', 'Tartalomgyártás', 'Fotó · videó · podcast.'),
+        ('business', 'Üzletfejlesztés', 'Működés, információ és fejlődés.'),
+        ('experiences', 'Rendezvényszervezés', 'Céges és privát események.'),
+        ('about', 'Partnerek', 'Dokumentált együttműködések.'),
+        ('quote', 'Ajánlatkérés', 'Mondd el röviden, mire van szükséged.'),
+        ('contact', 'Kapcsolat', 'Közvetlen elérhetőségek.')
     ],
     'en': [
-        ('business', 'Services', 'What we actually solve across operations, content and corporate experience.'),
-        ('creative', 'Creative content', 'Photography, film, podcast and related content through one coordination layer.'),
-        ('experiences', 'Corporate experiences', 'For moments that should feel intentionally designed rather than generically programmed.'),
-        ('about', 'About', 'Who works behind the scenes, how responsibility is divided and how collaboration is structured.'),
-        ('contact', 'Contact', 'Tell us what needs to change. We will shape the right format and team from there.')
+        ('home', 'Home', 'HIPStudio in brief.'),('creative', 'Content production', 'Photography · video · podcast.'),
+        ('business', 'Business development', 'Operations, information and growth.'),('experiences', 'Event production', 'Corporate and private events.'),
+        ('about', 'Partners', 'Documented collaborations.'),('quote', 'Request a quote', 'Tell us briefly what you need.'),('contact', 'Contact', 'Direct contact details.')
     ],
     'de': [
-        ('business', 'Leistungen', 'Was wir konkret in Betrieb, Content und Unternehmenserlebnis lösen.'),
-        ('creative', 'Creative Content', 'Fotografie, Film, Podcast und begleitender Content aus einer Koordination.'),
-        ('experiences', 'Unternehmenserlebnisse', 'Wenn ein Event bewusst gestaltet wirken soll statt wie ein Standardprogramm.'),
-        ('about', 'Über uns', 'Wer im Hintergrund arbeitet, wie Verantwortung verteilt ist und wie Zusammenarbeit aufgebaut wird.'),
-        ('contact', 'Kontakt', 'Sag uns, was erreicht werden soll. Daraus entwickeln wir Format und Team.')
+        ('home', 'Start', 'HIPStudio in Kürze.'),('creative', 'Content-Produktion', 'Fotografie · Video · Podcast.'),
+        ('business', 'Geschäftsentwicklung', 'Abläufe, Information und Entwicklung.'),('experiences', 'Veranstaltungsproduktion', 'Firmen- und Privatveranstaltungen.'),
+        ('about', 'Partner', 'Dokumentierte Zusammenarbeiten.'),('quote', 'Angebot anfragen', 'Beschreiben Sie kurz, was Sie brauchen.'),('contact', 'Kontakt', 'Direkte Kontaktdaten.')
     ]
 }
 
 ROUTES = {
+    'home': {'hu':'/hu/','en':'/en/','de':'/de/'},
     'business': {'hu':'/hu/uzleti-mukodes/','en':'/en/business-operations/','de':'/de/business-operations/'},
     'creative': {'hu':'/hu/kreativ-tartalom/','en':'/en/creative-content/','de':'/de/creative-content/'},
     'experiences': {'hu':'/hu/vallalati-elmenyek/','en':'/en/corporate-experiences/','de':'/de/unternehmenserlebnisse/'},
-    'about': {'hu':'/hu/rolunk/','en':'/en/about/','de':'/de/ueber-uns/'},
+    'about': {'hu':'/hu/partnerek/','en':'/en/partners/','de':'/de/partner/'},
+    'quote': {'hu':'/hu/ajanlatkeres/','en':'/en/request-a-quote/','de':'/de/angebot-anfragen/'},
     'contact': {'hu':'/hu/kapcsolat/','en':'/en/contact/','de':'/de/kontakt/'}
 }
 
@@ -99,16 +99,18 @@ def menu_markup(lang, current_path):
 
 def hero_markup(lang):
     h = HERO[lang]
-    contact = ROUTES['contact'][lang]
-    return f'''<section class="hero hero-film" data-hero-film><div class="hero-video-stage" data-hero-video-stage data-embed="{EMBED}"></div><div class="hero-art" aria-hidden="true"></div><div class="hero-film-content"><p class="eyebrow">{h['eyebrow']}</p><h1>{h['title']}</h1><p class="lead">{h['lead']}</p><div class="hero-film-actions"><a class="button" href="{contact}">{CTA[lang]} →</a><button class="hero-play" type="button" data-hero-play data-frame-title="{h['frame']}">{h['play']}</button></div><p class="hero-source">{h['source']} · <a href="{MEDIA['channelUrl']}">YouTube</a></p></div></section>'''
+    quote = ROUTES['quote'][lang]
+    return f'''<section class="hero hero-film" data-hero-film><div class="hero-video-stage" data-hero-video-stage data-embed="{EMBED}"></div><div class="hero-art" aria-hidden="true"></div><div class="hero-film-content"><p class="eyebrow">{h['eyebrow']}</p><h1>{h['title']}</h1><p class="lead">{h['lead']}</p><div class="hero-film-actions"><button class="hero-play" type="button" data-hero-play data-frame-title="{h['frame']}">{h['play']}</button><a class="hero-quote-link" href="{quote}">{CTA[lang]} →</a></div><p class="hero-source">{h['source']} · <a href="{MEDIA['channelUrl']}">YouTube</a></p></div></section>'''
 
 for path in D.rglob('index.html'):
     html = path.read_text()
     lang = lang_from_html(html)
     rel = '/' + path.relative_to(D).as_posix().removesuffix('index.html')
 
-    html = html.replace('<link rel="stylesheet" href="/assets/platform.css">', '<link rel="stylesheet" href="/assets/platform.css"><link rel="stylesheet" href="/assets/editorial-shell.css">')
-    html = html.replace('</body>', '<script src="/assets/editorial-shell.js" defer></script></body>')
+    html = re.sub(r'<link rel="stylesheet" href="/assets/editorial-shell\.css">', '', html)
+    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/editorial-shell.css"></head>')
+    if '/assets/editorial-shell.js' not in html:
+        html = html.replace('</body>', '<script src="/assets/editorial-shell.js" defer></script></body>')
 
     header_match = re.search(r'<header class="header">.*?</header>', html, flags=re.S)
     if header_match:

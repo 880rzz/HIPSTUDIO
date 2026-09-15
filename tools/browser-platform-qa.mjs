@@ -13,9 +13,9 @@ const errors=[];const external=new Set();const results=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('request',r=>{if(!r.url().startsWith(origin)&&!r.url().startsWith('data:'))external.add(r.url())});
 
-const representative=['/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/rolunk/','/hu/megoldasok/','/hu/megoldasok/business-operations-360/','/hu/megoldasok/content-engine/','/hu/szolgaltatasok/','/hu/szolgaltatasok/business/finance-admin/financial-administration/','/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/','/hu/szolgaltatasok/hipstudio/video/conference-streaming/','/hu/szolgaltatasok/flugos/corporate-experience/team-experience/','/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/','/hu/ai-trust/','/hu/kapcsolat/','/hu/ajanlatkeres/'];
+const representative=['/hu/','/en/','/de/','/hu/uzleti-mukodes/','/hu/kreativ-tartalom/','/hu/vallalati-elmenyek/','/hu/partnerek/','/hu/megoldasok/','/hu/megoldasok/business-operations-360/','/hu/megoldasok/content-engine/','/hu/szolgaltatasok/','/hu/szolgaltatasok/business/finance-admin/financial-administration/','/hu/szolgaltatasok/hipstudio/photo-portrait/business-portrait/','/hu/szolgaltatasok/hipstudio/video/conference-streaming/','/hu/szolgaltatasok/flugos/corporate-experience/team-experience/','/hu/szolgaltatasok/flugos/history-archive/flugos-futam-2019/','/hu/ai-trust/','/hu/kapcsolat/','/hu/ajanlatkeres/'];
 const legalRoutes=new Set(['/hu/adatvedelem/','/en/privacy/','/de/datenschutz/']);
-for(const width of [320,390,768,1440,1920]){
+for(const width of [390,834,1440,1920,3840]){
   await page.setViewportSize({width,height:960});
   const paths=width===390?build.pages.map(p=>p.path):representative;
   for(const path of paths){
@@ -45,24 +45,21 @@ await skip.focus();
 const skipFocused=await skip.evaluate(el=>document.activeElement===el);
 await page.keyboard.press('Enter');
 const skipTarget=await page.evaluate(()=>location.hash==='#main'&&!!document.querySelector('#main'));
-const commercialHomeProblem=await page.locator('[data-commercial-layer="problem-led-home"]').count()===1;
-const commercialHomeBenefits=await page.locator('[data-commercial-layer="partner-benefits"]').count()===1;
-const problemLinks=await page.locator('[data-commercial-layer="problem-led-home"] a.card').count();
-const businessProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/uzleti-mukodes/"]').count()===1;
-const creativeProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/kreativ-tartalom/"]').count()===1;
-const experienceProblemLink=await page.locator('[data-commercial-layer="problem-led-home"] a[href="/hu/vallalati-elmenyek/"]').count()===1;
+const threeDoors=await page.locator('.home-three-doors .pillar').count();
+const businessDoor=await page.locator('.home-three-doors a[href="/hu/uzleti-mukodes/"]').count()===1;
+const creativeDoor=await page.locator('.home-three-doors a[href="/hu/kreativ-tartalom/"]').count()===1;
+const experienceDoor=await page.locator('.home-three-doors a[href="/hu/vallalati-elmenyek/"]').count()===1;
 const menuToggle=page.locator('[data-menu-toggle]');
 await menuToggle.click();
 const menuOpen=await page.locator('[data-menu-overlay]').isVisible();
 await page.getByRole('link',{name:'EN',exact:true}).click();
 const languageSwitch=page.url().endsWith('/en/');
 
-await page.goto(origin+'/hu/rolunk/');
-const commercialAbout=await page.locator('[data-commercial-layer="integration-story"]').count()===1;
-const aboutHas2006=await page.locator('body').innerText().then(t=>t.includes('2006'));
+await page.goto(origin+'/hu/partnerek/');
+const partnerLogos=await page.locator('.partner-logo').count();
 
 await page.goto(origin+'/hu/uzleti-mukodes/');
-const commercialBusiness=await page.locator('[data-commercial-layer="pillar-value"]').count()===1;
+const conciseBusiness=await page.locator('.editorial-problem').count()===1&&await page.locator('.editorial-answer').count()===1;
 const businessHasScopeQualifier=await page.locator('body').innerText().then(t=>t.includes('A szabályozott feladatokat csak tisztázott felelősségi körrel vállaljuk.'));
 
 await page.goto(origin+'/hu/ajanlatkeres/');
@@ -85,7 +82,7 @@ const storage=await page.evaluate(()=>({localStorage:localStorage.length,session
 
 const unsafeReviewPage=r=>legalRoutes.has(r.path)?!r.robots.includes('noindex'):r.review!==1;
 const pageFailures=results.filter(r=>r.status!==200||r.overflow||r.brokenImages||r.h1!==1||unsafeReviewPage(r)||r.violations.length).map(r=>({path:r.path,width:r.width,status:r.status,overflow:r.overflow,brokenImages:r.brokenImages,h1:r.h1,review:r.review,robots:r.robots,violations:r.violations}));
-const interactions={skipHref,skipFocused,skipTarget,menuOpen,languageSwitch,commercialHomeProblem,commercialHomeBenefits,problemLinks,businessProblemLink,creativeProblemLink,experienceProblemLink,commercialAbout,aboutHas2006,commercialBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
+const interactions={skipHref,skipFocused,skipTarget,menuOpen,languageSwitch,threeDoors,businessDoor,creativeDoor,experienceDoor,partnerLogos,conciseBusiness,businessHasScopeQualifier,creativeServiceVisible,creativeScopeVisible,photoScopeVisible,quoteSubmitDisabled,internalEmailsExposed,prefillPillar,prefillService,prefillScopeVisible};
 const checks={
   pageFailures:pageFailures.length===0,
   pageErrors:errors.length===0,
@@ -98,15 +95,12 @@ const checks={
   skipTarget,
   menuOpen,
   languageSwitch,
-  commercialHomeProblem,
-  commercialHomeBenefits,
-  problemLinks:problemLinks===3,
-  businessProblemLink,
-  creativeProblemLink,
-  experienceProblemLink,
-  commercialAbout,
-  aboutHas2006,
-  commercialBusiness,
+  threeDoors:threeDoors===3,
+  businessDoor,
+  creativeDoor,
+  experienceDoor,
+  partnerLogos:partnerLogos===90,
+  conciseBusiness,
   businessHasScopeQualifier,
   creativeServiceVisible,
   creativeScopeVisible,

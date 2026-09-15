@@ -12,6 +12,8 @@ import json, os, shutil
 
 R = Path(__file__).resolve().parents[1]
 DATA = json.loads((R / 'content/platform.json').read_text())
+COMMERCIAL = json.loads((R / 'content/commercial-content.json').read_text())
+IMAGES = {item['id']:item for item in json.loads((R / 'content/images.json').read_text())}
 MODE = os.environ.get('BUILD_MODE', 'review')
 BASE = os.environ.get('PLATFORM_URL', DATA.get('masterDomain', 'https://www.hipstudio.hu')).rstrip('/')
 
@@ -33,6 +35,9 @@ if D.exists():
     shutil.rmtree(D)
 (D / 'assets').mkdir(parents=True)
 shutil.copyfile(R / 'assets/platform.css', D / 'assets/platform.css')
+(D / 'assets/photos').mkdir(parents=True)
+for image_id in ('portrait-04','commercial-05','property-16','commercial-30'):
+    shutil.copyfile(R / f'assets/photos/{image_id}-1440.webp', D / f'assets/photos/{image_id}-1440.webp')
 
 LANGS = ['hu', 'en', 'de']
 LOCALES = {'hu': 'hu_HU', 'en': 'en_GB', 'de': 'de_DE'}
@@ -41,7 +46,8 @@ ROUTES = {
     'business': {'hu':'uzleti-mukodes', 'en':'business-operations', 'de':'business-operations'},
     'creative': {'hu':'kreativ-tartalom', 'en':'creative-content', 'de':'creative-content'},
     'experiences': {'hu':'vallalati-elmenyek', 'en':'corporate-experiences', 'de':'unternehmenserlebnisse'},
-    'about': {'hu':'rolunk', 'en':'about', 'de':'ueber-uns'},
+    'about': {'hu':'partnerek', 'en':'partners', 'de':'partner'},
+    'quote': {'hu':'ajanlatkeres', 'en':'request-a-quote', 'de':'angebot-anfragen'},
     'contact': {'hu':'kapcsolat', 'en':'contact', 'de':'kontakt'},
     'trust': {'hu':'ai-trust', 'en':'ai-trust', 'de':'ai-trust'}
 }
@@ -49,7 +55,8 @@ ROUTES = {
 UI = {
     'review': {'hu':'Platform review build · nincs publikálva', 'en':'Platform review build · not published', 'de':'Platform-Review-Build · nicht veröffentlicht'},
     'home': {'hu':'Főoldal','en':'Home','de':'Start'},
-    'about': {'hu':'Hogyan dolgozunk','en':'How we work','de':'So arbeiten wir'},
+    'about': {'hu':'Partnerek','en':'Partners','de':'Partner'},
+    'quote': {'hu':'Ajánlatkérés','en':'Request a quote','de':'Angebot anfragen'},
     'contact': {'hu':'Konzultáció','en':'Consultation','de':'Beratung'},
     'trust': {'hu':'AI Trust','en':'AI Trust','de':'AI Trust'},
     'audience': {'hu':'Kinek szól','en':'Who it is for','de':'Für wen'},
@@ -103,6 +110,7 @@ def page_title(key, lang):
     if key == 'home': return DATA['hero']['title'][lang]
     if key in PILLARS: return PILLARS[key]['title'][lang]
     if key == 'about': return UI['about'][lang]
+    if key == 'quote': return UI['quote'][lang]
     if key == 'contact': return DATA['primaryCta'][lang]
     return UI['trust'][lang]
 
@@ -118,7 +126,11 @@ def meta_title(key, lang):
 def page_desc(key, lang):
     if key == 'home': return DATA['hero']['intro'][lang]
     if key in PILLARS: return PILLARS[key]['intro'][lang]
-    if key == 'about': return DATA['integrationStory']['reason'][lang]
+    if key == 'about': return {
+        'hu':'Korábbi, dokumentált HIPStudio együttműködések és partnerlogók.',
+        'en':'Documented previous HIPStudio collaborations and partner logos.',
+        'de':'Dokumentierte frühere HIPStudio-Zusammenarbeiten und Partnerlogos.'
+    }[lang]
     if key == 'contact': return DATA['positioning'][lang]
     return {
         'hu':'Átlátható AI-használati, emberi kontroll- és adatvédelmi elvek a HIPStudio rendszerhez.',
@@ -130,7 +142,7 @@ def language_links(key, lang):
     return ''.join(f'<a lang="{l}" hreflang="{l}" href="{e(href(key,l))}"' + (' aria-current="page"' if l == lang else '') + f'>{l.upper()}</a>' for l in LANGS)
 
 def nav(key, lang):
-    items = ['business','creative','experiences','about','contact']
+    items = ['home','creative','business','experiences','about','quote','contact']
     return ''.join(f'<a href="{e(href(k,lang))}"' + (' aria-current="page"' if k == key else '') + f'>{e(page_title(k,lang) if k in PILLARS else UI[k][lang])}</a>' for k in items)
 
 def graph(key, lang, title, desc):
@@ -173,19 +185,25 @@ def shell(key, lang, body):
     PAGES.append({'key':key,'lang':lang,'path':route(key,lang),'canonical':url})
 
 def cta(lang):
-    return f'<section class="cta"><p class="eyebrow">{e(DATA["positioning"][lang])}</p><h2>{e(UI["ctaTitle"][lang])}</h2><a class="button" href="{e(href("contact",lang))}">{e(DATA["primaryCta"][lang])} →</a></section>'
+    return f'<section class="cta"><p class="eyebrow">HIPStudio</p><h2>{e(UI["ctaTitle"][lang])}</h2><a class="button" href="{e(href("quote",lang))}">{e(UI["quote"][lang])} →</a></section>'
 
 def pillar_card(p, lang, index):
     return f'''<a class="pillar" href="{e(href(p['key'],lang))}"><span class="number">0{index} · {e(p['brand'])}</span><p class="eyebrow">{e(p['label'][lang])}</p><h3>{e(p['title'][lang])}</h3><p>{e(p['intro'][lang])}</p><span class="arrow" aria-hidden="true">↗</span></a>'''
 
 def pillar_page(p, lang):
     services = ''.join(f'<li>{e(s)}</li>' for s in p['services'][lang])
-    heritage = ''
+    problem = COMMERCIAL['pillars'][p['key']]['problem'][lang]
+    outcome = COMMERCIAL['pillars'][p['key']]['outcome'][lang]
+    labels = {
+      'hu':('A helyzet','A válasz','Amiben segítünk','Referenciák','Korábbi együttműködések és igazolt munkák.'),
+      'en':('The situation','Our answer','What we do','References','Previous collaborations and verified work.'),
+      'de':('Die Situation','Unsere Antwort','Wobei wir helfen','Referenzen','Frühere Zusammenarbeiten und belegte Arbeiten.')
+    }[lang]
+    gallery = ''
     if p['key'] == 'creative':
-        heritage = f'<p class="note"><strong>{e(DATA["heritage"]["headline"][lang])}</strong> {e(DATA["heritage"]["claim"][lang])}</p>'
-    elif p['key'] == 'experiences':
-        heritage = '<p class="note">Flúgos historical material is preserved separately from the current B2B offer and remains time-qualified.</p>'
-    return f'''<section class="page-hero"><a class="back" href="{e(href('home',lang))}">← {e(UI['back'][lang])}</a><p class="eyebrow">{e(p['brand'])} · {e(p['label'][lang])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section"><div class="section-head"><h2>{e(p['promise'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><h3>{e(UI['services'][lang])}</h3><ul class="service-list">{services}</ul>{heritage}</section>{cta(lang)}'''
+        photos = ''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(IMAGES[image_id]["alt"][lang])}" loading="lazy" decoding="async"><figcaption>{e(IMAGES[image_id]["alt"][lang])}</figcaption></figure>' for image_id in ('portrait-04','commercial-05','property-16'))
+        gallery = f'<div class="editorial-photo-grid">{photos}</div>'
+    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
 for lang in LANGS:
     cards = ''.join(pillar_card(p,lang,i+1) for i,p in enumerate(DATA['pillars']))
@@ -193,11 +211,13 @@ for lang in LANGS:
     flow = ''.join(f'<div><strong>0{i+1}</strong><span>{e(label)}</span></div>' for i,label in enumerate(flow_labels))
     heritage = f'''<section class="section"><div class="section-head"><p class="eyebrow">2006 → 2026</p><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div></section>'''
     integration = f'''<section class="dark"><div class="section"><div class="section-head"><h2>{e(DATA['integrationStory']['title'][lang])}</h2><p>{e(DATA['integrationStory']['reason'][lang])}</p></div><div class="flow">{flow}</div></div></section>'''
-    home = f'''<section class="hero"><div><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{e(DATA['hero']['intro'][lang])}</p><a class="button" href="{e(href('contact',lang))}">{e(DATA['primaryCta'][lang])} →</a></div><aside class="hero-side"><p class="eyebrow">{e(UI['audience'][lang])}</p><p>{e(DATA['audience'][lang])}</p></aside></section>{heritage}<section class="section"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p></div><div class="pillars">{cards}</div></section>{integration}{cta(lang)}'''
+    intro = {'hu':'2006 óta készítünk tartalmat, fejlesztünk működést és szervezünk olyan eseményeket, amelyeknek világos céljuk van.','en':'Since 2006, we have produced content, improved operations and created events with a clear purpose.','de':'Seit 2006 produzieren wir Content, verbessern Abläufe und gestalten Veranstaltungen mit einem klaren Ziel.'}[lang]
+    home = f'''<section class="hero"><div><p class="eyebrow">HIPStudio · 2006</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{e(intro)}</p></div></section><section class="section home-introduction"><p class="eyebrow">HIPStudio</p><h2>{e(intro)}</h2></section><section class="section home-three-doors"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2></div><div class="pillars">{cards}</div></section>{cta(lang)}'''
     shell('home',lang,home)
     for p in DATA['pillars']:
         shell(p['key'],lang,pillar_page(p,lang))
-    about = f'''<section class="page-hero"><p class="eyebrow">2006 → 2026</p><h1>{e(DATA['integrationStory']['title'][lang])}</h1><p class="lead">{e(DATA['integrationStory']['reason'][lang])}</p></section><section class="section"><div class="trust"><div><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div><div><h2>{e(UI['why'][lang])}</h2><p>{e(DATA['crossSell'][lang])}</p><p class="note">{e(UI['aboutNote'][lang])}</p></div></div></section>{cta(lang)}'''
+    partner_intro = {'hu':'Dokumentált együttműködések. A logók nem jelentenek jelenlegi megbízást vagy ajánlást.','en':'Documented collaborations. Logos do not imply a current engagement or endorsement.','de':'Dokumentierte Zusammenarbeiten. Logos bedeuten keinen aktuellen Auftrag und keine Empfehlung.'}[lang]
+    about = f'''<section class="page-hero"><p class="eyebrow">HIPStudio</p><h1>{e(UI['about'][lang])}</h1><p class="lead">{e(partner_intro)}</p></section>'''
     shell('about',lang,about)
     contact_review = f'<p class="note">{e(UI["contactReview"][lang])}</p>' if MODE == 'review' else ''
     contact = f'''<section class="page-hero"><p class="eyebrow">{e(DATA['positioning'][lang])}</p><h1>{e(DATA['primaryCta'][lang])}</h1><p class="lead">{e(UI['ctaTitle'][lang])}</p></section><section class="section"><div class="cards"><div class="card"><h2>HIPStudio Business</h2><p>{e(PILLARS['business']['intro'][lang])}</p></div><div class="card"><h2>HIPStudio Creative</h2><p>{e(PILLARS['creative']['intro'][lang])}</p></div><div class="card"><h2>Flúgos by HIPStudio</h2><p>{e(PILLARS['experiences']['intro'][lang])}</p></div></div>{contact_review}</section>'''

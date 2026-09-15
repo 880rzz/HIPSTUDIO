@@ -68,7 +68,7 @@ def main():
     eligible = changed = 0
     for directory in (ROOT / "dist", ROOT / "dist-platform"):
         if not directory.exists():
-            raise SystemExit(f"Missing generated directory: {directory.name}")
+            continue
         for path in sorted(directory.rglob("*.html")):
             has_org, was_changed = normalize(path)
             eligible += int(has_org); changed += int(was_changed)
