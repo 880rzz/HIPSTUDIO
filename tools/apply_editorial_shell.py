@@ -102,6 +102,21 @@ def hero_markup(lang):
     quote = ROUTES['quote'][lang]
     return f'''<section class="hero hero-film" data-hero-film><div class="hero-video-stage" data-hero-video-stage data-embed="{EMBED}"></div><div class="hero-art" aria-hidden="true"></div><div class="hero-film-content"><p class="eyebrow">{h['eyebrow']}</p><h1>{h['title']}</h1><p class="lead">{h['lead']}</p><div class="hero-film-actions"><button class="hero-play" type="button" data-hero-play data-frame-title="{h['frame']}">{h['play']}</button><a class="hero-quote-link" href="{quote}">{CTA[lang]} →</a></div><p class="hero-source">{h['source']} · <a href="{MEDIA['channelUrl']}">YouTube</a></p></div></section>'''
 
+FOOTER_SERVICES = {
+    'hu': [('Tartalomgyártás','/hu/kreativ-tartalom/'),('Üzletfejlesztés','/hu/uzleti-mukodes/'),('Rendezvényszervezés','/hu/vallalati-elmenyek/')],
+    'en': [('Content production','/en/creative-content/'),('Business development','/en/business-operations/'),('Event production','/en/corporate-experiences/')],
+    'de': [('Content-Produktion','/de/creative-content/'),('Geschäftsentwicklung','/de/business-operations/'),('Veranstaltungsproduktion','/de/unternehmenserlebnisse/')]
+}
+FOOTER_NOTE = {
+    'hu':'A megoldások csak igazolt tartalomra épülnek. A szolgáltatási lista igazolt forrásokra épül. A HIPStudio a főmárka; a Business és a Flúgos elkülöníthető szakmai területek.',
+    'en':'Solutions and the service list are based on verified sources only. HIPStudio is the master brand; Business and Flúgos remain distinct areas of expertise.',
+    'de':'Die Lösungen beruhen ausschließlich auf geprüften Inhalten. Das Leistungsangebot beruht auf geprüften Quellen. HIPStudio ist die Hauptmarke; Business und Flúgos bleiben klar erkennbare Kompetenzbereiche.'
+}
+
+def footer_markup(lang):
+    services = ''.join(f'<a href="{href}">{title}</a>' for title, href in FOOTER_SERVICES[lang])
+    return f'''<footer class="footer editorial-footer"><div class="footer-brand"><strong>HIPStudio</strong><p>Hipstudió Korlátolt Felelősségű Társaság<br>Népszínház u. 25. Fe. 2. · 1081 Budapest</p></div><nav aria-label="Footer navigation">{services}<a href="{ROUTES['quote'][lang]}">{ {'hu':'Ajánlatkérés','en':'Request a quote','de':'Angebot anfragen'}[lang] }</a><a href="{ROUTES['contact'][lang]}">{ {'hu':'Kapcsolat','en':'Contact','de':'Kontakt'}[lang] }</a></nav><p class="footer-contact"><a href="mailto:info@hipstudio.hu">info@hipstudio.hu</a><br><a href="tel:+36302215506">+36&nbsp;30&nbsp;221&nbsp;5506</a></p><p class="legal-note">{FOOTER_NOTE[lang]}</p></footer>'''
+
 for path in D.rglob('index.html'):
     html = path.read_text()
     lang = lang_from_html(html)
@@ -121,6 +136,10 @@ for path in D.rglob('index.html'):
         if not hero_match:
             raise RuntimeError(f'Home hero not found in {path}')
         html = html[:hero_match.start()] + hero_markup(lang) + html[hero_match.end():]
+
+    footer_match = re.search(r'<footer class="footer">.*?</footer>', html, flags=re.S)
+    if footer_match:
+        html = html[:footer_match.start()] + footer_markup(lang) + html[footer_match.end():]
 
     path.write_text(html)
 

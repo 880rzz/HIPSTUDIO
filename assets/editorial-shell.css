@@ -42,3 +42,10 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 
 /* Keep the absolute editorial header clear of page introductions and forms. */
 .quote-shell,.page-hero{padding-top:clamp(8rem,12vw,11rem)!important}
+.menu-title{font-size:clamp(1.25rem,2.2vw,2.35rem);line-height:1.05}
+.menu-copy{font-size:.82rem;line-height:1.4}
+.editorial-footer{display:grid;grid-template-columns:minmax(220px,1fr) minmax(360px,1.4fr) minmax(180px,.6fr);gap:2rem;align-items:start}
+.editorial-footer .footer-brand p,.editorial-footer .footer-contact{margin:.8rem 0 0;color:#555;font-size:.82rem;line-height:1.55}
+.editorial-footer nav{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;justify-content:flex-start}
+.editorial-footer nav a{font-size:.88rem}
+@media(max-width:800px){.editorial-footer{grid-template-columns:1fr;gap:1.2rem}.editorial-footer nav{gap:.5rem 1rem}}
