@@ -36,6 +36,46 @@
       "claimBoundary": "Portfolio evidence for portrait capability only; provider routing and contracting-party boundaries remain separate.",
       "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
       "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. This records the observed source-publication state only; it does not waive any third-party attribution right. If an author/credit obligation becomes known, visible credit is required before continued use."
+    },
+    {
+      "id": "portrait-04",
+      "role": "portrait-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["creative"],
+      "claimBoundary": "Published HIPStudio portfolio sample for portrait capability only; no client or endorsement is inferred from the image.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. Visible credit is required if a credit obligation becomes known."
+    },
+    {
+      "id": "commercial-05",
+      "role": "commercial-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["creative"],
+      "claimBoundary": "Published HIPStudio portfolio sample for commercial photography capability only; no client or endorsement is inferred from the image.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. Visible credit is required if a credit obligation becomes known."
+    },
+    {
+      "id": "property-16",
+      "role": "property-production",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["creative"],
+      "claimBoundary": "Published HIPStudio portfolio sample for property photography capability only; no client or endorsement is inferred from the image.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. Visible credit is required if a credit obligation becomes known."
+    },
+    {
+      "id": "commercial-30",
+      "role": "hero-fallback",
+      "sourceRegistry": "content/images.json",
+      "publicationRights": "user_confirmed_2026-09-07",
+      "usage": ["home"],
+      "claimBoundary": "Published HIPStudio portfolio sample used as the local hero fallback; no client or endorsement is inferred from the image.",
+      "creditDecision": "SOURCE_PUBLISHED_WITHOUT_VISIBLE_ASSET_CREDIT",
+      "creditDecisionBasis": "The governed source record points to the current HIPStudio gallery publication and no per-image author credit is recorded in content/images.json. Visible credit is required if a credit obligation becomes known."
     }
   ],
   "heroVideo": {
