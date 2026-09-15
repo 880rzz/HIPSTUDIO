@@ -26,3 +26,16 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .editorial-answer h2{font-size:clamp(1.35rem,2.3vw,2.65rem);line-height:1.12}
 .hero-film .lead strong,.page-hero .lead strong,.home-introduction strong{font-weight:700;color:#8a6a22}.hero-film .lead strong{color:#fff}
 @media(max-width:800px){.hero-film h1{font-size:clamp(2rem,9vw,3.25rem)}.editorial-onepager-hero h1{font-size:clamp(2.1rem,9vw,3.4rem)}}
+
+/* Final editorial treatment: readable contrast, shared card rhythm, and a quiet moving image layer. */
+.hero-film h1{color:#fff;background:linear-gradient(105deg,#fff 0%,#fff 48%,#d6b45a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-film .hero-art{transform:scale(1.06);animation:hero-drift 18s ease-in-out infinite alternate;will-change:transform}
+.hero-film .hero-video-stage{transform:translate3d(0,0,0);will-change:transform}
+.home-introduction h2,.editorial-onepager-hero h1,.editorial-problem h2,.editorial-answer h2{background:linear-gradient(105deg,#0a0a0a 0%,#161616 54%,#a7832d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#0a0a0a}
+.home-three-doors .pillar{display:flex;flex-direction:column;align-items:flex-start}
+.home-three-doors .pillar .eyebrow{min-height:1.15rem}
+.home-three-doors .pillar h3{margin-top:1.75rem;min-height:2.1em}
+.home-three-doors .pillar p:not(.eyebrow){max-width:32ch}
+.home-three-doors .pillar .arrow{margin-top:auto}
+@keyframes hero-drift{from{transform:scale(1.06) translate3d(-1.5%,0,0)}to{transform:scale(1.1) translate3d(1.5%,-1%,0)}}
+@media(prefers-reduced-motion:reduce){.hero-film .hero-art{animation:none;transform:none}}
