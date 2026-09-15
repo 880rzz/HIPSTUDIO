@@ -37,12 +37,13 @@ for page in MANIFEST['pages']:
     assert '<title>HelloÜzlet |' not in html
 
 hu = (D / 'hu/index.html').read_text(encoding='utf-8')
-assert '20 év tapasztalat' in hu
 assert '2006-02-27' in hu
-assert 'class="buyer-needs"' in hu
-assert 'data-pain-point="integrated-content"' in hu
-assert 'data-pain-point="adaptive-event-coverage"' in hu
-assert 'data-pain-point="management-operations-overload"' not in hu
-assert 'Nem szolgáltatással kezdünk. A problémával.' in hu
+assert '2006 óta készítünk tartalmat' in hu
+assert 'home-three-doors' in hu
+assert 'Tartalomgyártás' in hu
+assert 'Üzletfejlesztés' in hu
+assert 'Rendezvényszervezés' in hu
+assert 'data-commercial-layer' not in hu
+assert 'class="buyer-needs"' not in hu
 
 print('HIPStudio master-brand + buyer-first regression gate passed')

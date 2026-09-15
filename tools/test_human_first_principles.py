@@ -14,22 +14,22 @@ assert D.exists(), 'dist-platform missing after build:platform'
 
 checks = {
     'hu/index.html': [
-        'Három terület. Egy cél: működjön.',
-        'Legyen rend a működésben.',
-        'Legyen világos, mit képvisel a cég.',
-        'Az emberek ne csak ott legyenek. Kapcsolódjanak.'
+        '2006 óta készítünk tartalmat',
+        'Tartalomgyártás',
+        'Üzletfejlesztés',
+        'Rendezvényszervezés'
     ],
     'en/index.html': [
-        'Three areas. One goal: make it work.',
-        'Put the operation in order.',
-        'Make it clear what the company stands for.',
-        'People should not just attend. They should connect.'
+        'Since 2006, we have produced content',
+        'Content production',
+        'Business development',
+        'Event production'
     ],
     'de/index.html': [
-        'Drei Bereiche. Ein Ziel: Es soll funktionieren.',
-        'Ordnung in die Abläufe bringen.',
-        'Klar machen, wofür das Unternehmen steht.',
-        'Menschen sollen nicht nur teilnehmen. Sie sollen sich verbinden.'
+        'Seit 2006 produzieren wir Content',
+        'Content-Produktion',
+        'Geschäftsentwicklung',
+        'Veranstaltungsproduktion'
     ]
 }
 
@@ -58,13 +58,11 @@ for rel in checks:
 
 css = D / 'assets/human-first-principles.css'
 assert css.exists(), 'human-first-principles.css not copied to dist-platform'
-style = css.read_text(encoding='utf-8')
-assert 'body{background:#f7f6f2' in style
-assert 'grid-template-columns:repeat(3,minmax(0,1fr))' in style
-assert '.pillar:nth-child(1){background:#eeeae1' in style
-assert '.pillar:nth-child(2){background:#fff' in style
-assert '.pillar:nth-child(3){background:#0b1736' in style
-assert '.hero-film .lead{color:#f4f1e8}' in style, 'dark film hero lead contrast protection missing'
+editorial = (D / 'assets/editorial-shell.css').read_text(encoding='utf-8')
+assert 'background:#fff' in editorial
+assert '--ink:#0a0a0a' in editorial
+assert 'min-height:100svh' in editorial
+assert 'grid-template-columns:repeat(3,1fr)' in editorial
 
 business = (D/'hu/uzleti-mukodes/index.html').read_text(encoding='utf-8')
 assert 'data-business-scope-qualifier' in business
