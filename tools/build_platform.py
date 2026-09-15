@@ -229,7 +229,19 @@ def pillar_page(p, lang):
         blocks.append(f'<details class="service-reference"><summary>Podcast</summary><p>{e(podcast_copy)}</p><p><a class="text-link" href="{channel}">Referencia-videók megnyitása →</a></p></details>')
         gallery=''.join(blocks)
     history=f'''<section class="section editorial-history"><p class="eyebrow">2006 → 2026</p><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></section>'''
-    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section>{history}<section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
+    highlight_titles = {
+      'hu': ['Egy világos cél','Egy felelős rendszer','Egy használható eredmény'],
+      'en': ['One clear objective','One accountable system','One usable result'],
+      'de': ['Ein klares Ziel','Ein verantwortliches System','Ein nutzbares Ergebnis']
+    }[lang]
+    highlight_body = {
+      'hu': ['A feladatot és a felhasználást már az elején tisztázzuk.','Egy kézben marad a gondolat, a gyártás és a megvalósítás.','A végén nem csak anyag, hanem beépíthető eszköz marad.'],
+      'en': ['We clarify the objective and use before production starts.','The idea, production and delivery stay accountable in one system.','The result is made to be used, not simply delivered.'],
+      'de': ['Ziel und Nutzung werden vor der Produktion geklärt.','Idee, Produktion und Umsetzung bleiben in einem verantwortlichen System.','Das Ergebnis ist für die Anwendung gemacht, nicht nur für die Übergabe.']
+    }[lang]
+    highlights = '<section class="section product-highlights"><p class="eyebrow">'+e({'hu':'Kiemelések','en':'Highlights','de':'Highlights'}[lang])+'</p><div class="highlight-track">'+''.join(f'<article><span class="highlight-index">0{i+1}</span><h3>{e(t)}</h3><p>{e(b)}</p></article>' for i,(t,b) in enumerate(zip(highlight_titles,highlight_body)))+'</div></section>'
+    closer = '<section class="section product-closer"><div><p class="eyebrow">'+e({'hu':'Közelebbről','en':'Take a closer look','de':'Näher betrachtet'}[lang])+'</p><h2>'+e(p['title'][lang])+'</h2></div><p>'+e({'hu':'A szolgáltatás fókuszai és a hozzájuk tartozó igazolt referenciák egy helyen.','en':'The service focus and its documented references, in one place.','de':'Leistungsschwerpunkte und dokumentierte Referenzen an einem Ort.'}[lang])+'</p></section>'
+    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section>{highlights}{history}{closer}<section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
 for lang in LANGS:
     cards = ''.join(pillar_card(p,lang,i+1) for i,p in enumerate(DATA['pillars']))
