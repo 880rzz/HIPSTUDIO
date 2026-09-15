@@ -48,7 +48,7 @@ ROUTES = {
 HERO = {
     'hu': {
         'eyebrow':'HIPStudio · 2006 óta',
-        'title':'Ami fontos, elkészül.',
+        'title':'Gondolatból látható eredmény.',
         'lead':'<strong>Fotó, film, podcast</strong>, üzleti támogatás és vállalati élmények egy olyan rendszerben, ahol mindig látszik, mi a feladat, ki felel érte és mi lesz a kézzelfogható eredmény.',
         'play':'Showreel indítása',
         'frame':'HIPStudio showreel',
@@ -56,7 +56,7 @@ HERO = {
     },
     'en': {
         'eyebrow':'HIPStudio · since 2006',
-        'title':'What matters gets made.',
+        'title':'From thought to visible result.',
         'lead':'<strong>Photography, film, podcast</strong>, operational support and corporate experiences in one system where the task, responsibility and concrete result remain clear.',
         'play':'Play showreel',
         'frame':'HIPStudio showreel',
@@ -64,7 +64,7 @@ HERO = {
     },
     'de': {
         'eyebrow':'HIPStudio · seit 2006',
-        'title':'Was zählt, wird gemacht.',
+        'title':'Aus Gedanken wird sichtbares Ergebnis.',
         'lead':'<strong>Fotografie, Film, Podcast</strong>, operative Unterstützung und Unternehmenserlebnisse in einem System, in dem Aufgabe, Verantwortung und Ergebnis klar bleiben.',
         'play':'Showreel starten',
         'frame':'HIPStudio Showreel',
