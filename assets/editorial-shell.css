@@ -34,6 +34,7 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .home-introduction h2,.editorial-onepager-hero h1,.editorial-problem h2,.editorial-answer h2{background:linear-gradient(105deg,#0a0a0a 0%,#161616 54%,#a7832d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#0a0a0a}
 .home-three-doors .pillar{display:flex;flex-direction:column;align-items:flex-start}
 .home-three-doors .pillar .eyebrow{min-height:1.15rem}
+.home-three-doors .pillar .number{margin-bottom:2rem!important}
 .home-three-doors .pillar h3{margin-top:1.75rem;min-height:2.1em}
 .home-three-doors .pillar p:not(.eyebrow){max-width:32ch}
 .home-three-doors .pillar .arrow{margin-top:auto}
