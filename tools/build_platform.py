@@ -100,6 +100,16 @@ PILLARS = {p['key']: p for p in DATA['pillars']}
 PAGES = []
 
 def e(value): return escape(str(value), quote=True)
+def emphasized(value, lang):
+    text = e(value)
+    phrases = {
+        'hu': ('Fotó, videó és podcast', '2006 óta'),
+        'en': ('Photography, video and podcasts', 'Since 2006'),
+        'de': ('Fotografie, Video und Podcast', 'Seit 2006')
+    }[lang]
+    for phrase in phrases:
+        text = text.replace(phrase, f'<strong>{phrase}</strong>')
+    return text
 def route(key, lang):
     slug = ROUTES[key][lang]
     return f'/{lang}/' + (slug + '/' if slug else '')
@@ -204,7 +214,7 @@ def pillar_page(p, lang):
         protected_label = {'hu':'Védett tartalom','en':'Protected content','de':'Geschützter Inhalt'}[lang]
         photos = ''.join(f'<figure><img src="/assets/photos/{image_id}-1440.webp" alt="{e(protected_label)}" loading="lazy" decoding="async"><figcaption>{e(protected_label)}</figcaption></figure>' for image_id in ('portrait-04','commercial-05','property-16'))
         gallery = f'<div class="editorial-photo-grid">{photos}</div>'
-    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{e(p['intro'][lang])}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
+    return f'''<section class="page-hero editorial-onepager-hero"><a class="back" href="{e(href('home',lang))}">← HIPStudio</a><p class="eyebrow">{e(p['brand'])}</p><h1>{e(p['title'][lang])}</h1><p class="lead">{emphasized(p['intro'][lang],lang)}</p></section><section class="section editorial-problem"><p class="eyebrow">{e(labels[0])}</p><h2>{e(problem)}</h2></section><section class="section editorial-answer"><p class="eyebrow">{e(labels[1])}</p><h2>{e(outcome)}</h2><h3>{e(labels[2])}</h3><ul class="service-list">{services}</ul></section>{gallery}<section class="section editorial-references"><p class="eyebrow">{e(labels[3])}</p><h2>{e(labels[4])}</h2><a class="text-link" href="{e(href('about',lang))}">{e(UI['about'][lang])} →</a></section>{cta(lang)}'''
 
 for lang in LANGS:
     cards = ''.join(pillar_card(p,lang,i+1) for i,p in enumerate(DATA['pillars']))
@@ -213,7 +223,7 @@ for lang in LANGS:
     heritage = f'''<section class="section"><div class="section-head"><p class="eyebrow">2006 → 2026</p><h2>{e(DATA['heritage']['headline'][lang])}</h2><p>{e(DATA['heritage']['claim'][lang])}</p></div></section>'''
     integration = f'''<section class="dark"><div class="section"><div class="section-head"><h2>{e(DATA['integrationStory']['title'][lang])}</h2><p>{e(DATA['integrationStory']['reason'][lang])}</p></div><div class="flow">{flow}</div></div></section>'''
     intro = {'hu':'2006 óta készítünk tartalmat, fejlesztünk működést és szervezünk olyan eseményeket, amelyeknek világos céljuk van.','en':'Since 2006, we have produced content, improved operations and created events with a clear purpose.','de':'Seit 2006 produzieren wir Content, verbessern Abläufe und gestalten Veranstaltungen mit einem klaren Ziel.'}[lang]
-    home = f'''<section class="hero"><div><p class="eyebrow">HIPStudio · 2006</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{e(intro)}</p></div></section><section class="section home-introduction"><p class="eyebrow">HIPStudio</p><h2>{e(intro)}</h2></section><section class="section home-three-doors"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2></div><div class="pillars">{cards}</div></section>{cta(lang)}'''
+    home = f'''<section class="hero"><div><p class="eyebrow">HIPStudio · 2006</p><h1>{e(DATA['hero']['title'][lang])}</h1><p class="lead">{emphasized(intro,lang)}</p></div></section><section class="section home-introduction"><p class="eyebrow">HIPStudio</p><h2>{e(intro)}</h2></section><section class="section home-three-doors"><div class="section-head"><h2>{e(UI['pillars'][lang])}</h2></div><div class="pillars">{cards}</div></section>{cta(lang)}'''
     shell('home',lang,home)
     for p in DATA['pillars']:
         shell(p['key'],lang,pillar_page(p,lang))

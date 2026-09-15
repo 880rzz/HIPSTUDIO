@@ -48,24 +48,24 @@ ROUTES = {
 HERO = {
     'hu': {
         'eyebrow':'HIPStudio · 2006 óta',
-        'title':'Kevesebb koordináció. Több, ami tényleg elkészül.',
-        'lead':'Fotó, film, podcast, üzleti támogatás és vállalati élmények egy olyan rendszerben, ahol mindig látszik, mi a feladat, ki felel érte és mi lesz a kézzelfogható eredmény.',
+        'title':'Gondolatból látható eredmény.',
+        'lead':'<strong>Fotó, film, podcast</strong>, üzleti támogatás és vállalati élmények egy olyan rendszerben, ahol mindig látszik, mi a feladat, ki felel érte és mi lesz a kézzelfogható eredmény.',
         'play':'Showreel indítása',
         'frame':'HIPStudio showreel',
         'source':'Referenciafilm a HIPStudio saját YouTube-csatornájáról'
     },
     'en': {
         'eyebrow':'HIPStudio · since 2006',
-        'title':'Less coordination. More work actually delivered.',
-        'lead':'Photography, film, podcast, operational support and corporate experiences in one system where the task, responsibility and concrete result remain clear.',
+        'title':'From thought to visible result.',
+        'lead':'<strong>Photography, film, podcast</strong>, operational support and corporate experiences in one system where the task, responsibility and concrete result remain clear.',
         'play':'Play showreel',
         'frame':'HIPStudio showreel',
         'source':'Reference film from HIPStudio’s own YouTube channel'
     },
     'de': {
         'eyebrow':'HIPStudio · seit 2006',
-        'title':'Weniger Abstimmung. Mehr, das wirklich fertig wird.',
-        'lead':'Fotografie, Film, Podcast, operative Unterstützung und Unternehmenserlebnisse in einem System, in dem Aufgabe, Verantwortung und Ergebnis klar bleiben.',
+        'title':'Aus Gedanken wird sichtbares Ergebnis.',
+        'lead':'<strong>Fotografie, Film, Podcast</strong>, operative Unterstützung und Unternehmenserlebnisse in einem System, in dem Aufgabe, Verantwortung und Ergebnis klar bleiben.',
         'play':'Showreel starten',
         'frame':'HIPStudio Showreel',
         'source':'Referenzfilm vom eigenen HIPStudio YouTube-Kanal'

@@ -14,3 +14,15 @@
 .editorial-problem h2{font-size:clamp(1.65rem,3.5vw,3.8rem);max-width:28ch}
 .editorial-answer h2{font-size:clamp(1.55rem,2.7vw,3.1rem);max-width:32ch}
 @media(max-width:800px){.hero-film h1{font-size:clamp(2.35rem,11vw,4rem)}}
+
+/* Apple-like system typography: compact display scale, clear line breaks, restrained gold accent. */
+body,.menu-copy,.hero-film .lead,.page-hero .lead,.section p{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editorial-problem h2,.editorial-answer h2,.editorial-references h2{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;overflow-wrap:break-word;word-break:normal}
+.hero-film h1,.editorial-onepager-hero h1,.editorial-problem h2,.editorial-answer h2,.home-introduction h2{color:#8a6a22}
+.hero-film h1{font-size:clamp(2rem,4vw,4.25rem);line-height:1.02;letter-spacing:-.035em}
+.home-introduction h2{font-size:clamp(1.45rem,2.5vw,2.9rem);line-height:1.12}
+.editorial-onepager-hero h1{font-size:clamp(2.1rem,4vw,4.25rem);line-height:1.02}
+.editorial-problem h2{font-size:clamp(1.45rem,3vw,3.2rem);line-height:1.08}
+.editorial-answer h2{font-size:clamp(1.35rem,2.3vw,2.65rem);line-height:1.12}
+.hero-film .lead strong,.page-hero .lead strong,.home-introduction strong{font-weight:700;color:#8a6a22}.hero-film .lead strong{color:#fff}
+@media(max-width:800px){.hero-film h1{font-size:clamp(2rem,9vw,3.25rem)}.editorial-onepager-hero h1{font-size:clamp(2.1rem,9vw,3.4rem)}}
