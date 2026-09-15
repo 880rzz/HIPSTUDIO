@@ -81,9 +81,9 @@
       },
       "promise": {"hu":"Tartalom, amit nem csak megnéznek. Hanem megjegyeznek.","en":"Content people do not just watch. They remember it.","de":"Content, den man nicht nur ansieht, sondern behält."},
       "services": {
-        "hu":["Fotó","Videó","Podcast"],
-        "en":["Photography","Video","Podcast"],
-        "de":["Fotografie","Video","Podcast"]
+        "hu":["Fotóstúdió","Fotó","Videó","Podcast"],
+        "en":["Photo studio","Photography","Video","Podcast"],
+        "de":["Fotostudio","Fotografie","Video","Podcast"]
       }
     },
     {

@@ -49,4 +49,5 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .editorial-footer nav{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;justify-content:flex-start}
 .editorial-footer nav a{font-size:.88rem}
 .editorial-footer nav a,.editorial-footer .footer-contact a{display:inline-flex;min-height:24px;align-items:center}
+.service-reference{border-top:1px solid #000;padding:1rem 0}.service-reference summary{cursor:pointer;list-style:none;font-size:clamp(1rem,1.8vw,1.35rem);font-weight:650;display:flex;justify-content:space-between;gap:1rem}.service-reference summary::-webkit-details-marker{display:none}.service-reference summary::after{content:'+';font-weight:400}.service-reference[open] summary::after{content:'−'}.service-reference .editorial-photo-grid{margin-top:1.25rem}.service-reference>p{margin-top:1rem}
 @media(max-width:900px){.editorial-footer{grid-template-columns:1fr;gap:1.2rem}.editorial-footer nav{gap:.5rem 1rem}}
