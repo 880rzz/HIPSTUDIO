@@ -48,4 +48,5 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .editorial-footer .footer-brand p,.editorial-footer .footer-contact{margin:.8rem 0 0;color:#555;font-size:.82rem;line-height:1.55}
 .editorial-footer nav{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;justify-content:flex-start}
 .editorial-footer nav a{font-size:.88rem}
+.editorial-footer nav a,.editorial-footer .footer-contact a{display:inline-flex;min-height:24px;align-items:center}
 @media(max-width:800px){.editorial-footer{grid-template-columns:1fr;gap:1.2rem}.editorial-footer nav{gap:.5rem 1rem}}
