@@ -55,3 +55,4 @@ h1,h2,h3,.menu-title,.home-introduction h2,.editorial-onepager-hero h1,.editoria
 .editorial-history{display:grid;grid-template-columns:.35fr 1.65fr;gap:3rem;border-bottom:1px solid #000}.editorial-history h2{max-width:22ch;font-size:clamp(1.6rem,3vw,3.2rem);line-height:1.08}.editorial-history p:last-child{max-width:46ch;color:#555}
 @media(max-width:800px){.editorial-history{grid-template-columns:1fr;gap:1rem}}
 @media(max-width:900px){.editorial-footer{grid-template-columns:1fr;gap:1.2rem}.editorial-footer nav{gap:.5rem 1rem}}
+.header.editorial-header{position:fixed!important;inset:0 0 auto!important}
